@@ -1,0 +1,5 @@
+$(IS_MANAGE_CB,
+  XtAddCallback( $(IS_LINK,$(WIDGET_IDENTIFIER)->base.topWidget,self->base.$(WIDGET_IDENTIFIER)), "$(NAME)",
+                 manageWidget, (XtPointer)self->base.$(WIDGET_TO_MANAGE)); ,
+  XtAddCallback( $(IS_LINK,$(WIDGET_IDENTIFIER)->base.topWidget,self->base.$(WIDGET_IDENTIFIER)), "$(NAME)",
+                 $(METHOD)_CB, self);)

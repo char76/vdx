@@ -1,0 +1,91 @@
+#
+# User interface of MainWindow 
+#
+# Created by VDX v1.2
+#
+# User: lazy@apfel.goetting5
+# Date: Tue Jun  2 01:07:29 1998
+#                         
+
+#
+# Declare an array for all widgets of this interface
+#
+
+typeset -A aMainWindow
+
+#
+# Include the base module
+#
+
+. MainWindow_base.dtksh
+
+
+#
+# Call this function to create an user interface
+#
+
+createMainWindow () {
+
+	createMainWindow_base
+
+	# Add your own ideas at this point
+	XmTextSetString ${aMainWindow[directory]} `pwd`
+	XmTextSetString ${aMainWindow[toFind]} "core"
+
+}
+
+#
+# Show the user interface
+#
+
+showMainWindow () {
+	XtPopup ${aMainWindow[shell]} GrabNone
+}
+
+#
+# Hide the user interface
+#
+
+hideMainWindow () {
+	XtPopdown ${aMainWindow[shell]}
+}
+
+
+#
+# The Implemantion of methods
+#
+
+#
+# Callback MainWindow_exit
+#
+# $(CB_WIDGET)    - for calling widget
+# $(CB_CALL_DATA) - call_data structure
+# See man dtksh for details
+
+MainWindow_exit () {
+	exit 0
+}
+#
+# Callback MainWindow_dirSelected
+#
+# $(CB_WIDGET)    - for calling widget
+# $(CB_CALL_DATA) - call_data structure
+# See man dtksh for details
+
+MainWindow_dirSelected () {
+	selection=${CB_CALL_DATA.VALUE}
+	XmTextSetString ${aMainWindow[directory]} "$selection"
+}
+#
+# Callback MainWindow_doFind
+#
+# $(CB_WIDGET)    - for calling widget
+# $(CB_CALL_DATA) - call_data structure
+# See man dtksh for details
+
+MainWindow_doFind () {
+	XmTextGetString dir ${aMainWindow[directory]}
+	XmTextGetString file ${aMainWindow[toFind]}
+	result=`find "$dir" -name "$file"`
+	XmTextSetString ${aMainWindow[result]} "$result"
+}

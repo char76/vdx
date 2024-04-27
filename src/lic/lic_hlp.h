@@ -1,0 +1,196 @@
+/*
+ * All files in this project are distributed under the GNU General
+ * Public License. This is Free Software.
+ */
+#ifndef HID_TOP
+#define HID_TOP 0
+#endif
+
+#ifndef HID_RELEASE_NOTES
+#define HID_RELEASE_NOTES 9
+#endif
+
+#ifndef HID_AGREEMENT
+#define HID_AGREEMENT 23
+#endif
+
+#ifndef HID_REGISTRATION
+#define HID_REGISTRATION 37
+#endif
+
+#ifndef HID_USING_HELP
+#define HID_USING_HELP 7
+#endif
+
+#ifndef HID_USING_HELP
+#define HID_USING_HELP 22
+#endif
+
+#ifndef HID_PROJECTS
+#define HID_PROJECTS 24
+#endif
+
+#ifndef HID_CREATING_INTERFACES
+#define HID_CREATING_INTERFACES 25
+#endif
+
+#ifndef HID_BROWSE_WIDGET_TREES
+#define HID_BROWSE_WIDGET_TREES 26
+#endif
+
+#ifndef HID_CHANGE_THE_PROPERTIES_OF_WIDGETS
+#define HID_CHANGE_THE_PROPERTIES_OF_WIDGETS 27
+#endif
+
+#ifndef HID_WYSIWYG_VIEW
+#define HID_WYSIWYG_VIEW 6
+#endif
+
+#ifndef HID_DRAG___DROP
+#define HID_DRAG___DROP 4
+#endif
+
+#ifndef HID_ICON_AND_TREE_VIEW
+#define HID_ICON_AND_TREE_VIEW 5
+#endif
+
+#ifndef HID_CODE_GENERATION
+#define HID_CODE_GENERATION 28
+#endif
+
+#ifndef HID_EXTENDED_FEATURES
+#define HID_EXTENDED_FEATURES 29
+#endif
+
+#ifndef HID_REUSABLE_COMPONENTS
+#define HID_REUSABLE_COMPONENTS 35
+#endif
+
+#ifndef HID_USING_WIDGET_TEMPLATE
+#define HID_USING_WIDGET_TEMPLATE 36
+#endif
+
+#ifndef HID_ADAPTION_OF_CODE_GENERATION
+#define HID_ADAPTION_OF_CODE_GENERATION 30
+#endif
+
+#ifndef HID_TOPLEVEL_FILE
+#define HID_TOPLEVEL_FILE 31
+#endif
+
+#ifndef HID_SUBSECTION
+#define HID_SUBSECTION 33
+#endif
+
+#ifndef HID_INTERFACES
+#define HID_INTERFACES 34
+#endif
+
+#ifndef HID_IMAKEFILE_AND_MAIN_PROGRAM
+#define HID_IMAKEFILE_AND_MAIN_PROGRAM 32
+#endif
+
+#ifndef HID_WINDOWS
+#define HID_WINDOWS 8
+#endif
+
+#ifndef HID_MAIN_WINDOW
+#define HID_MAIN_WINDOW 1
+#endif
+
+#ifndef HID_NEW_PROJECT
+#define HID_NEW_PROJECT 2
+#endif
+
+#ifndef HID_PROJECT_SETTINGS
+#define HID_PROJECT_SETTINGS 15
+#endif
+
+#ifndef HID_GENERATE_DIALOG
+#define HID_GENERATE_DIALOG 17
+#endif
+
+#ifndef HID_GRID_DIALOG
+#define HID_GRID_DIALOG 18
+#endif
+
+#ifndef HID_OVERWRITE_DIALOG
+#define HID_OVERWRITE_DIALOG 19
+#endif
+
+#ifndef HID_EXECUTE_DIALOG
+#define HID_EXECUTE_DIALOG 20
+#endif
+
+#ifndef HID_VIEW_DEFAULTS
+#define HID_VIEW_DEFAULTS 39
+#endif
+
+#ifndef HID_DEFAULT_PUBLIC
+#define HID_DEFAULT_PUBLIC 40
+#endif
+
+#ifndef HID_GENERIC_OPTIONS
+#define HID_GENERIC_OPTIONS 41
+#endif
+
+#ifndef HID_QUICK_START_DIALOG
+#define HID_QUICK_START_DIALOG 42
+#endif
+
+#ifndef HID_WIDGET_RESOURCE_EDITOR
+#define HID_WIDGET_RESOURCE_EDITOR 3
+#endif
+
+#ifndef HID_OTHER_RESOURCES
+#define HID_OTHER_RESOURCES 48
+#endif
+
+#ifndef HID_COLOR_SELECT
+#define HID_COLOR_SELECT 10
+#endif
+
+#ifndef HID_FONT_CHOOSER
+#define HID_FONT_CHOOSER 11
+#endif
+
+#ifndef HID_MENU_EDITOR
+#define HID_MENU_EDITOR 12
+#endif
+
+#ifndef HID_TEXT_EDITOR
+#define HID_TEXT_EDITOR 13
+#endif
+
+#ifndef HID_WIDGET_PALETTE
+#define HID_WIDGET_PALETTE 14
+#endif
+
+#ifndef HID_FILE_SELECTION_BOX
+#define HID_FILE_SELECTION_BOX 21
+#endif
+
+#ifndef HID_WIDGET_BROWSER
+#define HID_WIDGET_BROWSER 38
+#endif
+
+#ifndef HID_TEMPLATES
+#define HID_TEMPLATES 43
+#endif
+
+#ifndef HID_PROJECT_SETTINGS
+#define HID_PROJECT_SETTINGS 44
+#endif
+
+#ifndef HID_ATTACHMENT_EDITOR
+#define HID_ATTACHMENT_EDITOR 45
+#endif
+
+#ifndef HID_GLOBAL_RESOURCES
+#define HID_GLOBAL_RESOURCES 46
+#endif
+
+#ifndef HID_TRANSFORM
+#define HID_TRANSFORM 47
+#endif
+

@@ -1,0 +1,56 @@
+#
+# User interface of $(NAME) 
+#
+# Created by VDX $(VDX_VERSION)
+#
+# User: $(USER)
+# Date: $(DATE)
+#                         
+
+#
+# Declare an array for all widgets of this interface
+#
+
+typeset -A a$(NAME)
+
+#
+# Include the base module
+#
+
+. $(NAME)_base.dtksh
+
+
+#
+# Call this function to create an user interface
+#
+
+create$(NAME) () {
+
+	create$(NAME)_base
+
+	# Add your own ideas at this point
+
+}
+
+#
+# Show the user interface
+#
+
+show$(NAME) () {
+	XtPopup ${a$(NAME)[shell]} GrabNone
+}
+
+#
+# Hide the user interface
+#
+
+hide$(NAME) () {
+	XtPopdown ${a$(NAME)[shell]}
+}
+
+
+#
+# The Implemantion of methods
+#
+
+$(METHODS,dtksh.cb_implementation.tmpl)

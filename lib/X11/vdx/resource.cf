@@ -1,0 +1,176 @@
+! Configuration of mapping between resource_type and internal types
+
+
+! Boolean resources
+
+Boolean			BOOL
+Bool			BOOL
+
+
+! Callback resources
+
+Callback		CALLBACK
+
+
+! Widget Resources
+
+Widget			WIDGET
+MenuWidget		WIDGET
+
+
+! Pixmap Resources
+
+Pixmap			PIXMAP
+HighlightPixmap		PIXMAP
+TopShadowPixmap		PIXMAP
+BottomShadowPixmap	PIXMAP
+ManHighlightPixmap	PIXMAP
+ManTopShadowPixmap	PIXMAP
+ManBottomShadowPixmap	PIXMAP
+PrimForegroundPixmap	PIXMAP
+DynamicPixmap		PIXMAP
+XmBackgroundPixmap	PIXMAP
+! Motif 2.1
+NoScalingDynamicPixmap  PIXMAP
+
+
+! Color resources
+
+Pixel			PIXEL
+SelectColor		PIXEL
+
+
+! FontList resources
+
+FontList		FONTLIST
+RenderTable		FONTLIST
+ButtonRenderTable	FONTLIST
+LabelRenderTable	FONTLIST
+TextRenderTable		FONTLIST
+! Motif 2.1
+TextFontList            FONTLIST
+LabelFontList           FONTLIST
+ButtonFontList          FONTLIST
+
+! Character string resources
+
+String			STRING
+
+
+! Use Converter for following resource types
+
+KeySym			CONVERTER
+AcceleratorTable	CONVERTER
+XmStringTable		CONVERTER
+TranslationTable	CONVERTER
+! Motif 2.1
+CardinalList		CONVERTER
+TabList			CONVERTER
+
+
+! XmString
+
+XmString		XMSTRING
+
+
+! Numeric values
+
+ShellVertDim		SHORT
+ShellHorizDim		SHORT
+HorizontalDimension	SHORT
+VerticalDimension	SHORT
+BooleanDimension	SHORT
+Dimension		SHORT
+ShellHorizPos		SHORT
+ShellVertPos		SHORT
+HorizontalPosition	SHORT
+VerticalPosition	SHORT
+TextPosition		SHORT
+Position		SHORT
+TopItemPosition		SHORT
+Short			SHORT
+
+Int			INT
+VerticalInt		INT
+HorizontalInt		INT
+Cardinal		INT
+
+!
+! Xrt
+!
+
+xrtFldPixel		PIXEL
+xrtFldInt		LONG
+xrtFldIntList		CONVERTER
+xrtFldFloat		CONVERTER
+xrtFldFloatList		CONVERTER
+xrtFldDate		CONVERTER
+xrtFldDateList		CONVERTER
+xrtFldDateIncrement	CONVERTER
+xrtFldDecimalPlaces	INT
+StringTable		CONVERTER
+XrtData			CONVERTER
+Float			CONVERTER
+XrtString		STRING
+XrtStrings		CONVERTER
+XrtValueLabels		CONVERTER
+XrtDataStyle		CONVERTER
+XrtDataStyles		CONVERTER
+Long			LONG
+
+Xrt3dData		CONVERTER
+Xrt3dGridLines		INT
+Xrt3dDouble		CONVERTER
+Xrt3dStrings		CONVERTER
+Xrt3dProject		INT
+Xrt3dValueLabels	CONVERTER
+Xrt3dXYColors		CONVERTER
+Xrt3dDistnTable		CONVERTER
+!Xrt3dTextList		CONVERTER
+Xrt3dContourStyles	CONVERTER
+
+xrtTblBooleanSeries		CONVERTER
+xrtTblDataTypeSeries		CONVERTER
+xrtTblCellSizeSeries		CONVERTER
+xrtTblPixmapLayoutSeries	CONVERTER
+xrtTblBorderSides		CONVERTER
+xrtTblColorSeries		CONVERTER
+xrtTblXmStringList		CONVERTER
+xrtTblRange			CONVERTER
+xrtTblRangeList			CONVERTER
+xrtTblBorderTypeSeries		CONVERTER
+xrtTblStringSeries		CONVERTER
+xrtTblDataTypeList		CONVERTER
+xrtTblFontListSeries		CONVERTER
+xrtTblPixmapSeries		CONVERTER
+xrtTblOverflowSeries		CONVERTER
+xrtTblClipPixmapSeries		CONVERTER
+xrtTblInt			INT
+xrtTblClipPixmap		PIXMAP
+xrtTblCellSize			INT
+xrtTblAlignmentSeries		CONVERTER
+xrtTblCaseSeries		CONVERTER
+xrtTblCellValues		CONVERTER
+Cursor				CONVERTER
+xrtTblPSFontMapList		CONVERTER
+xrtTblTargets			CONVERTER
+xrtTblWidgetSeries		CONVERTER
+xrtTblBorderSidesSeries		CONVERTER
+xrtTblIntSeries			CONVERTER
+GearPixmap			PIXMAP
+GearMask			PIXMAP
+GearState			INT
+GearIndicatorPixmapList		CONVERTER
+GearIndicatorMaskList		CONVERTER
+GearIcon			CONVERTER
+GearFloat			CONVERTER
+GearUlong			LONG
+GearWidget			WIDGET
+GearActivePageNumber		INT
+
+!
+! Xfe
+!
+
+Modifiers		CONVERTER
+

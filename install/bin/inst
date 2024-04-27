@@ -1,0 +1,128 @@
+#!/bin/sh
+# Installation script for Interface Builder
+#
+
+# mkdirhier from 
+# $XConsortium: mkdirhier.sh,v 1.6 91/08/13 18:13:04 rws Exp $
+# Courtesy of Paul Eggert
+
+mkdirhier () {
+	newline='
+'
+	IFS=$newline
+
+	case ${1--} in
+	-*) echo >&2 "mkdirhier: usage: mkdirhier directory ..."; exit 1
+	esac
+
+	status=
+
+	for directory
+	do
+		case $directory in
+		'')
+			echo >&2 "mkdirhier: empty directory name"
+			status=1
+			continue;;
+		*"$newline"*)
+			echo >&2 "mkdirhier: directory name contains a newline: \`\`$directory''"
+			status=1
+			continue;;
+		///*) prefix=/;; # See Posix 2.3 "path".
+		//*) prefix=//;;
+		/*) prefix=/;;
+		-*) prefix=./;;
+		*) prefix=
+		esac
+
+		IFS=/
+		set x $directory
+		IFS=$newline
+		shift
+
+		for filename
+		do
+			path=$prefix$filename
+			prefix=$path/
+			shift
+
+			test -d "$path" || {
+				paths=$path
+				for filename
+				do
+					if [ "$filename" != "." ]; then
+						path=$path/$filename
+						paths=$paths$newline$path
+					fi
+				done
+
+				mkdir $paths || status=$?
+				echo $paths
+				break
+			}
+		done
+	  done
+
+	return $status
+}
+
+# ---------------------------------------------
+#                  main
+# ---------------------------------------------
+
+PRODUCT="View Designer/X"
+EXECUTABLE=vdx
+
+mypath=`pwd`
+
+echo
+echo Installation of $PRODUCT
+echo
+
+echo "Enter installation path: \c"
+read install_path
+
+echo
+echo The path where $PRODUCT will be installed 
+echo is $install_path
+echo
+
+
+	echo >$mypath/installed
+	cd $install_path 2>/dev/null
+	if [ $? != 0 ]; then
+		mkdirhier $install_path >>$mypath/installed
+		if [ $? != 0 ]; then
+			echo ERROR: Can not make directory.
+			exit 1
+		fi
+		cd $install_path
+	fi
+	install_path=`pwd`
+	tar xvf $mypath/mlxvc.tar \
+		| sed -e "s!^!$install_path/!" \
+		>>$mypath/installed
+
+	cat $install_path/bin/mlxvc \
+		| sed -e "s!replace_mlxvc_home!$install_path!g" \
+		> $install_path/bin/mlxvc.tmp
+	mv $install_path/bin/mlxvc.tmp $install_path/bin/$EXECUTABLE
+	chmod +x $install_path/bin/$EXECUTABLE
+	echo $install_path/bin/$EXECUTABLE >>$mypath/installed
+
+	cat $install_path/bin/addLicense \
+		| sed -e "s!replace_mlxvc_home!$install_path!g" \
+		> $install_path/bin/addLicense.tmp
+	mv $install_path/bin/addLicense.tmp $install_path/bin/addLicense
+	chmod +x $install_path/bin/addLicense
+
+ 	cat $install_path/lib/X11/app-defaults/Mlxvc \
+		| sed -e "s!Replace_Product!$PRODUCT!g" \
+		> $install_path/lib/X11/app-defaults/Mlxvc.tmp
+	mv $install_path/lib/X11/app-defaults/Mlxvc.tmp \
+		$install_path/lib/X11/app-defaults/Mlxvc
+
+echo Add the $install_path/bin to your PATH environment variable.
+echo Start the $PRODUCT with command $EXECUTABLE.
+echo
+echo done.

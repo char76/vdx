@@ -1,0 +1,109 @@
+   MKSHARED = gcc -shared
+
+include $(TOPDIR)/config/Makeoptions
+
+  SHORTNAME = vdx
+   LONGNAME = VDX
+     MAKEIT = make
+ INSTALLDIR = $(SHORTNAME)-$(REVISION)-$(ARCH)
+    INSTALL = $(TOPDIR)/install/prep_install.sh $(TOPDIR)/install/$(INSTALLDIR)
+INSTALL_LINK = $(TOPDIR)/install/prep_link.sh $(TOPDIR)/install/$(INSTALLDIR)
+   REVISION = v1.3.0
+    REPLACE = sed -e 's!Replace_Product!$(LONGNAME)!g' | sed -e 's!Replace_Revision!$(REVISION)!g'
+ DOT_DEPEND = .depend-$(ARCH)
+
+include $(DOT_DEPEND)
+
+subdirs:
+	@for i in $(SUBDIRS) ; do\
+		(cd $$i;\
+		echo Make in $$i;\
+		$(MAKEIT) all); \
+	done
+
+depend-subdirs:	depend-create
+	@(for i in $(SUBDIRS) ; do\
+		(cd $$i;\
+		echo Make depend in $$i;\
+		$(MAKEIT) depend); \
+	done)
+
+depend-create:
+	@(for i in $(SUBDIRS) ; do\
+		(cd $$i;\
+		if test ! -f $(DOT_DEPEND); then\
+			touch $(DOT_DEPEND);\
+		fi); \
+	done)
+
+clean-subdirs:
+	@(for i in $(SUBDIRS) ; do\
+		(cd $$i;\
+		echo Make clean in $$i;\
+		$(MAKEIT) clean); \
+	done)
+
+
+install-subdirs:
+	@(for i in $(SUBDIRS) ; do\
+		(cd $$i;\
+		echo Make install in $$i;\
+		$(MAKEIT) install); \
+	done)
+	
+ARCH_LIBRARY = $(ARCH)/$(LIBRARY)
+
+ARCH_PROGRAM = $(ARCH)/$(PROGRAM)
+
+library: $(ARCH_LIBRARY)
+
+program: $(ARCH_PROGRAM)
+
+$(ARCH_LIBRARY): $(ARCH_OBJS)
+	$(RM) -f $(ARCH_LIBRARY)
+	$(AR) $(ARCH_LIBRARY) $(ARCH_OBJS)
+	$(RANLIB) $(ARCH_LIBRARY)
+
+$(ARCH_PROGRAM): $(ARCH_OBJS) $(LOCAL_LIBS)
+	$(CXXLINK) -o $(ARCH_PROGRAM) $(ARCH_OBJS) $(LOCAL_LIBS) $(LOCAL_SHLIB) $(LIBS)
+
+
+depend-src:
+	@if test ! -d $(ARCH); then \
+		echo making directory $(ARCH) ;\
+		mkdir $(ARCH) ;\
+	fi ;\
+	res="ARCH_OBJS =" ;\
+	for i in $(OBJS) ; do \
+		res="$$res $(ARCH)/$$i";\
+	done ;\
+	echo $$res >$(DOT_DEPEND);\
+	for i in $(SRCS) ; do \
+		obj=$(ARCH)/`echo $$i |sed -e "s!\.[cC]!.o!"` ;\
+		echo "$$obj: $$i" >>$(DOT_DEPEND) ;\
+		if test `echo $$i |sed -e "s!\.C!!"` = $$i ; then \
+		   printf '\t$$(CC) -c $$(CFLAGS)'" -o $$obj $$i" >>$(DOT_DEPEND) ;\
+		else \
+		   printf '\t$$(CXX) -c $$(CXXFLAGS)'" -o $$obj $$i" >>$(DOT_DEPEND) ;\
+		fi; \
+		echo >>$(DOT_DEPEND) ;\
+	done ;\
+	$(DEPEND) $(DEPENDFLAGS) $(SRCS) | sed -e 's!^.*:!$(ARCH)/&!'>>$(DOT_DEPEND)
+
+
+clean-src:
+	@$(RM) -f core $(ARCH_OBJS) ;\
+	if test -f $(ARCH_PROGRAM); then \
+		echo remove $(ARCH_PROGRAM);\
+		$(RM) -f $(ARCH_PROGRAM) ;\
+	fi ;\
+	if test -f $(ARCH_LIBRARY); then \
+		echo remove $(ARCH_LIBRARY);\
+		$(RM) -f $(ARCH_LIBRARY) ;\
+	fi
+
+
+
+
+
+

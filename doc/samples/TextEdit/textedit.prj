@@ -1,0 +1,5 @@
+PALETTE "Templates.pal"
+INTERFACE "TextWindow.i"
+LANG "c++"
+STARTUP "TextWindow"
+SOURCEDIR ""

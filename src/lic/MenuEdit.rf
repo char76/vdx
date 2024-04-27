@@ -1,0 +1,95 @@
+! ----------------------------------------------
+! File: MenuEdit.rf
+! Resource file of interface MenuEdit
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*MenuEdit*Label1.labelString: Children
+*MenuEdit*Label2.labelString: Order
+*MenuEdit*ArrowUp.quickHelpLabel: Move selected widget.
+*MenuEdit*ArrowDown.quickHelpLabel: Move selected widget.
+*MenuEdit*iconViewFrame.quickHelpLabel: Children of the menu widget.
+*MenuEdit*rowColumn_1.quickHelpLabel: Create a new child of menu widget.
+*MenuEdit*Label3.labelString: Add item
+*MenuEdit*quickHelp.labelString: This is a Quick Help Line.
+*MenuEdit*fileButton.labelString: File
+*MenuEdit*fileButton.mnemonic: F
+*MenuEdit*loadButton.accelerator: Ctrl<Key>l
+*MenuEdit*loadButton.acceleratorText: ^L
+*MenuEdit*loadButton.labelString: Load
+*MenuEdit*loadButton.mnemonic: L
+*MenuEdit*loadButton.quickHelpLabel: Load selected widget into browser.
+*MenuEdit*loadParentButton.accelerator: Ctrl<Key>p
+*MenuEdit*loadParentButton.acceleratorText: ^P
+*MenuEdit*loadParentButton.labelString: Load Parent
+*MenuEdit*closeButton.labelString: Close
+*MenuEdit*closeButton.mnemonic: C
+*MenuEdit*closeButton.quickHelpLabel: Close this window.
+*MenuEdit*viewButton.labelString: View
+*MenuEdit*smallIconButton.accelerator: Ctrl<Key>s
+*MenuEdit*smallIconButton.acceleratorText: ^S
+*MenuEdit*smallIconButton.labelString: Small Icons
+*MenuEdit*smallIconButton.mnemonic: S
+*MenuEdit*smallIconButton.quickHelpLabel: Display small icons in Tree View.
+*MenuEdit*withIconButton.accelerator: Ctrl<Key>I
+*MenuEdit*withIconButton.acceleratorText: ^I
+*MenuEdit*withIconButton.labelString: With Icons
+*MenuEdit*withIconButton.mnemonic: I
+*MenuEdit*withIconButton.quickHelpLabel: Display icons Tree View.
+*MenuEdit*withClassNameButton.accelerator: Ctrl<Key>n
+*MenuEdit*withClassNameButton.acceleratorText: ^N
+*MenuEdit*withClassNameButton.labelString: With Class Names
+*MenuEdit*withClassNameButton.mnemonic: N
+*MenuEdit*withClassNameButton.quickHelpLabel: Display class names of widgets.
+*MenuEdit*widgetButton.labelString: Widget
+*MenuEdit*widgetButton.mnemonic: W
+*MenuEdit*editButton.acceleratorText: E
+*MenuEdit*editButton.labelString: Edit
+*MenuEdit*editButton.mnemonic: E
+*MenuEdit*editButton.quickHelpLabel: Show Widget Resource Editor for selected widgets.
+*MenuEdit*browseButton.acceleratorText: B
+*MenuEdit*browseButton.labelString: Browse
+*MenuEdit*browseButton.mnemonic: B
+*MenuEdit*browseButton.quickHelpLabel: Show Browser for selected widgets.
+*MenuEdit*menuEditButton.acceleratorText: M
+*MenuEdit*menuEditButton.labelString: Menu Editor
+*MenuEdit*menuEditButton.mnemonic: M
+*MenuEdit*menuEditButton.quickHelpLabel: Show Menu Ediotor for selected widgets.
+*MenuEdit*cutButton.acceleratorText: X
+*MenuEdit*cutButton.labelString: Cut
+*MenuEdit*cutButton.mnemonic: u
+*MenuEdit*cutButton.quickHelpLabel: Copy selection to clipboard and delete selection.
+*MenuEdit*copyButton.acceleratorText: C
+*MenuEdit*copyButton.labelString: Copy
+*MenuEdit*copyButton.mnemonic: C
+*MenuEdit*copyButton.quickHelpLabel: Copy selection to clipboard.
+*MenuEdit*pasteButton.acceleratorText: V
+*MenuEdit*pasteButton.labelString: Paste
+*MenuEdit*pasteButton.mnemonic: P
+*MenuEdit*pasteButton.quickHelpLabel: Paste clipboard contents to selected widgets.
+*MenuEdit*deleteButton.acceleratorText: DEL
+*MenuEdit*deleteButton.labelString: Delete
+*MenuEdit*deleteButton.mnemonic: D
+*MenuEdit*deleteButton.quickHelpLabel: Delete selected widgets.
+*MenuEdit*helpButton.labelString: Help
+*MenuEdit*helpButton.mnemonic: H
+*MenuEdit*onHelp.labelString: On Help
+*MenuEdit*onHelp.mnemonic: H
+*MenuEdit*onHelp.quickHelpLabel: Show help on help system.
+*MenuEdit*onContext.mnemonic: C
+*MenuEdit*onContext.quickHelpLabel: Get help after clicking in a window.
+*MenuEdit*onWidResEditor.accelerator: Ctrl<Key>F1
+*MenuEdit*onWidResEditor.acceleratorText: ^F1
+*MenuEdit*onWidResEditor.quickHelpLabel: Show help for this window.
+*MenuEdit*optionsButton.labelString: Options
+*MenuEdit*optionsButton.mnemonic: O
+*MenuEdit*automaticLoadButton.accelerator: Ctrl<Key>t
+*MenuEdit*automaticLoadButton.acceleratorText: ^T
+*MenuEdit*automaticLoadButton.labelString: Automatic Load
+*MenuEdit*automaticLoadButton.mnemonic: t
+
+
+! ----------------------------------------------
+! end of resource file MenuEdit.rf
+! ----------------------------------------------

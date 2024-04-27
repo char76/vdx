@@ -1,0 +1,99 @@
+! ----------------------------------------------
+! File: WidResEditor.rf
+! Resource file of interface WidResEditor
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*WidResEditor*fileButton.labelString: File
+*WidResEditor*fileButton.mnemonic: F
+*WidResEditor*loadButton.accelerator: Ctrl<Key>l
+*WidResEditor*loadButton.labelString: Load
+*WidResEditor*loadButton.mnemonic: L
+*WidResEditor*loadButton.quickHelpLabel: Load selected widget into editor.
+*WidResEditor*applyButton.accelerator: Ctrl<Key>a
+*WidResEditor*applyButton.acceleratorText: ^A
+*WidResEditor*applyButton.labelString: Apply
+*WidResEditor*applyButton.mnemonic: A
+*WidResEditor*applyButton.quickHelpLabel: Apply changes to Wysiwyg View.
+*WidResEditor*applyToButton.labelString: Apply To
+*WidResEditor*applyToButton.mnemonic: T
+*WidResEditor*selectedButton.labelString: Selected Widgets
+*WidResEditor*selectedButton.mnemonic: S
+*WidResEditor*selectedButton.quickHelpLabel: Apply changes to selected widgets.
+*WidResEditor*meAndSiblingsButton.labelString: Me And Siblings
+*WidResEditor*meAndSiblingsButton.mnemonic: i
+*WidResEditor*meAndSiblingsButton.quickHelpLabel: Apply to current widget and its siblings.
+*WidResEditor*meAndChildrenButton.labelString: Me And Children
+*WidResEditor*meAndChildrenButton.mnemonic: C
+*WidResEditor*meAndChildrenButton.quickHelpLabel: Apply to current widget and its children.
+*WidResEditor*meAndAllButton.labelString: All Widgets of Interface
+*WidResEditor*meAndAllButton.mnemonic: A
+*WidResEditor*meAndAllButton.quickHelpLabel: Apply to all widgets of the interface.
+*WidResEditor*unhandledResources.labelString: Other Resources ...
+*WidResEditor*unhandledResources.mnemonic: U
+*WidResEditor*closeButton.accelerator: Ctrl<Key>c
+*WidResEditor*closeButton.acceleratorText: ^C
+*WidResEditor*closeButton.labelString: Close
+*WidResEditor*closeButton.mnemonic: C
+*WidResEditor*closeButton.quickHelpLabel: Close this window.
+*WidResEditor*viewButton.labelString: View
+*WidResEditor*viewButton.mnemonic: V
+*WidResEditor*coreButton.accelerator: Ctrl<Key>1
+*WidResEditor*coreButton.labelString: Core
+*WidResEditor*coreButton.mnemonic: C
+*WidResEditor*coreButton.quickHelpLabel: Show core resources of the current widget.
+*WidResEditor*specificButton.accelerator: Ctrl<Key>2
+*WidResEditor*specificButton.acceleratorText: ^2
+*WidResEditor*specificButton.labelString: Specific
+*WidResEditor*specificButton.mnemonic: S
+*WidResEditor*specificButton.quickHelpLabel: Show widget specific resources.
+*WidResEditor*constraintButton.accelerator: Ctrl<Key>3
+*WidResEditor*constraintButton.acceleratorText: ^3
+*WidResEditor*constraintButton.labelString: Constraints
+*WidResEditor*constraintButton.mnemonic: o
+*WidResEditor*constraintButton.quickHelpLabel: Show parent depending contraint resources.
+*WidResEditor*callbackButton.accelerator: Ctrl<Key>4
+*WidResEditor*callbackButton.acceleratorText: ^4
+*WidResEditor*callbackButton.labelString: Callbacks
+*WidResEditor*callbackButton.mnemonic: b
+*WidResEditor*callbackButton.quickHelpLabel: Show callback resources of current widget.
+*WidResEditor*extraButton.accelerator: Ctrl<Key>5
+*WidResEditor*extraButton.acceleratorText: ^5
+*WidResEditor*extraButton.labelString: Extra
+*WidResEditor*extraButton.mnemonic: E
+*WidResEditor*extraButton.quickHelpLabel: Extra settings for current widget.
+*WidResEditor*optionsButton.labelString: Options
+*WidResEditor*optionsButton.mnemonic: O
+*WidResEditor*automaticLoad.accelerator: Ctrl<Key>t
+*WidResEditor*automaticLoad.acceleratorText: ^T
+*WidResEditor*automaticLoad.labelString: Automatic Load
+*WidResEditor*automaticLoad.quickHelpLabel: Mark this editor as automatic loader.
+*WidResEditor*withSource.labelString: With Source
+*WidResEditor*withSource.quickHelpLabel: Show source of resource value (private/public/..).
+*WidResEditor*helpButton.labelString: Help
+*WidResEditor*helpButton.mnemonic: H
+*WidResEditor*onHelp.labelString: On Help
+*WidResEditor*onHelp.mnemonic: H
+*WidResEditor*onHelp.quickHelpLabel: Show help on help system.
+*WidResEditor*onContext.mnemonic: C
+*WidResEditor*onContext.quickHelpLabel: Get help by clicking in a window.
+*WidResEditor*onWidResEditor.accelerator: Ctrl<Key>F1
+*WidResEditor*onWidResEditor.acceleratorText: ^F1
+*WidResEditor*onWidResEditor.quickHelpLabel: Show help for this window.
+*WidResEditor*applyButton2.labelString: Apply
+*WidResEditor*applyButton2.quickHelpLabel: Apply changes to Wysiwyg View.
+*WidResEditor*closeButton2.labelString: Close
+*WidResEditor*closeButton2.quickHelpLabel: Close this window.
+*WidResEditor*helpButton2.labelString: Help
+*WidResEditor*helpButton2.quickHelpLabel: Show help for this window.
+*WidResEditor*categoryLabel.labelString: Category:
+*WidResEditor*currentCategoryLabel.quickHelpLabel: Display current view of widget resources.
+*WidResEditor*automaticLoadLabel.quickHelpLabel: Display automatic load state of this editor.
+*WidResEditor*quickHelp.labelString: The quick help line.
+*WidResEditor*messageDialog.dialogTitle: Other Resources
+
+
+! ----------------------------------------------
+! end of resource file WidResEditor.rf
+! ----------------------------------------------

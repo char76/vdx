@@ -1,0 +1,4 @@
+c       c       FALSE
+c++     C       FALSE
+c++lac  C       TRUE
+dtksh   dtksh   FALSE

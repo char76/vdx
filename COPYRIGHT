@@ -1,0 +1,15 @@
+Copyright 1994 - 1999, Dirk Laessig <dirk@laessig.com>
+
+All files within this project are distributed under the
+terms of the GPL (see file GPL.TXT for more info). This
+means, that this project is free software. You can use
+this software for your own purposes. Any modified version
+of this source code must contains this file.
+
+EXCEPTION: The files in the directory ./src/Xfe belong
+to the Mozilla project (www.mozilla.org). Regarding this
+these files have another license policy. 
+See ./src/Xfe/LICENSE for more information.
+
+
+

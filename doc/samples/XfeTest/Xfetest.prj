@@ -1,0 +1,16 @@
+INTERFACE "ToolBoxSample.i"
+LANG "c++"
+STARTUP "ToolBoxSample"
+SOURCEDIR "."
+APPL_CLASS "Xfetest"
+EXEC_FILE "xfetest"
+MORE_SOURCE ""
+EXTRA_CC_OPTIONS "-I../../../src"
+EXTRA_LD_OPTIONS "-L../../../src/Xfe"
+EXTRA_LIBRARIES "-lXfeWidgets"
+DESCRIPTION ""
+GLOBAL_RESOURCES "*XfeTab.buttonLayout: button_label_only
+*Tab0.labelString: 1
+*Tab1.labelString: 2
+*Tab2.labelString: 3
+"

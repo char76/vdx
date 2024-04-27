@@ -1,0 +1,35 @@
+#!/bin/sh
+
+rmdirs() {
+	# empty ?
+	rmdir $1 2>/dev/null && echo directory $1 removed.
+}
+
+dirs=
+
+echo Removing files ...
+for i in `cat installed`
+do
+	if [ -f $i ]; then 
+		rm -f $i
+	else
+		dirs="$dirs $i"
+	fi
+done
+
+
+#
+#
+
+for i in $dirs; do
+	for j in $dirs; do
+		if [ -d $j ]; then
+			rmdirs $j
+		fi
+	done
+	if [ -d $i ]; then
+		rmdirs $i
+	fi
+done
+
+echo done.

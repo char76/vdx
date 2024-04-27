@@ -1,0 +1,50 @@
+#!/bin/sh
+
+
+echo "/***********************************/"
+echo "/* Message header                  */"
+echo "/***********************************/"
+echo 
+echo "#ifndef _MSG_H_"
+echo "#define _MSG_H_"
+echo 
+
+# Transform resource file to preprocessor defines
+
+sed -e '
+: weiter
+/^!/d
+/^$/d
+/\\$/b slash1
+s/^[^ ^:]*:/#define & "&"/
+s/://
+s/:\".*$/\"/
+p
+d
+q
+
+: slash1
+s/^[^ ^:]*:/#define & "&"/
+s/://
+s/:\".*$/\"/
+n
+/\\$/b slash2
+s/^.*$//
+n
+b weiter
+
+: slash2
+s/^.*$//
+n
+/\\$/b slash2
+s/^.*$//
+n
+b weiter
+' | sed -e '/^$/d'           # delete all empty lines
+
+echo
+echo
+echo "#endif"
+echo
+
+

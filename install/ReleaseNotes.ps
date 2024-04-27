@@ -1,0 +1,5532 @@
+%!PS-Adobe-3.0
+%%Creator: Applixware
+%%Pages: 4
+%%DocumentNeededResources: font Palatino-Bold Palatino-Roman
+%%+ font Palatino-BoldItalic Courier Helvetica Symbol
+%%EndComments
+%%BeginProlog
+/bd { bind def } bind def
+/n  { newpath } bd
+/L  { lineto } bd
+/M  { moveto } bd
+/C  { curveto } bd
+/RL { rlineto } bd
+/MR { rmoveto } bd
+/ST { show } bd
+/S  { stroke } bd
+/SP { strokepath } bd
+/GS { gsave } bd
+/GR { grestore } bd
+/GRAY { setgray } bd
+/AXscale { 72 1000 div } bd
+/DOSETUP {
+      AXscale dup scale
+      1 setlinecap
+      4 setlinewidth
+      1 setlinejoin
+      4 setmiterlimit
+      [] 0 setdash
+} bd
+/DOCLIPBOX {
+    n 4 2 roll 2 copy M 4 1 roll exch 2 copy L exch pop 2 copy L pop
+    exch L closepath clip
+} bd
+/AXredict 14 dict def
+/X {
+      AXredict begin
+      exch /str exch def
+      str stringwidth pop sub
+      str length div 0 str ashow
+      end
+} bd
+/FINDFONT {
+    { findfont } stopped
+    { /Times-Roman findfont } if
+} bd
+/POINTSCALEFONT { AXscale div scalefont } bd
+/DOTSCALEFONT { scalefont } bd
+/SETFONT { setfont } bd
+/p01 <000e0e0600e0e060> def
+/p02 <0f0f0f0ff0f0f0f0> def
+/p03 <ff1f1f9ffff1f1f9> def
+/p04 <fffcfffcfffcfffcfffcfffcfffcfffcfffcfffcfffcfffcfffcfffc> def
+/p10 <040f0f0e40f0f0e0> def
+/p12 <0006060000606000> def
+/p13 <ff9f9ffffff9f9ff> def
+/p21 <ff0f0f1ffff0f0f1> def
+/ReEncodeSmall {
+      AXredict begin
+      /newcn exch def
+      /newfn exch def
+      /basefn exch def
+      /basefd basefn FINDFONT def
+      /newf basefd maxlength dict def
+      basefd
+      {
+    	exch dup /FID ne
+    	{
+    	  dup dup /Encoding eq exch /FontBBox eq or
+    	  { exch dup length array copy newf 3 1 roll put }
+    	  { exch newf 3 1 roll put }
+    	  ifelse
+    	}
+    	{ pop pop }
+    	ifelse
+      } forall
+      newf /FontName newfn put
+      newcn aload pop
+      newcn length 2 idiv
+      { newf /Encoding get 3 1 roll put }
+      repeat
+      newfn newf definefont pop
+      end
+} def
+/evISOLatin1Encoding [
+49 /one
+185 /onesuperior
+179 /threesuperior
+178 /twosuperior
+40 /parenleft
+242 /ograve
+210 /Ograve
+186 /ordmasculine
+183 /periodcentered
+93 /bracketright
+36 /dollar
+240 /eth
+52 /four
+45 /hyphen
+159 /tilde
+95 /underscore
+35 /numbersign
+170 /ordfeminine
+53 /five
+56 /eight
+162 /cent
+33 /exclam
+215 /multiply
+42 /asterisk
+189 /onehalf
+171 /guillemotleft
+227 /atilde
+195 /Atilde
+254 /thorn
+222 /Thorn
+124 /bar
+123 /braceleft
+165 /yen
+65 /A
+66 /B
+67 /C
+68 /D
+69 /E
+70 /F
+71 /G
+44 /comma
+72 /H
+58 /colon
+73 /I
+74 /J
+75 /K
+76 /L
+249 /ugrave
+232 /egrave
+217 /Ugrave
+200 /Egrave
+77 /M
+78 /N
+79 /O
+80 /P
+180 /acute
+81 /Q
+50 /two
+82 /R
+83 /S
+84 /T
+85 /U
+86 /V
+87 /W
+88 /X
+89 /Y
+90 /Z
+47 /slash
+191 /questiondown
+184 /cedilla
+97 /a
+60 /less
+98 /b
+190 /threequarters
+99 /c
+100 /d
+55 /seven
+101 /e
+102 /f
+54 /six
+103 /g
+51 /three
+104 /h
+105 /i
+106 /j
+107 /k
+161 /exclamdown
+108 /l
+109 /m
+57 /nine
+110 /n
+111 /o
+112 /p
+39 /quoteright
+34 /quotedbl
+253 /yacute
+237 /iacute
+225 /aacute
+221 /Yacute
+205 /Iacute
+193 /Aacute
+113 /q
+114 /r
+115 /s
+116 /t
+117 /u
+118 /v
+119 /w
+120 /x
+121 /y
+122 /z
+92 /backslash
+163 /sterling
+251 /ucircumflex
+244 /ocircumflex
+238 /icircumflex
+234 /ecircumflex
+226 /acircumflex
+219 /Ucircumflex
+212 /Ocircumflex
+206 /Icircumflex
+202 /Ecircumflex
+194 /Acircumflex
+158 /circumflex
+223 /germandbls
+255 /ydieresis
+252 /udieresis
+246 /odieresis
+239 /idieresis
+235 /edieresis
+228 /adieresis
+220 /Udieresis
+214 /Odieresis
+207 /Idieresis
+203 /Edieresis
+196 /Adieresis
+168 /dieresis
+188 /onequarter
+176 /degree
+164 /currency
+156 /ring
+187 /guillemotright
+208 /Eth
+32 /space
+177 /plusminus
+229 /aring
+197 /Aring
+61 /equal
+38 /ampersand
+37 /percent
+230 /ae
+59 /semicolon
+247 /divide
+43 /plus
+94 /asciicircum
+174 /registered
+181 /mu
+125 /braceright
+62 /greater
+243 /oacute
+211 /Oacute
+64 /at
+166 /brokenbar
+173 /minus
+248 /oslash
+216 /Oslash
+172 /logicalnot
+198 /AE
+182 /paragraph
+236 /igrave
+224 /agrave
+204 /Igrave
+192 /Agrave
+48 /zero
+175 /macron
+41 /parenright
+241 /ntilde
+209 /Ntilde
+96 /quoteleft
+46 /period
+231 /ccedilla
+199 /Ccedilla
+167 /section
+63 /question
+155 /dotlessi
+91 /bracketleft
+157 /grave
+169 /copyright
+250 /uacute
+233 /eacute
+218 /Uacute
+201 /Eacute
+245 /otilde
+213 /Otilde
+126 /asciitilde
+] def
+/DEFINEFONTS {
+      /AXFont2p300000 /Palatino-Bold FINDFONT 30.000 POINTSCALEFONT def
+      /AXFont2p140000 /Palatino-Bold FINDFONT 14.000 POINTSCALEFONT def
+      /AXFont2p130000 /Palatino-Bold FINDFONT 13.000 POINTSCALEFONT def
+      /AXFont1p120000 /Palatino-Roman FINDFONT 12.000 POINTSCALEFONT def
+      /Palatino-BoldItalic /EPalatino-BoldItalic evISOLatin1Encoding ReEncodeSmall
+      /AXFont3p140000 /EPalatino-BoldItalic FINDFONT 14.000 POINTSCALEFONT def
+      /AXFont4p100000 /Courier FINDFONT 10.000 POINTSCALEFONT def
+      /AXFont0p180000 /Helvetica FINDFONT 18.000 POINTSCALEFONT def
+      /AXFont5p120000 /Symbol FINDFONT 12.000 POINTSCALEFONT def
+} def
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Palatino-Bold
+%%IncludeResource: font Palatino-Roman
+%%IncludeResource: font Palatino-BoldItalic
+%%IncludeResource: font Courier
+%%IncludeResource: font Helvetica
+%%IncludeResource: font Symbol
+
+DEFINEFONTS
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+save /AXPageSave exch def
+DOSETUP
+0 11000 8500 0 DOCLIPBOX
+%%EndPageSetup
+GS
+GS
+869 10137 1609 9181 DOCLIPBOX
+n
+869 10137 M
+1608 10137 L 1608 9182 L 869 9182 L 869 10137 L 1608 10137 L
+GS
+1 GRAY
+eofill
+GR
+GR
+GS
+869 10137 1609 9181 DOCLIPBOX
+[740.0000 0.0000 0.0000 956.0000 869.0000 10137.0000] concat
+/AXimagebuf 35 string def
+70 90 4 [70 0 0 -90 0 0] 
+{currentfile AXimagebuf readhexstring pop} image
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffc444cffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffff05558ffffffffc44cffffffffffffffffffffffffffffffffffffffffff
+ffffffffffc555558ffffff885584cffffffffffffffffffffffffffffffffffffffff
+ffffffffff4555558cccfc4855558cffffffffffffffffffffffffffffffffffffffff
+ffffffffff4555555888445555554fffffffffffffffffffffffffffffffffffffffff
+ffffffffff4555555555555555554fffffffffffffffffffffffffffffffffffffffff
+ffffffffff4555555555555555554fffffffffffffffffffffffffffffffffffffffff
+ffccffffc85555555555555555558fffffffffffffffffffffffffffffffffffffffff
+ff4848cc8555555555555555555c8cffffffffffffffffffffffffffffffffffffffff
+fc555c885555555555555555555558ffffffffffffffffffffffffffffffffffffffff
+f45555555555555555555555555555888fffffffffffffffffffffffffffffffffffff
+f45555555555555555555555555555cc5444ffffffffffffffffffffffffffffffffff
+fc855555555555555555555555555555555c8fffffffffffffffffffffffffffffffff
+ffc85555555555555555555555555555555c8fffffffffffffffffffffffffffffffff
+fffc855555555555844455555555555555554fffffffffffffffffffffffffffffffff
+ffff455555555558cfff8855555555555558cfffffffffffffffffffffffffffffffff
+ffff45555555558cfffffc8555555555554cffffffffffffffffffffffffffffffffff
+fffc85555555554fffffff455555555554ffffffffffffffffffffffffffffffffffff
+fffc85555555558fffffff45555555555cffffffffffffffffffffffffffffffffffff
+ffc855555555554fffffff45555555554cffffffffffffffffffffffffffffffffffff
+fc8555555555558cfffff855555555554fffffffffffffffffffffffffffffffffffff
+c855555555555558cfff8855555555554fffffffffffffffffffffffffffffffffffff
+455555555555555584445555555555558cffffffffffffffffffffffffffffffffffff
+4555555555555555555555555555555554ffffffffffffffffffffffffffffffffffff
+455558c55555555555555555555555555c8fffffffffffffffffffffffffffffffffff
+c4448c4555555555555555555555555555c8fffc888cffffffffffffffffffffffffff
+fccfffc85555555555555555555555555554fff4ccc4cfffffffffffffffffffffffff
+fffffff8555555555555555555555555554cffc85554cfffffffffffffffffffffffff
+fffffff85555555555555555555c4455854fff4555554fffffffffffffffffffffffff
+fffffff855555555555555555558c8ccc4fffc8555554fffffffc8ffffffffffffffff
+fffffff855555555555555555c8c8c84cfff88555555548ffc84858fffffffffffffff
+fffffff8c555555555555555558c8555448455555555555444555558ffffffffffffff
+fffffff8555555c445c5555555485555555555555555555555555554cfffffffffffff
+fffffff85555558ff888555558c85555555555555555555555555554ffffffffffffff
+fffffffc455588fffffc855554f45555555555555555555555555558ffffffffffffff
+fffffffff848cfffffff855554fc855555555555555555555555558cffffffffffffff
+fffffffffffcfffffffff85448ff455555555555555555555555554cffffffffffffff
+ffffffffffffffffffffff8fffff855555555555555555555555554fffffffffffffff
+ffffffffffffffffffffffffffff855555555555555555555555558cffffffffffffff
+ffffffffffffffffffffffffffff45555555555555555555555555c8ffffffffffffff
+fffffffffffffffffffffffffffc8555555555584444555555555554cfffffffffffff
+ffffffffffffffffffffffffc88455555555558cfffc85555555555584cfffffffffff
+fffffffffffffffffffffff4855555555555558fffffc455555555555584cfffffffff
+fffffffffffffffffffffff455555555555554fffffff4555555555555558fffffffff
+fffffffffffffffffffffff455555555555554fffffff45555555555555c8fffffffff
+fffffffffffffffffffffff455555555555558cffffff4555555555555558fffffffff
+fffffffffffffffffffffff4455555555555558fffffc455555555555584cfffffffff
+fffffffffffffffffffffffffc84555555555588cfcc45555555555c48cfffffffffff
+fffffffffffffffffffffffffffc8555555555558458555555555554ffffffffffffff
+4444444cffffffffffffffc44444055555855555585585555555558cffffffffffffff
+80000008ffffffffffffff4000000555555555555555555555555c8fffffffffffffff
+c0000000cffffffffffffc00000045555455555555555555555555cfffffffffffffff
+fc0000008ffffffffffff0000004455555555555555555555555554fffffffffffffff
+ff4000000cffffffffff80000008455555555c5c5c5c55555555555cffffffffffffff
+ffc0000004fffffffffc0000004c8555555555555555555555555584ffffffffffffff
+fff4000000cffffffff4000000c85555555555555555555555555558cfffffffffffff
+fffc0000004fffffffc0000004f8c555400455555555555584555554cfffffffffffff
+ffff4000000cffffff0000000cff8c54000045555555555480045544ffffffffffffff
+fffff0000000fffff80000008ffff80000004455555554cfc0000004ffffffffffffff
+fffff8000000cfffc0000000ffffff0000008c8555554cfff4000004ffffffffffffff
+ffffff0000004fff4000000cffffff0000008f4555555cffc0000004ffffffffffffff
+ffffffc0000004fc0000004fffffff0000008fc855554fffc0000004ffffffffffffff
+fffffff4000000c4000000cfffffff0000008ff4ccc88fffc0000004ffffffffffffff
+fffffffc00000040000004ffffffff0000008ffc8888cfff8000000cffffffffffffff
+ffffffff8000000000000cffffffff0000008fffffffffc80000000cccccfffffccccf
+fffffffff000000000008fffffffff0000004cccccccc4000000008fc0008fff80004f
+fffffffff80000000000cfffffffff000000000000000000000008fffc0008f80004ff
+ffffffffff4000000008ffffffffff0000000000000000000004cfffff800040000cff
+ffffffffffc00000000cffffffffff00000000000000000000cfffffffc4000000cfff
+fffffffffff84444448fffffffffff444444444444444448ccffffffffcc40000cffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcc400008ffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc40000008fff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4000c4000cff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffff4000cff4000ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffff4000cfffc0000f
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+GR
+GS
+869 10137 1609 9181 DOCLIPBOX
+n
+869 10137 M
+1609 10137 L 1609 9181 L 869 9181 L 869 10137 L 1609 10137 L
+GR
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+750 397 M
+(July 10, 1997) 923 X
+GR
+0.0000 GRAY
+GS
+n
+6954 397 M
+(Page ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+7353 397 M
+(1) 83 X
+GR
+0.0000 GRAY
+GS
+n
+7436 397 M
+( of ) 231 X
+GR
+0.0000 GRAY
+GS
+n
+7667 397 M
+(4) 83 X
+GR
+0.0000 GRAY
+AXFont2p300000 SETFONT
+GS
+n
+6177 9615 M
+(VDX 1.2) 1573 X
+GR
+0.0000 GRAY
+GS
+n
+7750 9615 M
+( ) 104 X
+GR
+0.0000 GRAY
+AXFont3p140000 SETFONT
+GS
+n
+6537 9224 M
+(Release Notes) 1213 X
+GR
+0.0000 GRAY
+GS
+n
+5139 8891 M
+(October 16, 1997) 1427 X
+GR
+0.0000 GRAY
+GS
+n
+6566 8891 M
+( - Dirk L\344ssig) 1184 X
+GR
+GS
+0 11000 32000 -21000 DOCLIPBOX
+n
+750 8536 M
+7749 8536 L 
+0 setlinecap
+0.0000 GRAY
+S
+GR
+0.0000 GRAY
+AXFont2p140000 SETFONT
+GS
+n
+750 8054 M
+(VDX 1.2 - Motif Interface Builder Made on Linux for Linux People) 5895 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 7747 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+2707 7747 M
+(Interface ) 688 X
+GR
+0.0000 GRAY
+GS
+n
+3398 7747 M
+(Builders ) 662 X
+GR
+0.0000 GRAY
+GS
+n
+4063 7747 M
+(provide ) 624 X
+GR
+0.0000 GRAY
+GS
+n
+4690 7747 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4966 7747 M
+(design ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+5503 7747 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+5695 7747 M
+(user ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+6058 7747 M
+(interfaces ) 752 X
+GR
+0.0000 GRAY
+GS
+n
+6813 7747 M
+(based ) 470 X
+GR
+0.0000 GRAY
+GS
+n
+7286 7747 M
+(on ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+7519 7747 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7545 M
+(X ) 153 X
+GR
+0.0000 GRAY
+GS
+n
+2465 7545 M
+(Window ) 687 X
+GR
+0.0000 GRAY
+GS
+n
+3206 7545 M
+(System ) 575 X
+GR
+0.0000 GRAY
+GS
+n
+3835 7545 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4213 7545 M
+(OSF/Motif ) 863 X
+GR
+0.0000 GRAY
+GS
+n
+5130 7545 M
+(toolkit. ) 565 X
+GR
+0.0000 GRAY
+GS
+n
+5749 7545 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+6205 7545 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+6421 7545 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+6600 7545 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+7104 7545 M
+(Interface ) 688 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7343 M
+(Builder ) 591 X
+GR
+0.0000 GRAY
+GS
+n
+2861 7343 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+3207 7343 M
+(supports ) 696 X
+GR
+0.0000 GRAY
+GS
+n
+3919 7343 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4208 7343 M
+(interactive ) 822 X
+GR
+0.0000 GRAY
+GS
+n
+5046 7343 M
+(design ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+5596 7343 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+5801 7343 M
+(user ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+6177 7343 M
+(interfaces ) 752 X
+GR
+0.0000 GRAY
+GS
+n
+6945 7343 M
+(with ) 381 X
+GR
+0.0000 GRAY
+GS
+n
+7342 7343 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7141 M
+(2.0 widgets and that generates C and C++ source code.) 4040 X
+GR
+0.0000 GRAY
+AXFont2p140000 SETFONT
+GS
+n
+750 6514 M
+(The Story) 871 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 6207 M
+(Once ) 424 X
+GR
+0.0000 GRAY
+GS
+n
+2722 6207 M
+(upon ) 431 X
+GR
+0.0000 GRAY
+GS
+n
+3200 6207 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3372 6207 M
+(time ) 372 X
+GR
+0.0000 GRAY
+GS
+n
+3791 6207 M
+(there ) 419 X
+GR
+0.0000 GRAY
+GS
+n
+4257 6207 M
+(was ) 335 X
+GR
+0.0000 GRAY
+GS
+n
+4639 6207 M
+(no ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+4916 6207 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+5413 6207 M
+(Interface ) 688 X
+GR
+0.0000 GRAY
+GS
+n
+6148 6207 M
+(Builder ) 591 X
+GR
+0.0000 GRAY
+GS
+n
+6786 6207 M
+(available ) 704 X
+GR
+0.0000 GRAY
+GS
+n
+7537 6207 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6005 M
+(Linux. ) 519 X
+GR
+0.0000 GRAY
+GS
+n
+2805 6005 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+3160 6005 M
+(idea ) 356 X
+GR
+0.0000 GRAY
+GS
+n
+3550 6005 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+3773 6005 M
+(how ) 369 X
+GR
+0.0000 GRAY
+GS
+n
+4176 6005 M
+(such ) 385 X
+GR
+0.0000 GRAY
+GS
+n
+4595 6005 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4754 6005 M
+(complex ) 669 X
+GR
+0.0000 GRAY
+GS
+n
+5457 6005 M
+(tool ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+5818 6005 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+6148 6005 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+6396 6005 M
+(implemented ) 1027 X
+GR
+0.0000 GRAY
+GS
+n
+7457 6005 M
+(was ) 335 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5803 M
+(born. ) 430 X
+GR
+0.0000 GRAY
+GS
+n
+2690 5803 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+3017 5803 M
+(first ) 338 X
+GR
+0.0000 GRAY
+GS
+n
+3361 5803 M
+(experiments ) 952 X
+GR
+0.0000 GRAY
+GS
+n
+4319 5803 M
+(were ) 407 X
+GR
+0.0000 GRAY
+GS
+n
+4732 5803 M
+(done ) 412 X
+GR
+0.0000 GRAY
+GS
+n
+5150 5803 M
+(using ) 453 X
+GR
+0.0000 GRAY
+GS
+n
+5609 5803 M
+(Xaw ) 375 X
+GR
+0.0000 GRAY
+GS
+n
+5990 5803 M
+(widgets. ) 672 X
+GR
+0.0000 GRAY
+GS
+n
+6668 5803 M
+(After ) 428 X
+GR
+0.0000 GRAY
+GS
+n
+7102 5803 M
+(purchas-) 648 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5601 M
+(ing ) 281 X
+GR
+0.0000 GRAY
+GS
+n
+2560 5601 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+3030 5601 M
+(1.2 ) 250 X
+GR
+0.0000 GRAY
+GS
+n
+3300 5601 M
+(I ) 98 X
+GR
+0.0000 GRAY
+GS
+n
+3418 5601 M
+(started ) 552 X
+GR
+0.0000 GRAY
+GS
+n
+3990 5601 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+4197 5601 M
+(program, ) 730 X
+GR
+0.0000 GRAY
+GS
+n
+4947 5601 M
+(never ) 459 X
+GR
+0.0000 GRAY
+GS
+n
+5426 5601 M
+(mind ) 437 X
+GR
+0.0000 GRAY
+GS
+n
+5883 5601 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+6233 5601 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+6566 5601 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+6914 5601 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+7148 5601 M
+(years ) 435 X
+GR
+0.0000 GRAY
+GS
+n
+7603 5601 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5399 M
+(work. ) 473 X
+GR
+0.0000 GRAY
+GS
+n
+2748 5399 M
+(Problems ) 739 X
+GR
+0.0000 GRAY
+GS
+n
+3510 5399 M
+(like ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+3846 5399 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+4319 5399 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4666 5399 M
+(gcc ) 283 X
+GR
+0.0000 GRAY
+GS
+n
+4972 5399 M
+(bugs ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+5394 5399 M
+(had ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+5741 5399 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+5951 5399 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+6188 5399 M
+(worked ) 613 X
+GR
+0.0000 GRAY
+GS
+n
+6824 5399 M
+(around. ) 624 X
+GR
+0.0000 GRAY
+GS
+n
+7471 5399 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5197 M
+(C++ ) 362 X
+GR
+0.0000 GRAY
+GS
+n
+2624 5197 M
+(class ) 390 X
+GR
+0.0000 GRAY
+GS
+n
+3020 5197 M
+(design ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+3560 5197 M
+(changed ) 668 X
+GR
+0.0000 GRAY
+GS
+n
+4234 5197 M
+(evolutionary ) 990 X
+GR
+0.0000 GRAY
+GS
+n
+5230 5197 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+5423 5197 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+5554 5197 M
+(flexible ) 583 X
+GR
+0.0000 GRAY
+GS
+n
+6143 5197 M
+(design ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+6683 5197 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+6944 5197 M
+(further ) 562 X
+GR
+0.0000 GRAY
+GS
+n
+7512 5197 M
+(de-) 238 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4995 M
+(velopments. The tool got the name View Designer/X.) 3946 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4693 M
+(View ) 430 X
+GR
+0.0000 GRAY
+GS
+n
+2689 4693 M
+(Designer/X ) 919 X
+GR
+0.0000 GRAY
+GS
+n
+3615 4693 M
+(1.0 ) 250 X
+GR
+0.0000 GRAY
+GS
+n
+3872 4693 M
+(was ) 335 X
+GR
+0.0000 GRAY
+GS
+n
+4214 4693 M
+(distributed ) 862 X
+GR
+0.0000 GRAY
+GS
+n
+5083 4693 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+5317 4693 M
+(German ) 642 X
+GR
+0.0000 GRAY
+GS
+n
+5966 4693 M
+(Linux ) 477 X
+GR
+0.0000 GRAY
+GS
+n
+6450 4693 M
+(distributer ) 826 X
+GR
+0.0000 GRAY
+GS
+n
+7283 4693 M
+(Unifix ) 509 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4491 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+2591 4491 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+2824 4491 M
+(BREDEX, ) 741 X
+GR
+0.0000 GRAY
+GS
+n
+3571 4491 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3702 4491 M
+(company ) 727 X
+GR
+0.0000 GRAY
+GS
+n
+4435 4491 M
+(well ) 359 X
+GR
+0.0000 GRAY
+GS
+n
+4800 4491 M
+(known ) 559 X
+GR
+0.0000 GRAY
+GS
+n
+5365 4491 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+5626 4491 M
+(its ) 216 X
+GR
+0.0000 GRAY
+GS
+n
+5848 4491 M
+(Motif ) 450 X
+GR
+0.0000 GRAY
+GS
+n
+6304 4491 M
+(books ) 480 X
+GR
+0.0000 GRAY
+GS
+n
+6790 4491 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+7120 4491 M
+(widgets. ) 672 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4289 M
+(The great feedback we had was the inspiration to work on.) 4330 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3987 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+2738 3987 M
+(release ) 551 X
+GR
+0.0000 GRAY
+GS
+n
+3294 3987 M
+(1.1 ) 250 X
+GR
+0.0000 GRAY
+GS
+n
+3549 3987 M
+(was ) 335 X
+GR
+0.0000 GRAY
+GS
+n
+3889 3987 M
+(ready ) 466 X
+GR
+0.0000 GRAY
+GS
+n
+4360 3987 M
+(we ) 261 X
+GR
+0.0000 GRAY
+GS
+n
+4626 3987 M
+(changed ) 668 X
+GR
+0.0000 GRAY
+GS
+n
+5299 3987 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+5577 3987 M
+(name ) 449 X
+GR
+0.0000 GRAY
+GS
+n
+6031 3987 M
+(from ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+6438 3987 M
+(View ) 430 X
+GR
+0.0000 GRAY
+GS
+n
+6873 3987 M
+(Designer/X ) 919 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3785 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+2459 3785 M
+(abbreviation ) 972 X
+GR
+0.0000 GRAY
+GS
+n
+3451 3785 M
+(VDX, ) 444 X
+GR
+0.0000 GRAY
+GS
+n
+3915 3785 M
+(because ) 623 X
+GR
+0.0000 GRAY
+GS
+n
+4558 3785 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4703 3785 M
+(market ) 565 X
+GR
+0.0000 GRAY
+GS
+n
+5288 3785 M
+(leader ) 502 X
+GR
+0.0000 GRAY
+GS
+n
+5810 3785 M
+(mentioned ) 839 X
+GR
+0.0000 GRAY
+GS
+n
+6669 3785 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+7019 3785 M
+(designing ) 773 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3583 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+2523 3583 M
+(X ) 153 X
+GR
+0.0000 GRAY
+GS
+n
+2694 3583 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+2874 3583 M
+(registered. ) 825 X
+GR
+0.0000 GRAY
+GS
+n
+3717 3583 M
+(Now ) 411 X
+GR
+0.0000 GRAY
+GS
+n
+4146 3583 M
+(we ) 261 X
+GR
+0.0000 GRAY
+GS
+n
+4425 3583 M
+(have ) 396 X
+GR
+0.0000 GRAY
+GS
+n
+4839 3583 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+5259 3583 M
+(1.2 ) 250 X
+GR
+0.0000 GRAY
+GS
+n
+5527 3583 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+5869 3583 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+6200 3583 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+6380 3583 M
+(not ) 284 X
+GR
+0.0000 GRAY
+GS
+n
+6682 3583 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6973 3583 M
+(end ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+7312 3583 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+7519 3583 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3381 M
+(story.) 417 X
+GR
+0.0000 GRAY
+AXFont2p140000 SETFONT
+GS
+n
+750 2754 M
+(New Features) 1215 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 2447 M
+(We ) 289 X
+GR
+0.0000 GRAY
+GS
+n
+2551 2447 M
+(have ) 396 X
+GR
+0.0000 GRAY
+GS
+n
+2948 2447 M
+(improved ) 771 X
+GR
+0.0000 GRAY
+GS
+n
+3720 2447 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3994 2447 M
+(usability ) 683 X
+GR
+0.0000 GRAY
+GS
+n
+4678 2447 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+4868 2447 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+5271 2447 M
+(with ) 381 X
+GR
+0.0000 GRAY
+GS
+n
+5653 2447 M
+(some ) 431 X
+GR
+0.0000 GRAY
+GS
+n
+6085 2447 M
+(changes ) 637 X
+GR
+0.0000 GRAY
+GS
+n
+6723 2447 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+6912 2447 M
+(VDX's ) 519 X
+GR
+0.0000 GRAY
+GS
+n
+7432 2447 M
+(user ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+2250 2245 M
+(interface. These changes will help to be faster on interface design process.) 5421 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 1631 M
+(Attachment Editor) 1516 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 1328 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+2597 1328 M
+(Attachment ) 912 X
+GR
+0.0000 GRAY
+GS
+n
+3535 1328 M
+(Editor ) 506 X
+GR
+0.0000 GRAY
+GS
+n
+4067 1328 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4255 1328 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4406 1328 M
+(convenience ) 955 X
+GR
+0.0000 GRAY
+GS
+n
+5387 1328 M
+(tool ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+5740 1328 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+6021 1328 M
+(XmForm ) 697 X
+GR
+0.0000 GRAY
+GS
+n
+6744 1328 M
+(constraint ) 778 X
+GR
+0.0000 GRAY
+GS
+n
+7548 1328 M
+(re-) 202 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1126 M
+(sources. ) 638 X
+GR
+0.0000 GRAY
+GS
+n
+2923 1126 M
+(It ) 152 X
+GR
+0.0000 GRAY
+GS
+n
+3108 1126 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+3437 1126 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+3684 1126 M
+(reached ) 624 X
+GR
+0.0000 GRAY
+GS
+n
+4341 1126 M
+(via ) 268 X
+GR
+0.0000 GRAY
+GS
+n
+4642 1126 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+5142 1126 M
+(item ) 372 X
+GR
+0.0000 GRAY
+GS
+n
+5547 1126 M
+("Attachments" ) 1107 X
+GR
+0.0000 GRAY
+GS
+n
+6687 1126 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+6908 1126 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7214 1126 M
+(context ) 578 X
+GR
+%%PageTrailer
+AXPageSave restore
+showpage
+%%Page: 2 2
+%%BeginPageSetup
+save /AXPageSave exch def
+DOSETUP
+%%EndPageSetup
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+750 10595 M
+(VDX 1.2 - Release Notes) 1781 X
+GR
+0.0000 GRAY
+GS
+n
+750 397 M
+(July 10, 1997) 923 X
+GR
+0.0000 GRAY
+GS
+n
+6954 397 M
+(Page ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+7353 397 M
+(2) 83 X
+GR
+0.0000 GRAY
+GS
+n
+7436 397 M
+( of ) 231 X
+GR
+0.0000 GRAY
+GS
+n
+7667 397 M
+(4) 83 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9845 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+2727 9845 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+2926 9845 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3061 9845 M
+(XmForm ) 697 X
+GR
+0.0000 GRAY
+GS
+n
+3768 9845 M
+(widget. ) 601 X
+GR
+0.0000 GRAY
+GS
+n
+4379 9845 M
+(An ) 269 X
+GR
+0.0000 GRAY
+GS
+n
+4658 9845 M
+(Icon ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+5028 9845 M
+(View ) 430 X
+GR
+0.0000 GRAY
+GS
+n
+5468 9845 M
+(displays ) 660 X
+GR
+0.0000 GRAY
+GS
+n
+6138 9845 M
+(all ) 223 X
+GR
+0.0000 GRAY
+GS
+n
+6371 9845 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6654 9845 M
+(children ) 656 X
+GR
+0.0000 GRAY
+GS
+n
+7320 9845 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+7519 9845 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9643 M
+(Form ) 439 X
+GR
+0.0000 GRAY
+GS
+n
+2726 9643 M
+(widget. ) 601 X
+GR
+0.0000 GRAY
+GS
+n
+3357 9643 M
+(By ) 237 X
+GR
+0.0000 GRAY
+GS
+n
+3624 9643 M
+(selecting ) 689 X
+GR
+0.0000 GRAY
+GS
+n
+4343 9643 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4498 9643 M
+(child ) 413 X
+GR
+0.0000 GRAY
+GS
+n
+4941 9643 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+5244 9643 M
+(current ) 580 X
+GR
+0.0000 GRAY
+GS
+n
+5854 9643 M
+(attachment ) 865 X
+GR
+0.0000 GRAY
+GS
+n
+6749 9643 M
+(resources ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+7521 9643 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9441 M
+(displayed ) 771 X
+GR
+0.0000 GRAY
+GS
+n
+3043 9441 M
+(on ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+3290 9441 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3580 9441 M
+(right ) 401 X
+GR
+0.0000 GRAY
+GS
+n
+3998 9441 M
+(side ) 344 X
+GR
+0.0000 GRAY
+GS
+n
+4359 9441 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+4565 9441 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4855 9441 M
+(window. ) 701 X
+GR
+0.0000 GRAY
+GS
+n
+5573 9441 M
+(After ) 428 X
+GR
+0.0000 GRAY
+GS
+n
+6018 9441 M
+(changing ) 725 X
+GR
+0.0000 GRAY
+GS
+n
+6760 9441 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7050 9441 M
+(resources ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9239 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+2590 9239 M
+(selecting ) 689 X
+GR
+0.0000 GRAY
+GS
+n
+3289 9239 M
+(another ) 610 X
+GR
+0.0000 GRAY
+GS
+n
+3909 9239 M
+(child ) 413 X
+GR
+0.0000 GRAY
+GS
+n
+4332 9239 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4615 9239 M
+(resources ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+5367 9239 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+5648 9239 M
+(saved ) 472 X
+GR
+0.0000 GRAY
+GS
+n
+6130 9239 M
+(but ) 289 X
+GR
+0.0000 GRAY
+GS
+n
+6429 9239 M
+(not ) 284 X
+GR
+0.0000 GRAY
+GS
+n
+6723 9239 M
+(applied. ) 647 X
+GR
+0.0000 GRAY
+GS
+n
+7380 9239 M
+(Only ) 412 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9037 M
+(when ) 455 X
+GR
+0.0000 GRAY
+GS
+n
+2725 9037 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3014 9037 M
+(Apply ) 514 X
+GR
+0.0000 GRAY
+GS
+n
+3544 9037 M
+(button ) 531 X
+GR
+0.0000 GRAY
+GS
+n
+4091 9037 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4269 9037 M
+(clicked ) 563 X
+GR
+0.0000 GRAY
+GS
+n
+4848 9037 M
+(all ) 223 X
+GR
+0.0000 GRAY
+GS
+n
+5087 9037 M
+(changes ) 637 X
+GR
+0.0000 GRAY
+GS
+n
+5740 9037 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+5945 9037 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6234 9037 M
+(children ) 656 X
+GR
+0.0000 GRAY
+GS
+n
+6906 9037 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+7250 9037 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+7480 9037 M
+(vis-) 270 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8835 M
+(ible in the WYSIWYG View.) 2072 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 8221 M
+(Global Resources) 1445 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 7918 M
+(In ) 195 X
+GR
+0.0000 GRAY
+GS
+n
+2466 7918 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+2608 7918 M
+(simple ) 538 X
+GR
+0.0000 GRAY
+GS
+n
+3163 7918 M
+(text ) 316 X
+GR
+0.0000 GRAY
+GS
+n
+3496 7918 M
+(editor ) 484 X
+GR
+0.0000 GRAY
+GS
+n
+3997 7918 M
+(global ) 499 X
+GR
+0.0000 GRAY
+GS
+n
+4513 7918 M
+(resources ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+5272 7918 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+5585 7918 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+5816 7918 M
+(set. ) 289 X
+GR
+0.0000 GRAY
+GS
+n
+6122 7918 M
+(You ) 345 X
+GR
+0.0000 GRAY
+GS
+n
+6484 7918 M
+(have ) 396 X
+GR
+0.0000 GRAY
+GS
+n
+6897 7918 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+7101 7918 M
+(write ) 430 X
+GR
+0.0000 GRAY
+GS
+n
+7548 7918 M
+(re-) 202 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7716 M
+(sources ) 596 X
+GR
+0.0000 GRAY
+GS
+n
+2877 7716 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+3087 7716 M
+(X ) 153 X
+GR
+0.0000 GRAY
+GS
+n
+3262 7716 M
+(resource ) 671 X
+GR
+0.0000 GRAY
+GS
+n
+3955 7716 M
+(file ) 276 X
+GR
+0.0000 GRAY
+GS
+n
+4253 7716 M
+(syntax. ) 568 X
+GR
+0.0000 GRAY
+GS
+n
+4843 7716 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+5186 7716 M
+(Font ) 377 X
+GR
+0.0000 GRAY
+GS
+n
+5585 7716 M
+(Chooser ) 656 X
+GR
+0.0000 GRAY
+GS
+n
+6263 7716 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+6609 7716 M
+(Color ) 457 X
+GR
+0.0000 GRAY
+GS
+n
+7088 7716 M
+(Selection ) 704 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7514 M
+(window ) 659 X
+GR
+0.0000 GRAY
+GS
+n
+2949 7514 M
+(known ) 559 X
+GR
+0.0000 GRAY
+GS
+n
+3544 7514 M
+(from ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+3982 7514 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4291 7514 M
+(Widget ) 587 X
+GR
+0.0000 GRAY
+GS
+n
+4914 7514 M
+(Resource ) 716 X
+GR
+0.0000 GRAY
+GS
+n
+5666 7514 M
+(Editor ) 506 X
+GR
+0.0000 GRAY
+GS
+n
+6208 7514 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+6515 7514 M
+(available ) 704 X
+GR
+0.0000 GRAY
+GS
+n
+7255 7514 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+7479 7514 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7312 M
+(view ) 404 X
+GR
+0.0000 GRAY
+GS
+n
+2687 7312 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+2901 7312 M
+(help ) 368 X
+GR
+0.0000 GRAY
+GS
+n
+3296 7312 M
+(specifying ) 804 X
+GR
+0.0000 GRAY
+GS
+n
+4127 7312 M
+(color ) 413 X
+GR
+0.0000 GRAY
+GS
+n
+4567 7312 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4918 7312 M
+(font ) 340 X
+GR
+0.0000 GRAY
+GS
+n
+5285 7312 M
+(values. ) 562 X
+GR
+0.0000 GRAY
+GS
+n
+5874 7312 M
+(After ) 428 X
+GR
+0.0000 GRAY
+GS
+n
+6329 7312 M
+(pressing ) 669 X
+GR
+0.0000 GRAY
+GS
+n
+7025 7312 M
+(apply ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+7519 7312 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7110 M
+(changes ) 637 X
+GR
+0.0000 GRAY
+GS
+n
+2899 7110 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3036 7110 M
+(visible ) 526 X
+GR
+0.0000 GRAY
+GS
+n
+3574 7110 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+3774 7110 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4059 7110 M
+(WYSIWYG ) 869 X
+GR
+0.0000 GRAY
+GS
+n
+4940 7110 M
+(view. ) 446 X
+GR
+0.0000 GRAY
+GS
+n
+5398 7110 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+5893 7110 M
+(you ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+6232 7110 M
+(generate ) 675 X
+GR
+0.0000 GRAY
+GS
+n
+6919 7110 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7204 7110 M
+(project, ) 588 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6908 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2545 6908 M
+(global ) 499 X
+GR
+0.0000 GRAY
+GS
+n
+3060 6908 M
+(resources ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+3818 6908 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+4105 6908 M
+(written ) 581 X
+GR
+0.0000 GRAY
+GS
+n
+4702 6908 M
+(into ) 333 X
+GR
+0.0000 GRAY
+GS
+n
+5051 6908 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+5192 6908 M
+(file ) 276 X
+GR
+0.0000 GRAY
+GS
+n
+5484 6908 M
+(named ) 551 X
+GR
+0.0000 GRAY
+GS
+n
+6051 6908 M
+(<ApplClass>.rf, ) 1221 X
+GR
+0.0000 GRAY
+GS
+n
+7288 6908 M
+(where ) 504 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6706 M
+(ApplClass is the application class of your project.) 3637 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 6092 M
+(Transforming a Widget) 1922 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 5789 M
+(In ) 195 X
+GR
+0.0000 GRAY
+GS
+n
+2491 5789 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2809 5789 M
+(context ) 578 X
+GR
+0.0000 GRAY
+GS
+n
+3432 5789 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+3944 5789 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4114 5789 M
+(new ) 358 X
+GR
+0.0000 GRAY
+GS
+n
+4517 5789 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+5029 5789 M
+(item ) 372 X
+GR
+0.0000 GRAY
+GS
+n
+5446 5789 M
+(named ) 551 X
+GR
+0.0000 GRAY
+GS
+n
+6042 5789 M
+("Transform" ) 945 X
+GR
+0.0000 GRAY
+GS
+n
+7032 5789 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+7239 5789 M
+(added. ) 553 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5587 M
+(Choosing ) 749 X
+GR
+0.0000 GRAY
+GS
+n
+3059 5587 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+3425 5587 M
+(item ) 372 X
+GR
+0.0000 GRAY
+GS
+n
+3850 5587 M
+(opens ) 481 X
+GR
+0.0000 GRAY
+GS
+n
+4384 5587 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4710 5587 M
+(Transform ) 821 X
+GR
+0.0000 GRAY
+GS
+n
+5584 5587 M
+(Dialog. ) 578 X
+GR
+0.0000 GRAY
+GS
+n
+6215 5587 M
+(Using ) 482 X
+GR
+0.0000 GRAY
+GS
+n
+6750 5587 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+7116 5587 M
+(you ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+7496 5587 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5385 M
+(change ) 566 X
+GR
+0.0000 GRAY
+GS
+n
+2822 5385 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3099 5385 M
+(class ) 390 X
+GR
+0.0000 GRAY
+GS
+n
+3493 5385 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+3686 5385 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3815 5385 M
+(widget. ) 601 X
+GR
+0.0000 GRAY
+GS
+n
+4420 5385 M
+(Please ) 506 X
+GR
+0.0000 GRAY
+GS
+n
+4930 5385 M
+(note ) 364 X
+GR
+0.0000 GRAY
+GS
+n
+5298 5385 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+5632 5385 M
+(all ) 223 X
+GR
+0.0000 GRAY
+GS
+n
+5859 5385 M
+(resource ) 671 X
+GR
+0.0000 GRAY
+GS
+n
+6534 5385 M
+(settings ) 611 X
+GR
+0.0000 GRAY
+GS
+n
+7149 5385 M
+(not ) 284 X
+GR
+0.0000 GRAY
+GS
+n
+7437 5385 M
+(pro-) 313 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5183 M
+(vided by the new widget class will be lost.) 3125 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 4569 M
+(Creating Widgets in Browser) 2376 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 4266 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+2572 4266 M
+(new ) 358 X
+GR
+0.0000 GRAY
+GS
+n
+2930 4266 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+3397 4266 M
+("Create" ) 647 X
+GR
+0.0000 GRAY
+GS
+n
+4044 4266 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+4232 4266 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4505 4266 M
+(Widget ) 587 X
+GR
+0.0000 GRAY
+GS
+n
+5092 4266 M
+(Tree ) 370 X
+GR
+0.0000 GRAY
+GS
+n
+5462 4266 M
+(Browser ) 657 X
+GR
+0.0000 GRAY
+GS
+n
+6119 4266 M
+(enables ) 594 X
+GR
+0.0000 GRAY
+GS
+n
+6713 4266 M
+(you ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+7040 4266 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7313 4266 M
+(create ) 479 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4064 M
+(widgets ) 630 X
+GR
+0.0000 GRAY
+GS
+n
+2886 4064 M
+(without ) 627 X
+GR
+0.0000 GRAY
+GS
+n
+3515 4064 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3790 4064 M
+(WYSIWYG ) 869 X
+GR
+0.0000 GRAY
+GS
+n
+4661 4064 M
+(View. ) 472 X
+GR
+0.0000 GRAY
+GS
+n
+5135 4064 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+5498 4064 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+5828 4064 M
+(make ) 445 X
+GR
+0.0000 GRAY
+GS
+n
+6275 4064 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6550 4064 M
+(creation ) 636 X
+GR
+0.0000 GRAY
+GS
+n
+7188 4064 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+7379 4064 M
+(large ) 413 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3862 M
+(hierarchies ) 854 X
+GR
+0.0000 GRAY
+GS
+n
+3143 3862 M
+(easier. ) 513 X
+GR
+0.0000 GRAY
+GS
+n
+3694 3862 M
+(If ) 154 X
+GR
+0.0000 GRAY
+GS
+n
+3886 3862 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+4049 3862 M
+(widget ) 559 X
+GR
+0.0000 GRAY
+GS
+n
+4646 3862 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4846 3862 M
+(created ) 581 X
+GR
+0.0000 GRAY
+GS
+n
+5465 3862 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+5691 3862 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+6059 3862 M
+(way, ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+6496 3862 M
+(no ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+6764 3862 M
+(geometry ) 746 X
+GR
+0.0000 GRAY
+GS
+n
+7548 3862 M
+(re-) 202 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3660 M
+(sources ) 596 X
+GR
+0.0000 GRAY
+GS
+n
+2880 3660 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+3180 3660 M
+(set. ) 289 X
+GR
+0.0000 GRAY
+GS
+n
+3498 3660 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+3888 3660 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4079 3660 M
+(an ) 222 X
+GR
+0.0000 GRAY
+GS
+n
+4330 3660 M
+(imported ) 731 X
+GR
+0.0000 GRAY
+GS
+n
+5090 3660 M
+(difference ) 782 X
+GR
+0.0000 GRAY
+GS
+n
+5901 3660 M
+(because ) 623 X
+GR
+0.0000 GRAY
+GS
+n
+6553 3660 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6855 3660 M
+(geometry ) 746 X
+GR
+0.0000 GRAY
+GS
+n
+7630 3660 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3458 M
+(handled ) 652 X
+GR
+0.0000 GRAY
+GS
+n
+2934 3458 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+3189 3458 M
+(Motif's ) 567 X
+GR
+0.0000 GRAY
+GS
+n
+3784 3458 M
+(geometry ) 746 X
+GR
+0.0000 GRAY
+GS
+n
+4558 3458 M
+(manager. ) 733 X
+GR
+0.0000 GRAY
+GS
+n
+5319 3458 M
+(For ) 292 X
+GR
+0.0000 GRAY
+GS
+n
+5639 3458 M
+(localized ) 702 X
+GR
+0.0000 GRAY
+GS
+n
+6369 3458 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+6721 3458 M
+(font ) 340 X
+GR
+0.0000 GRAY
+GS
+n
+7089 3458 M
+(indepen-) 661 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3256 M
+(dent software this is a necessary feature.) 2976 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 2642 M
+(Popup Menus) 1156 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 2339 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+2744 2339 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+2878 2339 M
+(popup ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+3421 2339 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+3897 2339 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4068 2339 M
+(created ) 581 X
+GR
+0.0000 GRAY
+GS
+n
+4658 2339 M
+(it ) 145 X
+GR
+0.0000 GRAY
+GS
+n
+4812 2339 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+5149 2339 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+5372 2339 M
+(automatically ) 1052 X
+GR
+0.0000 GRAY
+GS
+n
+6433 2339 M
+(bound ) 525 X
+GR
+0.0000 GRAY
+GS
+n
+6967 2339 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+7163 2339 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7445 2339 M
+(par-) 305 X
+GR
+0.0000 GRAY
+GS
+n
+2250 2137 M
+(ent ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2560 2137 M
+(widget. ) 601 X
+GR
+0.0000 GRAY
+GS
+n
+3188 2137 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+3698 2137 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3998 2137 M
+(right ) 401 X
+GR
+0.0000 GRAY
+GS
+n
+4426 2137 M
+(mouse ) 532 X
+GR
+0.0000 GRAY
+GS
+n
+4985 2137 M
+(button ) 531 X
+GR
+0.0000 GRAY
+GS
+n
+5543 2137 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+5732 2137 M
+(pressed ) 612 X
+GR
+0.0000 GRAY
+GS
+n
+6371 2137 M
+(on ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+6628 2137 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6928 2137 M
+(parent, ) 564 X
+GR
+0.0000 GRAY
+GS
+n
+7519 2137 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1935 M
+(popup ) 534 X
+GR
+0.0000 GRAY
+GS
+n
+2797 1935 M
+(menu ) 467 X
+GR
+0.0000 GRAY
+GS
+n
+3271 1935 M
+(appears. ) 667 X
+GR
+0.0000 GRAY
+GS
+n
+3945 1935 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+4313 1935 M
+(behavior ) 694 X
+GR
+0.0000 GRAY
+GS
+n
+5014 1935 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+5183 1935 M
+(available ) 704 X
+GR
+0.0000 GRAY
+GS
+n
+5894 1935 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+6089 1935 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6369 1935 M
+(WYSIWYG ) 869 X
+GR
+0.0000 GRAY
+GS
+n
+7245 1935 M
+(View's ) 547 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1733 M
+(test mode and in the generated application.) 3196 X
+GR
+%%PageTrailer
+AXPageSave restore
+showpage
+%%Page: 3 3
+%%BeginPageSetup
+save /AXPageSave exch def
+DOSETUP
+%%EndPageSetup
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+750 10595 M
+(VDX 1.2 - Release Notes) 1781 X
+GR
+0.0000 GRAY
+GS
+n
+750 397 M
+(July 10, 1997) 923 X
+GR
+0.0000 GRAY
+GS
+n
+6954 397 M
+(Page ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+7353 397 M
+(3) 83 X
+GR
+0.0000 GRAY
+GS
+n
+7436 397 M
+( of ) 231 X
+GR
+0.0000 GRAY
+GS
+n
+7667 397 M
+(4) 83 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 9533 M
+(Keyboard Traversal for Icon and Tree Views) 3650 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 9230 M
+(Navigation ) 874 X
+GR
+0.0000 GRAY
+GS
+n
+3141 9230 M
+(using ) 453 X
+GR
+0.0000 GRAY
+GS
+n
+3600 9230 M
+(keyboard ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+4348 9230 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+4516 9230 M
+(added ) 511 X
+GR
+0.0000 GRAY
+GS
+n
+5033 9230 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+5226 9230 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+5505 9230 M
+(Icon ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+5871 9230 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+6201 9230 M
+(Tree ) 370 X
+GR
+0.0000 GRAY
+GS
+n
+6577 9230 M
+(Views. ) 543 X
+GR
+0.0000 GRAY
+GS
+n
+7126 9230 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+7453 9230 M
+(cur-) 297 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9028 M
+(rent ) 339 X
+GR
+0.0000 GRAY
+GS
+n
+2604 9028 M
+(selected ) 632 X
+GR
+0.0000 GRAY
+GS
+n
+3237 9028 M
+(icon ) 353 X
+GR
+0.0000 GRAY
+GS
+n
+3591 9028 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+3754 9028 M
+(changed ) 668 X
+GR
+0.0000 GRAY
+GS
+n
+4423 9028 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+4651 9028 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4925 9028 M
+(cursor ) 511 X
+GR
+0.0000 GRAY
+GS
+n
+5437 9028 M
+(keys ) 379 X
+GR
+0.0000 GRAY
+GS
+n
+5817 9028 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+6142 9028 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+6370 9028 M
+(pressing ) 669 X
+GR
+0.0000 GRAY
+GS
+n
+7040 9028 M
+('+' ) 235 X
+GR
+0.0000 GRAY
+GS
+n
+7276 9028 M
+(or ) 199 X
+GR
+0.0000 GRAY
+GS
+n
+7476 9028 M
+('-' ) 190 X
+GR
+0.0000 GRAY
+GS
+n
+7667 9028 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8826 M
+(subtree ) 586 X
+GR
+0.0000 GRAY
+GS
+n
+2864 8826 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+3048 8826 M
+(collapsed ) 741 X
+GR
+0.0000 GRAY
+GS
+n
+3811 8826 M
+(or ) 199 X
+GR
+0.0000 GRAY
+GS
+n
+4032 8826 M
+(expanded. ) 814 X
+GR
+0.0000 GRAY
+GS
+n
+4868 8826 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+5251 8826 M
+(keyboard ) 742 X
+GR
+0.0000 GRAY
+GS
+n
+6015 8826 M
+(support ) 625 X
+GR
+0.0000 GRAY
+GS
+n
+6662 8826 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+6846 8826 M
+(very ) 375 X
+GR
+0.0000 GRAY
+GS
+n
+7243 8826 M
+(usefull ) 549 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8624 M
+(when widgets are renamed.) 2053 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 8010 M
+(Version Control) 1325 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 7707 M
+(A ) 172 X
+GR
+0.0000 GRAY
+GS
+n
+2442 7707 M
+(little ) 377 X
+GR
+0.0000 GRAY
+GS
+n
+2834 7707 M
+(interface ) 681 X
+GR
+0.0000 GRAY
+GS
+n
+3530 7707 M
+(enables ) 594 X
+GR
+0.0000 GRAY
+GS
+n
+4139 7707 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+4341 7707 M
+(integrate ) 698 X
+GR
+0.0000 GRAY
+GS
+n
+5054 7707 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+5471 7707 M
+(into ) 333 X
+GR
+0.0000 GRAY
+GS
+n
+5819 7707 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+5959 7707 M
+(revision ) 639 X
+GR
+0.0000 GRAY
+GS
+n
+6613 7707 M
+(control ) 564 X
+GR
+0.0000 GRAY
+GS
+n
+7192 7707 M
+(system. ) 600 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7505 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+2744 7505 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+2874 7505 M
+(file ) 276 X
+GR
+0.0000 GRAY
+GS
+n
+3155 7505 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+3322 7505 M
+(opened, ) 634 X
+GR
+0.0000 GRAY
+GS
+n
+3961 7505 M
+(saved ) 472 X
+GR
+0.0000 GRAY
+GS
+n
+4438 7505 M
+(or ) 199 X
+GR
+0.0000 GRAY
+GS
+n
+4642 7505 M
+(close ) 407 X
+GR
+0.0000 GRAY
+GS
+n
+5054 7505 M
+(some ) 431 X
+GR
+0.0000 GRAY
+GS
+n
+5490 7505 M
+(shell ) 388 X
+GR
+0.0000 GRAY
+GS
+n
+5883 7505 M
+(scripts ) 527 X
+GR
+0.0000 GRAY
+GS
+n
+6415 7505 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+6748 7505 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+6967 7505 M
+(run. ) 348 X
+GR
+0.0000 GRAY
+GS
+n
+7320 7505 M
+(These ) 472 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7303 M
+(scripts ) 527 X
+GR
+0.0000 GRAY
+GS
+n
+2784 7303 M
+(\(vcopen, ) 676 X
+GR
+0.0000 GRAY
+GS
+n
+3467 7303 M
+(vcsave ) 538 X
+GR
+0.0000 GRAY
+GS
+n
+4012 7303 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4343 7303 M
+(vcclose\) ) 631 X
+GR
+0.0000 GRAY
+GS
+n
+4981 7303 M
+(are ) 271 X
+GR
+0.0000 GRAY
+GS
+n
+5259 7303 M
+(prepared ) 719 X
+GR
+0.0000 GRAY
+GS
+n
+5985 7303 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+6179 7303 M
+(handle ) 550 X
+GR
+0.0000 GRAY
+GS
+n
+6736 7303 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+7016 7303 M
+(RCS ) 359 X
+GR
+0.0000 GRAY
+GS
+n
+7382 7303 M
+(com-) 368 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7101 M
+(mands ) 542 X
+GR
+0.0000 GRAY
+GS
+n
+2813 7101 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+3082 7101 M
+(check-in ) 662 X
+GR
+0.0000 GRAY
+GS
+n
+3758 7101 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4096 7101 M
+(check-out. ) 804 X
+GR
+0.0000 GRAY
+GS
+n
+4914 7101 M
+(Using ) 482 X
+GR
+0.0000 GRAY
+GS
+n
+5410 7101 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+5697 7101 M
+(toggle ) 502 X
+GR
+0.0000 GRAY
+GS
+n
+6213 7101 M
+(button ) 531 X
+GR
+0.0000 GRAY
+GS
+n
+6758 7101 M
+(Version ) 616 X
+GR
+0.0000 GRAY
+GS
+n
+7388 7101 M
+(Con-) 362 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6899 M
+(trol ) 302 X
+GR
+0.0000 GRAY
+GS
+n
+2556 6899 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+2748 6899 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3025 6899 M
+(Generic ) 615 X
+GR
+0.0000 GRAY
+GS
+n
+3644 6899 M
+(Options ) 635 X
+GR
+0.0000 GRAY
+GS
+n
+4283 6899 M
+(Dialog ) 536 X
+GR
+0.0000 GRAY
+GS
+n
+4823 6899 M
+(this ) 313 X
+GR
+0.0000 GRAY
+GS
+n
+5140 6899 M
+(behavior ) 694 X
+GR
+0.0000 GRAY
+GS
+n
+5838 6899 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+6138 6899 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+6356 6899 M
+(switched ) 708 X
+GR
+0.0000 GRAY
+GS
+n
+7068 6899 M
+(on ) 230 X
+GR
+0.0000 GRAY
+GS
+n
+7302 6899 M
+(or ) 199 X
+GR
+0.0000 GRAY
+GS
+n
+7505 6899 M
+(off. ) 287 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6697 M
+(Feel ) 344 X
+GR
+0.0000 GRAY
+GS
+n
+2611 6697 M
+(free ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+2947 6697 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+3146 6697 M
+(change ) 566 X
+GR
+0.0000 GRAY
+GS
+n
+3724 6697 M
+(these ) 424 X
+GR
+0.0000 GRAY
+GS
+n
+4160 6697 M
+(scripts ) 527 X
+GR
+0.0000 GRAY
+GS
+n
+4699 6697 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+4898 6697 M
+(integrate ) 698 X
+GR
+0.0000 GRAY
+GS
+n
+5608 6697 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+6022 6697 M
+(into ) 333 X
+GR
+0.0000 GRAY
+GS
+n
+6367 6697 M
+(your ) 393 X
+GR
+0.0000 GRAY
+GS
+n
+6772 6697 M
+(own ) 369 X
+GR
+0.0000 GRAY
+GS
+n
+7153 6697 M
+(revision ) 639 X
+GR
+0.0000 GRAY
+GS
+n
+2250 6495 M
+(control system.) 1122 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 5881 M
+(vdxgen) 600 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 5578 M
+(When ) 483 X
+GR
+0.0000 GRAY
+GS
+n
+2777 5578 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3089 5578 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+3530 5578 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+3731 5578 M
+(invoked ) 648 X
+GR
+0.0000 GRAY
+GS
+n
+4418 5578 M
+(by ) 227 X
+GR
+0.0000 GRAY
+GS
+n
+4684 5578 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4996 5578 M
+(command ) 783 X
+GR
+0.0000 GRAY
+GS
+n
+5818 5578 M
+(vdxgen ) 594 X
+GR
+0.0000 GRAY
+GS
+n
+6451 5578 M
+(it ) 145 X
+GR
+0.0000 GRAY
+GS
+n
+6635 5578 M
+(generates ) 746 X
+GR
+0.0000 GRAY
+GS
+n
+7420 5578 M
+(only ) 372 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5376 M
+(source ) 525 X
+GR
+0.0000 GRAY
+GS
+n
+2788 5376 M
+(code ) 389 X
+GR
+0.0000 GRAY
+GS
+n
+3178 5376 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+3434 5376 M
+(an ) 222 X
+GR
+0.0000 GRAY
+GS
+n
+3657 5376 M
+(interface. ) 723 X
+GR
+0.0000 GRAY
+GS
+n
+4381 5376 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+4743 5376 M
+(command ) 783 X
+GR
+0.0000 GRAY
+GS
+n
+5527 5376 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+5824 5376 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+6039 5376 M
+(used ) 396 X
+GR
+0.0000 GRAY
+GS
+n
+6436 5376 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+6625 5376 M
+(make ) 445 X
+GR
+0.0000 GRAY
+GS
+n
+7071 5376 M
+(rules. ) 451 X
+GR
+0.0000 GRAY
+GS
+n
+7523 5376 M
+(It's ) 269 X
+GR
+0.0000 GRAY
+GS
+n
+2250 5174 M
+(not ) 284 X
+GR
+0.0000 GRAY
+GS
+n
+2571 5174 M
+(necessary ) 757 X
+GR
+0.0000 GRAY
+GS
+n
+3359 5174 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+3577 5174 M
+(start ) 370 X
+GR
+0.0000 GRAY
+GS
+n
+3978 5174 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4282 5174 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+4715 5174 M
+(for ) 255 X
+GR
+0.0000 GRAY
+GS
+n
+5001 5174 M
+(generating ) 834 X
+GR
+0.0000 GRAY
+GS
+n
+5866 5174 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6170 5174 M
+(interfaces. ) 794 X
+GR
+0.0000 GRAY
+GS
+n
+6995 5174 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+7347 5174 M
+(make ) 445 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4972 M
+(rules ) 409 X
+GR
+0.0000 GRAY
+GS
+n
+2679 4972 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+3027 4972 M
+(generate ) 675 X
+GR
+0.0000 GRAY
+GS
+n
+3722 4972 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4015 4972 M
+(source ) 525 X
+GR
+0.0000 GRAY
+GS
+n
+4560 4972 M
+(code ) 389 X
+GR
+0.0000 GRAY
+GS
+n
+4969 4972 M
+(when ) 455 X
+GR
+0.0000 GRAY
+GS
+n
+5444 4972 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+5737 4972 M
+(interface ) 681 X
+GR
+0.0000 GRAY
+GS
+n
+6438 4972 M
+(file ) 276 X
+GR
+0.0000 GRAY
+GS
+n
+6734 4972 M
+(\(*.i\) ) 310 X
+GR
+0.0000 GRAY
+GS
+n
+7064 4972 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+7246 4972 M
+(newer. ) 546 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4770 M
+(The command vdxgen can be started in that way:) 3635 X
+GR
+0.0000 GRAY
+AXFont4p100000 SETFONT
+GS
+n
+2593 4513 M
+(vdxgen GenerationModel InterfaceFile DestinationSourceFile) 4814 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 4236 M
+(If you want to add vdxgen to your makefile rules, here is an example:) 5132 X
+GR
+0.0000 GRAY
+AXFont4p100000 SETFONT
+GS
+n
+2250 3979 M
+(%.rf: %.i) 747 X
+GR
+0.0000 GRAY
+GS
+n
+2750 3747 M
+(vdxgen c++ $< $@) 1328 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3515 M
+(%_base.C: %.i) 1079 X
+GR
+0.0000 GRAY
+GS
+n
+2750 3283 M
+(vdxgen c++ $< $@) 1328 X
+GR
+0.0000 GRAY
+GS
+n
+2250 3051 M
+(%_base.h: %.i) 1079 X
+GR
+0.0000 GRAY
+GS
+n
+2750 2819 M
+(vdxgen c++ $< $@) 1328 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 2542 M
+(Please ) 506 X
+GR
+0.0000 GRAY
+GS
+n
+2774 2542 M
+(note ) 364 X
+GR
+0.0000 GRAY
+GS
+n
+3154 2542 M
+(that ) 330 X
+GR
+0.0000 GRAY
+GS
+n
+3500 2542 M
+(if ) 147 X
+GR
+0.0000 GRAY
+GS
+n
+3663 2542 M
+(you ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+4006 2542 M
+(save ) 370 X
+GR
+0.0000 GRAY
+GS
+n
+4392 2542 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+4681 2542 M
+(project ) 546 X
+GR
+0.0000 GRAY
+GS
+n
+5243 2542 M
+(from ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+5661 2542 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+6079 2542 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6368 2542 M
+(next ) 359 X
+GR
+0.0000 GRAY
+GS
+n
+6743 2542 M
+(make ) 445 X
+GR
+0.0000 GRAY
+GS
+n
+7204 2542 M
+(will ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+7548 2542 M
+(re-) 202 X
+GR
+0.0000 GRAY
+GS
+n
+2250 2340 M
+(build all the files.) 1278 X
+GR
+%%PageTrailer
+AXPageSave restore
+showpage
+%%Page: 4 4
+%%BeginPageSetup
+save /AXPageSave exch def
+DOSETUP
+%%EndPageSetup
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+750 10595 M
+(VDX 1.2 - Release Notes) 1781 X
+GR
+0.0000 GRAY
+GS
+n
+750 397 M
+(July 10, 1997) 923 X
+GR
+0.0000 GRAY
+GS
+n
+6954 397 M
+(Page ) 399 X
+GR
+0.0000 GRAY
+GS
+n
+7353 397 M
+(4) 83 X
+GR
+0.0000 GRAY
+GS
+n
+7436 397 M
+( of ) 231 X
+GR
+0.0000 GRAY
+GS
+n
+7667 397 M
+(4) 83 X
+GR
+0.0000 GRAY
+AXFont2p140000 SETFONT
+GS
+n
+750 9520 M
+(New Documentation \(not available in beta release\)) 4507 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 9213 M
+(Besides ) 597 X
+GR
+0.0000 GRAY
+GS
+n
+2864 9213 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+3151 9213 M
+(User ) 389 X
+GR
+0.0000 GRAY
+GS
+n
+3554 9213 M
+(Guide ) 501 X
+GR
+0.0000 GRAY
+GS
+n
+4069 9213 M
+(new ) 358 X
+GR
+0.0000 GRAY
+GS
+n
+4441 9213 M
+(documentation ) 1162 X
+GR
+0.0000 GRAY
+GS
+n
+5617 9213 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+5793 9213 M
+(available. ) 746 X
+GR
+0.0000 GRAY
+GS
+n
+6553 9213 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+6888 9213 M
+(User ) 389 X
+GR
+0.0000 GRAY
+GS
+n
+7291 9213 M
+(Guide ) 501 X
+GR
+0.0000 GRAY
+GS
+n
+2250 9011 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+2428 9011 M
+(provided ) 726 X
+GR
+0.0000 GRAY
+GS
+n
+3167 9011 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+3368 9011 M
+(English ) 600 X
+GR
+0.0000 GRAY
+GS
+n
+3981 9011 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+4318 9011 M
+(German. ) 684 X
+GR
+0.0000 GRAY
+GS
+n
+5015 9011 M
+(It ) 152 X
+GR
+0.0000 GRAY
+GS
+n
+5180 9011 M
+(describes ) 727 X
+GR
+0.0000 GRAY
+GS
+n
+5920 9011 M
+(the ) 273 X
+GR
+0.0000 GRAY
+GS
+n
+6206 9011 M
+(VDX's ) 519 X
+GR
+0.0000 GRAY
+GS
+n
+6738 9011 M
+(user ) 360 X
+GR
+0.0000 GRAY
+GS
+n
+7111 9011 M
+(interface ) 681 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8809 M
+(and how to create a user interface for another application.) 4261 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8507 M
+(The ) 321 X
+GR
+0.0000 GRAY
+GS
+n
+2605 8507 M
+(new ) 358 X
+GR
+0.0000 GRAY
+GS
+n
+2996 8507 M
+(System ) 575 X
+GR
+0.0000 GRAY
+GS
+n
+3604 8507 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+3961 8507 M
+(Programming ) 1075 X
+GR
+0.0000 GRAY
+GS
+n
+5069 8507 M
+(Guide ) 501 X
+GR
+0.0000 GRAY
+GS
+n
+5603 8507 M
+(is ) 162 X
+GR
+0.0000 GRAY
+GS
+n
+5798 8507 M
+(available ) 704 X
+GR
+0.0000 GRAY
+GS
+n
+6535 8507 M
+(in ) 188 X
+GR
+0.0000 GRAY
+GS
+n
+6756 8507 M
+(English. ) 642 X
+GR
+0.0000 GRAY
+GS
+n
+7431 8507 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+2250 8305 M
+(documentations will discover more secrets of VDX.) 3785 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 7691 M
+(System Guide) 1166 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 7388 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+2628 7388 M
+(new ) 358 X
+GR
+0.0000 GRAY
+GS
+n
+2999 7388 M
+(documentation ) 1162 X
+GR
+0.0000 GRAY
+GS
+n
+4174 7388 M
+(describes ) 727 X
+GR
+0.0000 GRAY
+GS
+n
+4914 7388 M
+(all ) 223 X
+GR
+0.0000 GRAY
+GS
+n
+5150 7388 M
+(system ) 558 X
+GR
+0.0000 GRAY
+GS
+n
+5721 7388 M
+(dependencies ) 1054 X
+GR
+0.0000 GRAY
+GS
+n
+6788 7388 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+6990 7388 M
+(VDX. ) 444 X
+GR
+0.0000 GRAY
+GS
+n
+7447 7388 M
+(You ) 345 X
+GR
+0.0000 GRAY
+GS
+n
+2250 7186 M
+(will learn:) 745 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 6871 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 6871 M
+(How to install VDX.) 1494 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 6554 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 6554 M
+(Which files the VDX consist of.) 2286 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 6237 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 6237 M
+(Resources for VDX's options.) 2156 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 5920 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 5920 M
+(Integrate VDX into a revision control system.) 3326 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 5603 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 5603 M
+(Usage of vdxgen.) 1282 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 5286 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 5286 M
+(How to install license keys.) 2013 X
+GR
+0.0000 GRAY
+AXFont2p130000 SETFONT
+GS
+n
+750 4670 M
+(Programming Guide) 1697 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 4367 M
+(This ) 361 X
+GR
+0.0000 GRAY
+GS
+n
+2612 4367 M
+(documentation ) 1162 X
+GR
+0.0000 GRAY
+GS
+n
+3774 4367 M
+(explains ) 657 X
+GR
+0.0000 GRAY
+GS
+n
+4431 4367 M
+(common ) 689 X
+GR
+0.0000 GRAY
+GS
+n
+5120 4367 M
+(programmer's ) 1098 X
+GR
+0.0000 GRAY
+GS
+n
+6218 4367 M
+(tasks ) 414 X
+GR
+0.0000 GRAY
+GS
+n
+6632 4367 M
+(and ) 324 X
+GR
+0.0000 GRAY
+GS
+n
+6956 4367 M
+(how ) 369 X
+GR
+0.0000 GRAY
+GS
+n
+7325 4367 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+7512 4367 M
+(de-) 238 X
+GR
+0.0000 GRAY
+GS
+n
+2250 4165 M
+(velop applications based on VDX generated source code. You will learn:) 5323 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 3850 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 3850 M
+(Basics of user interface application development.) 3609 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 3533 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 3533 M
+(Structure of the source code generated by VDX.) 3508 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 3216 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 3216 M
+(Developing user interface components.) 2889 X
+GR
+0.0000 GRAY
+AXFont5p120000 SETFONT
+GS
+n
+2250 2899 M
+(\267) 77 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2500 2899 M
+(How to add and implement callbacks.) 2806 X
+GR
+0.0000 GRAY
+AXFont2p140000 SETFONT
+GS
+n
+750 2270 M
+(Ordering VDX) 1314 X
+GR
+0.0000 GRAY
+AXFont1p120000 SETFONT
+GS
+n
+2250 1963 M
+(To ) 235 X
+GR
+0.0000 GRAY
+GS
+n
+2511 1963 M
+(become ) 606 X
+GR
+0.0000 GRAY
+GS
+n
+3128 1963 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+3264 1963 M
+(licensee ) 622 X
+GR
+0.0000 GRAY
+GS
+n
+3897 1963 M
+(of ) 189 X
+GR
+0.0000 GRAY
+GS
+n
+4097 1963 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+4510 1963 M
+(you ) 327 X
+GR
+0.0000 GRAY
+GS
+n
+4848 1963 M
+(have ) 396 X
+GR
+0.0000 GRAY
+GS
+n
+5255 1963 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+5453 1963 M
+(buy ) 328 X
+GR
+0.0000 GRAY
+GS
+n
+5792 1963 M
+(a ) 125 X
+GR
+0.0000 GRAY
+GS
+n
+5928 1963 M
+(license ) 542 X
+GR
+0.0000 GRAY
+GS
+n
+6481 1963 M
+(key. ) 350 X
+GR
+0.0000 GRAY
+GS
+n
+6842 1963 M
+(It ) 152 X
+GR
+0.0000 GRAY
+GS
+n
+7005 1963 M
+(can ) 296 X
+GR
+0.0000 GRAY
+GS
+n
+7312 1963 M
+(be ) 214 X
+GR
+0.0000 GRAY
+GS
+n
+7537 1963 M
+(or-) 213 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1761 M
+(dered ) 472 X
+GR
+0.0000 GRAY
+GS
+n
+2842 1761 M
+(via ) 268 X
+GR
+0.0000 GRAY
+GS
+n
+3229 1761 M
+(On-line ) 601 X
+GR
+0.0000 GRAY
+GS
+n
+3949 1761 M
+(Order ) 487 X
+GR
+0.0000 GRAY
+GS
+n
+4555 1761 M
+(Form. ) 481 X
+GR
+0.0000 GRAY
+GS
+n
+5155 1761 M
+(Look ) 419 X
+GR
+0.0000 GRAY
+GS
+n
+5693 1761 M
+(to ) 187 X
+GR
+0.0000 GRAY
+GS
+n
+5999 1761 M
+(VDX ) 402 X
+GR
+0.0000 GRAY
+GS
+n
+6520 1761 M
+(home ) 457 X
+GR
+0.0000 GRAY
+GS
+n
+7096 1761 M
+(page ) 398 X
+GR
+0.0000 GRAY
+GS
+n
+7613 1761 M
+(at ) 179 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1559 M
+(http://www.bredex.de/EN/vdx/.) 2606 X
+GR
+0.0000 GRAY
+GS
+n
+2250 1257 M
+( ) 42 X
+GR
+%%PageTrailer
+AXPageSave restore
+showpage
+%%Trailer
+%%EOF
+

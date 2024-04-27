@@ -1,0 +1,10 @@
+include $(TOPDIR)/config/Makeoptions.linux-m2.1-lac
+
+
+       ARCH = linux-m3-lac
+
+   INCLUDES = 
+       LIBS = -lXm -lXpm -lXt -lSM -lICE -lXext -lXp -lX11 -lm
+#    DEFINES = -D_POSIX_SOURCE -D_XOPEN_SOURCE
+    DEFINES = -fpermissive -fPIC
+CDEBUGFLAGS = -g -fno-builtin -w

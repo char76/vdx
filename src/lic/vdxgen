@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# Copyright (C) 1997, Dirk Laessig
+#
+# This script determines the install directory of vdx package and
+# set the environment variables VDX_HOME and XFILESEARCHPATH.
+# 
+# If the script doesn't work:
+#     Change #!/bin/sh  to  #!/bin/bash or #!/bin/ksh
+# or  set VDX_HOME to install directory of vdx package.
+#
+
+#
+# look for the install directory
+#
+
+
+
+# get full qualified path 
+
+get_full_qual() {
+    dir=`dirname $1`
+    echo `(cd $dir; pwd)`/`basename $1`
+}
+
+# get destination of symbolic link
+
+get_destination() {
+    dest=`find $1 -printf %l`
+    if [ x`echo $dest | cut -b 1` != "x/" ]; then
+	dest=`dirname $1`/$dest
+    fi
+    dest=`get_full_qual $dest`
+    echo $dest
+}
+
+# find out the path of this script
+
+the_path=`command -v $0`
+the_path=`get_full_qual $the_path`
+
+# if there is a symbolic link, get destination
+
+while test -L $the_path
+do
+    the_path=`get_destination $the_path`
+done
+
+
+bin_dir=`dirname $the_path`
+
+#
+# setup environment
+#
+
+VDX_HOME=`dirname $bin_dir`
+
+XFILESEARCHPATH=$XFILESEARCHPATH:$VDX_HOME/lib/X11/%L/%T/%N%S:$VDX_HOME/lib/X11/%T/%N%S:/usr/lib/X11/%T/%N%S
+
+export XFILESEARCHPATH VDX_HOME
+
+export LD_LIBRARY_PATH=$VDX_HOME/lib:$LD_LIBRARY_PATH
+
+#
+# execute vdx binary
+#
+
+exec $VDX_HOME/bin/vdxgen.bin $*

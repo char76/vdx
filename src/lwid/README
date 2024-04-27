@@ -1,0 +1,39 @@
+Lazy Widgets v0.1
+-----------------
+
+This directory contains source code for the library liblwid.a.
+It provides three widget classes:
+
+1. XlButtonBox
+   A widget that derives from XmManager. It's designed to create a
+   box of XmPushButtons. The children are regular aligned horizontally
+   or vertically.
+
+2. XlCellTable
+   As XlButtonBox this class derives from XmManager. The children are
+   aligned in a row column grid. The constraint resources cellColumn and 
+   cellRow determines the position in this table. The position of child
+   within the table cell depends on the constraint resources 
+   horizontalAlignment and verticalAlignment. These may have values like
+   center, beginning, end and justify.
+
+3. XlBubble
+   This widget is derived from OverrideShell. The bubble is used to add
+   ToolTips to your application. Currently the bubble is only a rectangle
+   known from MS-Windows.
+   The bubble creates automatically a XmLabel as child. The labelString of the 
+   child is accessed by the resource labelString of XlBubble. To change 
+   the background color you have to insert following line in the resource 
+   file:
+            *XlBubble*background: #FDFFCA
+   To add such a ToolTip to another widget the XlBubble is created as
+   a child of this widget. Enter and Leave events and timer are handled
+   automatically.
+
+The widget classes are designed to work with VDX. The most SetValues()
+methods are NOT FULLY IMPLEMENTED. Feel free to changed the source code
+if you need it.
+
+Dirk Laessig
+
+

@@ -1,0 +1,33 @@
+WIDGET {
+  NAME ""
+  CLASS ""
+  MANAGED ""
+  QUICKHELP ""
+  HELPID "0"
+  VIEWDATA "LONG TemplateView width 486 LONG TemplateView height 168 BOOLEAN TemplateView WithClasses FALSE BOOLEAN TemplateView WithSmallIcons FALSE BOOLEAN TemplateView WithIcons TRUE BOOLEAN TemplateView CreateOnClick FALSE "
+  WIDGET {
+    NAME "ScrolledText"
+    CLASS "XmScrolledWindow"
+    MANAGED "TRUE"
+    QUICKHELP ""
+    HELPID "-1"
+    VIEWDATA "BOOLEAN TreeNodeView WithChildren TRUE "
+    DESCRIPTION "XmScrolledWindow"
+    height "290" private
+    width "320" private
+    x "510" private
+    y "230" private
+    WIDGET {
+      NAME "text_1"
+      CLASS "XmText"
+      MANAGED "TRUE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA ""
+      DESCRIPTION "XmText"
+      x "10" private
+      y "10" private
+      editMode "XmMULTI_LINE_EDIT" private
+    }
+  }
+}

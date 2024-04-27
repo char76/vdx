@@ -1,0 +1,1231 @@
+Alignment
+	XmALIGNMENT_BEGINNING	0
+	XmALIGNMENT_CENTER	1
+	XmALIGNMENT_END		2
+end
+
+LabelType
+	XmPIXMAP	1
+	XmSTRING	2
+end
+
+StringDirection
+	XmSTRING_DIRECTION_L_TO_R	0
+	XmSTRING_DIRECTION_R_TO_L	1
+	XmSTRING_DIRECTION_DEFAULT 	255
+end
+
+Orientation
+	XmVERTICAL		1
+	XmHORIZONTAL		2
+end
+
+RowColumnType
+	XmWORK_AREA	0
+	XmMENU_BAR	1
+	XmMENU_PULLDOWN	2
+	XmMENU_POPUP	3
+	XmMENU_OPTION	4
+end
+
+Packing
+	XmNO_PACKING	0
+	XmPACK_TIGHT	1
+	XmPACK_COLUMN	2	
+	XmPACK_NONE	3
+end
+
+UnitType
+	XmPIXELS	0
+	Xm100TH_MILLIMETERS	1
+	Xm1000TH_INCHES		2
+	Xm100TH_POINTS	3
+	Xm100TH_FONT_UNITS	4
+end
+
+NavigationType
+	XmNONE			0
+	XmTAB_GROUP		1
+	XmSTICKY_TAB_GROUP	2
+	XmEXCLUSIVE_TAB_GROUP	3
+	XmDYNAMIC_DEFAULT_TAB_GROUP	255
+end
+
+ShadowType
+	XmSHADOW_ETCHED_IN	5
+        XmSHADOW_ETCHED_OUT	6
+	XmSHADOW_IN		7
+	XmSHADOW_OUT		8
+end	
+
+ResizePolicy
+	XmRESIZE_NONE	0
+	XmRESIZE_GROW	1
+	XmRESIZE_ANY	2
+end	
+
+DialogStyle
+	XmDIALOG_MODELESS			0
+	XmDIALOG_PRIMARY_APPLICATION_MODAL	1
+	XmDIALOG_FULL_APPLICATION_MODAL		2
+	XmDIALOG_SYSTEM_MODAL			3
+end	
+
+EditMode
+	XmMULTI_LINE_EDIT	0
+	XmSINGLE_LINE_EDIT	1
+end
+
+SelectionPolicy
+	XmSINGLE_SELECT		0
+	XmMULTIPLE_SELECT	1
+	XmEXTENDED_SELECT	2
+	XmBROWSE_SELECT		3
+end
+
+ListSizePolicy
+	XmVARIABLE		0
+	XmCONSTANT		1
+	XmRESIZE_IF_POSSIBLE	2
+end
+
+Attachment
+	XmATTACH_NONE			0
+	XmATTACH_FORM			1
+	XmATTACH_OPPOSITE_FORM		2
+	XmATTACH_WIDGET			3
+	XmATTACH_OPPOSITE_WIDGET	4
+	XmATTACH_POSITION		5
+	XmATTACH_SELF			6
+end
+
+IndicatorType
+	XmN_OF_MANY	1
+	XmONE_OF_MANY	2
+end
+
+SeparatorType
+	XmNO_LINE			0
+	XmSINGLE_LINE			1
+	XmDOUBLE_LINE			2
+	XmSINGLE_DASHED_LINE		3
+	XmDOUBLE_DASHED_LINE		4
+	XmSHADOW_ETCHED_IN		5
+	XmSHADOW_ETCHED_OUT		6
+	XmSHADOW_ETCHED_IN_DASH		7
+	XmSHADOW_ETCHED_OUT_DASH	8
+end
+
+DeleteRespose
+	XmDESTROY	0
+	XmUNMAP		1
+	XmDO_NOTHING	2
+end
+
+MultiClick
+	XmMULTICLICK_DISCARD	0
+	XmMULTICLICK_KEEP	1
+end
+
+ArrowDirection
+	XmARROW_UP	0
+	XmARROW_DOWN	1
+	XmARROW_LEFT	2
+	XmARROW_RIGHT	3
+end
+
+ProcessingDirection
+	XmMAX_ON_TOP	0
+	XmMAX_ON_BOTTOM	1
+	XmMAX_ON_LEFT	2
+	XmMAX_ON_RIGHT	3
+end
+
+ScrollBarDisplayPolicy
+	XmSTATIC	0
+	XmAS_NEEDED	1
+end
+
+DialogType
+	XmDIALOG_TEMPLATE	0
+	XmDIALOG_ERROR		1
+	XmDIALOG_INFORMATION	2
+	XmDIALOG_MESSAGE	3
+	XmDIALOG_QUESTION	4
+	XmDIALOG_WARNING	5
+	XmDIALOG_WORKING	6
+end
+
+VisualPolicy
+	XmVARIABLE		0
+	XmCONSTANT		1
+	XmRESIZE_IF_POSSIBLE	2
+end
+
+ScrollingPolicy
+	XmAUTOMATIC		0
+	XmAPPLICATION_DEFINED	1
+end
+
+ScrollBarPlacement
+	XmTOP_LEFT	3
+	XmBOTTOM_LEFT	2
+	XmTOP_RIGHT	1
+	XmBOTTOM_RIGHT	0
+end
+
+CommandWindowLocation
+	XmCOMMAND_ABOVE_WORKSPACE	0	
+	XmCOMMAND_BELOW_WORKSPACE	1
+end
+
+TearOffModel
+	XmTEAR_OFF_ENABLED		0
+	XmTEAR_OFF_DISABLED		1
+end
+
+InitialState
+	NormalState	1
+	IconicState	3
+end
+
+AudibleWarning
+	XmNONE	0
+	XmBELL	1
+end
+
+DeleteResponse
+	XmDESTROY	0
+	XmUNMAP		1
+	XmDO_NOTHING	2
+end
+
+InputPolicy
+	XmPER_SHELL		0
+	XmPER_WIDGET		1
+	XmINHERIT_POLICY	255
+end
+
+KeyboardFocusPolicy
+	XmEXPLICIT	0
+	XmPOINTER	1
+end
+
+Direction
+  XmRIGHT_TO_LEFT_TOP_TO_BOTTOM 	69 
+  XmLEFT_TO_RIGHT_TOP_TO_BOTTOM 	70
+  XmRIGHT_TO_LEFT_BOTTOM_TO_TOP		73
+  XmLEFT_TO_RIGHT_BOTTOM_TO_TOP		74
+
+  XmTOP_TO_BOTTOM_RIGHT_TO_LEFT 	133
+  XmTOP_TO_BOTTOM_LEFT_TO_RIGHT 	134
+  XmBOTTOM_TO_TOP_RIGHT_TO_LEFT 	137
+  XmBOTTOM_TO_TOP_LEFT_TO_RIGHT 	138
+
+  XmTOP_TO_BOTTOM 			199
+  XmBOTTOM_TO_TOP 			203
+  XmRIGHT_TO_LEFT 			205
+  XmLEFT_TO_RIGHT			206
+  XmDEFAULT_DIRECTION			256
+end
+
+ComboBoxType
+	XmCOMBO_BOX		0
+	XmDROP_DOWN_COMBO_BOX	1
+        XmDROP_DOWN_LIST	2
+end
+
+MatchBehavior
+	XmNONE				0
+	XmQUICK_NAVIGATE 		1
+	XmINVALID_MATCH_BEHAVIOR	2
+end
+
+ArrowLayout
+    XmARROWS_END		0
+    XmARROWS_BEGINNING		1
+    XmARROWS_SPLIT		2
+    XmARROWS_FLAT_END		3
+    XmARROWS_FLAT_BEGINNING	4
+end
+
+ArrowSensitivity
+    XmARROWS_INSENSITIVE		0
+    XmARROWS_INCREMENT_SENSITIVE	1
+    XmARROWS_DECREMENT_SENSITIVE	2
+    XmARROWS_SENSITIVE			3
+    XmARROWS_DEFAULT_SENSITIVITY	4
+end
+
+SpinBoxChildType 
+    XmPIXMAP	1
+    XmSTRING	2
+    XmNUMERIC	3
+end
+
+AutomaticSelection
+	XmNO_AUTO_SELECT	0
+        XmAUTO_SELECT		1
+end
+
+LineStyle
+	XmNO_LINE	0
+        XmSINGLE	1
+end
+
+EntryViewType
+	XmLARGE_ICON	0
+        XmSMALL_ICON	1
+        XmANY_ICON	2
+end
+
+SpatialIncludeModel	
+	XmAPPEND	0
+        XmCLOSEST	1
+        XmFIRST_FIT	2
+end
+
+LayoutType
+	XmOUTLINE	0
+        XmSPATIAL	1
+	XmDETAIL	2
+end
+
+OutlineButtonPolicy
+	XmOUTLINE_BUTTON_PRESENT	0
+	XmOUTLINE_BUTTON_ABSENT		1
+end
+
+PrimaryOwnership
+	XmOWN_NEVER	0
+	XmOWN_ALWAYS	1
+	XmOWN_MULTIPLE	2
+	XmOWN_POSSIBLE_MULTIPLE	3
+end
+
+SpatialResizeModel
+	XmGROW_MINOR	0
+	XmGROW_MAJOR	1
+        XmGROW_BALANCED	2
+end
+
+SpatialStyle
+	XmNONE	0
+	XmGRID	1
+	XmCELLS	2
+end
+
+SelectionTechnique
+	XmMARQUEE		0
+        XmMARQUEE_EXTEND_START	1
+        XmMARQUEE_EXTEND_BOTH	2
+        XmTOUCH_ONLY		3
+        XmTOUCH_OVER		4
+end
+
+SpatialSnapModel
+	XmNONE		0
+        XmSNAP_TO_GRID	1
+        XmCENTER	2
+end
+
+OutlineState
+	XmCOLLAPSED	0
+        XmEXPANDED	1
+end
+
+BindingType
+	XmNONE			0
+        XmPIXMAP		1
+        XmSOLID			2
+        XmSPIRAL		3
+        XmPIXMAP_OVERLAP_ONLY	4
+end
+
+NotebookChildType
+	XmNONE		0
+        XmPAGE		1
+        XmMAJOR_TAB	2
+        XmMINOR_TAB	3
+        XmSTATUS_AREA	4
+        XmPAGE_SCROLLER	5
+end
+
+ChildPlacement
+	XmPLACE_TOP			0
+	XmPLACE_ABOVE_SELECTION		1
+	XmPLACE_BELOW_SELECTION		2
+end
+
+FileTypeMask
+	XmFILE_DIRECTORY	1
+	XmFILE_REGULAR		2
+	XmFILE_ANY_TYPE		3
+end
+
+SelectionType
+	XmDIALOG_WORK_AREA	0
+	XmDIALOG_PROMPT		1
+	XmDIALOG_SELECTION	2
+	XmDIALOG_COMMAND	3
+	XmDIALOG_FILE_SELECTION	4
+end	
+
+SliderMode
+	XmSLIDER	0
+	XmTHERMOMETER	1
+end
+
+SliderVisual
+	XmBACKGROUND_COLOR	0
+	XmFOREGROUND_COLOR	1
+        XmTROUGH_COLOR		2
+	XmSHADOWED_BACKGROUND	3
+end
+
+SliderMark
+	XmNONE		0
+	XmETCHED_LINE	1
+	XmTHUMB_MARK	2
+	XmROUND_MARK	3
+end
+
+ShowValue
+	XmNONE		0
+	XmNEAR_SLIDER	1
+	XmNEAR_BORDER	2
+end
+
+ShowArrows
+	XmNONE		0
+	XmEACH_SIDE	1
+	XmMAX_SIDE	2
+	XmMIN_SIDE	3
+end
+
+
+Set
+	XmUNSET		0      
+	XmSET		1
+	XmINDETERMINATE	2
+end
+
+
+ToggleMode
+	XmTOGGLE_BOOLEAN	0
+	XmTOGGLE_INDETERMINATE	1
+end
+
+
+IndicatorOn
+	XmINDICATOR_NONE	0
+	XmINDICATOR_FILL      	1
+	XmINDICATOR_CHECK     	16
+	XmINDICATOR_CHECK_BOX 	17
+	XmINDICATOR_CROSS     	32
+	XmINDICATOR_CROSS_BOX 	33
+end
+
+ChildType
+	XmFRAME_GENERIC_CHILD	0
+        XmFRAME_WORKAREA_CHILD	1
+        XmFRAME_TITLE_CHILD	2
+end
+
+ChildHorizontalAlignment
+	XmALIGNMENT_BASELINE_TOP	0
+	XmALIGNMENT_CENTER		1
+	XmALIGNMENT_BASELINE_BOTTOM	2
+end
+
+ChildVerticalAlignment
+	XmALIGNMENT_BASELINE_TOP	0
+	XmALIGNMENT_CENTER		1
+	XmALIGNMENT_BASELINE_BOTTOM	2
+	XmALIGNMENT_WIDGET_TOP		3
+	XmALIGNMENT_WIDGET_BOTTOM	4
+end
+
+CellTableAlignment
+	XmCELL_ALIGNMENT_BEGINNING	0
+	XmCELL_ALIGNMENT_CENTER		1
+	XmCELL_ALIGNMENT_END		2
+	XmCELL_ALIGNMENT_JUSTIFY	3
+end
+
+ScrolledWindowChildType
+	XmWORK_AREA		0
+	XmMENU_BAR		1 
+        XmHOR_SCROLLBAR		2 
+        XmVERT_SCROLLBAR	3
+        XmCOMMAND_WINDOW	4
+        XmSEPARATOR		5
+        XmMESSAGE_WINDOW	6
+        XmSCROLL_HOR		7
+	XmSCROLL_VERT		8
+	XmNO_SCROLL		9
+        XmCLIP_WINDOW		10
+	XmGENERIC_CHILD		11
+end
+
+AutoDragModel
+	XmAUTO_DRAG_ENABLED	0
+	XmAUTO_DRAG_DISABLED	1
+end
+
+SlidingMode
+	XmSLIDER		0
+	XmTHERMOMETER		1
+end
+
+SelectionMode
+	XmNORMAL_MODE		0
+	XmADD_MODE		1
+end
+
+Gravity
+	ForgetGravity           0
+	NorthWestGravity        1
+	NorthGravity            2
+	NorthEastGravity        3
+	WestGravity             4
+	CenterGravity           5
+	EastGravity             6
+	SouthWestGravity        7
+	SouthGravity            8
+	SouthEastGravity        9
+	StaticGravity           10
+end
+
+
+VerticalAlignment
+	XmALIGNMENT_BEGINNING	0
+	XmALIGNMENT_CENTER	1
+	XmALIGNMENT_END		2
+end
+
+DefaultButtonType
+	XmDIALOG_APPLY_BUTTON		1
+        XmDIALOG_CANCEL_BUTTON		2
+        XmDIALOG_OK_BUTTON		4
+	XmDIALOG_HELP_BUTTON		7
+end
+
+FileFilterStyle
+	XmFILTER_NONE		0
+	XmFILTER_HIDDEN_FILES	1
+end
+  
+PathMode
+	XmPATH_MODE_FULL	0
+	XmPATH_MODE_RELATIVE	1
+end
+
+BubblePlacement
+	XmBUBBLE_POINTER	0
+	XmBUBBLE_TOP_LEFT	1
+	XmBUBBLE_TOP_RIGHT	2
+	XmBUBBLE_BOTTOM_LEFT	3
+	XmBUBBLE_BOTTOM_RIGHT	4
+end
+
+
+xrtFldCase
+	case_as_is	0
+	case_lower	1
+	case_upper	2
+end
+
+xrtFldDispScrollBar
+	dispsb_as_needed	0
+	dispsb_always	1
+	dispsb_never	2
+end
+
+xrtFldFormat
+	format_binary		0
+	format_currency		1
+	format_currency_intl	2
+	format_default		3
+	format_fixed		4
+	format_general		5
+	format_hex		6
+	format_octal		7
+	format_percent		8
+	format_scientific	9
+	format_thousands		10
+end
+
+xrtFldSearchPolicy
+	search_single		0
+	search_multichar		1
+end
+
+xrtFldError
+	error_exceed_length	0
+	error_exceed_lines	1
+	error_invalid_char	2
+	error_invalid_datatype	3
+	error_is_null		4
+	error_nomatch_mask	5
+	error_nomatch_picklist	6
+	error_out_of_range	7
+	error_validatecb		8
+	error_none		9
+end
+
+xrtFldMatchMask
+	match_all		0
+	match_partial_l_to_r	1
+	match_partial_r_to_l	2
+end
+
+XrtFldMenuAlignment
+	menu_align_beginning	0
+	menu_align_both		1
+	menu_align_end		2
+end	
+
+xrtFldRange
+	range_char		0
+	range_default		1
+	range_double		2
+	range_float		3
+	range_int		4
+	range_long		5
+	range_short		6
+	range_unsigned_char	7
+	range_unsigned_int	8
+	range_unsigned_long	9
+	range_unsigned_short	10
+end
+
+xrtFldNegativeFormat
+	neg_as_is		0
+	neg_locale		1
+	neg_parentheses		2
+end
+
+
+xrtFldFieldType
+	fieldtype_currency	0
+	fieldtype_date		1
+	fieldtype_float		2
+	fieldtype_int		3
+	fieldtype_none		4
+	fieldtype_string		5
+end	
+
+xrtSpinArrowLayout
+	arrows_beginning	0
+	arrows_end		1
+	arrows_split		2
+end
+
+xrtSpinType
+	type_counter	0
+	type_picklist	1
+end
+
+xrtFldArrowType
+	arrow_none		0
+	arrow_wedge		1
+	arrow_with_underbar	2
+	arrow_custom		3
+end
+
+
+
+XrtAlign
+    alignvertical		1
+    alignhorizontal	2
+end	
+
+XrtRotate
+    rotatenone	1
+    rotate90	2
+    rotate270	3
+end
+
+XrtBorder
+    bordernone		0
+    border3dout		1
+    border3din		2
+    bordershadow		3
+    borderplain		4
+    borderetchedin	5
+    borderetchedout	6
+    borderframein		7
+    borderframeout	8
+    borderbevel		9
+end
+
+XrtAnnotationMethod
+    annovalues		0
+    annopointlabels	1
+    annovaluelabels	2
+    annotimelabels	3
+end
+
+XrtAngleUnit
+    angledegrees		1
+    angleradians		2
+    anglegrads		3
+end
+
+XrtShading
+    shadingcolor		1
+    shadingdithered	2
+    shadingnone		3
+end
+
+XrtMarkerMethod
+    markersetpoint	1
+    markervalue		2
+end
+
+XrtAnnoPlacement
+    annoauto	0
+    annoorigin	1
+    annomin	2
+    annomax	3
+end
+
+XrtType
+    typeplot		1
+    typebar		2
+    typepie		3
+    typestackingbar	4
+    typearea		5
+    typehilo		6
+    typehiloopenclose	7
+    typecandle		8
+    typepolar		9
+    typeradar		10
+    typefilledradar	11
+end
+
+XrtNumMethod
+    numprecision	0
+    numround	1
+end
+
+XrtOriginPlacement
+    originauto	0
+    originzero	1
+    originmin	2
+    originmax	3
+end
+
+XrtPieOrder
+    pieorderascending	1
+    pieorderdescending	2
+    pieorderdataorder	3
+end
+
+XrtPieThresholdMethod
+    pieslicecutoff	1
+    piepercentile		2
+end
+
+XrtAnchor
+    anchornorth		16
+    anchorsouth		32
+    anchoreast		1
+    anchorwest		2
+    anchornortheast	17
+    anchornorthwest	18
+    anchorsoutheast	33
+    anchorsouthwest	34
+    anchorhome		0
+    anchorbest		256
+end
+
+XrtAdjust
+    adjustleft	1
+    adjustright	2
+    adjustcenter	3
+end
+
+XrtTimeUnit
+    tmunitseconds	1
+    tmunitminutes	2
+    tmunithours	3
+    tmunitdays	4
+    tmunitweeks	5
+    tmunitmonths	6
+    tmunityears	7
+end
+
+
+Xrt3dBarFormat
+	BarFixed		0
+	BarHistogram	        1
+end
+
+Xrt3dBorder
+	BorderNone		0
+	Border3dOut		1
+	Border3dIn		2
+	BorderShadow		3
+	BorderPlain		4
+	BorderEtchedIn		5
+	BorderEtchedOut		6
+	BorderFrameIn		7
+	BorderFrameOut		8
+	BorderBevel		9
+end
+
+Xrt3dZoneMethod
+	ZoneContours	0
+	ZoneCells	1
+end
+
+Xrt3dType
+	TypeSurface	0
+	TypeBar		1
+end
+
+Xrt3dAdjust
+	AdjustLeft	1
+	AdjustRight	2
+	AdjustCenter	3
+end
+
+Xrt3dAnnoMethod
+	AnnoValues	1
+	AnnoDataLabels	2
+	AnnoValueLabels	3
+end
+
+Xrt3dLegendStyle
+	LegendStyleStepped	1
+	LegendStyleContinuous	2
+end
+
+Xrt3dPreviewMethod
+	PreviewCube	0
+	PreviewFull	100
+end
+
+Xrt3dAnchor
+	AnchorNorth		16
+	AnchorSouth		32
+	AnchorEast		1
+	AnchorWest		2
+	AnchorNortheast		17
+	AnchorNorthwest		18
+	AnchorSoutheast		33
+	AnchorSouthwest		34
+end
+
+Xrt3dAlign
+	AlignVertical		1
+	AlignHorizontal		2
+end
+
+Xrt3dDistnMethod
+	DistnLinear	0
+	DistnFromTable  5
+end
+
+Xrt3dStrokeFont
+	SfCyrillicComplex	0
+	SfGothicEnglish		1
+	SfGothicGerman		2
+	SfGothicItalian		3
+	SfGreekComplex		4
+	SfGreekComplexSmall	5
+	SfGreekSimplex		6
+	SfItalicComplex		7
+	SfItalicComplexSmall	8
+	SfItalicTriplex		9
+	SfRomanComplex		10
+	SfRomanComplexSmall	11
+	SfRomanDuplex		12
+	SfRomanSimplex		13
+	SfRomanTriplex		14
+	SfScriptComplex		15
+	SfScriptSimplex		16
+end
+
+xrtTblResize
+	resize_none		0
+	resize_all		1
+	resize_horizontal	2
+	resize_vertical		4
+end
+
+xrtTblRowPlacement
+	place_top	0
+	place_bottom	1
+end
+
+xrtTblAttachment
+	attach_cells	0
+	attach_side	1
+end
+
+xrtTblValidatePolicy
+	validate_never		0
+	validate_user_edit	1
+	validate_set		2
+	validate_always		3
+end
+
+
+xrtTblSelectionPolicy
+	select_none		0
+	select_single		1
+	select_range		2
+	select_multirange	3
+end
+
+xrtTblColumnPlacement
+	place_left	0
+	place_right	1
+end
+
+xrtTblCase
+	case_as_is	0
+	case_lower	1
+	case_upper	2
+end
+
+
+xrtTblDoubleBuffer
+	doublebuffer_none	0
+	doublebuffer_cell	1
+	doublebuffer_window	2
+end
+
+xrtTblDispScrollBar
+	dispsb_as_needed	0
+	dispsb_always		1
+	dispsb_never		2
+end
+
+xrtTblJumpScroll
+	JUMP_NONE		0
+	JUMP_HORIZONTAL		1
+	JUMP_VERTICAL		2
+	JUMP_ALL		3
+end
+
+xrtTblAlignment
+	alignment_topbegin	0
+	alignment_topcenter	1
+	alignment_topend	2
+	alignment_middlebegin	3
+	alignment_middlecenter	4
+	alignment_middleend	5
+	alignment_bottombegin	6
+	alignment_bottomcenter	7
+	alignment_bottomend	8
+end
+
+xrtTblOverflow
+	overflow_none		0
+	overflow_horizontal	1
+end
+
+xrtTblXmStringGetMode
+	get_string	0
+	get_xmstring	1
+end
+
+xrtTblXmStringSetMode
+	set_string	0
+	set_examine	1
+	set_xmstring	2
+end
+
+xrtTblBorderType
+	border_none		0
+	border_etched_in	1
+	border_etched_out	2
+	border_in		3
+	border_out		4
+	border_plain		5
+	border_frame_in		6
+	border_frame_out	7
+end
+
+
+xrtTblDataType
+	type_field_currency	0
+	type_field_date		1
+	type_field_float	2
+	type_field_int		3
+	type_field_none		4
+	type_field_string	5
+	type_boolean		6
+	type_double		7
+	type_float		8
+	type_int		9
+	type_string		10		
+	type_last		100
+end
+
+xrtTblRepaint
+	repaint_off		0
+	repaint_on		1
+	repaint_nocalc		2
+end
+
+xrtTblScrollBarPosition
+	sbposition_cells	0
+	sbposition_side		1
+end
+
+xrtTblPixmapLayout
+	pixmap_topleft		0
+	pixmap_topcenter	1
+	pixmap_topright		2
+	pixmap_middleleft	3
+	pixmap_middlecenter	4
+	pixmap_middleright	5
+	pixmap_bottomleft	6
+	pixmap_bottomcenter	7
+	pixmap_bottomright	8
+	pixmap_tile		9
+end
+
+xrtTblLocation
+        location_none		0
+        location_top		1
+        location_left		2
+        location_bottom		3
+        location_right		4
+end
+
+GearStringLayout
+	string_center	0
+	string_top	1
+	string_left	2
+	string_bottom	3
+	string_right	4
+end
+
+GearRotation
+	rotate_none		0
+	rotate_90		1
+	rotate_180		2
+	rotate_270		3
+	rotate_unspecified	4
+end
+
+GearType
+	type_unspecified	0
+	type_string		1
+	type_pixmap		2
+	type_string_pixmap	3
+end
+
+GearIndicator
+	indicator_none		0
+	indicator_fill		1
+	indicator_check		2
+	indicator_check_box	3
+	indicator_circle	4
+	indicator_circle_box	5
+	indicator_cross		6
+	indicator_cross_box	7
+	indicator_pixmap	8
+end
+
+GearAlignment
+	align_beginning	0
+	align_center	1
+	align_end	2
+end
+
+GearProgressType
+	progress_bar		0
+	progress_discrete_bar	1
+	progress_icon		2
+	progress_stacking_icons	3
+end
+
+GearMenuAlignment
+	menu_align_beginning	0
+	menu_align_both		1
+	menu_align_end		2
+end
+
+GearArrowType
+	arrow_none		0
+	arrow_wedge		1
+	arrow_with_underbar	2
+	arrow_custom		3
+end
+
+GearSearchPolicy
+	search_single		0
+	search_multichar	1
+end
+
+GearAlignerAlignment
+	aligner_beginning	0
+	aligner_center		1
+	aligner_end		2
+end
+
+GearDisplayPolicy
+	display_as_needed	0
+	display_always		1
+	display_never		2
+end
+
+GearTabSide
+	side_left	0
+	side_right	1
+	side_top	2
+	side_bottom	3
+end
+
+GearPageAttachPolicy
+	attach_always	0
+	attach_none	1
+end
+
+GearTabRotation
+	rotate_none		0
+	rotate_90		1
+	rotate_180		2
+	rotate_270		3
+	rotate_unspecified	4
+end
+
+GearChildType
+	child_type_page		0
+	child_type_tab		1
+	child_type_internal	2
+end
+
+GearAnchorSide
+	anchor_side_left	0
+	anchor_side_right	1
+	anchor_side_top		2
+	anchor_side_bottom	3
+end
+
+GearStyle
+	style_rounded		0
+	style_square		1
+	style_slanted		2
+	style_chamfered		3
+end
+
+
+PositionMode
+	XmZERO_BASED	0
+	XmONE_BASED     1
+end
+
+PositionType
+    	XmPOSITION_INDEX	0
+    	XmPOSITION_VALUE	1
+end
+
+ButtonLayout
+        button_label_only		0
+        button_label_on_bottom		1
+        button_label_on_left		2
+        button_label_on_right		3
+        button_label_on_top		4
+        button_pixmap_only		5
+end
+
+ButtonTrigger
+        button_trigger_anywhere		0
+        button_trigger_label		1
+        button_trigger_pixmap		2
+        button_trigger_either		3
+        button_trigger_neither		4
+end
+
+ButtonType
+        button_none	0
+        button_push	1
+        button_toggle	2
+end
+
+BufferType
+	buffer_shared	0
+	buffer_none	1
+	buffer_private	2
+end
+
+AccentType
+	accent_box		0
+	accent_none		1
+	accent_underline	2
+end
+
+LocationType
+	location_east		0
+	location_north		1
+	location_north_east	2
+	location_north_west	3
+	location_south		4
+	location_south_east	5
+	location_south_west	6
+	location_west		7
+end
+
+PaneChildType
+	pane_child_none			0
+	pane_child_attachment_one	1
+	pane_child_attachment_two	2
+	pane_child_work_area_one	3
+	pane_child_work_area_two	4
+end
+
+PaneChildAttachment
+	pane_child_attach_none		0
+	pane_child_attach_bottom	1
+	pane_child_attach_left		2
+	pane_child_attach_right		3
+	pane_child_attach_top		4
+end
+
+PaneDragMode
+	pane_drag_preserve_one		0
+	pane_drag_preserve_two		1
+	pane_drag_preserve_ratio	2
+end
+
+PaneSashType
+	pane_sash_double_line		0
+	pane_sash_filled_rectangle	1
+	pane_sash_live			2
+	pane_sash_rectangle		3
+	pane_sash_single_line		4
+end
+
+ToolBarSelectionPolicy
+	tool_bar_select_none		0
+	tool_bar_select_single		1
+	tool_bar_select_multiple	2
+end
+
+ChromeChildType
+	chrome_bottom_view	0
+	chrome_center_view	1
+	chrome_dash_board	2
+	chrome_ignore		3
+	chrome_left_view	4
+	chrome_menu_bar		5
+	chrome_right_view	6
+	chrome_tool_box		7
+	chrome_top_view		8
+end
+
+ToolScrollArrowPlacement
+	tool_scroll_arrow_placement_both	0
+	tool_scroll_arrow_placement_end		1
+	tool_scroll_arrow_placement_start	2
+end
+
+

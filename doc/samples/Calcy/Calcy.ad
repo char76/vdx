@@ -1,0 +1,14 @@
+! ----------------------------------------------
+! File: CalcWindow.rf
+! Resource file of interface CalcWindow
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*CalcWindow.title: Calcy
+*CalcWindow*add_button.labelString: Add
+
+
+! ----------------------------------------------
+! end of resource file CalcWindow.rf
+! ----------------------------------------------

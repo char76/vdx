@@ -1,0 +1,12 @@
+#!/bin/sh
+
+to_save=$1
+rcs_dir=`dirname $to_save`/RCS
+
+if [ ! -d $rcs_dir ]; then
+    mkdir $rcs_dir
+fi
+
+ci -l -m"Checked in from VDX" -t-"Description" $to_save
+
+  

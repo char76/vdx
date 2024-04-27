@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for i in `ls gifs`
+do
+eps_file=`basename $i gif`eps
+gif_file=gifs/$i
+echo Converting $gif_file to $eps_file ...
+convert -geometry 100%x100% -density 100x100 $gif_file $eps_file
+done
+echo done.

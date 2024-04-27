@@ -1,0 +1,30 @@
+
+
+ 
+        		   Welcome to VDX
+        		  
+       		  (formerly known as View Designer/X)
+
+
+
+    Copyright (C) 1996, 1997, 1998 by Dirk Laessig, Braunschweig, Germany
+			   ALL RIGHTS RESERVED
+			     dirk@bredex.de
+
+
+	
+1. Installation
+
+	Install this application in a directory of your choice.
+
+2. Running the interface builder
+
+	Start the shell script 'vdx', which is in the directory 'bin' of
+	the installed tree. This script will setup the environment and
+	call the real binary.
+
+3. Deinstallation
+
+	Remove this directory.
+
+

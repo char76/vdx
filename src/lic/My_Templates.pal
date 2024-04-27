@@ -1,0 +1,8 @@
+WIDGET {
+  NAME ""
+  CLASS ""
+  MANAGED ""
+  QUICKHELP ""
+  HELPID "0"
+  VIEWDATA "LONG PaletteView width 200 LONG PaletteView height 300 "
+}

@@ -1,0 +1,481 @@
+! Replace_Product - Resource file
+! Application resources
+! (C) Dirk Laessig
+
+! -----------------------------
+! global defaults
+! -----------------------------
+
+!
+! The bubbles
+!
+*.openBubble.labelString: To reload a project\nclick on this icon.
+*.saveBubble.labelString: Save the current project.
+*.templateBubble.labelString: Display the default\ntemplate folder.
+*.productBubble.labelString: Look into the about box.
+*.paletteBubble.labelString: Display a window\nwith Widget classes.
+*.testModeBubble.labelString: Switch WYSIWYG view from\nlayout mode to test mode.
+*.execBubble.labelString: Execute an external program,\ne.g. make or xmkmf.
+*.generateBubble.labelString: Generate the source code.
+*.fontChooserBubble.labelString: Font Chooser
+*.colorSelectBubble.labelString: Color Selection
+*.applyBubble.labelString: Apply changes
+
+!
+! Fancy layout
+!
+Vdx*enableEtchedInMenu: True
+Vdx*enableThinThickness: True
+
+!
+! Define the colors
+!
+Vdx*background:	        ivory3
+Vdx*XmText.background:	#bebeaf
+Vdx*SensitiveViewScrolledWindow.ClipWindow.background: #bebeaf
+Vdx*SensitiveViewScrolledWindow.ScrolledWindowClipWindow.background: #bebeaf
+Vdx*SensitiveViewScrolledWindow.SensitiveContainer.background: #bebeaf
+
+!
+! Tooltip with yellow background
+!
+Vdx*XlBubble*background: #FDFFCA
+Vdx*XlBubble*foreground: #000000
+
+!
+! Make the widget resource editor table a bit more compact
+!
+Vdx*WidResEditor*XlCellTable.horizontalSpacing: 1
+Vdx*WidResEditor*XlCellTable.verticalSpacing: 1
+
+! ------------------------------------------------------------------------
+! Fonts
+!
+Vdx*fontList:	-adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1,\
+                -adobe-helvetica-medium-o-*-*-12-*-*-*-*-*-iso8859-1=italic,\
+               -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1=bold
+Vdx*FontList:	-adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1,\
+                -adobe-helvetica-medium-o-*-*-12-*-*-*-*-*-iso8859-1=italic,\
+               -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1=bold
+
+!
+! Font that is used when moving and resizing
+!
+*lwhereFont:		-adobe-helvetica-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+
+!
+! Context menu font is bold
+!
+*Popupmenu*fontList: -adobe-helvetica-bold-r-normal--12-*-*-*-*-*-iso8859-1
+
+! ------------------------------------------------------------------------
+
+!
+! Following resources should always be public
+!
+Vdx.defaultPublic: labelString mnemonic accelerator acceleratorText messageString title dialogTitle
+
+!
+! We need dynamic drag & drop protocal
+!
+*dragReceiverProtocolStyle: DRAG_PREFER_DYNAMIC
+*dragInitiatorProtocolStyle: DRAG_PREFER_DYNAMIC
+
+!
+! Text Widget to edit object names
+!
+*SensitiveContainer.XmText.highlightThickness:	1
+*SensitiveContainer.XmText.marginHeight:	2
+*SensitiveContainer.XmText.marginWidth:		2
+*SensitiveContainer.XmText.shadowThickness:	1
+
+!
+! default title of context menu
+!
+*Popupmenu.PopupMenuLabel.labelString: 	Selected Objects
+
+*MessageBox.okLabelString:		Ok
+*MessageBox.cancelLabelString:	        Cancel
+*MessageBox.helpLabelString:	        Help
+
+*LcreatorCreate.labelString:	Create
+
+!----------------------------
+! MLXHelp Resources
+! ---------------------------
+!*MLXHelp*text.fontList: -adobe-times-medium-r-normal--14-*-*-*-*-*-iso8859-1
+!*MLXHelp*contentsButton.labelString:	Contents
+!*MLXHelp*titleLabel.labelString:	Title:
+!*MLXHelp*contentsDialog.dialogTitle:	Contents
+!*MLXHelp.title: 			Help System
+!*MLXHelp*Exit.labelString: 		Close
+!*MLXHelp*backButton.quickHelpLabel:	Backward - last help text.
+!*MLXHelp*forwardButton.quickHelpLabel:	Forward - next help text.
+!*MLXHelp*text.quickHelpLabel:		The help text.
+!*MLXHelp*frame.quickHelpLabel:		Contents tree - click the tree nodes.
+!*MLXHelp*Exit.quickHelpLabel:		Close the help window.
+
+
+! -----------------------------
+! Main window
+! -----------------------------
+!*MainWindow.title:			Replace_Product
+!
+!*MainWindow.height: 			450
+!*MainWindow.width:  			400
+!
+!*MainWindow*File.labelString:			File
+!*MainWindow*File.mnemonic:			F
+!*MainWindow*Widgets.labelString:		Widgets
+!*MainWindow*Widgets.mnemonic:			W
+!*MainWindow*Project.labelString:		Project
+!*MainWindow*Project.mnemonic:			P
+!*MainWindow*Options.labelString:		Options
+!*MainWindow*Options.mnemonic:			O
+!*MainWindow*Help.labelString:			Help
+!!*MainWindow*Help.mnemonic:			H
+!
+!
+!*MainWindow*FileOpen.labelString:	        Open ...
+!*MainWindow*FileOpen.mnemonic:	        	O
+!*MainWindow*FileOpen.quickHelpLabel:	        Open a project file.
+!*MainWindow*FileSave.labelString:		Save
+!*MainWindow*FileSave.mnemonic:			S
+!*MainWindow*FileSave.quickHelpLabel:		Save the current project.
+!*MainWindow*FileSaveAs.labelString:		Save as ...
+!*MainWindow*FileSaveAs.mnemonic:		a
+!*MainWindow*FileSaveAs.quickHelpLabel:		Save the current project in another location.
+!*MainWindow*FileExit.labelString:		Exit
+!*MainWindow*FileExit.mnemonic:			x
+!!*MainWindow*FileExit.quickHelpLabel:	       	Exit the Replace_Product
+!
+!*MainWindow*ProjectNew.labelString:		New ...
+!*MainWindow*ProjectNew.mnemonic:		N
+!*MainWindow*ProjectNew.quickHelpLabel:		Create a new project.
+!
+!*MainWindow*ProjectSettings.labelString:	Settings
+!*MainWindow*ProjectSettings.mnemonic:		S
+!*MainWindow*ProjectSettings.quickHelpLabel:	Change the project settings.
+!*MainWindow*ProjectPalette.labelString:		Templates
+!*MainWindow*ProjectPalette.mnemonic:		T
+!*MainWindow*ProjectPalette.quickHelpLabel:	Show the templates of the current project.
+!*MainWindow*ProjectLoadInterface.labelString:	Interface add ...
+!*MainWindow*ProjectLoadInterface.mnemonic:	a
+!*MainWindow*ProjectLoadInterface.quickHelpLabel:Add a interface from a file to \
+!						the current project.
+!*MainWindow*ProjectGenerate.labelString:	Code generation ...
+!*MainWindow*ProjectGenerate.mnemonic:		g
+!*MainWindow*ProjectGenerate.quickHelpLabel:	Generate code for this project.
+!
+!*MainWindow*WidgetsPalette.labelString:		Palette
+!*MainWindow*WidgetsPalette.mnemonic:		P
+!*MainWindow*WidgetsPalette.quickHelpLabel:	Show a widget class palette.
+!
+!*MainWindow*OptionsGrid.labelString:		Grid
+!*MainWindow*OptionsGrid.mnemonic:		G
+!*MainWindow*OptionsGrid.quickHelpLabel:		Change grid of the layout editor.
+!*MainWindow*OptionsSave.labelString:		Save
+!*MainWindow*OptionsSave.mnemonic:		S
+!*MainWindow*OptionsSave.quickHelpLabel:		Save options in your home directory.
+!*MainWindow*OptionsQuickHelp.labelString:	Quick help
+!*MainWindow*OptionsQuickHelp.mnemonic:		Q
+!*MainWindow*OptionsQuickHelp.quickHelpLabel:	Toggle the quick help line.
+!
+!*MainWindow*quickHelpMainWindow.labelString:	Main Window
+!*MainWindow*quickHelpTextEditor.labelString:	Text Editor
+!*MainWindow*quickHelpResourceEdit.labelString:	Resource Editor
+!
+!*MainWindow*minimalRefreshButton.labelString:	mimimal
+!*MainWindow*optimalRefreshButton.labelString:	optimal
+!
+!*MainWindow*UpdatePolicy.labelString:		Update policy
+!*MainWindow*UpdatePolicy.mnemonic:		U
+!*MainWindow*UpdatePolicy.quickHelpLabel:	Various kinds of update policy in the layout editor.
+!
+!*MainWindow*ViewForm.quickHelpLabel:		Interfaces of the current project.
+!*MainWindow*MessageForm*quickHelpLabel:		Error, warnings und information messages.
+!
+!! ----------------------------
+!! Icons
+!! ----------------------------
+!
+!*MainWindow*OpenIcon.quickHelpLabel:		Open a project file.
+!*MainWindow*SaveIcon.quickHelpLabel:		Save the current project.
+!*MainWindow*PaletteIcon.quickHelpLabel:		Show the templates of the current project.
+!*MainWindow*WidgetPaletteIcon.quickHelpLabel:	Show a widget class palette.
+!*MainWindow*ProductIcon.quickHelpLabel:		Product informations.
+!
+!
+!!*MainWindow*GridDialog.dialogTitle:		Grid
+!*MainWindow*GridModeOn.labelString:		Grid on
+!*MainWindow*GridModeOff.labelString:		Grid off
+!*MainWindow*GridValueLabel.labelString:		Spacing:
+!*MainWindow*GridOk.labelString:			Ok
+!*MainWindow*GridCancel.labelString:		Cancel
+!*MainWindow*GridHelp.labelString:		Help
+!
+!*MainWindow*ProjectGenerateDialog.dialogTitle:  Code generation
+!*MainWindow*MainGenerateToggle.labelString:	  Main programm
+!*MainWindow*ImakefileGenerateToggle.labelString:  Imakefile
+!*MainWindow*StubsGenerateToggle.labelString:	Overwrite stubs
+!*MainWindow*PGOk.labelString:			Ok
+!*MainWindow*PGCancel.labelString:		Cancel
+!*MainWindow*PGHelp.labelString:			Help
+!
+!*MainWindow*ViewLabel.labelString:		Interfaces:
+!
+!
+!*MainWindow*TestModeToggle.labelString:		Test mode
+!*MainWindow*TestModeToggle.quickHelpLabel:	Change the layout editor from \
+!						edit to test mode.
+!
+!*MainWindow*HelpForHelp.labelString:		On Help
+!*MainWindow*HelpForHelp.mnemonic:		O
+!*MainWindow*HelpForHelp.quickHelpLabel:		Help for the help system.
+!*MainWindow*HelpTutorial.labelString:		Tutorial
+!*MainWindow*HelpTutorial.mnemonic:		T
+!*MainWindow*HelpTutorial.quickHelpLabel:	Invoke the Replace_Product \
+!tutorial.
+!*MainWindow*HelpOnContext.labelString:		On Context
+!*MainWindow*HelpOnContext.mnemonic:		C
+!*MainWindow*HelpOnContext.quickHelpLabel:	Getting help by clicking \
+!						on a widget.
+!*MainWindow*HelpProduct.labelString:		Product information
+!*MainWindow*HelpProduct.mnemonic:		P
+!*MainWindow*HelpProduct.quickHelpLabel:		Product informations
+!
+!*MainWindow*MessageClearButton.labelString:	Clear
+!*MainWindow*MessageClearButton.quickHelpLabel:	Clear the output window.
+!
+!*MainWindow*MessageLabel.labelString:		Output:
+!
+!*MainWindow*ProductInfoDialog.dialogTitle:	Product information
+!*MainWindow*PIClose.labelString:		Close
+!
+!*MainWindow*WidgetCreateDialog.dialogTitle:	Widget classes
+!*MainWindow*XmCreateOptionMenu_1.labelString:	Default shell:
+!*MainWindow*XmCreateOptionMenu_1.quickHelpLabel:  By creating a non-shell \
+!			widget on a root, this is the class of the parent.
+!		
+!*MainWindow*ProjectNewDialog.dialogTitle:	New project
+!*MainWindow*ProjectNewLabel.labelString:	Project name:
+!*MainWindow*ProjectNewOk.labelString:		Ok
+!*MainWindow*ProjectNewCancel.labelString:	Cancel
+!*MainWindow*ProjectNewHelp.labelString:		Help
+!
+!*MainWindow*PSLangOptionMenu.labelString:	Code generation:
+!*MainWindow*PSNameLabel.labelString:		Project name:
+!*MainWindow*PSPaletteLabel.labelString:		Templates:
+!*MainWindow*PSStartLabel.labelString:		Startup Interface:
+!*MainWindow*PSOk.labelString:			Ok
+!*MainWindow*PSCancel.labelString:		Cancel
+!*MainWindow*PSHelp.labelString:			Help
+!*MainWindow*ProjectSettingsDialog.dialogTitle:	Project settings
+
+
+! ----------------------------
+! Menus
+! ---------------------------
+*Popupmenu.MenuEdit.labelString:	Menu Editor
+*Popupmenu.MenuEdit.acceleratorText:	M
+
+*Popupmenu.Transform.labelString:	Transform
+*Popupmenu.Transform.acceleratorText:	T
+*Popupmenu.Attachments.labelString:	Attachments
+*Popupmenu.Attachments.acceleratorText:	A
+
+*Popupmenu*InterfaceBrowse.labelString:		Browse
+*Popupmenu*InterfaceBrowse.acceleratorText:	B
+*Popupmenu*Save.labelString:		Save
+*Popupmenu*SaveAs.labelString:		Save as ...
+*Popupmenu*CreateLink.labelString:		Create link
+*Popupmenu*CodeGenerate.labelString:	Generate
+*Popupmenu*Show.labelString:		Show
+*Popupmenu*Show.acceleratorText:	S
+*Popupmenu*Hide.labelString:		Hide
+*Popupmenu*Hide.acceleratorText:	H
+*Popupmenu*Delete.labelString:		Delete
+*Popupmenu*AlignLeft.labelString:	Left
+*Popupmenu*AlignTop.labelString:	Top
+*Popupmenu*AlignRight.labelString:	Right
+*Popupmenu*AlignBottom.labelString:	Bottom
+*Popupmenu*AlignVCenter.labelString:	Vertical Center
+*Popupmenu*AlignHCenter.labelString:	Horizontal Center
+*Popupmenu*AlignWidth.labelString:	Width
+*Popupmenu*AlignHeight.labelString:	Height
+
+*Popupmenu*Edit.acceleratorText:	E
+*Popupmenu*Browse.acceleratorText:	B
+*Popupmenu*Cut.acceleratorText:		X
+*Popupmenu*Copy.acceleratorText:	C
+*Popupmenu*Paste.acceleratorText:	V
+*Popupmenu*Rename.acceleratorText:	R
+*Popupmenu*Refresh.acceleratorText:	F
+*Popupmenu*Delete.acceleratorText:	DEL
+
+
+! ----------------------------
+!   WidgetCreator
+! ----------------------------
+
+*WidgetCreatorShell.title:	Widget-Klassen
+
+*WidgetCreatorShell*WidgetCreatorForm.height: 	400
+*WidgetCreatorShell*WidgetCreatorForm.width: 	300
+*WidgetCreatorShell*WidgetCreatorForm.OptionMenu.labelString: 	Default shell:
+
+
+! ----------------------------
+!   LresEditor
+! ----------------------------
+
+*LresEditor*AutoLoad.labelString:		Automatic load
+*LresEditor*AutoLoad.quickHelpLabel:	        Mark this editor as automatic loader.
+*LresEditor*ExtraNameLabel.labelString:		Name:
+*LresEditor*ExtraNameText.quickHelpLabel:	Identifier and name of widget.
+*LresEditor*ExtraManageLabel.labelString:	Managed:
+*LresEditor*ExtraManageToggle.labelString:	true
+*LresEditor*ExtraManageToggle.quickHelpLabel:	Manage when created.
+*LresEditor*ExtraQuickHelpLabel.labelString:	Quick-Help:
+*LresEditor*ExtraQuickHelpText.quickHelpLabel:	Enter a helpfull string.
+*LresEditor*ExtraHelpIdLabel.labelString:	Help-Node:
+*LresEditor*ExtraHelpIdText.quickHelpLabel:	Drop a Help-Node from Help Editor.
+*LresEditor*Clear.labelString:			Clear
+*LresEditor*Clear.quickHelpLabel:		Disconnect the Help-Node.
+
+*LresEditor*Menu.labelString:			Category:
+*LresEditor*Apply.labelString:			Apply
+*LresEditor*Close.labelString:			Close
+*LresEditor*Help.labelString:			Help
+*LresEditor*Apply.quickHelpLabel:		Apply changes to layout editor.
+*LresEditor*Close.quickHelpLabel:		Close interface, without saving changes.
+*LresEditor*Help.quickHelpLabel:		Get help for the Widget Resource Editor.
+
+
+! --------------------------
+!   Palette
+! --------------------------
+*PaletteShell.title: 				Templates
+*PaletteShell.PaletteForm.width: 		200
+*PaletteShell.PaletteForm.height: 		300
+*PaletteShell.PaletteForm.Close.labelString: 	Close
+
+
+! --------------------------
+!   Browse
+! --------------------------
+*WidgetBrowse.width:			200
+*WidgetBrowse.height:			300
+*WidgetBrowse*Button.labelString:	Close
+
+
+
+! --------------------------
+!  FontSelect
+! --------------------------
+*FontSelect.title:			Font chooser
+*FontSelect*okButton.labelString:		OK
+*FontSelect*okButton.quickHelpLabel:		Put the selected font in the resource entry.
+*FontSelect*cancelButton.labelString:		Cancel
+*FontSelect*cancelButton.quickHelpLabel:	Close the font chooser without saving.
+*FontSelect*helpButton.labelString:		Help
+*FontSelect*helpButton.quickHelpLabel:		Invoke the tutorial.
+*FontSelect*companyOptionMenu.quickHelpLabel:	Company menu.
+*FontSelect*familyOptionMenu.quickHelpLabel:	Family menu.
+*FontSelect*sizeOptionMenu.quickHelpLabel:	Size menu.
+*FontSelect*fontList.quickHelpLabel:		List of all matching fonts.
+*FontSelect*fontSelection.quickHelpLabel:	The selected font.
+*FontSelect*sampleText.quickHelpLabel:		A editable sample text.
+
+! --------------------------
+! TextEdit
+! --------------------------
+*TextEdit*fileMenuButton.labelString:		File
+*TextEdit*fileMenuButton.mnemonic:		F
+*TextEdit*fileImport.labelString:		Import ...
+*TextEdit*fileImport.mnemonic:			I
+*TextEdit*fileImport.quickHelpLabel:		Insert file at cursor position.
+*TextEdit*fileExport.labelString:		Export ...
+*TextEdit*fileExport.mnemonic:			E
+*TextEdit*fileExport.quickHelpLabel:		Export text to file.
+*TextEdit*fileClose.labelString:		Close
+*TextEdit*fileClose.mnemonic:			C
+
+*TextEdit*editMenuButton.labelString:		Edit
+*TextEdit*editMenuButton.mnemonic:		E
+*TextEdit*editCut.labelString:			Cut
+*TextEdit*editCut.mnemonic:			C
+*TextEdit*editCut.quickHelpLabel:		Cut the selected text and put it on the clipboard.
+*TextEdit*editCopy.labelString:			Copy
+*TextEdit*editCopy.mnemonic:			o
+*TextEdit*editCopy.quickHelpLabel:		Copy the selected text to clipboard.
+*TextEdit*editPaste.labelString:		Paste
+*TextEdit*editPaste.mnemonic:			P
+*TextEdit*editPaste.quickHelpLabel:		Insert the contents of the clipboard.
+
+*TextEdit*helpMenuButton.labelString:		Help
+*TextEdit*helpMenuButton.mnemonic:		H
+*TextEdit*helpHelp.labelString:			Help
+*TextEdit*helpHelp.mnemonic:			H
+*TextEdit*helpHelp.quickHelpLabel:		Get help for the Text Editor.
+*TextEdit*helpQuickhelp.labelString:		Quickhelp
+*TextEdit*helpQuickhelp.mnemonic:		Q
+*TextEdit*helpQuickhelp.quickHelpLabel:		Toggle the visibility of Quickhelp line.
+
+*TextEdit*text.quickHelpLabel:		The editable text.
+
+! ----------------------------------
+! MenuEdit
+! ----------------------------------
+
+*MenuEdit*Label1.labelString:			Children
+*MenuEdit*Label2.labelString:			Order
+*MenuEdit*Label3.labelString:			Add entry
+*MenuEdit*schliessenButton.labelString:		Close
+
+*MenuEdit*ArrowUp.quickHelpLabel: 	Move selected widget up.
+*MenuEdit*ArrowDown.quickHelpLabel: 	Move selected widget down.
+*MenuEdit*addLabelButton.quickHelpLabel: Add Label widget as child.
+*MenuEdit*addPushButtonLazy.quickHelpLabel: Add PushButton widget as child.
+*MenuEdit*addToggleButtonButton.quickHelpLabel: Add ToggleButton widget as child.
+*MenuEdit*addSeparatorButton.quickHelpLabel: Add Separator widget as child.
+*MenuEdit*addSubMenuButton.quickHelpLabel: Add PulldownMenu and CascadeButton as children.
+*MenuEdit*schliessenButton.quickHelpLabel: Close the Menu Editor.
+
+
+! ----------------------------------
+! ColorSelect
+! ----------------------------------
+
+*ColorSelect.title:				Color Editor
+*ColorSelect*okButton.labelString:		OK
+*ColorSelect*okButton.quickHelpLabel:		Save changes and close this window.
+*ColorSelect*cancelButton.labelString:		Cancel
+*ColorSelect*cancelButton.quickHelpLabel:	Close Color Editor without saving changes.
+*ColorSelect*helpButton.labelString:		Help
+*ColorSelect*helpButton.quickHelpLabel:		Get help for this window.
+*ColorSelect*sampleColor.labelString:		
+*ColorSelect*sampleColor.quickHelpLabel:	Current selected color.
+*ColorSelect*redScale.quickHelpLabel:		Red value of current color.
+*ColorSelect*greenScale.quickHelpLabel:		Green value of current color.
+*ColorSelect*blueScale.quickHelpLabel:		Blue value of current color.
+*ColorSelect*colorText.quickHelpLabel:		Text presentation of current color.
+
+! ------------------------------------------------
+! Resource QuickHelp
+! ------------------------------------------------
+*WidResEditor*LresNumber.quickHelpLabel:   Enter a numeric value.
+*WidResEditor*LresXmString.quickHelpLabel: String presentation for a XmString.
+*WidResEditor*LresCallback.quickHelpLabel: Method/function in your source code or name of widget to manage.
+*WidResEditor*LresRelation.quickHelpLabel: Name of a widget in the current interface.
+*WidResEditor*LresPixmap.quickHelpLabel:   Name of a Xpm file.
+*WidResEditor*LresPixel.quickHelpLabel:    Color name, e.g. red, peachpuff or #rrggbb.
+*WidResEditor*LresFontList.quickHelpLabel: A font name.
+*WidResEditor*LresString.quickHelpLabel: 	 A simple character string.
+*WidResEditor*LresCvtFromString.quickHelpLabel:  Any string that can be convertered to a resource value.
+
+*WidResEditor*T.quickHelpLabel: 	 Open a full text editor.
+*WidResEditor*C.quickHelpLabel: 	 Open a color selection editor.
+*WidResEditor*F.quickHelpLabel: 	 Open a font chooser.
+
+*WidResEditor*labelString.quickHelpLabel: The Label of the widget.

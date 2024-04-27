@@ -1,0 +1,2333 @@
+% --------------------------------------------------------------------------
+% 
+% Benutzerhandbuch für den View Designer/X
+%
+%	in Englisch
+% 
+% --------------------------------------------------------------------------
+
+
+\documentstyle[epsf,palatino,twoside,makeidx,refman]{report} 
+
+\tolerance 400%
+\emergencystretch 1em%
+%\hfuzz .2
+%\vfuzz\hfuzz
+
+%\sloppy
+
+
+% -- A5 --
+%\setlength\textheight {165mm}
+%\setlength\fullwidth  {110mm}
+%\setleftmarginwidth{2.5cm}
+
+\setlength\textheight {8.3in}
+
+\setleftmarginwidth{4cm}
+
+\makeindex
+
+\def\glossarname{Glossary}
+
+\def\lazyglossar{ \newpage
+	      \addcontentsline{toc}{chapter}{\glossarname}
+	\longthickhrule\bigskip
+     {\secshape\Large\bf\sf \glossarname \par}
+     \bigskip\longthickhrule\bigskip
+    \markboth{\uppercase{\glossarname}}{\uppercase{\glossarname}}%
+    \thispagestyle{plain}
+}
+
+\def\lazyindex{
+	\newpage
+	      \addcontentsline{toc}{chapter}{\indexname}
+	\printindex
+}
+
+% ------------------------------------
+% Zapfding-Font
+% ------------------------------------
+\font\symbolfont=pzdr at 14pt
+
+\def\arrow{{$\rightarrow$}}
+
+\newenvironment{mylist}[1]{ \begin{list}{}{
+	\listparindent0cm \itemindent0cm \labelsep0.1cm
+	\settowidth{\labelwidth}{\bf #1} 
+	\setlength{\leftmargin}{\labelwidth}
+	\addtolength{\leftmargin}{\labelsep}	
+	\renewcommand{\makelabel}[1]{##1 \hfill}
+}}{\end{list}}
+
+\newenvironment{lazy}{\bigskip\hrulefill\begin{alltt}\small}{\end{alltt}\hrulefill\bigskip}
+
+\def\syntax#1{{\em \marginlabel{Syntax:}}{\tt #1}}
+\def\desc#1{{\em \marginlabel{Description:}}{#1}}
+\def\function#1#2{\syntax{#1}
+
+\desc{#2}}
+
+\def\myitem#1{\marginlabel{\em #1}}
+
+\def\showkey#1{{\tt <#1>}}
+
+\newtheorem{myexample}{Example:}[chapter]
+\newenvironment{exam}{\smallskip\begin{myexample}\rm \ }{\hfill$\Box$\end{example}}
+
+
+\def\epsfsize#1#2{\ifnum#1>\hsize\hsize\else#1\fi}
+
+\newcommand{\psfigure}[2] {
+	\begin{figure} 
+	\begin{center}
+	\ \epsfbox{#1}
+	\end{center}
+	\caption{\label{#1} #2}
+	\end{figure}
+}
+
+\newcommand{\psmargin}[1] {
+	\marginpar{
+	\begin{center}
+	\ \epsffile{#1}
+	\end{center}
+	}
+}
+
+\newcommand{\marginchar}[1] {
+	\parskip1mm
+	\marginpar{
+		\begin{center}
+			{\myfont #1}
+		\end{center}
+	}
+}
+
+\def\telefon{\marginchar{\char37}}
+\def\brief{\marginchar{\char41}}
+\def\finger{\marginchar{\char43}}
+\def\haken{\marginchar{\char51}}
+
+
+% ------------------------------------
+% headings
+% ------------------------------------
+
+\headheight 1cm
+
+% ------------------------------------
+% masse
+% ------------------------------------
+
+\parindent0.0cm		% Keine Einrueckung beim Absatzbeginn
+%\footheight0.0cm
+%\footskip0.0cm
+%\textheight20.5cm
+%\textwidth14cm
+%\headwidth14cm
+%\oddsidemargin1cm
+%\evensidemargin1cm
+
+\pagestyle{headings}
+
+% ------------------------------------
+% Beginn des Dokumentes
+% ------------------------------------
+
+\begin{document}
+
+% ------------------------------------
+% nocite
+% ------------------------------------
+
+\pagenumbering{roman}
+
+	\hfill \ \epsffile{logo_new.ps}
+	\ \vskip14cm
+
+	{\Large \sf
+	\hfill View Designer/X \par
+	\hfill User Guide \par
+	}
+	\hfill {\small \sf Release 1.1} \par
+
+	\smallskip
+	\longhrule
+	\smallskip
+	\hfill {\small \sf \today} \par
+
+\thispagestyle{empty} 
+\newpage
+%\maketitle
+
+{\small
+Copyright {\copyright} 1996, 1997, Dirk Lässig
+
+\bigskip
+
+	UNIX and Motif are trademarks of The Open Group.
+}
+
+\newpage
+
+\tableofcontents				  	% Inhaltsverzeichnis
+\newpage
+
+\chapter{Introduction}
+
+\pagenumbering{arabic}
+
+\section{The Goal of View Designer}
+
+	Using X Window System and Motif toolkit it's possible to create user
+	friendly applications. Without support of powerful tools this is a hard
+	work for application developers.
+
+	The View Designer is such a tool which helps software engineers to
+	develop graphical user interfaces for applications running on UNIX
+	systems. 
+
+\section{Features Provided by Release 1.1}
+
+
+	The latest release of View Designer provides following features:
+
+	\begin{itemize}
+
+	\item Object oriented handling including Drag \& Drop
+	\item Interactive WYSIWYG view
+	\item Widget Resource Editor
+	\item Widget Tree Browser
+	\item Templates of widget tree
+	\item Reusable components 
+	\item Generating C and C++ code
+	\item Adaption of code generation
+
+	\end{itemize}
+
+
+\section{Usage of this User Guide}
+
+	For better understanding of View Designer, knowledge of C and
+	C++ programming and Motif toolkit is needed. If you don't have such
+	knowledge you should read a book that introduces Motif programming
+	prior to reading this document.
+
+	Following conventions are used throughout this user guide:
+
+	\begin{itemize}
+	\item \myitem{Example}In the left column of a page you see important
+	words which refers to contents of the text. These could be used for
+	rapid finding of searched explanations.
+
+	\item If we refer to keyboard usage the following convention is used:
+	\showkey{F1}. That means you have to press the first function key on
+	your keyboard. 
+
+	\item Important words are highlighted with an {\em italic}
+	font. Source code sequences are shown in {\tt typewriter} font.
+	\end{itemize}
+
+	In the following chapters we introduce parts of user 
+	interface of View Designer. After this we explain the 
+	design process with an example. In the last chapters some special
+	features of the View Designer are shown. But at first the next 
+	section gives an overview of the functionality. 
+
+\section{Basic Concepts}
+
+	\myitem{\bf Projects}View Designer supports the development of Motif
+	applications. It works with a project that consists of interfaces and
+	several settings.
+
+	\psfigure{overview_en.eps}{Overview}
+
+	\myitem{\bf Interfaces}An interface contains one widget tree, i.e.
+	widgets that are ordered hierarchically. Widget are graphical user
+	interface components used to create Motif user interfaces. A widget
+	belongs to a widget class and has several settings like name and
+	resources. Resources are responsible for appearance and behavior of
+	widgets. 
+
+	View Designer supports design of interfaces in an interactive
+	way. The tools of View Designer create, edit and delete widgets.
+	The WYSIWYG view shows the final appearance of a user interface. The
+	hierarchy of widgets can be changed using Widget Tree Browser and the
+	properties of widgets are edited by Widget Resource Editor. Other
+	helpful tools simplify the creation of interfaces, e.g. Templates.
+
+	Interfaces are saved in files with extension {\tt .i}. The source code
+	generation creates a few files for every interface containing code to
+	create final user interface.
+
+	\myitem{\bf Project setting}A project has many properties, e.g. the
+	name of the application, source code generation model, name of 
+	a interface, that appears first when the application starts up,
+	and compiler and linker options. These
+	properties and names of containing interfaces are saved in a project
+	file ({\tt .prj}).
+
+
+\chapter{User Interface of View Designer}
+
+	This chapter introduces the user interface of View Designer.
+	After reading it
+	you will be familiar with tools and functionality. In the following
+	chapter knowledge is improved with an example.
+
+\section{Main Window}
+
+	% Menus
+	\index{Main Window}
+	Figure \ref{mainwindow.eps} shows the main window of View Designer. It
+	is the starting point for creation of user interfaces in Motif and
+	generation of source code.
+
+	% Bild
+
+	\psfigure{mainwindow.eps}{Main Window}
+
+
+	At the top of main window a menu bar is placed. Projects can be
+	created, loaded, changed and saved by using the contained menus.
+	More windows of View Designer are reachable by this menus. The global
+	user configuration can be changed by this menus. Also available is an
+	online help system.
+
+
+	\myitem{\bf File}
+	The file menu contains items which create, read or save projects. A
+	project contains a set of interfaces and settings. The final
+	application is made by generating code and executing {\tt make}.
+	If you want to build a new application, you have to create a project.
+	Now follows the description of the file menu:
+
+
+	\myitem{New}
+		A new project is created. A little dialog comes up and you have
+		to enter the name of the new project. The project file name
+		and the name of final executable is derived from this name.
+		If you are currently working on a project and there are
+		unsaved changes, you will be asked, whether 
+		you want to throw away the changes.
+
+	\myitem{Open}\index{project file}Choose this menu item to load a
+		formerly saved project. A file selection box is displayed 
+		and you
+		have to specify a project file name. This file name has always
+		the extension {\tt .prj}. Not only the project file is 
+		belonging
+		to a project. Also interface files with extension {\tt .i} are
+		loaded. The project file only refers to these file. Interface
+		files are always in the same directory as the project file.
+
+
+	\myitem{Save}This Menu item is used to save the current project
+		to file system. If you save the project the first time a file
+		selection box is shown. You have to specify the project file
+		name. All interfaces are saved in the same directory.
+	
+	\myitem{Save as}A file selection box is shown and you have to specify
+		the name of the project file. After clicking on Ok button the
+		project is saved.
+
+	\myitem{New Templates}\index{Templates}This menu items creates a new
+		template folder, which is appearing as a new window. Using
+		this window you can create new templates and save the template
+		folder in a template file ({\tt .pal}). Templates are widget
+		trees with predefined resources.
+
+	\myitem{Open Templates}The template file is opened using menu item
+		{\em Open Templates}. In a file selection box you have to
+		specify the file name with extension {\tt .pal}. If the
+		template file is successfully opened, template folder is
+		displayed.
+
+
+	\myitem{Exit}This menu item closes the application. If there are
+		changes on the current project, you will be ask
+		whether to abandon or save them. Answering
+		'Yes' causes the View Designer to save the project in the
+		auto-save directory (see later). So you are able to restore it
+		the next time. If you don't want to exit the View Designer
+		without normal saving, you have to answer 'No'.
+
+
+	\myitem{\bf Project Menu}
+	In Project menu you are able to apply actions to current project.
+	These actions are e.g. changing settings and generating source code.
+
+	\myitem{Settings}\index{Project Settings}Using this menu item settings
+		of current project can be changed. Settings are e.g. the
+		project name, the path where generated source code is placed,
+		name of startup interface and how code is generated.
+	
+	\myitem{Import Interface}\index{Interface!importing}After choosing this
+		menu item a file selection box is shown. If an interface file
+		with extension {\tt .i} specified and you press OK, this file
+		is inserted into current project. The imported interface is a
+		part of project and could be changed.
+
+	\myitem{Generate}\index{Source Code!generating}To generate the source
+		code for a project, choose menu item {\em Generate} and a
+		little dialog will be shown. This dialog enables you to
+		specify which source file you want to overwrite. From Imakefile
+		the {\tt xmkmf} utility creates a makefile, the main program
+		contains the function {\tt main()} that initializes
+		application and opens the startup interface. The callbacks of
+		an user interface are contained in source files which are
+		different to those containing user interface creation. These
+		files are generated by View Designer the first time. If you
+		want to overwrite these source files select {\em Stubs}. After
+		pressing {\em OK} files are generated but VDX don't write
+		the files. A dialog containing a list is used to give you a
+		chance for decision of what files you really want to write.
+
+	
+	\myitem{Execute}\index{xmkmf}\index{make}This menu item is used for
+		execution of {\tt xmkmf}, {\tt make depend}, {\tt make} and
+		final application. In a dialog you choose one of these
+		programs and press {\em Apply}. The output of this process is
+		written into output text pane of main window. Only one program
+		can be executed. When it's running a push button labeled with
+		stop icon is appearing. View Designer is sending Signal {\tt
+		SIGKILL} to running application, if you click on stop icon.
+
+	\myitem{\bf Widgets Menu}\index{Widget!creating}To create widgets
+		for an user interface you should open the widget class palette
+		or use sub-menus in {\em Widgets} menu.
+
+	\myitem{Palette}
+		Using this menu item you get a palette of all available widget
+		classes. The widget classes are appearing as icons. To create
+		a widget click on one of these icons.
+
+		Sub-menus in {\em Widgets} menu could also be used for menu
+		creation. The available widget classes are divided into
+		Shells, Managers, Primitives and Dialogs. If you've chosen a
+		widget class the mouse pointer is grabbed and you have to click
+		and drag the mouse. 
+
+		
+	\myitem{{\bf Options Menu}}\index{Options}View Designer is
+		configurable. These configuration options are saved into file
+		{\tt .vdxrc} in your home directory. The configuration is done
+		by items in {\tt Options} menu.
+
+	\myitem{Generic}\index{Generic Options}This opens a dialog for generic
+		options configuration. Following properties of View Designer
+		can be changed:
+	
+		\begin{itemize}
+		\item The {\em Quick Start Dialog} presents short cut
+		operations for users at program startup. When VDX is started
+		the dialog is shown and offers three actions: Open, New and
+		Recover Project. If this dialog is wanted use {\em Generic}
+		options. 
+
+		\item A project is saved automaticly if {\em Auto Saving} is
+		on. The interval between these auto savings is adjusted by
+		{\em Auto Save Time} slider. The directory where project is
+		saved can be changed with {\em Auto Save Path} text entry.
+
+		\item {\em Main Template Folder} is a file that is used as the
+		main template palette. The file has extension {\tt .pal}. If
+		user wants another palette than default, the file name can be
+		changed to refer to his own template file.
+
+		\item A {\em Quick Help} line is placed in bottom of every
+		window. If these helpful lines are unwanted change {\em Show
+		Lines} toggle button's state to of.
+
+		\item When a project is loaded from a file the WYSIWYG View is
+		automaticly shown if this {\em WYSIWYG after load} toggle
+		button is set.
+		\end{itemize}
+
+
+	\myitem{Grid}\index{Grid}If widgets are created, resized and moved,
+		a grid is used to support convenient placing. Default value of
+		grid are ten pixels. To change this, the dialog, that is opened
+		by {\em Grid} menu item, could be used.
+
+	\myitem{Update Policy}\index{WYSIWYG}To control the update behavior
+		of WYSIWYG view this sub-menu contains two items. If {\em
+		Minimum} is chosen, the refresh of child widget doesn't refresh
+		the parent. Otherwise, e.g. refresh of a child of XmRowColumn
+		causes XmRowColumn to refresh. This behavior is called the
+		{\em Optimum}. To refresh widgets explicitly, choose menu item
+		{\em Refresh} in widget's context menu.
+
+	\myitem{Default Shell}\index{Default Shell}If a widget is created on
+		the root window, an interface is created implicitly. The
+		top widget of an interface is always a shell. Creating a
+		non-shell widget on root window causes the insertion of
+		default shell of a class that is specified by sub-menu {\em
+		Default Shell}
+
+	\myitem{View Defaults}\index{View Defaults}The default view settings
+		are changeable by this dialog. Here the user is able to specify
+		default view parameter like {\em Small Icons}. For Widget Tree
+		Browser and Menu Editor the icon views are adjustable. For all
+		views the {\em Automatic Load} options can be changed.
+
+
+	\myitem{Default Public}\index{Default Public}If you create an
+		application some resources, e.g. labelString, should always be
+		set in external resource file (public). That's important to
+		design your 
+		application for different languages. The later described
+		Widget Resource Editor offers this facility. But to define
+		resources that should always be public, for all your project,
+		use the dialog {\em Default Public}. You could add and delete
+		resource names in the list.
+
+	\myitem{\bf Help Menu}\index{Online Help}\index{Help System}The last
+	menu in main window's menu bar is the {\em Help} menu. It serves as
+	an entry point to help system.
+
+	\myitem{On Help}
+		The help system is opened and a text to describe the help
+		system is displayed. If you are using the online help for the 
+		first time you are encouraged to read this text.
+		
+	\myitem{Tutorial}
+		The menu item Tutorial opens the tutorial on using the VDX.
+
+	\myitem{On Context}
+		By choosing On Context the mouse cursor changes and you may
+		click on a dialog item you want help on.
+
+	\myitem{About}
+		The About menu item displays a dialog which contains VDX 
+		Copyright information. If you licensed the VDX it will also
+		display information about that license.
+
+	% Toolbar
+	\myitem{\bf Toolbar}
+	To speed up certain often performed tasks, there are a few icons
+	displayed below the Menu bar. By clicking on them you can easily
+	take one of the following actions:
+
+	With this icon you can load an existing project
+	\psmargin{OpenProject.eps} file. You will be displayed with a file
+	selection dialog in which you may choose a {\tt .prj} file to load.
+	The action taken is the same as by choosing the menu item {\em Open}
+	from the file menu.
+
+	This icon is a shortcut \psmargin{SaveProject.eps} for the menu 
+	item {\em Save} which saves the current project. If you save a new
+	project for the first time a file selection box will appear in which
+	you may choose a name for the project.
+
+	This icon loads and displays the main template folder
+	\psmargin{Templates.eps} as chosen in {\em Generic Options}.
+	This folder allows you to use and edit the templates.
+
+	By choosing this\psmargin{WidgetPalette.eps} icon the widget class
+	palette will pop up. This palette shows all widget classes known to
+	and usable by the VDX. The action taken is the same as with the menu 
+	item {\em Palette} from the Widget menu..
+
+	To create a new project,\psmargin{Generate.eps} besides the Project 
+	menus {\em Generate} function you may also click this icon.
+
+	To build and execute the current project including the build steps 
+	xmkmf, make\psmargin{Execute.eps} you may choose either this icon 
+	or the menu item {\em Execute} from the Project menu.
+
+	\myitem{Test Mode} The {\em Test Mode} button\index{Test Mode} is
+	used to switch the WYSIWYG display from layout to test mode.
+	In layout mode you change the appearance of the interface by
+	interactively moving widgets and changing their resources. 
+	In test mode you can preview the behavior of the generated interface.
+
+	\psmargin{Logo_16.eps} The icon showing the VDX logo may be used to
+	display the About Box. It's the same as choosing {\em About} from the
+	Help menu.
+
+	% Interface IconView
+
+	\myitem{\bf Icon View}\index{Icon View!Main Window}
+	The main area of the VDX window is occupied by the Icon View.
+	This view displays all interfaces in the current project.
+	Within this view you may select objects by clicking on them with
+	the left mouse button. By holding down the control key while clicking
+	with the mouse on non selected objects these will be added to the
+	current selection. If you select an icon and hold down the mouse
+	button while dragging it over to other objects, these objects will be
+	added to the current selection. Another way to select icons in the
+	icon view is to drag the mouse cursor to an empty area in the view
+	space and pressing and holding the left button while pulling with
+	the mouse. You will see a so called rubber band forming a rectangle
+	in which all enclosed objects will be selected.
+
+	The name of an \index{Interface!changing name} interface is determined
+	by the name of the first widget (Shell Widget) in that interface.
+	Thus, by changing the name of the interface, the name of the first
+	widget will be changed as well.
+	This can be accomplished by pressing the Alt key and clicking on
+	an interface with the left button of the mouse simultaneously. A
+	input dialog will pop up with which you may change the interfaces
+	name. The changes will take effect if you click the mouse outside
+	the dialog or by pressing the \showkey{Enter} key. If you wish to
+	abandon the changes made press the \showkey{Esc} key while the dialog
+	is still active.
+
+	\index{Interface!Kontextmenu}
+	By clicking the right mouse button in the icon view a context menu
+	will be displayed. If done while the mouse cursor is on a selected
+	object, the context menu will apply to all selected objects. By
+	choosing one of the displayed menu items i.e. {\em Browse}, browsers
+	for all of the selected objects will be opened. Some of the context
+	menu's items have key shortcuts such as \showkey{B} for browse which
+	can be used directly on  without activating the	context menu with 
+	the mouse. All these actions of course only work
+	if the keyboard focus is within the icon view, which will be
+	indicated by a black border.
+
+	The following actions can be taken via the context menu of the
+	interfaces:
+
+	\myitem{Browse}\index{Browse}\index{Tree View!opening}This 
+		item opens the browser. The key shortcut for this is
+		\showkey{B}.
+		The browser displays the widget tree for the selected
+		interface. Each widget in the tree is displayed as an icon,
+		which has the same behavior as an icon in the icon view.
+		Additionally the browser allows changing the tree structure
+		by using the clipboard and Motif's Drag \& Drop mechanism.
+
+
+	\myitem{Save}\index{Interface!saving}The 
+		save function allows the user to save a particular
+		interface to a separate file. This file will have the
+		extension {\tt .i}.
+	
+	\myitem{Save As}
+		To save the interface under a different name select
+		this menu item.
+
+	\myitem{Create Link}\index{Link!creating}Creates a link to
+		another interface. If the user wishes to reuse the
+		interface in another widget he may create a link.
+		To accomplish this first select this menu item, then
+		point the mouse to the new parent widget within the WYSIWYG
+		view of the interface the link should point to.
+
+	\myitem{Generate}\index{Source Code!generating}Generate source code
+		for a single interface. This is useful if you only changed
+		one interface and don't want to go trough all the steps of
+		rebuilding the whole source as with the Project menu's 
+		{\em Generate}. There will be no stub files rebuilt as well.
+
+	\myitem{Show}\index{WYSIWYG View}This 
+		item is used to show the WYSIWYG view of the selected
+		interface. The key shortcut is \showkey{S}.
+		The WYSIWYG view allows the user to view and change the
+		appearance of the interface. It facilitates moving and
+		resizing of the interface's widgets.
+
+	\myitem{Hide}Hides the WYSIWYG view. (Key \showkey{H}).
+
+	\myitem{Delete}\index{Delete!Interface 
+	context menu}\index{Interface!deleting}To 
+		remove an interface from the project. This action does not
+		delete the interface file.
+
+	The WYSIWYG view will also be activated if an icon in the
+	icon view will be double-clicked. {\em Show} is the so called default
+	action.
+
+	\myitem{\bf Output}\index{Output}The 
+	window Output contained in the VDX main window will show
+	messages normally written to standard output or standard error
+	output. These are in particular warnings of Xlib, X Toolkit,
+	Motif and informational messages of the View Designer. The
+	{\em Clear} button allows to erase all messages in this window.
+
+	\index{Quick Help}The 
+	lower border of the main window contains the Quick help
+	line. If the user moves the mouse over almost any item in
+	the main window a short help text describing the function
+	of the item will be displayed here. This help line is available 
+	in nearly any of the View Designers windows. It can be disabled
+	with the Generic options dialog.
+
+\section{WYSIWYG View}
+	
+	\index{WYSIWYG View}
+	The main purpose of an interface builder is the creation
+	of graphical user interface objects. The only way to do
+	this effectively is to show the result (the interface)
+	while the user is editing it.
+
+	\myitem{\bf Selecting}\index{Widget!selecting}Figure
+	\ref{wysiwyg.eps} on page \pageref{wysiwyg.eps} shows 
+	the WYSIWYG view of an
+	example user interface. A button with the label {\em Cancel} is
+	selected. The selection of a widget is done by clicking on
+	it with the left button of the mouse. As with the icons in
+	the icon view multiple selections are done by holding
+	the Control key while left-clicking.
+	
+	\psfigure{wysiwyg.eps}{WYSIWYG view of an example interface}
+
+	\myitem{\bf Resize}\index{Grid}\index{Widget!changing size}The 
+	left mouse button is also used to change the size of a
+	widget. To do so move the mouse cursor over one of the
+	eight little rectangles on the border of the widget. Press
+	and hold the left mouse button and drag the mouse in the desired
+	direction to resize the widget. While dragging the mouse the new
+	size of the widget will be shown as a black bordered rectangle.
+	When releasing the mouse button	the widget will resize itself to 
+	the new dimensions. The new size of the widget will be adjusted
+	according to the {\em Grid} set in the Options menu of the main
+	window.
+
+	\myitem{\bf Move}\index{Widget!moving}\index{Drag
+		\& Drop}The View Designer uses the Drag \& Drop mechanism
+	of the Motif toolkit. This mechanism is common to all Motif
+	applications and uses the middle mouse button.
+	This makes it possible to move a widget around in its parent
+	but also to move a widget from one parent to another or even
+	to another interface. While doing this the WYSIWYG view will
+	display a rectangle the size of the moved widget. According to
+	the grid this rectangle will be moved relatively to the new
+	parent widget, so the new position will always be visible.
+
+	\myitem{\bf Copy}\index{Widget!copying}\index{Drag \& Drop}Drag 
+	\& Drop is also used to copy certain objects. To create
+	a copy hold the Control key during the whole process. After
+	releasing the middle mouse button, the object will be copied
+	to its new location, leaving the source unchanged. The newly
+	created object may be assigned a name different from the sources
+	because names must be unique within a single interface.
+	
+	\myitem{\bf Context Menu}\index{Widget!context menu}
+	The right mouse button is used to open the objects context
+	menu. If there is more than one widget selected, the menu
+	will apply to all selected widgets.
+	The context menu contains the following entrys:
+
+	\myitem{Edit}\index{Edit}\index{Widget Resource 
+		Editor!opening}By selecting Edit from the menu or by
+		pressing \showkey{E} the widget resource editor will
+		be displayed. This editor allows for the modification
+		of a widgets resources. It can also be opened by double
+		clicking on a widget with the left mouse button, again
+		forming the default action.
+
+	\myitem{Browse}\index{Tree View!opening}As with the menu item
+		Browse in the icon view's context menu selecting this
+		item opens the browser. Contrary to the above mentioned
+		this browser will not contain the whole widget hierarchy
+		of the interface but only the selected widget and 
+		its children.
+
+	\myitem{Align}\index{Align}\index{Widget!aligning}
+		The sub menu Align contains eight menu items. These items
+		will be activated when more than one widget is selected.
+		It is significant which widget is selected first since
+		the alignment will be adjusted according to this widget.
+
+		\begin{mylist}{Horizontal Centers}
+		\item[Left] All selected widgets will be aligned at the
+			left edge of the first widget.
+
+		\item[Right] The widgets will be aligned at the right
+			edge of the first widget.
+ 
+		\item[Top] All widgets align at the upper edge of the
+			first widget.
+
+		\item[Bottom] The selected widgets are aligned at the lower
+			edge of the first.
+
+		\item[Horizontal Center] All but the first widget will be
+			moved horizontally until they center with the first
+			widget.
+
+		\item[Vertical Center] The centering will be done by
+			moving the widgets vertically until they are
+			centered with the first widget.
+	
+		\item[Width] All widgets inherit the width of the first
+			selected widget.
+
+		\item[Height] The widgets inherit the height.
+	
+		\end{mylist}
+
+	\myitem{Cut}\index{Cut}\index{Clipboard}The Cut menu item causes
+		the widget to be copied to the Clipboard and then 
+		removed from the interface. The key shortcut for this action
+		is \showkey{X}. If you selected multiple widgets all
+		will be copied and removed. The cut widgets can be
+		inserted into any interface by selecting the Paste
+		menu item.
+
+	\myitem{Copy}\index{Copy}\index{Clipboard}
+		In opposite to Cut this item does not remove the widget
+		from the interface it was selected in. The Paste action
+		will as with Cut insert the copied widgets into an interface.
+
+	\myitem{Paste}\index{Paste}\index{Clipboard}With the Paste entry
+		widgets that have been Cut or Copied with the respective
+		actions will be pasted into an interface. The widget whose
+		context menu was opened to do the paste will become the
+		new parent widget. If the widget can't become parent to
+		the widgets in the clipboard the Paste menu item will
+		be grayed and not selectable. {\em Paste} is also reachable
+		with the shortcut \showkey{V}.
+
+	\myitem{Menu Editor}\index{Menu 
+		Editor!opening}\index{Menu Editor} This menu item is
+		visible only for menu bar, pop-up menu and pull-down
+		menu widgets (Key \showkey{M}). A new window will open
+		which allows the creation of menu structures. With this
+		Editor you will be able to effectively create menus
+		with push buttons, toggle buttons, labels, separators and
+		sub menus.
+
+	\myitem{Visibility}\index{Visibility}\index{Dialog} As with the
+		Edit menu entry this item will only be visible for
+		dialog widgets. With it a dialog can be shown or hidden.
+		Dialogs are parts of the interface that are visible only
+		for a certain action, i.e. opening a file will show a
+		file selection dialog which will disappear after a file
+		is selected.
+
+	\myitem{Refresh}\index{Refresh}\index{WYSIWYG View}
+		The WYSIWYG view can be refreshed with this menu item.
+		The shortcut key for this action is \showkey{F}.
+		Refreshing the view may be necessary if some of
+		the view's contents gets messed up due to errors while
+		drawing.
+
+	\myitem{Delete}\index{Delete!in Widget Context Menu}\index{Widget!deleting}
+		The widget will be completely erased. If there are
+		children contained within it you will be asked if you
+		really want to remove the widget and all of its children.
+		Attention! Contrary to the Cut action this cannot be
+		reversed since no copy of the erased widgets will be
+		saved to the clipboard. The shortcut for Delete is
+		\showkey {Del}.
+
+\section{Widget Resource Editor}
+		
+	\index{Widget Resource Editor}
+	\index{Resources!changing}
+	With the widget resource editor (see fig. \ref{resourceedit.eps})
+	the resources of widgets can be changed.
+	It can be opened by selecting Edit from the context menu or
+	double clicking on the widget.
+
+	\myitem{\bf File}\index{File!in Widget Resource Editor} In the
+	file menu of the resource editor various file operations on a widget
+	can be selected. It contains functionality to save 
+	selected widgets to a file (item {\em Save} or key \showkey{Ctrl-L}),
+	to load widgets from the hard disk (item {\em Load} or key
+	\showkey{Ctrl-L}), to apply changed resources to the widget
+	(item {\em Apply} or key \showkey{Ctrl-A}) and to close the resource
+	editor (item {\em Close} or key \showkey{Ctrl-C}).
+
+	\myitem{\bf View}\index{Category}\index{View!in Widget Resource Editor}
+	The view menu of the resource editor allows selecting the
+	the different views on a widget. The currently active view is shown
+	in the line below the menu bar. The keys \showkey{Ctrl-1} to
+	\showkey{Ctrl-5} switch between the different views.
+
+	\myitem{Core}\index{Core}
+		Within this category are contained all resources of the
+		core widget class. This class is the base class for all
+		other widgets, it contains resources common to all widgets.
+		These are for example {\tt XmNx, XmNy, XmNwidth, XmNheight}.
+
+	\myitem{Specific}\index{Specific}This category contains resources
+		specific to the current widget class (e.g. XmNLabelString).
+
+	\myitem{Constraint}\index{Attachments}\index{Constraint}The
+		constraint resources for a widget are defined by it's
+		base class. These resources are only necessary for
+		specific widgets.
+		If the parent widget defines the child widget's appearance
+		and needs additional data for every child to do so, this
+		data usually is contained within the constraint resource
+		category, e.g. the children of a {\tt XmForm} widget have
+		resources defining their preferred layout (Attachment).
+
+	\myitem{Callbacks}\index{Callback}This category contains all
+		callback resources of a widget. Callbacks are functions
+		which will be executed if certain events occur.
+		i.e. A certain callback routine will be called if the
+		user clicks on a push button with the mouse. Callbacks
+		therefore contain the main functionality of your
+		application. The View Designer cannot help you
+		in designing this functionality, what it does is to
+		help you layout your applications front end.
+
+	\myitem{Extra}\index{Extra}\index{Widget!Name}Special adjustments
+		which are not in particular resources can be made with
+		the entrys in this category. These can be the name for
+		the widget, or the toggle button {\em Manage} which
+		assures that the widget will be made visible after creating it.
+
+	% Bild
+
+	\psfigure{resourceedit.eps}{Widget Resource Editor}
+
+	
+	\myitem{\bf Automatic Load}\index{Automatic Load}The standard
+	behavior of the View Designer is to open a new resource editor
+	each time {\em Edit} is chosen from the context menu. The toggle
+	button {\em Automatic Load} in the options menu switches it
+	to loading the resources of further edited widgets into a single
+	specific resource editor. If you choose to open a resource editor
+	for a widget after enabling this button no new resource editor
+	will pop up but the resources will be loaded into the editor
+	specified after selecting {\em Automatic Load}. The status of
+	automatic load can be viewed in the status line below the menu
+	bar.
+	
+	\myitem{\bf Resource lines}\index{Resource lines}
+	The main area of the widget resource editor is occupied by a
+	scrollable window containing the resource lines available
+	for the particular widget. On the left hand of each line is
+	a toggle button showing the name of the resource. If this button
+	is active, the selected resource is marked for manual setting
+	in the source code or the resource file. If the button is not
+	active the default value for this resource will be used.
+	On the right side of the button various fields may be shown, depending
+	on the resource type. These can be e.g. input areas, option menus
+	or toggle buttons. If the resource is for example boolean,
+	a toggle button will be shown, which allows for setting the
+	value of the resource to true or false. The next field to the
+	right contains push buttons through which a text editor,
+	a font chooser or a color selection dialog may be opened. The
+	options menu on the rightmost side of the scrolled window allows
+	the user to choose a source for the resource values. The
+	following sources can be chosen here:
+
+	\myitem{private}\index{private}\index{Source Code}
+			The resource value will be written to the created
+			source. The View Designer separates the generated
+			source into two different kinds of source files.
+			The files edit-able by the user, called Stubs and
+			the files used by the View Designer internally
+			which must not be edited since these files will
+			be overwritten each time source code is generated.
+			One of the latter files also contains these private
+			resources.
+
+	\myitem{public}\index{Resource file}\index{public}This resource
+			will be contained in an external file created while
+			generating the source code. The source created will
+			contain a file with the extension {\tt .rf}. Building
+			the application a file with the name 
+			{\em project name}{\tt .ad} will be created containing
+			all the resources from these {\tt .rf} files.
+
+	\myitem{load}\index{load}
+			For resources of the Pixmap type
+			\index{Xpm file}\index{Pixmap}this menu item
+			specifies the pixmap file (Xpm format) to be 
+			loaded at run time.
+			This means the pixmap file will be loaded after the
+			application has been started.
+			The text field of this resource must contain
+			the path and name of the pixmap file. The path may
+			be absolute or relative or may just contain the
+			name of the pixmap file in which case the file
+			will be looked up with {\tt XtResolvePathname()}
+			\index{XtResolvePathname()} which looks for a
+			subdirectory {\tt pixmaps}. This will affect both
+			the created application and the WYSIWYG view.
+
+	\myitem{include}\index{include}Xpm files can be included in the
+			generated source. If your application shouldn't
+			bother with looking for {\em possibly missing} pixmaps
+			it could be useful to compile the pixmaps into
+			your applications executable. The Xpm file will
+			be included with the {\tt \#include} C preprocessor
+			statement.
+
+	\myitem{method} If \index{method}\index{Callback}option
+			menu shows this entry, the name of a callback
+			function could be entered here. This function
+			will be located in the above mentioned Stub files
+			generated by the View Designer.
+			The functions code will have to be implemented
+			by the developer of the application, respectively
+			you, the user. The test mode of the WYSIWYG view
+			is designed to help you in finding out if your
+			callback will be branched to at the desired action.
+			If you play with the interface in test mode, the
+			lower part of the main window (message pane) will
+			show information which widget called one of its 
+			callbacks.
+
+	\myitem{manage} In this input field the name of a widget should
+			be entered\index{manage}\index{Dialog}.
+			The widget which corresponds to the name 
+			(e.g. a Dialog) should be in the same interface and
+			will be shown in case this callback occurs.
+			This is especially useful for dialogs, 'cause
+			a dialog is usually invisible and is only shown
+			if a certain action on the interface is carried out
+			e.g. if a File open menu item is selected in which
+			case a file selection box is shown.
+
+	
+	There is a Quick help bar giving a fast overview of all the
+	elements in the resource editor too.
+
+	The push button {\em Apply} on the lower border will apply
+	the changed resources to the widget.
+	{\em Close} will close the window discarding all changes made
+	since the last {\em Apply} command.
+	The {\em Help} button will take you to the online help.
+
+\section{Browser}
+
+	\index{Tree View}
+	As shown in figure \ref{browser.eps}, the View Designer incorporates
+	a Tree View. It provides for a quick overview of the widget hierarchy
+	of an interface or a widgets sub tree. The browser is opened
+	by choosing {\em Browse} from a widgets context menu. The plus and
+	minus signs in the tree view open or hide parts of the tree. The
+	icon representing the widget shows information of what type the widget
+	actually is.
+
+	\myitem{\bf File}\index{File!in Browser}The file menu of this window
+		contains the file operations available for the widget
+		shown in the browsers window.
+
+	\myitem{Load}\index{Load!in Browser}This menu item - as well as the
+		key \showkey{Ctrl-L} - loads a widget from the disk into
+		the browser. The widget to be replaced may be chosen from
+		the WYSIWYG view or from any icon or three view. If an
+		interface is chosen in the main window, the shell widget
+		of that interface will be loaded.
+
+	\myitem{Load Parent}\index{Load Parent!in Browser}The parent
+		of the currently displayed widget will be loaded with 
+		{\em Load Parent} or the key \showkey{Ctrl-P}. If there
+		already is a shell widget displayed in the browser this
+		action has no effect.
+
+	\myitem{Close}\index{Close!in Browser}Closes the browser window.
+		The key shortcut for this is \showkey{Ctrl-C}.
+
+	\myitem{\bf View}\index{View!in Browser}The {\em View} item allows
+		you to change the properties of the browser window, e.g.
+		displaying large or small icons. The defaults for these
+		settings can be changed with the View Defaults dialog of
+		the View Designer's main window. Note that the changes you
+		make are only applicable for the particular browser you
+		are editing. To change the overall behavior of all browser
+		windows use the View Defaults dialog.
+
+	\myitem{Small Icons}\index{Small Icons!in Browser}If this menu
+		item is chosen, the tree view will contain only small
+		icons for each widget. It can be used to fit more widgets
+		into the browser's window.
+	
+	\myitem{With Icons}\index{With Icons!in Browser}If you don't want
+		to see any icons, choose this item to switch them on or off.
+
+	\myitem{With Class Names}\index{With Class Names!in
+		Browser}The default browser shows the name for each widget
+		class displayed in its window. The names will be shown to
+		the right of the icons in italics. This menu item toggles
+		displaying these names.
+
+	\myitem{\bf Widget}\index{Widget!Menu in Browser}This 
+	menu contains actions also available in the context menu of
+	each widget. The actions apply to all widgets selected in the tree
+	view. If no widget is currently selected these menu items will
+	be grayed and can't be selected.
+
+	\myitem{\bf Options}\index{Automatic Load!in Browser}The options menu
+	currently contains only one entry. The toggle button
+	{\em Automatic Load} does the same as the button in the widget
+	resource editor. The currently active browser can be chosen to
+	display all tree views opened (context menu {\em Browse}) after 
+	toggling this button to on.
+
+	\psfigure{browser.eps}{The Browser}
+
+	\myitem{\bf Drag \& Drop}\index{Drag \& Drop}In addition to the 
+	actions offered by the icon view the browser allows for moving
+	widgets within the tree. This is again accomplished using the
+	Motif Drag \& Drop feature. By dragging the mouse while holding
+	the middle button down the selected objects can be moved to
+	a different position within the tree. There are two possible
+	actions that depend on the position of the mouse pointer within
+	the tree while doing the Drag \& Drop. These actions can be
+	determined by the shape of the mouse cursor shown while dragging.
+
+	\begin{enumerate}
+	\item Insert as a child. The mouse cursor will show an angle. The
+		selected object will be inserted as a child of the object
+		the mouse cursor is currently on.
+	\item Insert in between. The mouse cursor will show no angle. The
+		selected object will be inserted between two neighboring
+		objects. The mouse cursor must be positioned between those
+		two objects to carry out this action.
+	\end{enumerate}
+	
+	Similar to the WYSIWYG view this view allows to copy instead of
+	moving the selected objects by pressing the Ctrl key while
+	dragging.
+
+	It should be noted that not every widget is allowed to have children.
+	For example a push button never can have a push button child.
+	If the user chooses a wrong Drag \& Drop action the failure
+	will be indicated by the mouse cursor being dragged back to where
+	the invalid move began.
+
+	The other options available with the tree view are the same as
+	for the icon view. One or more objects may be selected and a pop
+	up menu for them may be opened. The default action, activated by 
+	double clicking with the left mouse button, is opening the
+	widget resource editor. Changing the name of a widget is also
+	possible. This is done by holding the \showkey{Alt} key while
+	clicking with the left button on the desired widget, this provides
+	a much more efficient way to change widget names than the
+	resource editor does.
+
+\section{Menu Editor}
+		
+	\index{Menu Editor}
+	To allow the user to easily create menus, the View Designer has
+	a built in menu editor (Fig. \ref{menuedit.eps}) function. This menu
+	editor can be activated via a widgets context menu. The menu
+	editor feature will only be available for widgets to which applying
+	a menu is possible. These are e.g. menu bars, pop-up menus, pull down
+	menus or radio boxes.
+
+	The menu bar of the menu editor provides the same functionality as
+	the menu of the browser. The file menu allows you to load a widget
+	into the menu editor or to close the menu editor. The view menu
+	controls the icon view. The widget menu allows to perform actions
+	on selected widgets in the icon view and the options menu contains
+	the toggle button {\em Automatic Load}. The default appearance of
+	the menu editor can also be changed with the View Defaults dialog
+	of the main window.
+	
+	\psfigure{menuedit.eps}{Menu Editor}
+
+	\index{Icon View!Menu Editor}The 
+	icon view of the menu editor shows all children of the currently
+	edited widget. It provides all the above mentioned functionality
+	of an icon view. The figure shows a push button {\em Exit} which
+	is currently being renamed.
+
+	\myitem{\bf Folder}\index{Folder}The arrows are used to change the
+	order of the child widgets. By pressing the desired arrow button
+	the selected widget will move up and down the hierarchy.
+
+	\myitem{\bf Add item}\index{Add item}The buttons before {\em Add item}
+	are used to create widgets. The {\ Submenu} item is special, because
+	with this button a cascade button and a pull-down menu will be
+	created. With the cascade button the resource
+	{\tt \index{XmNsubMenuId} XmNsubMenuId} will be set, creating
+	a motif sub menu.
+	The created widgets will be inserted as last children and may be
+	edited later. For example by pressing \showkey{Alt} and the left
+	mouse button while the cursor is over an icon, the name of the
+	corresponding widget may be changed. Double clicking on an icon
+	opens the widget resource editor and right clicking on it opens
+	the context menu for the widget. If you've created a sub-menu, the
+	context menu will contain an item menu editor which will open another
+	menu editor for this particular sub menu. This way, menu
+	structures of any depth can be edited.
+
+\section{Project Settings}
+
+	\psfigure{settings.eps}{Project settings}
+
+	\index{Project Settings}\index{Settings}
+	The project settings can be reached by choosing {\em Settings} in the
+	project menu. A window as shown in figure \ref{settings.eps} will
+	be opened. In this window settings mostly regarding source code
+	generation may be altered.
+
+	\myitem{\bf Project File} The text field {\em Project file} contains
+	the name of the projects main file. \index{Project File}
+	\index{Application Class}\index{Executable} This file
+	will have the extension {\tt .prj}. The extension may be left out when
+	entering a new name, since it will be added by the View Designer if
+	it's missing. If you change the project file name and use \showkey{Tab}
+	to switch to another input field, the {\em Application class} and
+	{\em Executable} will be changed according to the project name.
+	These presets may be changed at will, they are only suggestions.
+	It may be noted, however that the executable name should be lowercase
+	and the application class name should start with an uppercase letter.
+	The application class sets the name for the later created resource
+	file.
+
+	\myitem{\bf Generation Model} The type of source code created is
+	set by the menu {\em Generation Model}. The View Designer contains
+	two language models at the moment, C and C++. The setting made here
+	will affect the Imakefile, the main program and the created user
+	interfaces. How to manipulated code generation can be seen on page
+	\pageref{codegeneration}. In the main program a certain interface
+	will be created and displayed first \index{Startup Interface}.
+	Which interface should be first can be adjusted
+	with the menu {\em Startup Interface}.
+
+	\myitem{\bf Source Path}\index{Source Path}The {\em Source path}
+	setting determines where the source for the project should be
+	generated. The default will be the same directory the project files
+	are stored in. The input field {\em Source path} may contain an
+	alternate path to store the source. For example you may enter
+	{\tt src} in which case the source will be stored in a subdirectory
+	{\tt src} in your project directory. This will separate the
+	generated source from the project files. If the entered directory
+	does not exist an attempt will be made to create it. The small button
+	close to the input field opens a file selection dialog which may
+	be used to select the path.
+	
+	\myitem{\bf More Source Files}\index{More Source Files}Since your
+	program will consist of more than only the View Designer created
+	source the {\em More Source files} input field may contain additional
+	source files. The names must be separated by spaces. The button at
+	the input field again opens a file selection box in which all
+	C and C++ sources will be listed. You may now choose the files
+	to be included in the generated source and they will be entered
+	into the input field after closing the selection box.
+
+	\myitem{\bf Extra ..}\index{Extra Compiler Options}Additional flags
+	for the Compiler and Linker \index{Extra Linker Options} may be entered
+	in the following input fields. A compiler option could be e.g. 
+	{\tt -I/opt/\-dbms\-/include} which will search for include files
+	in the given extra path besides the standard include path.
+	A linker option would be e.g.  {\tt -L/opt/dbms/lib} which would add
+	{\tt /opt/dbms/lib} to the linker search path, and 
+	\index{Extra Libraries} extra libraries could be {\tt -lsql}.
+	These are only examples, the options valid to your compiler may
+	differ.
+
+\section{Templates}
+
+	The template window (figure \ref{template_window.eps}) shows the
+	template file (extension {\tt .pal}. This file holds widgets
+	and widget trees used as templates. The main template window
+	can be opened by an icon in the View Designer's main window.
+
+	\psfigure{template_window.eps}{Template Window}
+
+	The icon view displays the contents of the template file. This view
+	is special from the other icon views because if the user clicks on an
+	icon in this view, the mouse cursor changes and the View Designer
+	waits for the user to point it to where a new copy of the template
+	should be created. If you click in an WYSIWYG view a widget will
+	be created within the view which has the same properties as the
+	template widget. If you click outside the WYSIWYG views the View
+	Designer will create a new interface using the template. The right
+	mouse button will cancel the action.
+
+	The menu of the template window is almost the same as in the 
+	widget browser and the menu editor. The view menu and the widget
+	menu are in fact identical to those. Therefore the view menu,
+	as in the other views, controls the behavior of the icon view.
+	The widget menu contains the same items as in the context menu
+	of each widget (The special Paste to templates is discussed a
+	little later).
+	
+	\myitem{\bf File}Somewhat different is however the file menu.
+	It allows for saving of the modified templates ({\em Save} or
+	\showkey{Ctrl-S}). As usual a file selection box will appear and
+	you may choose a different filename for the template file. {\em Close}
+	or \showkey{Ctrl-C} closes the window. If the templates have been
+	changed a message box will appear asking you whether to abandon
+	the changes or not.
+
+	\myitem{\bf Paste to Templates}\index{Paste!to Template}
+	The item special to the template view's widget menu is the item
+	paste to templates. With this item the contents of the clipboard
+	will be copied to the template window. This option is not tied
+	to the widget selected in the window. It may be chosen only
+	if one or more widgets are held in the clipboard.
+
+	\myitem{\bf Create On Click}\index{Create On Click}The 
+	menu item Create on Click, contained in the option menu, changes
+	the earlier mentioned behavior when clicking on an ícon in the icon
+	view. If this option is toggled off, icons may be selected with
+	the left mouse button. The Create on click option along with
+	the window size and the size of the icons is saved for your
+	convenience.
+
+	\myitem{\bf Drag \& Drop}\index{Drag \& Drop!in Templates}
+	The Drag \& Drop mechanism of course is also available with the
+	template view. The user can drop widgets into the window and
+	they will be inserted into the templates. The reverse of this action
+	is also possible so that the dragged template can be copied to an
+	existing interface by dropping it there.
+
+\chapter{Sample Application}
+
+	The application design process using the View Designer will be 
+	shown in this chapter with the Textedit application.
+
+	First, create a directory for the application. This directory
+	will contain the files used by the View Designer as well as
+	the source code of our sample application. Change to the directory
+	you just created and start the View Designer.
+
+\section{Project Settings}
+
+	\index{Project Settings}
+	After starting the View Designer, a project called {\em Untitled}
+	is already created. To change the project name, use the {\em Project}
+	menu item {\em Settings}. The dialog already shown in figure
+	\ref{settings.eps} will be displayed.
+
+	Our project name shall be Textedit. Enter 
+	{\tt Textedit.prj} into the first input field. You may omit the
+	extension {\tt .prj} for the View Designer will append it
+	automatically in that case. The file {\tt Textedit.prj} is
+	the main project file and contains information about the
+	project. Since we want our project to be C++, select the
+	corresponding option in the dialog. Now select {\em OK} to
+	close the window and apply the changes to the project.
+
+\section{Creating an Interface}
+	
+	An interface will be added implicitly if you create a widget
+	without creating its parent first. If this widget is a shell
+	this shell will become the first and only widget of the interface.
+	If the created widget is no shell, the necessary shell will be
+	created automatically. The shell widget will be a default
+	shell in that case, which can be selected in the options menu
+	of the main window. An exception to this is creating a dialog.
+	A dialog can't be created without a parent widget, since dialogs
+	can only be parts of an interface.
+	
+	A widget can be created in two different ways.
+	\begin{enumerate} \index{Widget!creating}
+	\item 	The menu {\em Widget} of the main View Designer window
+		is used. It contains the sub menus {\em Shells}, {\em Manager},
+		{\em Primitives} and {\em Dialogs}. These sub menus
+		contain all widget classes known to the View Designer.
+		The sub menus are tear off menus and therefore can be
+		pinned to a separate window on the desktop using the
+		uppermost dotted menu entry.
+	\item	The widget class palette is opened using the menu item
+		{\em Palette} in the {\em Widget} menu or the palette
+		icon in the main windows tool bar. This palette is
+		split into the same categories as the {\em Widgets} menu.
+
+		The icon views displayed in the palette show the different
+		widget classes, but to save space without names. The name
+		of the widget class under the mouse cursor is shown in
+		the palette view's quick help line.
+
+	\end{enumerate}
+	When a widget to be created is selected as shown above, the mouse
+	cursor will change indicating that the View Designer expects the
+	user to select a position for the new interface. If the left
+	mouse button is pressed while dragging with the mouse a rectangle
+	will appear indicating the size of the widget to be created.
+	With releasing the mouse button the widget will be created.
+	It should be noted however that a new interface will only
+	be created if the position the mouse is clicked isn't in a
+	WYSIWYG view. 
+	Otherwise an attempt will be made to create the new widget
+	within the existing interface.
+
+	\index{Default Shell}
+	For our sample application we will create a widget of the
+	XmMainWindow first. Because the default shell is TopLevelShell
+	\footnote{ In the later created source an Interface will be
+	represented by a pop-up shell. The ApplicationShell
+	will always be created, therefore it isn't necessary to
+	create it explicitly. } we don't have to worry about the
+	shell widget. To do so select {\em MainWindow} in the {\em Manager}
+	sub menu and create a widget as described above. A widget of
+	type TopLevelShell named {\em Interface\_1} and a widget
+	named {\em mainWindow\_1} will be created.
+	The icon view of the main window will now contain an icon for
+	the newly created interface.
+
+	Now our application needs a menu bar. We can create it by using
+	the menu item {\em MenuBar} in the {\em Manager} sub menu. Note
+	that unlike XmMainWindow {\tt XmCreateMenuBar()} is no widget class
+	but a Convenience function. To create the menu bar, this function will
+	be called in the generated source. To create XmMainWindow the function
+	{\tt XtCreateWidget()} will be called.
+	
+	When you selected the menu entry {\em MenuBar} don't click the mouse
+	on an empty area of the desktop, since that would create a new 
+	interface containing the menu. Instead click and drag in the
+	WYSIWYG view of our first interface. Note that the regardless of
+	the size you dragged the widget will always be on the upper edge of
+	the interface.
+
+	\psfigure{interface_1.eps}{The new Interface}
+
+	\index{WYSIWYG View}
+	Figure \ref{interface_1.eps} shows the WYSIWYG view of the new
+	interface.
+
+\section{Using the Menu Editor}
+	
+	\psfigure{menuedit_bar.eps}{Menu Editor}
+
+	\index{Menu Editor!using}
+	Well, doesn't the menu look a little empty? Press the right
+	mouse button on the menu bar and select {\em Menu Editor} from
+	the context menu. The menu editor as shown in
+	figure \ref{menuedit_bar.eps} will open up. However the icon
+	view as opposite to the figure will be blank.
+
+	\psfigure{browser_bar.eps}{The Menu Hierarchy}
+
+	A menu bar only can hold sub menus, therefore only the push button
+	{\em SubMenu} will be selectable. Press it twice now to create
+	the following four widgets: two cascade buttons and two pull-down menus.
+	Each pull-down menu is connected to one cascade button, i.e. the
+	resource {\tt XmNsubMenuId} contains the name of the pull-down menus.
+	The names for the new widgets should be changed to be more verbose. To
+	do so use \showkey{Alt-Left Mouse Button}. The renaming
+	procedure is shown in figure \ref{menuedit_bar.eps}. If the name
+	for a pull-down menu is changed, the corresponding {\tt XmNsubMenuId}
+	of the cascade button will be changed as well.
+
+	\index{Icon view!Menu Editor}
+	The icon view also allows for opening context menus for the 
+	widgets. To open a menu editor for the sub-menu {\em FileMenu}
+	simply choose {\em Menu Editor} from the context menu. This way
+	the sub menus can be filled with items building a widget hierarchy
+	as shown in \ref{browser_bar.eps}. 
+
+\section{Using the Widget Resource Editor}
+
+	\psfigure{resourceedit_new.eps}{Changing Resources}
+
+	\index{Widget Resource Editor!use}
+	Although the widget names are meaningful for the programmer now,
+	the end user wouldn't know what to do with them. Therefore,
+	every widget needs it's {\tt XmNlabelString} to be changed.
+	To support internationalization, it would be useful to store
+	the labels in a separate external resource file.
+
+	Choose a menu item, e.g. the widget {\tt New\-Button} and open
+	the the widget resource editor. Enable {\em Automatic load}.
+	The category specific contains the {\tt XmNlabelString} resource.
+	The resources are sorted alphabetically and are displayed without
+	the preceding {\tt XmN}. If you change the text in the text field
+	the toggle button indicating a manually set resource will be
+	enabled. You can reverse this by disabling the button again.
+	The asterisk in front of the resource indicates that this resource
+	has been altered but not applied (using {\em Apply}) to the widget.
+	The leftmost pop-up menu contains settings for using an external
+	resource file {\em public} to set this resource or for setting
+	the value for the resource within the source code {\em private}.
+	We want the resource to be read from a resource file, so we choose
+	{\em public}.
+
+	After pressing the {\em Apply} button, all changes made will be put
+	to the widget. Now we choose another widget e.g. {\tt OpenButton},
+	without closing the resource editor first, by double clicking with
+	the left button or choosing edit in the context menu for the button.
+	The resources for the new widget will be shown in our
+	resource editor. This is exactly the effect the {\em Automatic load}
+	menu item has. If it isn't activated the time we choose the new
+	widget a separate resource editor will be opened.
+
+	\index{Callback}
+	The widget resource editor is also used to define the callbacks for
+	the widgets. The category {\em Callbacks} contains the callbacks
+	valid for the particular widget. The text fields allow the user to
+	enter the name of the function which is to be called if the callback
+	occurs. The code for the callback is to be implemented by the
+	application programmer (you) and is located in a separate file not
+	normally touched by the View Designer. The editing of the source
+	code is not done with the View Designer since there are enough
+	excellent editors out there and each programmer has his own favorite.
+
+	\psfigure{editwindow.eps}{The Edit Window}
+
+	So far the only functionality our application has is a menu.
+	The thing to add for a text editor is of course a text widget
+	with which the text editing can be done. If the text widget is
+	created as a child of {\tt XmMainWindow} it will fill up the
+	entire client area of the window. Only the menu bar will be visible.
+	Furthermore a scrollbar will be placed on the lower edge of the
+	text widget. If we change the resource {\tt XmNeditMode} to
+	XmMulti\_LINE\_EDIT the widget will change from a one line text
+	field to a multi line editor.
+
+	What the figure so far doesn't show are the file selection boxes
+	for loading and saving the edited text and a MessageBox dialog
+	which will be shown before the application terminates.
+	
+\section{Dialogs and Callbacks}
+
+	\index{Callback}\index{Dialog}
+	The procedure to create a dialog is similar to creating other
+	widgets. If you click on a dialog widget class in the palette,
+	the mouse cursor changes to a familiar shape. Click in the
+	WYSIWYG view of the application interface to create the dialog.
+	The context menu of the dialog has an entry labeled
+	\index{Visibility} {\em Visibility}. With it you can hide the dialog
+	in the View Designers context. Note that this does not change the
+	visibility of the dialog for the created application. Every dialog
+	defaults to create invisible (not managed) in the application
+	source code. If you wish to pop up the dialog as soon as the
+	application is started you will have to change this in the
+	{\em Extra} category in resource editor.
+
+	The View Designer allows the user to tie a dialog to a particular
+	callback. If this callback occurs, it causes the dialog to
+	become managed, which will make it visible. To do so enter
+	the name of the dialog widget in the {\em Callback} category of
+	the resource editor. Additionally the option pop-up on the
+	left must be changed from {\em method} to {\em manage}.
+
+	\index{Test Mode}
+	The test mode allows you to check the correct binding of the
+	callback to the dialog. This is particularly useful if the
+	dialog should be opened by a push button or another visible
+	part of the interface, e.g. the {\em Open} menu item.
+	Our example ties dialogs to the menu items {\em Open}, {\em Save}
+	and {\em Exit}.
+
+\section{Source code generation}
+
+	\index{Source code!generating}
+	To generate the source code for the whole project, choose
+	{\em Code generation} from the {\em Project} menu. A dialog
+	will be displayed which allows you to choose what files the
+	View Designer should create.
+
+	\begin{enumerate}
+	\item If {\em Main program} is chosen, the code for the main
+		program will be generated.
+	\item {\em Imakefile} will create a file that is used by {\tt xmkmf}
+		to create makefiles for the application.
+	\item The code for an interface is put in two files, one of them
+		is overwritten by the View Designer, the other file contains
+		the code written by the application programmer. It will
+		contain the callbacks and will not be touched by the View
+		Designer. However if it is the first time the source is
+		generated it is useful to check the {\em Stubs} button
+		since the View Designer will then create a file with empty
+		callback stubs which can be easily edited by the programmer.
+	\end{enumerate}
+
+	After pressing {\em Ok} a list of the created files is shown for
+	you to check whether an important file is to be overwritten. If you
+	click {\em Write} the files will be finally generated.
+
+	In our example the following files will be created:
+
+	\myitem{\tt TextWin\-dow.C}
+				This file contains the above mentioned
+				callback stubs. The programmer must edit
+				this code. In our case this file will
+				contain the methods of a C++ class named
+				{\tt TextWindow}. Also contained herein
+				is the initialization of the module, which
+				for us is the constructor of {\tt TextWindow}.
+
+	\myitem{\tt TextWin\-dow.h} This header file contains the class
+				definition of {\tt TextWindow}. New
+				variables and methods should be added here.
+				Remember that the initialization of the
+				new members should be done in the constructor.
+
+	\myitem{\tt TextWin\-dow.rf} All resources marked {\em public} in
+				the resource editor will be written to
+				this file. These {\tt .rf} files will be
+				copied to one large resource file with
+				the name {\tt Textedit.ad}. The {\tt .rf} files
+				should never be edited.
+
+	\myitem{\tt TextWin\-dow\_base.C} This file contains the base class
+				definition {\tt TextWindow\_base}. It is the
+				parent of {\tt TextWindow} and contains
+				layout information for the interface. It also
+				creates the widget tree for the interface.
+				This file should never be edited.
+
+	\myitem{\tt TextWin\-dow\_base.h} This is the header file for
+				{\tt TextWindow\_base} containing the class
+				definition. This file should never be edited.
+
+	\myitem{\tt textedit.C} This file contains the {\tt main()} function
+				which creates and opens the startup interface.
+
+	\myitem{\tt VcView.C} {\tt VcView} Is the base class of all interfaces.
+				(This is only valid for C++ code generation.
+				{\tt VcView} contains functionality needed
+				by every interface.
+
+	\myitem{\tt VcView.h}	The header file of {\tt VcView}.
+
+	\myitem{\tt Imakefile}  The Imakefile of the project. It is used by
+				{\tt xmkmf} to create a makefile.
+	
+	To compile the application, first execute {\tt xmkmf}. A Makefile
+	will be created. The next step is to {\tt make depend} to add
+	dependencies to the makefile. With the final {\tt make} the code
+	will be compiled and linked into an executable file.
+
+	\index{xmkmf} \index{make}
+	The above steps can also be done within the View Designer by choosing
+	{\em Execute} from the {\em Project} menu.
+
+	At the moment the application only has a dead user
+	interface. To bring it to life you must implement the necessary
+	callbacks. On how to implement the callbacks please refer to
+	the example TextEdit shipped with the View Designer. It can be
+	found in the directory {\tt doc/samples/TextEdit}. Please browse
+	through {\tt TextWindow.h}, {\tt TextWindow.C} and {\tt textedit.C}.
+	
+\chapter{Additional Features}
+
+	This chapter contains explanations for additional features of the
+	View Designer which are there to ease working with the View Designer.
+
+\section{Online Help}
+	
+	\index{Online Help} \index{Help System}
+	The View Designer help system as well as the quick help are designed
+	to be accessible from almost every dialog or editor to quicken the
+	process of creating a complex application as much as possible.
+
+	\myitem{\bf Help On Help}
+	The help system can be opened e.g. by using the Help menu of the
+	main window. The use of the help system is explained in Help On
+	Help by choosing the appropriate button. The shown text explains
+	the usage of the help system.
+
+	\myitem{\bf On Context}\index{Context help}An online helps main
+	purpose is to aid the user in all steps of the development
+	process. If you want help on any window, choose {\em On Context}
+	in the main windows help menu. The mouse cursor changes shape and
+	you may click on the dialog item you want help on. The help system
+	will search the Online help for an appropriate entry and will then
+	display the corresponding help text.
+
+	The context help is also available via the key shortcut \showkey{F1}.
+	The keyboard focus must be on the dialog item you want help on.
+
+	\myitem{\bf Tutorial}\index{Tutorial}Since you're already reading the
+	manual, you have a basic understanding how the View Designer works.
+	However the help system also contains an online manual. It describes
+	the View Designers functionality in a similar way this manual does.
+
+\section{Using Templates}
+
+	\index{Template}
+	Using templates is extremely useful when building large applications
+	which contain many widgets of the same appearance. To achieve a
+	uniform look and feel in your application, you can create widgets
+	with predefined resources. This removes the necessity to edit
+	the resources for each widget separately.
+
+	A template doesn't need to consist of a single widget. Since widgets
+	may have children the creation of template widget trees is also
+	possible.
+
+	\myitem{\bf Creating Templates}\index{Template!creating}After creating
+		a widget you want to become a template you have to open
+		the template window first. With the Drag \& Drop mechanism
+		you then put this widget into the template window to make
+		it a template. To do so click with the middle mouse button
+		on the widget and drag it - while holding the middle button
+		down - to the template window. The original widget will
+		remain untouched, while the template window will show a
+		new icon. This icon has a context menu similar to the original
+		widgets menu. This way you can edit the resources of the
+		template widget in the same manner as with the other widgets.
+		Opening the widget browser and other actions are possible
+		as well.
+
+	\myitem{\bf Using Templates}\index{Template!using}Now the created
+		template should be the base for a new widget. To do so
+		left-click on the template icon. The mouse cursor will
+		change its shape once again and the View Designer awaits
+		you to choose a parent for the new widget. Click with the
+		left button on the parent and the new widget will be
+		created using the resources of the template.
+
+	The mentioned procedure isn't the only way to create widgets
+	from templates, you may also use Drag \& Drop or the Clipboard.
+
+\section{Creating links to interfaces}
+
+	\index{Link}
+	The disadvantage of templates is that a widget, once created doesn't
+	keep track of changed template resources. If you, for example,
+	created a customer data form and used it thoroughly throughout your
+	application and a change in the wanted data occurs, you will have
+	to change every single form in your whole application. That
+	could be a lot of work for sure.
+
+	With links this disadvantage disappears. A link to an interface
+	is created within other interfaces. If you change the linked
+	interface, the change will affect all interfaces this widget was
+	linked to. Even the functionality implemented in callbacks and
+	other functions used in the original interface are the same
+	for all interfaces it is linked to.
+
+	\myitem{\bf Example}
+		A customer data form is implemented as a separate interface.
+		You wrote functions which read from and write to the form.
+		If you use this interface as a link, this functionality is
+		available to all interfaces that use this link. If the data
+		sheet changes (e.g. a field is added) and the form changes
+		these changes automatically affect all interfaces.
+
+	Interfaces are therefore reusable components which can be bound
+	to other interfaces using links.
+
+	\myitem{\bf Create}\index{Link!creating}After creation of an interface
+		as reusable item you use the context menus {\em Create Link}
+		to start the linking. The mouse cursor changes shape awaiting
+		the choice of a new parent widget for the link. The link will
+		be created after clicking with the left button and will be
+		displayed as frame widget with children. These children have
+		the same hierarchy as the original interface. However the link
+		will be treated as a whole and therefore is a frame widget
+		in the hierarchy of the links destination (the new parent).
+		The look of the interface can only be changed by editing
+		the links source interface.
+
+	\index{Interface}
+	The fact that interfaces themselves are reusable components is not
+	only important for the creation of links. It is also used with
+	dynamically creating widget hierarchy. The modules created by
+	the View Designer are also reusable there. The generated source
+	code contains the interfaces as C structures or C++ classes.
+	The function for initialization is contained in the file stub
+	edited by the programmer and has the following form:
+
+	\bigskip \hrule
+	\begin{verbatim}
+	InterfaceName *
+	createInterfaceName(Widget parent,
+	                    ArgList args, 
+	                    Cardinal n);  
+
+	\end{verbatim}
+	\hrule \bigskip
+
+	The {\tt parent} is the parent widget, {\tt args} is a resource
+	list for the Xt Toolkit and {\tt n} specifies the size of the list.
+	The {\tt InterfaceName} is to be replaced with the actual name
+	of the interface to be created. The function creates an interface
+	and returns a pointer to the created object. You may also change
+	this function and pass a pointer to the data that should be
+	viewed to the function. If however the interface is used as a link
+	the function is defined as interface and should not be changed.
+
+\section{Other Drag \& Drop features}
+
+	\index{Drag \& Drop}
+	You already heard of the use of the Drag \& Drop mechanism in
+	many parts of the design process. The following list shows all
+	possible actions that can be done by
+	dragging and dropping.
+
+	\myitem{\bf Widget creation}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget class & WYSIWYG view	\\
+	\hfill Widget class & Browser view \\
+	\hfill Widget class & Templates \\
+	\end{tabular}
+
+	\myitem{\bf Widget movement}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & WYSIWYG view \\
+	\hfill Widget & Browser view \\
+	\end{tabular}
+
+	\myitem{\bf Widget copy}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & WYSIWYG view \\
+	\hfill Widget & Browser view \\
+	\hfill Widget & templates\\
+	\end{tabular}
+
+ 	\myitem{\bf Text export}
+	\begin{tabular}{p{4cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & Text entry field\\
+	\hfill Widget class & Text entry field\\
+	\hfill Interface & Text entry field\\
+	\end{tabular}
+
+
+\chapter{Configuring Code Generation}
+
+	One advantage of the View Designers code generation mechanism is the
+	use of template files. By using those templates, the programmer can
+	suit the code generation process according to his needs. How to
+	take advantage of template files will be shown in this chapter.
+
+	\label{codegeneration}
+
+\section{Code Generation Models}
+
+	\index{Code generation model}\index{lang.cf}
+	While generating the source code the View Designer reads its
+	configuration files from {\tt lib/X11/vdx}. The file {\tt lang.cf}
+	contains a list of all available languages.
+
+	\index{Project options}
+	As we already know the project settings dialog sets the language
+	the source code should be generated in. But this does not only
+	affect the generated source. The code generation module also
+	determines which template files it should use from this setting.
+	The View Designer ships with two built in code generation modules -
+	{\em c} and {\em c++}. You may create your own code generation
+	with the name of {\em my-c++} for example. If you did, the settings
+	dialog will display a third model, which you created yourself.
+
+	\myitem{\bf Model creation}
+	\index{Code generation model!creating}\index{addLang} A new generation
+	model is created using the shell script {\em addLang}. It is located
+	in the same directory the template files for existing languages are
+	in. To create a new model change to the directory {\tt lib/X11/vdx}.
+	You'll have to use an existing model to create the new one. The
+	syntax for {\em addLang} is as follows. 
+	\begin{verbatim}
+	addLang c++ my-c++
+	\end{verbatim}
+	This will copy the {\em c++} model to a new model, {\em my-c++}.
+	The new code model will show up in the project settings as soon as
+	a new View Designer is started. However at the moment the code
+	generated with the new {\em my-c++} will be exactly the same as
+	created from the {\em c++} model. You will have to change the template
+	files to suit your needs.
+
+\section{Template files}
+	
+	\index{Template file}
+	The template files for a code generation model have the name of
+	the model as their prefix. All files of the {\em my-c++} model
+	therefore have the prefix {\tt my-c++}. The file {\tt my-c++.tmpl}
+	is the most important of the template files. Within this file
+	the templates for generating an interface are listed. The file
+	{\tt my-c++.def.tmpl} is used to create the {\tt InterfaceName.h}
+	header file. It should be noted that this template file isn't the
+	only one used in creating {\tt InterfaceName.h}. Some parts of
+	the file are created using other template files.
+
+	The following list shows which source files are created using which
+	template files.
+	
+	{\tt
+	\begin{center}
+	\begin{tabular}{r@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	my-c++.rf.tmpl       & InterfaceName.rf \\
+	my-c++.def\_base.tmpl & InterfaceName\_\-base.h \\
+	my-c++.impl\_base.tmpl& InterfaceName\_\-base.C \\
+	my-c++.def.tmpl      & InterfaceName.h \\
+	my-c++.impl.tmpl     & InterfaceName.C \\
+	my-c++.VcView\_h.tmpl & VcView.h \\
+	my-c++.VcView\_C.tmpl & VcView.C \\
+	\end{tabular}
+	\end{center}
+	}
+
+	To create the main program file and the Imakefile other templates
+	not mentioned here are used.
+
+\section{Expression Replacement}
+	
+	\index{Template file!expressions}
+	When the View Designer loads a template file, it will search for
+	the following expressions. VARNAME is the name of a variable defined
+	in the code generation module of the View Designers executable.
+
+	{\tt \$(VARNAME)} -- VARNAME will be replaced by the according string
+		in the generated source code.
+
+	{\tt \$(VARNAME,code1,code2)} -- VARNAME is a boolean variable. If
+		it's value is true, {\tt code1} will be written to the source.
+		If it's value is false, {\tt code2} will be replaced.
+
+	{\tt \$(VARNAME,sub-template)} -- VARNAME is a set of structures.
+		For each member of the set the template file
+		{\tt sub-template} will be loaded. The expressions in the
+		sub template file will be replaced according to the same
+		procedures as normal template files.
+
+	Variables may be for example the name of an interface or the resources
+	of a widget.
+
+	As shown on page \pageref{tmpl-sample} the generation of source files
+	is easy to modify using this method. The file shown is
+	{\tt c++.def\_base.tmpl}. This file controls the generation of the
+	header file for the base module.
+	
+	The expression {\tt \$(NAME)} will be replaced by the name of the
+	interface. The expression {\tt \$(LINKS,c++.links\_for\-ward.tmpl)}
+	results in loading the file {\tt c++.links\_for\-ward.tmpl} and
+	expanding all links in the interface.
+	
+	By creating new code generation models and changing the models
+	template files you are allowed to easily extend the View Designers
+	abilities and bring your ideas to life. The interface to the
+	View Designer are the expressions and replacement rules that were
+	just described. All expressions and their replacements will be
+	described in the following section.
+
+\section{Interface Description}
+
+	The following notation will be used throughout this section to
+	ease the understanding of the code generation interface.
+	At the start of each line the name of an expression is given, e.g.
+	the description of {\tt \$(CREATION)} will start with {\tt CREATION}.
+	To specify the type of the expression the letters {\tt (S)} for a
+	string, {\tt (B)} for a boolean and {\tt (A)} for an array will be
+	used. If the elements of an array are described, the variable names
+	will be separated by a colon from the array name. Example:
+
+	{\tt RESOURCES (A)}\\
+	{\tt RESOURCES} is an array of resources for a particular widget.
+	For each array element the given {\em sub-template} will be expanded
+	and put into the source replacing {\tt RESOURCES}.
+	
+	{\tt RESOURCES.RESOURCENAME (S)}\\
+	The {\tt RESOURCENAME} is a string containing the name of the
+	resource, e.g. {\tt labelString}.
+
+	The code generation interface is separated into two parts. The first
+	part is the interface to the main program and Imakefile, the second
+	is the interface to the view interfaces.
+
+\subsection{Imakefile and main program}
+
+	When generating the source for a project, you may create an Imakefile
+	and main program for each interface.
+
+	All uses for expressions mentioned below are related to the already
+	existing code generation models C and C++. If you change the code
+	generation, you may implement new purposes for them.
+
+	{\tt PROGRAM (S)}\\
+	The expression {\tt PROGRAM} is replaced by the name of the programs
+	executable file. This name is derived from the name of the project
+	file. This expression is mainly used in templates for the Imakefiles
+	to create the rules for linking the program.
+
+	{\tt STARTUP (S)}\\
+	The startup interface of the project. This interface is opened first
+	after starting the application. The startup interface is specified
+	in the {\em Settings} entry in the {\em Project} menu. {\tt STARTUP}
+	contains the name of the interface, which usually is the name of
+	the interface class (C++) or the name of the interface structure (C).
+	This expression is used in the main program to create and show the
+	startup interface.
+	
+	{\tt APPL\_CLASS (S)}\\
+	This expression contains a string naming the application class of
+	the program. This string differs from the program name only in the
+	first letter, which will be uppercase. The application class will
+	also determine the name for the external resource file. Therefore
+	this expression is used in both the Imakefile and the main program.
+
+	{\tt OBJECTS (S)}\\
+	A string containing all object files. It is used in the Imakefile
+	template. All files have the extension {\tt .o} and are separated
+	by spaces.
+
+	{\tt SOURCES (S)}\\
+	This expression is used in the Imakefile too. It contains all
+	source files of the project. The files have the extension {\tt .c}
+	or {\tt .C} and are separated by spaces. The list of the source
+	files is normally used in the {\em make depend} rule.
+
+	{\tt RESOURCEFILES (S)}\\
+	All public resources are written to files with the extension
+	{\tt .rf}. These files are copied to a single resource file
+	of the name {\tt \$(APPL\_CLASS).ad}. From this file a header file
+	containing the fall-back resources for the project is generated.
+	{\tt RESOURCEFILES} contains the name of the files ending with the
+	suffix {\tt .rf} separated by spaces.
+
+\subsection{Interfaces}
+
+	For each interface of the project the following expressions are
+	known. The generated source files are created using the following
+	interface.
+
+	{\tt SHELLCREATION (S)}\\
+	This string contains a function call for creating a shell widget. In
+	particular this is a call to the {\tt XtCreateWidget} function. The
+	parameters to the function call are to be defined before calling this
+	function. The {\tt Widget parent} should be set to the parent of
+	the created widget. The {\tt ArgList arg} is a list containing all
+	resources the widget should be created with. The {\tt Cardinal n}
+	is the count of the resources in the {\tt arg} list. Before using
+	this expression in a template file, the variables should be set
+	and initialized with their appropriate values.
+	
+	{\tt SHELLIDENTIFIER (S)}\\
+	The variable name for the shell widget. Usually this variable is
+	set by using the above mentioned function call.
+
+	{\tt SHELLRESOURCES (A)}\\
+	This is an array containing all preset resources of a widget. For each
+	resource the given file will be loaded and processed. The source
+	code segments created in this process will be merged and put into
+	the created source template in spite of the expression
+	{\tt SHELLRESOURCES}. The default behavior is to set the variable
+	{\tt ArgList args} using {\tt XtSetArg()} and to set the variable
+	{\tt Cardinal n} to the argument count.
+
+	{\tt SHELLRESOURCES.RESOURCENAME (S)}\\
+	This string contains the name of the resource to be set. The name
+	may be for example {\tt labelString}. There are two possible ways to
+	use this string with {\tt XtSetArg}:
+
+	\begin{enumerate}
+	\item by merging it with the prefix {\tt XmN} e.g.
+	{\tt XmNlabelString}. This however holds the disadvantage of
+	incompatibility with future versions of the View Designer that may
+	be using non Motif widget classes, not using the Motif specific
+	{\tt XmN} prefix, to enhance functionality.
+	\item The string may be enclosed in quotation marks. This has the
+	same meaning as the macro {\tt XmNlabelString} but is more portable.
+	\end{enumerate}
+
+	{\tt SHELLRESOURCES.RESOURCEVALUE (S)}\\
+	The value of the resource to be set is held in this string. This may
+	be a C constant, e.g. a number, or a conversion function may be called.
+	\begin{enumerate}
+	\item {\tt Pixmap createPixmapFromData(char**);}\\
+		A pixmap included in the source code will be created.
+	\item {\tt Pixmap createPixmapFromFile(char*);}\\
+		The pixmap will be loaded at program run time.
+	\item {\tt RES\_CONVERT(type, string);}\\
+		This is a macro. It converts the resource value given in
+		{\tt char *} as {\tt string} to the {\tt type} type. The
+		type to convert to will be given as a string, e.g.
+		XmString.
+	\end{enumerate}
+
+
+	{\tt NAME (S)}\\
+	This expression holds the name of the interface. It can be used as
+	class name (e.g. {\tt class \$(NAME)}). It should be noted that the
+	name of the interface is the same as the name of its shell widget.
+
+	{\tt LINKS (A)}\\
+	All interfaces used as links in an interface are contained in this
+	array. Its main purpose is to build header include lists, because
+	the the interface of the linked class must be known to the interface
+	it is linked to.
+
+	{\tt LINKS.LINK\_CLASS (S)}\\
+	The name of the linked interface. With it the preprocessor directive
+	{\tt \#include "\$(LINK\_CLASS).h"} can be created.
+	
+	{\tt WIDGETS (A)}\\
+	All widgets of an interface, excluding the shell widget, are held
+	in this array. The widgets keep a certain order within the array.
+	With the order of the widgets their creation time is determined.
+	However not all entries in this array are widgets. The interfaces
+	linked to this interface are also among the elements of {\tt WIDGETS}.
+
+	{\tt WIDGETS.ISLINK (B)}\\
+	This boolean expression is true if the element is a link.
+
+  	{\tt WIDGETS.MANAGE (B)}\\
+	This boolean expression is true if the widget is to be managed. If 
+	it's false, the function {\tt XtManageChild} is not to be called.
+
+  	{\tt WIDGETS.IDENTIFIER (S)}\\
+	This string holds the name of the widget which will be used as the
+	name for its variable too.
+
+	{\tt WIDGETS.TYPE (S)}\\
+	The type of the variable. It is normally set to {\tt Widget}, but
+	it also may be a pointer to a linked interface.
+
+	{\tt WIDGETS.PARENT (S)}\\
+	The name of the parent widget is kept in this string. It is to be
+	used to set the variable {\tt Widget parent}.
+
+	{\tt WIDGETS.CREATION (S)}\\
+	The creation of the widget or the link is done using the functions
+	contained in this string. It is necessary that the variables
+	{\tt Widget parent}, {\tt ArgList args} and {\tt Cardinal n} are set
+	and verified before using this expression (see also
+	{\tt SHELL\-CREATION}). The difference to creation of shell widgets
+	are the different functions used to create certain widgets, e.g.
+	not only {\tt XtCreateWidget()} but also {\tt XmCreateMenuBar} or
+	{\tt createCreditCard()}, if CreditCard as linked interface
+	is used.
+
+	{\tt WIDGETS.INTERFACE (S)}\\
+	Herein the name of the interface this widget belongs to is contained.
+	It can be used to access the class or structure of the interface
+	respectively.
+
+	{\tt WIDGETS.RESOURCES (A)}\\
+	The resources to be set at creation time are held in this array. It
+	is used the same way as the array {\tt SHELLRESOURCES}.
+
+	{\tt WIDGETS.RESOURCES.RESOURCENAME (S)}\\
+	The usage of this string is the same as with the according expression
+	in the shell widget resources. It should be noted again that the
+	resource name is not merged with the prefix {\tt XmN}.
+
+	{\tt WIDGETS.RESOURCES.RESOURCEVALUE (S)}\\
+	This expression is also similar to the one used in the shell widget
+	resources. Even the conversion routines mentioned there are
+	applicable to this string.
+
+	{\tt METHODS (A)}\\
+	The callbacks defined for a certain interface are stored in the
+	array {\tt METHODS}. It is used to declare the methods and to create
+	the callback {\em stubs}.
+
+	{\tt METHODS.METHOD (S)}\\
+	The actual name of the method. The string stored in here is the
+	same as entered in the widget resource editors callback category.
+
+	{\tt METHODS.INTERFACE (S)}\\
+	To avoid naming conflicts or to build the scope of an interface
+	class the name of the interface may be used. Within an interface
+	the name of a method always must be unique.
+
+	{\tt CALLBACKS (A)}\\
+	The array {\tt CALLBACKS} differs from the {\tt METHODS} array in the
+	way that in doesn't contain a method element but a element for setting
+	a callback. This means that a method may be called for two different
+	callback events, thus this array contains at least as many members
+	as the {\tt METHODS} array.
+
+	{\tt CALLBACKS.IS\_LINK (B)}\\
+	This boolean variable is true if the object the callback is to be set
+	for is no widget but a link to another interface.
+
+	{\tt CALLBACKS.IS\_MANAGE\_CB (B)}\\
+	Is true if at the time the callback occurs a different widget
+	should be managed. This means no method from {\tt METHODS} will be
+	called. The function executed will manage the child itself using
+	the {\tt XtManageChild()}.
+
+	{\tt CALLBACKS.NAME (S)}\\
+	The name of the callback, e.g. {\tt activateCallback}. Note that
+	as with the resource names a C String will be formed from this
+	name.
+
+	{\tt CALLBACKS.WIDGET\_IDENTIFIER (S)}\\
+	The name of the widget the callback is to be set for. This is not
+	necessarily a widget. If {\tt IS\_LINK} is true, the string contained
+	may be a link. The callback will then be added to the links frame
+	widget.
+
+	{\tt CALLBACKS.METHOD (S)}\\
+	The name of the method which is to be executed if the callback
+	occurs. This does not have to be the same function passed to
+	{\tt XtAddCallback()}, for C++ this isn't even possible. The
+	function executed would rather be a {\tt static member function}.
+	This function will receive a pointer to the instance of the
+	interface {\tt this} as {\em client data}. Within the body
+	of the function an abstract virtual method will be called which
+	is to be implemented by the programmer.
+
+	{\tt CALLBACKS.WIDGET\_TO\_MANAGE (S)}\\
+	If {\tt IS\_MANAGE\_CB} is true, this expression holds the name
+	of a widget to be managed in case the respective callback occurs.
+
+	{\tt RELATIONS (A)}\\
+	A certain kind of resources will be set after all widgets have
+	been created. These are in particular resources of the type widget,
+	i.e. all resources set with their value being a widget the code
+	generation will set after creating all widgets. This is useful
+	because all widgets will be present and the resources can be
+	set in any order.
+
+	{\tt RELATION.SOURCEWIDGET (S)}\\
+	This string contains the name of the widget the resource is to be
+	set for.
+
+	{\tt RELATION.RESOURCENAME (S)}\\
+	The name of the widget resource to be set. It can be e.g. of the
+	type {\tt leftWidget} or {\tt subMenuId}. The prefix {\tt XmN} must
+	be taken care of here too.
+
+	{\tt RELATION.DESTINATIONWIDGET (S)}\\
+	The widget being set as resource, e.g. the widget the resource widget
+	should align to if both are children of a XmForms widget and the
+	resource {\tt leftWidget} is set.
+
+	{\tt RELATION.SOURCE\_ISLINK (B)}\\
+	{\tt RELATION.DESTINATION\_ISLINK (B)}\\
+	The objects referenced can be links of course, in which case the
+	respective frame widget is to be used.
+
+	{\tt HEADERS (A)}\\
+	All widgets used in a certain interface need different header files.
+	This array contains all header files necessary for the interface.
+
+	{\tt HEADERS.HEADER (S)}\\
+	The relative path name of the header file to be used in the
+	preprocessor {\tt \#include} statement (e.g.
+	{\verb!#include <$(HEADER)>!}).
+
+	{\tt LOCALHEADERS (A)}\\
+	With the inclusion of Xpm files additional header files are
+	necessary. All necessary header files are present in this array.
+	These headers are identical to the Xpm files to be included.
+
+	{\tt LOCALHEADERS.HEADER (S)}\\
+	The name of the Xpm file.
+
+	{\tt RESOURCEFILE (S)}\\
+	If resources are set to {\em public} in the widget resource editor
+	then it is to be set in an external resource file. All public
+	resources of an interface will be written to a file with the
+	extension {\tt .rf} using this expression.
+
+\begin{figure}
+\begin{maxipage}
+\begin{small}
+	{\baselineskip0.4cm \label{tmpl-sample}
+	\begin{verbatim}
+	// -----------------------------------------------------
+	// $(NAME)_base.h
+	// 
+	// This file was automaticly generated by
+	// View Designer/X                          
+	//
+	// Don't edit this file, please !
+	// -----------------------------------------------------
+
+	#ifndef _$(NAME)_base_H_
+	#define _$(NAME)_base_H_
+	
+	#include <X11/Intrinsic.h>
+	#include "VcView.h"
+	
+	$(LINKS,c++.links_forward.tmpl)
+	
+	// -----------------------------------------------------
+	// Class definition 
+	// class $(NAME)_base is a derived class of VcView
+	// -----------------------------------------------------
+	
+	class $(NAME)_base : public VcView {
+	private:
+	  void createWidgets();
+	  void addRelations();
+	  void addCallbacks();
+	
+	protected:
+	  Widget $(SHELLIDENTIFIER);
+	$(WIDGETS,c++.widgetdeclaration.tmpl)
+	
+	$(METHODS,c++.static_cb_declaration.tmpl)
+	
+	
+		  // override the following methods in class $(NAME)
+	
+	$(METHODS,c++.cb_abstract_declaration.tmpl)
+	
+	public:
+	  $(NAME)_base(Widget parent = NULL, ArgList args = NULL, 
+	                                     Cardinal n = 0);
+	
+	  Widget getTop() { return $(SHELLIDENTIFIER); }
+	  Pixmap createPixmapFromData(char **data);
+	  Pixmap createPixmapFromFile(char *filename);
+	  static void manageWidget(Widget wg, XtPointer c,
+	                                      XtPointer call);
+	};
+	
+	#endif /* Don't add stuff after this #endif */
+	\end{verbatim}
+	}
+\end{small}
+\end{maxipage}
+\caption{Example for a template file}
+\end{figure}
+
+\lazyglossar
+
+\myitem{Dialog}
+	Part of a user interface which is only visible at certain times
+	during application execution. Dialogs are used to show special
+	information to the user or to present the user with choices.
+
+\myitem{Drag \& Drop}
+	Method used in graphical user interfaces to facilitate copying,
+	moving or tieing objects using the pointing device (usually the
+	mouse). The OSF/Motif user interface implements this method
+	using the middle mouse button.
+
+\myitem{Imake}
+	A package to create Makefiles for X applications. The package
+	is contained with the standard X Window System distribution. The
+	source the Imake package uses to create the makefiles is a very
+	simple Imakefile.
+
+\myitem{Option Menu}
+	Part of a user interface used to select one of a set of possible
+	options. Only the currently selected choice is visible. By clicking
+	with the mouse on the menu it will expand to show all possible
+	options to choose from.
+
+\myitem{OSF} 
+	Short for Open Software Foundation. A consortium of firms with the
+	aim to establish standards for open systems. Products of the OSF
+	are e.g. Motif, DCE and OSF/1.
+	
+\myitem{OSF/Motif}
+	Toolkit based on the X Window System. It defines many widget classes
+	and functions to create graphical user interfaces.
+
+\myitem{Push Button}
+	Part of a user interface that performs an action if clicked with
+	the mouse or activated via the keyboard. 
+
+\myitem{Shell Widget}
+	Implements the interface to the world outside the widget
+	(Window Manager). The shell widget and its children appear in
+	a certain window controlled by the window manager.
+
+\myitem{Toggle Button}
+	A widget that, if activated by mouse or keyboard, switches between
+	two states, e.g. on and off.
+
+\myitem{User Interface}
+	The interface through which an application interacts with the user.
+
+\myitem{Widget}
+	Object of an user interface. Every widget has its distinctive look
+	and behavior. All of them are controlled by resources. Widgets
+	are for example text entry fields or menus.
+
+\myitem{Widget Class}
+	A widget class defines the characteristics of a widget. The widget
+	classes form a hierarchy which base is the class Core.
+
+\myitem{Window Manager}
+	A program that manages and controls the windows of applications
+	running on a machine (e.g. changing size, window movement and so on).
+	The window manager published by the OSF is called {\bf mwm}.
+
+\myitem{X Window System}
+	Network transparent window system for open systems. The X Window
+	System is the base for designing and implementing graphical user
+	interfaces for most Unixes. It is developed by the Massachusetts
+	Institute of Technology (MIT).
+
+\lazyindex
+
+\end{document}
+% end of document
+% don't add stuff after this 
+  

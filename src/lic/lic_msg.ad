@@ -1,0 +1,193 @@
+! Message source file of Replace_Product
+! Written by Dirk Laessig
+
+! Global messages
+VDX_VERSION:			Replace_Revision
+ERROR_TITLE:			Replace_Product - Error
+CANT_OPEN_FILE:			Can't open file '%s'.
+QUERY_OVERWRITE_TITLE:		Replace_Product - File exist
+QUERY_OVERWRITE:		Do you wan't to overwrite '%s'?
+FILE_WRITTEN:			File '%s' was successfully written.
+
+ERROR_SYSTEM:			System Error:\n\
+%s: %s
+
+DEMO_DIALOG_TITLE:		Demo Version
+DEMO_DIALOG_MSG:		\
+Did not find license information!\n\
+Replace_Product is running in demonstration mode.\n\n\
+To purchase licenses contact BREDEX GmbH:\n\n\
+http://www.bredex.de/EN/vdx/
+
+
+DEMO_ERROR:			Demo Version - Writing of file '%s' not allowed.
+DEMO_GEN_ERROR:			Demo Version - Code generation of '%s' not allowed.
+
+DEMO_MESSAGE:			\
+----------------------------------------\n\
+Switching to Demo Version!\n\
+Can't save more than %d widgets per interface.\n\
+----------------------------------------
+
+! Messages used in Mainwindow.C
+
+MAINWINDOW_TITLE:       Replace_Product - %s
+
+QUERY_QUIT_MSG:		Do you want to quit Replace_Product\n\
+without saving the project?
+
+QUERY_QUIT_OPTIONS_CHANGED: Options has changed!\n\
+Do you want to quit without saving the options?
+
+QUERY_QUIT_TITLE:	Replace_Product - Quit
+FILE_OPEN_TITLE:	Replace_Product - Open file
+PROJECT_SAVE_TITLE:	Replace_Product - Save prokect
+INTERFACE_NOT_EXIST:	A interface called '%s' don't exist.
+INVALID_FILE_FORMAT:    %s: Invalid file format.
+ERROR_SEEN:		Error seen. See output window.
+WRITE_FILE_ERROR:	System Error:\n\
+'%s': %s
+
+CARE_OVERWRITE:		%s%s(may contain changes)
+SHOULD_BE_WRITTEN:	%s%s(should be written)
+STARTING_PROGRAM:	--- Starting: %s
+CHILD_RETURNED:		--- exit[%d]
+CHILD_GET_SIGNAL:	--- terminated by signal %d
+CHILD_STOPPED:		--- stopped by signal %d
+PROJECT_SAVE_SUCCESS:	Project successfully saved.
+
+! Messages used in Lproject.C
+
+QUERY_INTERFACE_DELETE_MSG:	Do you want to delete '%s'?
+QUERY_INTERFACE_DELETE_TITLE:	Replace_Product - Delete interface
+INTERFACE_SAVE_TITLE:		Replace_Product - Save interface
+QUERY_OVERWRITE_FILE_MSG:	File named '%s' exist.\n\
+Do you wan't to overwrite '%s'?
+QUERY_OVERWRITE_FILE_TITLE:	Replace_Product - Overwrite file
+INTERFACE_SAVE_SUCCESS:		Interface successfully saved.
+
+! Messages used in LApp.C
+
+ERROR_FILE_NOT_FOUND:		Can't find file '%s'.
+QUERY_NEW_PROJECT_TITLE:	New project?
+QUERY_NEW_PROJECT:		Changes will be lost.
+ERROR_NO_VALID_FORMAT:	        File '%s' has invalid format.
+AUTOSAVING_DONE:		Auto Saving: %s at %s
+AUTOSAVING_ERROR:		Auto Saving ERROR %s at %s
+! Messages used in Lresource.C
+
+SAY_CALLBACK_CALLED:		Callback '%s' called by widget '%s'.
+
+
+! Messages used in Lwidget.C
+
+QUERY_WIDGET_DELETE_TITLE:	Replace_Product - Delete widget
+QUERY_WIDGET_DELETE_MSG:	Widget '%s' has children.\n\
+Do you really want to delete it.
+
+WIDGET_BROWSE_TITLE:		Tree View - %s (%s)
+
+
+
+! Messages used in LresEditor.C
+
+RES_EDIT_TITLE:			Resources - %s (%s)
+ATTRIB_PUBLIC:			Resource value is set in the resource file.
+ATTRIB_PRIVATE:			Resource value is set in the generated code.
+ATTRIB_INCLUDE:			Pixmap is included in the source code.
+ATTRIB_LOAD:			Pixmap is read at runtime.
+ATTRIB_METHOD:			Function which you have to implement.
+ATTRIB_MANAGE:			Widget (e.g. Dialog) which is managed.
+LRES_SOME_CHANGES_TITLE:	Abandon Changes
+LRES_SOME_CHANGES_MSG:		There are unsaved changes in the editor.\n\
+Do you want abandon these changes?
+
+WidName_LABEL:			Name:
+WidManage_LABEL:		Managed:
+WidQuickHelp_LABEL:		Quick Help:
+WidHelpNode_LABEL:		Help Node:
+WidDescription_LABEL:		Description:
+
+!Messages used in MenuEdit.C
+
+MENU_EDIT_TITLE:		Menu edit - %s (%s)
+ERROR_MENUEDIT_TITLE:		Error while swaping widgets
+ERROR_MENUEDIT_MSG:		Select only one widget.
+
+
+! Messages used in FontSelect.C
+
+SAMPLE_FONT_TEXT:		Pferde essen keinen Gurkensalat.\n\
+abcdefgeijklmnopqrstuvwxyz\n\
+ABCDEFGEIJKLMNOPQRSTUVWXYZ\n\
+"!§$%&/()=?+-*#~
+
+
+! Messages used in Lcreator.C
+
+ERROR_CREATE_DIALOG:		Can't create a dialog on root.
+LCREATOR_DESCRIPTION:		%s
+
+
+! Messages used in TemplateView.C
+WARNING_TEMPLATE_CHANGED_TITLE: Abandon Changes
+WARNING_TEMPLATE_CHANGED_MSG:	Template '%s' has changed.\n\
+Do you want abandon these changes?
+TEMPLATES_TITLE:		Templates - %s
+
+! Messages used in WidResEditor.C
+WR_EDITOR_CORE:		Core
+WR_EDITOR_CONSTRAINT:	Constraints
+WR_EDITOR_SPECIFIC:	Specific
+WR_EDITOR_CALLBACK:	Callbacks
+WR_EDITOR_EXTRA:	Extra
+WR_EDITOR_USER:		User
+WR_EDITOR_AUTOMATIC_LOAD_ON:	Automatic Load: On
+WR_EDITOR_AUTOMATIC_LOAD_OFF:	Automatic Load: Off
+
+
+! Messages used in AttachmentEditor.C
+
+ATTACHMENT_EDITOR_TITLE: Attachment Editor - %s
+
+
+! Messages used in TransformDialog.C
+
+TRANSFORM_DIALOG_TITLE: Transform - %s (%s)
+
+
+! Default Resources in WYSIWYG-View
+
+DEFAULT_WYSIWYG_RESOURCES:	\
+*dragReceiverProtocolStyle: DRAG_PREFER_DYNAMIC\n\
+*dragInitiatorProtocolStyle: DRAG_PREFER_DYNAMIC\n\
+*MLXHelp*Box.labelFontList: -adobe-helvetica-bold-r-normal--14-140-75-75-p-82-iso8859-1\n\
+*MLXHelp*titleLabel.labelString:	Title:\n\
+*MLXHelp*contentsDialog.dialogTitle:	Contents\n\
+*MLXHelp.title: 			Help System\n\
+*MLXHelp*Exit.labelString: 		Close\n\
+*Popupmenu*fontList: -adobe-helvetica-bold-r-normal--12-*-*-*-*-*-iso8859-1\n\
+*Popupmenu.MenuEdit.labelString:	Menu Editor\n\
+*Popupmenu.MenuEdit.acceleratorText:	M\n\
+*Popupmenu.PopupMenuLabel.labelString:  Selected Objects\n\
+*PulldownMenu*fontList: -adobe-helvetica-bold-r-normal--12-*-*-*-*-*-iso8859-1\n\
+*Popupmenu*Edit.acceleratorText:	E\n\
+*Popupmenu*Browse.acceleratorText:	B\n\
+*Popupmenu*Cut.acceleratorText:		X\n\
+*Popupmenu*Copy.acceleratorText:	C\n\
+*Popupmenu*Paste.acceleratorText:	V\n\
+*Popupmenu*Rename.acceleratorText:	R\n\
+*Popupmenu*Refresh.acceleratorText:	F\n\
+*Popupmenu*Delete.acceleratorText:	DEL\n\
+*Popupmenu.Transform.labelString:	Transform\n\
+*Popupmenu.Transform.acceleratorText:	T\n\
+*Popupmenu.Attachments.labelString:	Attachments\n\
+*Popupmenu.Attachments.acceleratorText:	A\n\
+*PulldownMenu*AlignLeft.labelString:	Left\n\
+*PulldownMenu.AlignTop.labelString:	Top\n\
+*PulldownMenu.AlignRight.labelString:	Right\n\
+*PulldownMenu.AlignBottom.labelString:	Bottom\n\
+*PulldownMenu.AlignVCenter.labelString:	Vertical Center\n\
+*PulldownMenu.AlignHCenter.labelString:	Horizontal Center\n\
+*PulldownMenu.AlignWidth.labelString:	Width\n\
+*PulldownMenu.AlignHeight.labelString:	Height

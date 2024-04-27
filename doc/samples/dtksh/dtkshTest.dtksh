@@ -1,0 +1,64 @@
+#!/usr/dt/bin/dtksh
+#
+# Main program of DtkshTest 
+#
+# Created by VDX
+#
+
+#
+# Determine the directory
+#
+
+echo $0
+d=`command -v $0`
+echo $d
+d=`dirname $d`
+
+echo $d
+
+# 
+# We have to find the appl-res file. If the appl-res file is
+# copied to the right place, this is not necessary.
+#
+
+XUSERFILESEARCHPATH=${d}/%N.ad:$XUSERFILESEARCHPATH
+export XUSERFILESEARCHPATH
+
+#
+# Setup the PATH
+#
+
+PATH=${d}:$PATH
+export PATH
+
+#
+# Include the startup interface
+#
+
+. MainWindow.dtksh
+
+
+#
+# This is the way dtksh initializes the tool kit
+#
+
+XtInitialize topLevel dtkshTest DtkshTest
+
+#
+# Create and show the startup interface. Only one instance of interfaces
+# can be created.
+#
+
+createMainWindow
+
+showMainWindow
+
+#
+# The well-known MainLoop
+#
+
+XtMainLoop
+
+
+
+

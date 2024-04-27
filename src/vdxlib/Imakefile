@@ -1,0 +1,121 @@
+/****************************************************************
+ *
+ *  $RCSfile: Imakefile,v $
+ *  $Date: 1998/06/06 18:33:38 $
+ *  $Revision: 1.3 $
+ *
+ *  Copyright 1997 1998, Dirk Laessig
+ *  ALL RIGHTS RESERVED
+ *  See the file Copyright for more information
+ *
+ *  Dirk Laessig
+ *  Muehlenpfordtstr. 5
+ *  38106 Braunschweig
+ *  Germany
+ ****************************************************************/
+/*
+ * $Log: Imakefile,v $
+ * Revision 1.3  1998/06/06 18:33:38  lazy
+ * Drawer finished, fixing bugs in Imakefile
+ *
+ * Revision 1.2  1998/05/13 18:48:23  lazy
+ * Add convenient support.
+ *
+ * Revision 1.1.1.1  1998/04/24 23:45:53  lazy
+ * Imported to CVS
+ */
+
+/************************/
+/*                      */
+/* ! EDIT config.tmpl ! */
+/*                      */
+/************************/
+
+#include <Motif.tmpl>
+#include "config.tmpl"
+
+#if UseCDE
+#define CDEFlags -DUSE_CDE -I/usr/dt/include
+#define CDELibs -L/usr/dt/lib -lDtTerm -lDtHelp -lDtWidget -lDtSvc -ltt
+#else
+#define CDEFlags
+#define CDELibs
+#endif
+
+#if UseLWID
+#define LWIDFlags -DUSE_LWID -I$(LWIDPath)
+#define LWIDLibs $(LWIDPath)/lwid/liblwid.a
+#else
+#define LWIDFlags
+#define LWIDLibs 
+#endif
+
+#if UseXRT
+#define XRTFlags -DUSE_XRT -I$(XRTPath)/include
+#define XRTLibs -L$(XRTPath)/lib -lxrt3d -lxrtm -lxrttable -lxrtfield -lxrtgear 
+#else
+#define XRTFlags
+#define XRTLibs 
+#endif
+
+#if UseXFE
+#define XFEFlags -DUSE_XFE -I$(XFEPath)
+#define XFELibs $(XFEPath)/Xfe/libXfeWidgets.a
+#else
+#define XFEFlags
+#define XFELibs
+#endif
+
+#if UseBX
+#define BXFlags -DUSE_BX  -I$(BXPath)/include
+#define BXLibs  -L$(BXPath)/lib -lBXm 
+#else
+#define BXFlags
+#define BXLibs 
+#endif
+
+#if UseINT
+#define INTFlags -DUSE_INT -I$(INTPath)
+#define INTLibs  -L$(INTPath)/lib -lINT 
+#else
+#define INTFlags
+#define INTLibs 
+#endif
+
+          WIDGET_CFLAGS = CDEFlags LWIDFlags XRTFlags XFEFlags BXFlags INTFlags
+
+            WIDGET_LIBS = CDELibs LWIDLibs XRTLibs XFELibs BXLibs INTLibs
+       EXTRALIBRARYDEPS = LWIDLibs XFELibs
+
+      CXXEXTRA_INCLUDES = $(WIDGET_CFLAGS)
+         EXTRA_INCLUDES = $(WIDGET_CFLAGS)
+	   REQUIREDLIBS = $(WIDGET_LIBS) /usr/X11R6/lib/libXpm.so -L/usr/X11R6/lib XmClientLibs
+
+                   OBJS = LClassInfo.o
+                   SRCS = LClassInfo.C
+                LIBNAME = vdx
+                    REV = 1.0
+
+SharedLibraryTarget($(LIBNAME),$(REV),$(OBJS),.,.)
+
+all::
+	@echo
+	@echo "Type 'make install' to copy libvdx.so to lib directory."
+	@echo
+
+../lwid/liblwid.a:
+	@(cd ../lwid; xmkmf; make all)
+
+../Xfe/libXfeWidgets.a:
+	@(cd ../Xfe; xmkmf; make all)
+
+
+install::
+	mv ../../lib/libvdx.so ../../lib/libvdx.so.old
+	cp libvdx.so ../../lib
+ 
+
+
+
+
+

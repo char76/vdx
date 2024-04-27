@@ -1,0 +1,38 @@
+/* Makefile for creating a version in the version subdirectory */
+
+/* Change the EXECUTABLE */
+
+EXECUTABLE	= vdx
+PRODUCT		= View Designer/X
+VERSION		= $(EXECUTABLE)-1.0
+VERSION_TAR_FILE= $(VERSION).tar.gz
+
+VERSION_DIR	= $(VERSION)
+TAR_FILE	= mlxvc.tar
+TO_TAR		= bin lib
+TO_COPY		= bin/inst bin/uninst
+
+all:	
+	@(echo Creating version tar file ...; \
+	  if [ ! -d $(VERSION_DIR) ]; then \
+		mkdir $(VERSION_DIR); \
+	  fi; \
+	  cp $(TO_COPY) $(VERSION_DIR); \
+	  cd version; \
+	  tar chf ../$(VERSION_DIR)/$(TAR_FILE) $(TO_TAR); \
+ 	  tar -f ../$(VERSION_DIR)/$(TAR_FILE) --delete "*/license"; \
+	  echo done.)
+
+clean::
+	@($(RM) -f $(VERSION_DIR)/$(TAR_FILE))
+
+tar:	$(VERSION_TAR_FILE)
+
+$(VERSION_TAR_FILE):	$(VERSION_DIR)/$(TAR_FILE)
+	@(echo Taring version to  $(VERSION_TAR_FILE)...; \
+	  tar czhf $(VERSION_TAR_FILE) $(VERSION_DIR); \
+	  echo done.)
+
+depend::
+	@echo do nothing.
+

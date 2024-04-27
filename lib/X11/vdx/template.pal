@@ -1,0 +1,437 @@
+WIDGET {
+  NAME ""
+  CLASS ""
+  MANAGED ""
+  QUICKHELP ""
+  HELPID "0"
+  VIEWDATA "LONG TemplateView width 486 LONG TemplateView height 280 BOOLEAN TemplateView WithClasses TRUE BOOLEAN TemplateView WithSmallIcons FALSE BOOLEAN TemplateView WithIcons TRUE BOOLEAN TemplateView CreateOnClick TRUE "
+  WIDGET {
+    NAME "scrolledText"
+    CLASS "XmScrolledWindow"
+    MANAGED "TRUE"
+    QUICKHELP ""
+    HELPID "-1"
+    VIEWDATA ""
+    DESCRIPTION "XmScrolledWindow"
+    height "290" private
+    width "320" private
+    x "510" private
+    y "230" private
+    WIDGET {
+      NAME "text_1"
+      CLASS "XmText"
+      MANAGED "TRUE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA ""
+      DESCRIPTION "XmText"
+      x "10" private
+      y "10" private
+      editMode "XmMULTI_LINE_EDIT" private
+    }
+  }
+  WIDGET {
+    NAME "numeric"
+    CLASS "XmSpinBox"
+    MANAGED "TRUE"
+    QUICKHELP ""
+    HELPID "-1"
+    VIEWDATA ""
+    DESCRIPTION "XmSpinBox"
+    x "150" private
+    y "50" private
+    WIDGET {
+      NAME "text_1"
+      CLASS "XmText"
+      MANAGED "TRUE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA ""
+      DESCRIPTION "XmText"
+      height "31" private
+      width "50" private
+      x "2" private
+      y "2" private
+      cursorPositionVisible "0" private
+      editable "0" private
+      spinBoxChildType "XmNUMERIC" private
+    }
+  }
+  WIDGET {
+    NAME "mainWindow"
+    CLASS "XmMainWindow"
+    MANAGED "TRUE"
+    QUICKHELP ""
+    HELPID "-1"
+    VIEWDATA ""
+    DESCRIPTION "XmMainWindow"
+    height "320" private
+    width "360" private
+    x "620" private
+    y "280" private
+    WIDGET {
+      NAME "menuBar_1"
+      CLASS "XmCreateMenuBar"
+      MANAGED "TRUE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA "BOOLEAN TreeNodeView WithChildren TRUE "
+      DESCRIPTION "XmCreateMenuBar"
+      x "10" private
+      y "0" private
+      menuHelpWidget "helpButton" private
+      WIDGET {
+        NAME "fileButton"
+        CLASS "XmCascadeButton"
+        MANAGED "TRUE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmCascadeButton"
+        height "21" private
+        width "40" private
+        x "5" private
+        y "5" private
+        labelString "File" public
+        mnemonic "F" public
+        subMenuId "fileMenu" private
+      }
+      WIDGET {
+        NAME "fileMenu"
+        CLASS "XmCreatePulldownMenu"
+        MANAGED "FALSE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA "BOOLEAN TreeNodeView WithChildren FALSE "
+        DESCRIPTION "XmCreatePulldownMenu"
+        x "0" private
+        y "0" private
+        WIDGET {
+          NAME "newButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          labelString "New" public
+          mnemonic "N" public
+          activateCallback "do_fileNew" method
+        }
+        WIDGET {
+          NAME "openButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Ctrl<Key>o" public
+          acceleratorText "Ctrl-o" public
+          labelString "Open" public
+          mnemonic "O" public
+          activateCallback "fileOpenDialog" manage
+        }
+        WIDGET {
+          NAME "saveButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Ctrl<Key>s" public
+          acceleratorText "Ctrl-s" public
+          labelString "Save" public
+          mnemonic "S" public
+          activateCallback "do_fileSave" method
+        }
+        WIDGET {
+          NAME "saveAsButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          labelString "Save As .." public
+          mnemonic "A" public
+          activateCallback "fileSaveDialog" manage
+        }
+        WIDGET {
+          NAME "separator"
+          CLASS "XmSeparator"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmSeparator"
+          x "0" private
+          y "0" private
+        }
+        WIDGET {
+          NAME "exitButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Ctrl<Key>x" public
+          acceleratorText "Ctrl-x" public
+          labelString "Exit" public
+          mnemonic "x" public
+          activateCallback "exitDialog" manage
+        }
+      }
+      WIDGET {
+        NAME "editButton"
+        CLASS "XmCascadeButton"
+        MANAGED "TRUE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmCascadeButton"
+        x "0" private
+        y "0" private
+        labelString "Edit" public
+        mnemonic "E" public
+        subMenuId "editMenu" private
+      }
+      WIDGET {
+        NAME "editMenu"
+        CLASS "XmCreatePulldownMenu"
+        MANAGED "FALSE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA "BOOLEAN TreeNodeView WithChildren FALSE "
+        DESCRIPTION "XmCreatePulldownMenu"
+        x "0" private
+        y "0" private
+        WIDGET {
+          NAME "cutButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Shift<Key>osfDelete" public
+          acceleratorText "Shift-DEL" public
+          labelString "Cut" public
+          mnemonic "u" public
+          activateCallback "do_cut" method
+        }
+        WIDGET {
+          NAME "copyButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Ctrl<Key>osfInsert" public
+          acceleratorText "Ctrl-INS" public
+          labelString "Copy" public
+          mnemonic "C" public
+          activateCallback "do_copy" method
+        }
+        WIDGET {
+          NAME "pasteButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Shift<Key>osfInsert" public
+          acceleratorText "Shift-INS" public
+          labelString "Paste" public
+          mnemonic "P" public
+          activateCallback "do_paste" method
+        }
+      }
+      WIDGET {
+        NAME "helpButton"
+        CLASS "XmCascadeButton"
+        MANAGED "TRUE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmCascadeButton"
+        x "0" private
+        y "0" private
+        labelString "Help" public
+        mnemonic "H" public
+        subMenuId "helpMenu" private
+      }
+      WIDGET {
+        NAME "helpMenu"
+        CLASS "XmCreatePulldownMenu"
+        MANAGED "FALSE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmCreatePulldownMenu"
+        x "0" private
+        y "0" private
+        WIDGET {
+          NAME "onHelpButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          labelString "On Help" public
+          mnemonic "H" public
+          activateCallback "do_onHelp" method
+        }
+        WIDGET {
+          NAME "onContextButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          labelString "On Context" public
+          mnemonic "C" public
+          activateCallback "do_onContext" method
+        }
+        WIDGET {
+          NAME "onWindowButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          accelerator "Ctrl<Key>F1" public
+          acceleratorText "Ctrl-F1" public
+          labelString "On Window" public
+          mnemonic "W" public
+          activateCallback "do_onWindow" method
+        }
+        WIDGET {
+          NAME "separator_1"
+          CLASS "XmSeparator"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmSeparator"
+          x "0" private
+          y "0" private
+        }
+        WIDGET {
+          NAME "aboutButton"
+          CLASS "XmPushButton"
+          MANAGED "TRUE"
+          QUICKHELP ""
+          HELPID "-1"
+          VIEWDATA ""
+          DESCRIPTION "XmPushButton"
+          x "0" private
+          y "0" private
+          labelString "About" public
+          mnemonic "A" public
+          activateCallback "aboutDialog" manage
+        }
+      }
+    }
+    WIDGET {
+      NAME "fileOpenDialog"
+      CLASS "XmCreateFileSelectionDialog"
+      MANAGED "FALSE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA "BOOLEAN WidgetView showDialog FALSE "
+      DESCRIPTION "XmCreateFileSelectionDialog"
+      autoUnmanage "1" private
+      dialogTitle "Load File" public
+      okCallback "do_fileOpen" method
+    }
+    WIDGET {
+      NAME "fileSaveDialog"
+      CLASS "XmCreateFileSelectionDialog"
+      MANAGED "FALSE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA "BOOLEAN WidgetView showDialog FALSE "
+      DESCRIPTION "XmCreateFileSelectionDialog"
+      autoUnmanage "1" private
+      dialogTitle "Save File As" public
+      okCallback "do_saveAs" method
+    }
+    WIDGET {
+      NAME "exitDialog"
+      CLASS "XmCreateQuestionDialog"
+      MANAGED "FALSE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA "BOOLEAN WidgetView showDialog FALSE "
+      DESCRIPTION "XmCreateQuestionDialog"
+      dialogTitle "Exit?" public
+      messageString "Do you want to quit the application?
+Changes may be lost." public
+      okLabelString "Exit" private
+      okCallback "do_exit" method
+    }
+    WIDGET {
+      NAME "aboutDialog"
+      CLASS "XmCreateTemplateDialog"
+      MANAGED "FALSE"
+      QUICKHELP ""
+      HELPID "-1"
+      VIEWDATA "BOOLEAN WidgetView showDialog FALSE BOOLEAN TreeNodeView WithChildren FALSE "
+      DESCRIPTION "XmCreateTemplateDialog"
+      dialogTitle "About this!" public
+      WIDGET {
+        NAME "aboutClose"
+        CLASS "XmPushButton"
+        MANAGED "TRUE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmPushButton"
+        labelString "Close" public
+      }
+      WIDGET {
+        NAME "aboutLabel"
+        CLASS "XmLabel"
+        MANAGED "TRUE"
+        QUICKHELP ""
+        HELPID "-1"
+        VIEWDATA ""
+        DESCRIPTION "XmLabel"
+        alignment "XmALIGNMENT_BEGINNING" private
+        labelString "Your Application
+Copyright © 1997, by YOU
+Designed using VDX" public
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+! ----------------------------------------------
+! File: TabManager.rf
+! Resource file of interface TabManager
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*TabManager*xrtTabButton1.labelString: 3d
+*TabManager*xrtTabButton2.labelString: Field
+*TabManager*xrtTabButton3.labelString: Table
+
+
+! ----------------------------------------------
+! end of resource file TabManager.rf
+! ----------------------------------------------

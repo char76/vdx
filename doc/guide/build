@@ -1,0 +1,10 @@
+#!/bin/sh
+
+create_eps
+latex short_de.tex
+latex short_de.tex
+
+dvips short_de.dvi -o short_de.ps -N0 -t A4
+
+dvips short_de.dvi -o short_de.a.ps -A -N0 -t A4
+dvips short_de.dvi -o short_de.b.ps -B -N0 -t A4

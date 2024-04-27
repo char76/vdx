@@ -1,0 +1,285 @@
+#
+# User interface of MainWindow
+#
+# Created by VDX v1.2 - Don't edit!
+#
+# User: lazy@apfel.goetting5
+# Date: Tue Jun  2 01:07:29 1998
+#                         
+
+
+createMainWindow_base () {
+
+  # Create the popup shell
+
+  XtCreatePopupShell aMainWindow[shell] MainWindow TopLevelShell $topLevel
+  aMainWindow[MainWindow]=${aMainWindow[shell]}
+
+  # Create other widgets
+
+
+  # ---------------------------------------------  
+  # Create Widget mainWindow
+  # ---------------------------------------------
+
+  parent=${aMainWindow[MainWindow]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget mainWindow XmMainWindow $parent \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[mainWindow]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget menuBar
+  # ---------------------------------------------
+
+  parent=${aMainWindow[mainWindow]}
+
+  # Creating Widget 
+  
+  XmCreateMenuBar widget $parent menuBar \
+               x:"0" \
+               y:"0" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[menuBar]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget cascadeButton
+  # ---------------------------------------------
+
+  parent=${aMainWindow[menuBar]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget cascadeButton XmCascadeButton $parent \
+               x:"0" \
+               y:"0" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[cascadeButton]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget pulldownMenu
+  # ---------------------------------------------
+
+  parent=${aMainWindow[menuBar]}
+
+  # Creating Widget 
+  
+  XmCreatePulldownMenu widget $parent pulldownMenu \
+               x:"0" \
+               y:"0" \
+
+
+  
+
+  aMainWindow[pulldownMenu]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget pushButton
+  # ---------------------------------------------
+
+  parent=${aMainWindow[pulldownMenu]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget pushButton XmPushButton $parent \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[pushButton]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget form
+  # ---------------------------------------------
+
+  parent=${aMainWindow[mainWindow]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget form XmForm $parent \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[form]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget directory
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget directory XmText $parent \
+               x:"0" \
+               y:"0" \
+               bottomAttachment:"XmATTACH_NONE" \
+               leftAttachment:"XmATTACH_FORM" \
+               leftOffset:"5" \
+               resizable:"1" \
+               rightAttachment:"XmATTACH_WIDGET" \
+               rightOffset:"5" \
+               topAttachment:"XmATTACH_FORM" \
+               topOffset:"5" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[directory]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget pushButton_1
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget pushButton_1 XmPushButton $parent \
+               x:"0" \
+               y:"0" \
+               rightAttachment:"XmATTACH_FORM" \
+               rightOffset:"5" \
+               topAttachment:"XmATTACH_FORM" \
+               topOffset:"5" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[pushButton_1]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget toFind
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget toFind XmText $parent \
+               x:"0" \
+               y:"0" \
+               bottomAttachment:"XmATTACH_NONE" \
+               leftAttachment:"XmATTACH_FORM" \
+               leftOffset:"5" \
+               resizable:"1" \
+               rightAttachment:"XmATTACH_WIDGET" \
+               rightOffset:"5" \
+               topAttachment:"XmATTACH_WIDGET" \
+               topOffset:"5" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[toFind]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget result
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget result XmText $parent \
+               x:"0" \
+               y:"0" \
+               editMode:"XmMULTI_LINE_EDIT" \
+               rows:"10" \
+               bottomAttachment:"XmATTACH_FORM" \
+               bottomOffset:"5" \
+               leftAttachment:"XmATTACH_FORM" \
+               leftOffset:"5" \
+               resizable:"1" \
+               rightAttachment:"XmATTACH_FORM" \
+               rightOffset:"5" \
+               topAttachment:"XmATTACH_WIDGET" \
+               topOffset:"5" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[result]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget fileSelectionDialog
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XmCreateFileSelectionDialog widget $parent fileSelectionDialog \
+               x:"0" \
+               y:"0" \
+               autoUnmanage:"1" \
+               fileTypeMask:"XmFILE_DIRECTORY" \
+
+
+  
+
+  aMainWindow[fileSelectionDialog]=$widget
+
+  # ---------------------------------------------  
+  # Create Widget pushButton_2
+  # ---------------------------------------------
+
+  parent=${aMainWindow[form]}
+
+  # Creating Widget 
+  
+  XtCreateWidget widget pushButton_2 XmPushButton $parent \
+               x:"0" \
+               y:"0" \
+               bottomAttachment:"XmATTACH_NONE" \
+               leftAttachment:"XmATTACH_NONE" \
+               resizable:"1" \
+               rightAttachment:"XmATTACH_FORM" \
+               rightOffset:"5" \
+               topAttachment:"XmATTACH_WIDGET" \
+               topOffset:"5" \
+
+
+  XtManageChild $widget 
+
+  aMainWindow[pushButton_2]=$widget
+
+
+
+  XtAddCallback  ${aMainWindow[pushButton]} "activateCallback" MainWindow_exit 
+
+  XtAddCallback  ${aMainWindow[pushButton_1]} "activateCallback" \
+                 "XtManageChild ${aMainWindow[fileSelectionDialog]}" 
+
+  XtAddCallback  ${aMainWindow[fileSelectionDialog]} "okCallback" MainWindow_dirSelected 
+
+  XtAddCallback  ${aMainWindow[pushButton_2]} "activateCallback" MainWindow_doFind 
+
+
+  XtSetValues ${aMainWindow[cascadeButton]} \
+              "subMenuId":${aMainWindow[pulldownMenu]}
+  XtSetValues ${aMainWindow[directory]} \
+              "rightWidget":${aMainWindow[pushButton_1]}
+  XtSetValues ${aMainWindow[toFind]} \
+              "rightWidget":${aMainWindow[pushButton_2]}
+  XtSetValues ${aMainWindow[toFind]} \
+              "topWidget":${aMainWindow[directory]}
+  XtSetValues ${aMainWindow[result]} \
+              "topWidget":${aMainWindow[toFind]}
+  XtSetValues ${aMainWindow[pushButton_2]} \
+              "topWidget":${aMainWindow[directory]}
+
+
+}

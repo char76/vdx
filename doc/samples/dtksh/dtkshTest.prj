@@ -1,0 +1,13 @@
+INTERFACE "MainWindow.i"
+LANG "dtksh"
+STARTUP "MainWindow"
+SOURCEDIR "."
+APPL_CLASS "DtkshTest"
+EXEC_FILE "dtkshTest"
+MORE_SOURCE ""
+EXTRA_CC_OPTIONS ""
+EXTRA_LD_OPTIONS ""
+EXTRA_LIBRARIES ""
+DESCRIPTION ""
+GLOBAL_RESOURCES "DtkshTest*background: #a8e0d6
+"

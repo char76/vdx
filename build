@@ -1,0 +1,78 @@
+#!/bin/sh
+
+
+get_arch() {
+    l=`grep "ARCH.*=" config/Makeoptions`
+    l=`echo $l| cut -d '=' -f 2`
+    echo $l
+}
+
+options=`cd config; ls Makeoptions.*`
+
+options=`echo $options | sed -e 's/Makeoptions.//g'`
+
+i=1
+for o in $options
+do
+    echo $i')' $o
+    i=`expr $i + 1`
+done
+
+action=build
+if [ x$1 = xc ]; then
+    action=clobber
+fi
+if [ x$1 = xs ]; then
+    action=set
+fi
+
+echo Enter configuration to $action
+read s
+
+to_do=""
+
+for b in $s
+do
+    i=1
+    for o in $options
+    do
+	if [ x$b = x$i ]; then
+	    to_do="$to_do $o"
+	fi
+	i=`expr $i + 1`
+    done
+done
+
+echo $action $to_do
+
+for o in $to_do
+do
+    (cd config; rm Makeoptions; ln -s Makeoptions.$o Makeoptions)
+    if [ $action = set ]; then
+	touch .depend-`get_arch`
+	echo Configuration set to $o
+	exit 0
+    fi
+    if [ $action = build ]; then
+	touch .depend-`get_arch`
+	make World 2>&1 |tee make.log.$o
+    fi
+    if [ $action = clobber ]; then
+	arch=`get_arch`
+	for i in `find . -name .depend-$arch`
+	do
+	    echo Remove file $i
+	    rm $i
+	done
+	for i in `find . -type d -name $arch`
+	do
+	    echo Remove directory $i
+	    rm -rf $i
+	done
+	echo Remove file make.log.$o
+	rm make.log.$o
+    fi
+done
+
+
+

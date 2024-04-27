@@ -1,0 +1,18 @@
+! -----------------------------------------
+! This file was automaticly generated
+! by VDX 
+!
+!             Do not edit!
+!
+! Global resources for project xfetest
+! Application Class: Xfetest
+! -----------------------------------------
+
+*XfeTab.buttonLayout: button_label_only
+*Tab0.labelString: 1
+*Tab1.labelString: 2
+*Tab2.labelString: 3
+
+
+! End of file
+

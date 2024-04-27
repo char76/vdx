@@ -1,0 +1,16 @@
+/* ------------------------------------------ */
+/* Method: $(METHOD)()                      */
+/* ------------------------------------------ */
+
+void $(METHOD)(self, wg, callData)
+     $(INTERFACE) *self;
+     Widget wg;
+     XtPointer callData;
+{
+  /* delete the printf() and add your own code */
+
+  printf("Callback $(METHOD) called by widget %s\n", XtName(wg));
+
+}
+
+

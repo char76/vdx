@@ -1,0 +1,269 @@
+! ----------------------------------------------
+! File: MainWindow.rf
+! Resource file of interface MainWindow
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*MainWindow*File.labelString: File
+*MainWindow*File.mnemonic: F
+*MainWindow*ProjectNew.labelString: New ...
+*MainWindow*ProjectNew.mnemonic: N
+*MainWindow*ProjectNew.quickHelpLabel: Create new project.
+*MainWindow*FileOpen.accelerator: Ctrl<Key>o
+*MainWindow*FileOpen.acceleratorText: ^O
+*MainWindow*FileOpen.labelString: Open ...
+*MainWindow*FileOpen.mnemonic: O
+*MainWindow*FileOpen.quickHelpLabel: Load project from file.
+*MainWindow*FileSave.accelerator: Ctrl<Key>s
+*MainWindow*FileSave.acceleratorText: ^S
+*MainWindow*FileSave.labelString: Save
+*MainWindow*FileSave.mnemonic: S
+*MainWindow*FileSave.quickHelpLabel: Save current project.
+*MainWindow*FileSaveAs.labelString: Save As ...
+*MainWindow*FileSaveAs.mnemonic: A
+*MainWindow*FileSaveAs.quickHelpLabel: Save current project to another location.
+*MainWindow*newTemplates.labelString: New Templates
+*MainWindow*newTemplates.quickHelpLabel: Create new widget template folder.
+*MainWindow*openTemplates.labelString: Open Templates ...
+*MainWindow*openTemplates.mnemonic: p
+*MainWindow*openTemplates.quickHelpLabel: Read template folder from a file.
+*MainWindow*FileExit.accelerator: Ctrl<Key>x
+*MainWindow*FileExit.acceleratorText: ^X
+*MainWindow*FileExit.labelString: Exit
+*MainWindow*FileExit.mnemonic: x
+*MainWindow*FileExit.quickHelpLabel: Exit View Designer/X.
+*MainWindow*Project.labelString: Project
+*MainWindow*Project.mnemonic: P
+*MainWindow*ProjectSettings.labelString: Settings
+*MainWindow*ProjectSettings.mnemonic: S
+*MainWindow*ProjectSettings.quickHelpLabel: Show project settings dialog.
+*MainWindow*ProjectLoadInterface.labelString: Import Interface ...
+*MainWindow*ProjectLoadInterface.mnemonic: I
+*MainWindow*ProjectLoadInterface.quickHelpLabel: Load an interface from file and add this to current project.
+*MainWindow*ProjectShowHelp.labelString: Show Help
+*MainWindow*ProjectShowHelp.mnemonic: H
+*MainWindow*ProjectShowHelp.quickHelpLabel: Show help system for current project.
+*MainWindow*ProjectResources.labelString: Global Resources
+*MainWindow*ProjectResources.mnemonic: R
+*MainWindow*ProjectResources.quickHelpLabel: Open the global resource settings.
+*MainWindow*ProjectGenerate.accelerator: Ctrl<Key>g
+*MainWindow*ProjectGenerate.acceleratorText: ^G
+*MainWindow*ProjectGenerate.labelString: Generate ...
+*MainWindow*ProjectGenerate.mnemonic: G
+*MainWindow*ProjectGenerate.quickHelpLabel: Generate project's source code.
+*MainWindow*ProjectExecute.accelerator: Ctrl<Key>e
+*MainWindow*ProjectExecute.acceleratorText: ^E
+*MainWindow*ProjectExecute.labelString: Execute ...
+*MainWindow*ProjectExecute.mnemonic: E
+*MainWindow*ProjectExecute.quickHelpLabel: Execute xmkmf, make or application.
+*MainWindow*Widgets.labelString: Widgets
+*MainWindow*Widgets.mnemonic: W
+*MainWindow*WidgetsPalette.labelString: Palette
+*MainWindow*WidgetsPalette.mnemonic: P
+*MainWindow*WidgetsPalette.quickHelpLabel: Show widget class palette.
+*MainWindow*ShellMenuButton.labelString: Shell
+*MainWindow*ShellMenuButton.mnemonic: S
+*MainWindow*ShellMenuButton.quickHelpLabel: Create a shell widget.
+*MainWindow*ManagerMenuButton.labelString: Manager
+*MainWindow*ManagerMenuButton.quickHelpLabel: Create a manager widget.
+*MainWindow*PrimitivesMenuButton.labelString: Primitive
+*MainWindow*PrimitivesMenuButton.mnemonic: i
+*MainWindow*PrimitivesMenuButton.quickHelpLabel: Create a primitive widget.
+*MainWindow*DialogsMenuButton.labelString: Dialog
+*MainWindow*DialogsMenuButton.mnemonic: D
+*MainWindow*DialogsMenuButton.quickHelpLabel: Create a dialog widget.
+*MainWindow*Options.labelString: Options
+*MainWindow*Options.mnemonic: O
+*MainWindow*genericOptionButton.labelString: Generic ...
+*MainWindow*genericOptionButton.mnemonic: e
+*MainWindow*genericOptionButton.quickHelpLabel: Change the behavior of Replace_Product.
+*MainWindow*OptionsGrid.labelString: Grid ...
+*MainWindow*OptionsGrid.mnemonic: G
+*MainWindow*OptionsGrid.quickHelpLabel: Show dialog to change wysiwyg view's grid value.
+*MainWindow*UpdatePolicy.labelString: Update Policy
+*MainWindow*UpdatePolicy.mnemonic: U
+*MainWindow*UpdatePolicy.quickHelpLabel: Modify update behavior of wysiwyg view.
+*MainWindow*minimalRefreshButton.labelString: Minimum
+*MainWindow*minimalRefreshButton.mnemonic: M
+*MainWindow*minimalRefreshButton.quickHelpLabel: Update current widget only.
+*MainWindow*optimalRefreshButton.labelString: Optimum
+*MainWindow*optimalRefreshButton.mnemonic: O
+*MainWindow*optimalRefreshButton.quickHelpLabel: Update wysiwig view with maximum effort.
+*MainWindow*defaultShellButton.labelString: Default Shell
+*MainWindow*defaultShellButton.mnemonic: S
+*MainWindow*defaultShellButton.quickHelpLabel: Change default shell.
+*MainWindow*applicationShellButton.labelString: Application Shell
+*MainWindow*applicationShellButton.mnemonic: A
+*MainWindow*toplevelShellButton.labelString: Toplevel Shell
+*MainWindow*toplevelShellButton.mnemonic: T
+*MainWindow*transientShellButton.labelString: Transient Shell
+*MainWindow*transientShellButton.mnemonic: r
+*MainWindow*dialogShellButton.labelString: Dialog Shell
+*MainWindow*dialogShellButton.mnemonic: D
+*MainWindow*viewDefaultsButton.labelString: View Defaults ...
+*MainWindow*viewDefaultsButton.mnemonic: V
+*MainWindow*viewDefaultsButton.quickHelpLabel: Change view defaults for Widget Resource, Menu Editor and Browser.
+*MainWindow*defaultPublicButton.labelString: Default Public ...
+*MainWindow*defaultPublicButton.mnemonic: P
+*MainWindow*defaultPublicButton.quickHelpLabel: Resources which should always be set in a resource file.
+*MainWindow*helpButton.labelString: Help
+*MainWindow*helpButton.mnemonic: H
+*MainWindow*HelpForHelp.labelString: On Help
+*MainWindow*HelpForHelp.mnemonic: H
+*MainWindow*HelpForHelp.quickHelpLabel: Show's how to use the help system.
+*MainWindow*HelpOnContext.labelString: On Context
+*MainWindow*HelpOnContext.mnemonic: C
+*MainWindow*HelpOnContext.quickHelpLabel: Get help for a clicked widget.
+*MainWindow*HelpTutorial.accelerator: Ctrl<Key>F1
+*MainWindow*HelpTutorial.acceleratorText: ^F1
+*MainWindow*HelpTutorial.labelString: Tutorial
+*MainWindow*HelpTutorial.mnemonic: T
+*MainWindow*HelpTutorial.quickHelpLabel: Show help for View Designer/X.
+*MainWindow*HelpProduct.labelString: About
+*MainWindow*HelpProduct.mnemonic: A
+*MainWindow*HelpProduct.quickHelpLabel: Who has developed this software?
+*MainWindow*OpenIcon.quickHelpLabel: Load a project file.
+*MainWindow*SaveIcon.quickHelpLabel: Save current project.
+*MainWindow*PaletteIcon.quickHelpLabel: Show default template folder.
+*MainWindow*ProductIcon.quickHelpLabel: View Designer/X?
+*MainWindow*WidgetPaletteIcon.quickHelpLabel: Show widget class palette.
+*MainWindow*ViewForm.quickHelpLabel: All user interfaces of the current project.
+*MainWindow*ViewLabel.labelString: Interfaces:
+*MainWindow*MessageLabel.labelString: Output:
+*MainWindow*XmText_1.quickHelpLabel: The output of X-lib, X-Toolkit, Motif and View Designer/X.
+*MainWindow*MessageClearButton.labelString: Clear
+*MainWindow*MessageClearButton.quickHelpLabel: Clear output area.
+*MainWindow*quickHelp.labelString: This is the Quick Help Line.
+*MainWindow*quickHelp.quickHelpLabel: This line show quick help while moving pointer.
+*MainWindow*TestModeToggle.labelString: Test Mode
+*MainWindow*TestModeToggle.quickHelpLabel: Switch wysiwyg view into test mode.
+*MainWindow*ProductInfoDialog.dialogTitle: About Replace_Product
+*MainWindow*PIClose.labelString: Close
+*MainWindow*ProductInfoLabel.labelString: Replace_Product Release Replace_Revision\nCopyright © 1996, 1997, 1998 Dirk Lässig.\nAll rights reserved.
+*MainWindow*label_2.labelString: Demo Mode
+*MainWindow*ProjectNewDialog.dialogTitle: New Project
+*MainWindow*PSNameLabel.labelString: Project File:
+*MainWindow*PSNameText.quickHelpLabel: Name of project file.
+*MainWindow*PSPaletteLabel.labelString: Application Class:
+*MainWindow*PSPaletteText.quickHelpLabel: Name of template file.
+*MainWindow*PSLangOptionMenu.labelString: Generation Model:
+*MainWindow*PSLangOptionMenu.quickHelpLabel: Programming languages for code generation.
+*MainWindow*PSStartLabel.labelString: Startup Interface:
+*MainWindow*PCStartText.quickHelpLabel: First interface after the programm startup.
+*MainWindow*PSOk.labelString: OK
+*MainWindow*PSCancel.labelString: Cancel
+*MainWindow*PSHelp.labelString: Help
+*MainWindow*PSSourceDirLabel.labelString: Source Path:
+*MainWindow*PSSourceDirText.quickHelpLabel: Directory in which the source code is generated.
+*MainWindow*PSPaletteFiles.labelString: ...
+*MainWindow*PSPaletteFiles.quickHelpLabel: Open a file selection box.
+*MainWindow*PSSourceDirFiles.labelString: ...
+*MainWindow*PSSourceDirFiles.quickHelpLabel: Open a file selection box.
+*MainWindow*PSPaletteFileSB.dialogTitle: Template file
+*MainWindow*PSSourceDirFileSB.dialogTitle: Source directory
+*MainWindow*GridDialog.dialogTitle: Wysiwyg View - Grid
+*MainWindow*GridOk.labelString: OK
+*MainWindow*GridCancel.labelString: Cancel
+*MainWindow*GridHelp.labelString: Help
+*MainWindow*GridModeOn.labelString: Grid On
+*MainWindow*GridModeOff.labelString: Grid Off
+*MainWindow*GridValueLabel.labelString: Grid Value
+*MainWindow*saveProjectDialog.dialogTitle: Save as
+*MainWindow*loadProjectDialog.dialogTitle: Load project
+*MainWindow*loadInterfaceDialog.dialogTitle: Load interface
+*MainWindow*overwriteDialog.dialogTitle: Write the following files?
+*MainWindow*owOk.labelString: Write
+*MainWindow*owOk.quickHelpLabel: Write selected files.
+*MainWindow*owCancel.labelString: Do nothing
+*MainWindow*owCancel.quickHelpLabel: Don't write anything.
+*MainWindow*owHelp.labelString: Help
+*MainWindow*owHelp.quickHelpLabel: Getting more help.
+*MainWindow*overwriteFilesList.fontList: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+*MainWindow*overwriteFilesList.quickHelpLabel: Selected files will be written.
+*MainWindow*ExecIcon.quickHelpLabel: Execute xmkmf, make or application.
+*MainWindow*quickStartDialog.cancelLabelString: Close
+*MainWindow*quickStartDialog.dialogTitle: Quick Start
+*MainWindow*quickStartDialog.messageString: What do you want to do?
+*MainWindow*quickStartDialog.okLabelString: Do
+*MainWindow*qsNewButton.labelString: New Project:
+*MainWindow*qsRecoverButton.labelString: Recover Project:
+*MainWindow*generateIcon.quickHelpLabel: Generate Source Code
+*MainWindow*viewDefaultsDialog.dialogTitle: View Default Settings
+*MainWindow*widBrowseViewFrame.quickHelpLabel: Widget Tree Browser defaults.
+*MainWindow*label_3.labelString: Widget Tree Browser
+*MainWindow*browserSmallIconToggle.labelString: Small Icons
+*MainWindow*browserWithIconToggle.labelString: With Icons
+*MainWindow*browserWithClassNameToggle.labelString: With Class Name
+*MainWindow*browserAutomaticLoadToggle.labelString: Automatic Load
+*MainWindow*menuEditFrame.quickHelpLabel: Menu Editor defaults.
+*MainWindow*label_3_1.labelString: Menu Editor
+*MainWindow*menuEditSmallIconToggle.labelString: Small Icons
+*MainWindow*menuEditWithIconToggle.labelString: With Icons
+*MainWindow*menuEditWithClassNameToggle.labelString: With Class Name
+*MainWindow*menuEditAutomaticLoadToggle.labelString: Automatic Load
+*MainWindow*attachmentEditorFrame.quickHelpLabel: Menu Editor defaults.
+*MainWindow*label_3_1_1.labelString: Attachment Editor
+*MainWindow*aeSmallIconToggle.labelString: Small Icons
+*MainWindow*aeWithIconToggle.labelString: With Icons
+*MainWindow*aeWithClassNameToggle.labelString: With Class Name
+*MainWindow*aeAutomaticLoadToggle.labelString: Automatic Load
+*MainWindow*resourceEditorFrame.quickHelpLabel: Widget Resource Editor defauts.
+*MainWindow*label_3_2.labelString: Widget Resource Editor
+*MainWindow*editorAutomaticLoadToggle.labelString: Automatic Load
+*MainWindow*coreView.labelString: Core
+*MainWindow*specificView.labelString: Specific
+*MainWindow*constraintView.labelString: Constraints
+*MainWindow*callbackView.labelString: Callbacks
+*MainWindow*defaultPublicDialog.dialogTitle: Default Public Resources
+*MainWindow*defaultPublicDialog.messageString: Resources which are always in resources files.
+*MainWindow*defaultPublicList.quickHelpLabel: List of public resources.
+*MainWindow*defaultPublicText.quickHelpLabel: Enter a resource name, like labelString.
+*MainWindow*defaultPublicAdd.labelString: Add
+*MainWindow*defaultPublicAdd.quickHelpLabel: Add resource to the list.
+*MainWindow*defaultPublicDelete.labelString: Delete
+*MainWindow*defaultPublicDelete.quickHelpLabel: Delete selected resource names. 
+*MainWindow*genericOptionsDialog.dialogTitle: Generic Options
+*MainWindow*genericOptionsDialog.messageString: Customize Replace_Product's generic behavior.
+*MainWindow*label_4.labelString: Quick Start Dialog:
+*MainWindow*label_4_1.labelString: Auto Saving:
+*MainWindow*label_4_2.labelString: Auto Save Time:
+*MainWindow*label_4_3.labelString: Auto Save Path:
+*MainWindow*label_4_4.labelString: Main Template Folder:
+*MainWindow*genericQuickStartToggle.labelString: Show
+*MainWindow*genericQuickStartToggle.quickHelpLabel: Shows a dialog at program startup.
+*MainWindow*genericAutoSaveToggle.labelString: On
+*MainWindow*genericAutoSaveToggle.quickHelpLabel: Enable automatic saving of projects.
+*MainWindow*genericAutoSaveScale.quickHelpLabel: Change the auto save time.
+*MainWindow*genericAutoSaveText.quickHelpLabel: Path where the auto saved project is placed.
+*MainWindow*genericMainTemplateText.quickHelpLabel: Template folder that is opened by template icon.
+*MainWindow*label_4_4_1.labelString: Quick Help:
+*MainWindow*quickHelpToggle.labelString: Show Lines
+*MainWindow*quickHelpToggle.quickHelpLabel: Enable the Quick Help lines.
+*MainWindow*label_4_4_1_1.labelString: Wysiwyg after load:
+*MainWindow*genericAfterLoadToggle.labelString: Show
+*MainWindow*genericAfterLoadToggle.quickHelpLabel: Show wysiwyg view after an interface is read from a file.
+*MainWindow*toolTipLabel.labelString: Tool Tips:
+*MainWindow*versionControlLabel.labelString: Version Control:
+*MainWindow*toolTipToggle.quickHelpLabel: Show help on toolbar buttons.
+*MainWindow*versionControlToggle.labelString: Execute Scripts
+*MainWindow*versionControlToggle.quickHelpLabel: Execute scripts (vcopen, vcsave, vcclose).
+*MainWindow*executeDialog.dialogTitle: Execute Program
+*MainWindow*xmkmfToggleButton.labelString: xmkmf
+*MainWindow*xmkmfToggleButton.quickHelpLabel: Execute xmkmf for makefile creation.
+*MainWindow*makeDependToggleButton.labelString: make depend
+*MainWindow*makeDependToggleButton.quickHelpLabel: Execute 'make depend'.
+*MainWindow*makeToggleButton.labelString: make
+*MainWindow*makeToggleButton.quickHelpLabel: Build your application using 'make'.
+*MainWindow*execToggleButton.labelString: program
+*MainWindow*execToggleButton.quickHelpLabel: Run your application.
+*MainWindow*StopIcon.quickHelpLabel: Stop running program
+*MainWindow*ProjectGenerateDialog.dialogTitle: Generate Source Code
+*MainWindow*ImakefileGenerateToggle.quickHelpLabel: Generate Imakefile for makefile creation.
+*MainWindow*MainGenerateToggle.quickHelpLabel: Generate main source file.
+*MainWindow*StubsGenerateToggle.quickHelpLabel: Stubs you can edit.
+
+
+! ----------------------------------------------
+! end of resource file MainWindow.rf
+! ----------------------------------------------

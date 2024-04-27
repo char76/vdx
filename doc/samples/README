@@ -1,0 +1,102 @@
+Example Projects for View Designer/X
+------------------------------------
+
+How to build?
+
+	1. xmkmf 
+
+	2. make Makefiles
+
+	3. make depend
+
+	4. make all
+
+
+You should load the project files into the VDX and examine widget tree
+and resource settings. The source code of the examples
+is already written. That's why you don't have to generate the source code. Some
+files are changed. These files contain code which implements the callbacks
+and initialization functions.
+
+
+Project descriptions
+--------------------
+
+Calcy 
+
+A little program which enables the user to enter two number in
+the text widgets. The sum of these numbers will be calculated, if the
+user clicks the 'Add' button. The result is appearing in a text widget
+in the bottom of the window.
+Calcy sample explains:
+
+	Creating a user interface by using VDX
+	How to add a callback
+	Writing your own code
+	Usage of XmText widget
+
+
+
+Hungry
+
+A little window enables the user to choose a burger or a pizza and in
+a radio box the credit card. The Apply button writes the ordering information
+on the standard output. Clicking Close button terminates the application.
+With key F1 and Help button a help dialog is shown.
+Hungry sample shows:
+
+	How links can be used to integrate an interface into another interface.
+	Binding a dialog to a callback.
+	The behavior of radio boxes and toggle buttons.
+
+
+	
+TextEdit
+
+This text editor could be used to open, read, change and save files.
+This is the first C++ program.
+TextEdit sample shows the usage:
+
+	C++ code generation
+	menus
+	accelerators
+	file selection boxes
+	XmText clipboard functions
+	window manager protocol callbacks
+
+
+
+
+ToDo
+
+A little program that maintains a todo list. A list widgets contains the
+titles of all todo list items. The items are ordered by priority. New items
+can be added to the list. A todo list item view shows the title, priority
+and a description. These data can be changed. 
+ToDo list sample shows the usage of:
+
+	XmForm, XmFrame and XmList widgets.
+	How to combine data and user interface. 
+
+
+
+ADDITIONAL EXAMPLES
+-------------------
+
+XrtTest
+
+An interface that uses Xrt widgets. You have to change the path for
+header files and libraries.
+
+
+dtksh
+
+An example that demonstrates the code generation for dtksh scripts.
+
+
+Xfe
+
+The netscape's Xfe Widget Set.
+
+
+ALL PROGRAMS ARE ONLY EXAMPLES. NO WARRENTY.

@@ -1,0 +1,86 @@
+/****************************************************************
+ *
+ *  $RCSfile: Imakefile,v $
+ *  $Date: 1998/05/13 18:47:41 $
+ *  $Revision: 1.3 $
+ *
+ *  This file belongs the changes of the 'Covered Code' regarding
+ *  the terms of the NPL. See file CHANGES and LICENSE for more
+ *  information.
+ *
+ *  Contributer:
+ *  Dirk Laessig
+ *  Muehlenpfordtstr. 5
+ *  38106 Braunschweig
+ *  Germany
+ ****************************************************************/
+/*
+ * $Log: Imakefile,v $
+ * Revision 1.3  1998/05/13 18:47:41  lazy
+ * Fix after test.
+ *
+ * Revision 1.2  1998/05/13 13:48:53  lazy
+ * Added the NPL notice.
+ *
+ * Revision 1.1.1.1  1998/04/24 23:45:50  lazy
+ * Imported to CVS
+ *
+ * Revision 1.1  1998/04/22 19:39:31  lazy
+ * Initial revision
+ *
+ */
+
+OBJS		= \
+		  Arrow.o \
+		  BmButton.o \
+		  BmCascade.o \
+		  Button.o \
+		  BypassShell.o \
+		  CallProcs.o \
+		  Cascade.o \
+		  ChildrenUtil.o \
+		  Chrome.o \
+		  ComboBox.o \
+		  Converters.o \
+		  Cursor.o \
+		  DashBoard.o \
+		  Debug.o \
+		  DialogUtil.o \
+		  Draw.o \
+		  FancyBox.o \
+		  Find.o \
+		  FontChooser.o \
+		  FrameShell.o \
+		  GcUtil.o \
+		  Geometry.o \
+		  Label.o \
+		  ListUtil.o \
+		  Logo.o \
+		  Manager.o \
+		  MenuUtil.o \
+		  Oriented.o \
+		  Pane.o \
+		  PixmapUtil.o \
+		  Primitive.o \
+		  Private.o \
+		  ProgressBar.o \
+		  RepType.o \
+		  Resources.o \
+		  ShellUtil.o \
+		  StringUtil.o \
+		  Tab.o \
+		  TaskBar.o \
+		  ToolBar.o \
+		  ToolBox.o \
+		  ToolItem.o \
+		  ToolScroll.o \
+		  Translations.o \
+		  Util.o \
+		  WmUtil.o \
+		  $(NULL)
+
+EXTRA_INCLUDES = -DVDX_CHANGES -I..
+
+LIBNAME=XfeWidgets
+
+NormalLibraryTarget($(LIBNAME),$(OBJS))

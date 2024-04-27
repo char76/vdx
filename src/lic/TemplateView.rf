@@ -1,0 +1,90 @@
+! ----------------------------------------------
+! File: TemplateView.rf
+! Resource file of interface TemplateView
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*TemplateView*fileButton.labelString: File
+*TemplateView*fileButton.mnemonic: F
+*TemplateView*saveButton.accelerator: Ctrl<Key>s
+*TemplateView*saveButton.acceleratorText: ^S
+*TemplateView*saveButton.labelString: Save
+*TemplateView*saveButton.mnemonic: S
+*TemplateView*saveButton.quickHelpLabel: Save templates.
+*TemplateView*saveAsButton.labelString: Save As ...
+*TemplateView*saveAsButton.mnemonic: A
+*TemplateView*saveAsButton.quickHelpLabel: Shows a file selection box to save templates.
+*TemplateView*closeButton.labelString: Close
+*TemplateView*closeButton.mnemonic: C
+*TemplateView*closeButton.quickHelpLabel: Close this window.
+*TemplateView*viewButton.labelString: View
+*TemplateView*smallIconButton.accelerator: Ctrl<Key>s
+*TemplateView*smallIconButton.acceleratorText: ^S
+*TemplateView*smallIconButton.labelString: Small Icons
+*TemplateView*smallIconButton.mnemonic: S
+*TemplateView*smallIconButton.quickHelpLabel: Use small icons.
+*TemplateView*withIconButton.accelerator: Ctrl<Key>I
+*TemplateView*withIconButton.acceleratorText: ^I
+*TemplateView*withIconButton.labelString: With Icons
+*TemplateView*withIconButton.mnemonic: I
+*TemplateView*withIconButton.quickHelpLabel: Use icons.
+*TemplateView*withClassNameButton.accelerator: Ctrl<Key>n
+*TemplateView*withClassNameButton.acceleratorText: ^N
+*TemplateView*withClassNameButton.labelString: With Class Names
+*TemplateView*withClassNameButton.mnemonic: N
+*TemplateView*withClassNameButton.quickHelpLabel: Shows the class name of widget.
+*TemplateView*widgetButton.labelString: Widget
+*TemplateView*widgetButton.mnemonic: W
+*TemplateView*pasteToTemplateButton.labelString: Paste to Template
+*TemplateView*pasteToTemplateButton.mnemonic: T
+*TemplateView*pasteToTemplateButton.quickHelpLabel: Paste clipboard contents into template folder.
+*TemplateView*editButton.acceleratorText: E
+*TemplateView*editButton.labelString: Edit
+*TemplateView*editButton.mnemonic: E
+*TemplateView*editButton.quickHelpLabel: Shows Widget Resource Editor for selected widgets.
+*TemplateView*browseButton.acceleratorText: B
+*TemplateView*browseButton.labelString: Browse
+*TemplateView*browseButton.mnemonic: B
+*TemplateView*browseButton.quickHelpLabel: Shows browser for selected widgets.
+*TemplateView*cutButton.acceleratorText: X
+*TemplateView*cutButton.labelString: Cut
+*TemplateView*cutButton.mnemonic: u
+*TemplateView*cutButton.quickHelpLabel: Copy selection to clipboard and delete selection.
+*TemplateView*copyButton.acceleratorText: C
+*TemplateView*copyButton.labelString: Copy
+*TemplateView*copyButton.mnemonic: C
+*TemplateView*copyButton.quickHelpLabel: Copy selection to clipboard.
+*TemplateView*pasteButton.acceleratorText: V
+*TemplateView*pasteButton.labelString: Paste
+*TemplateView*pasteButton.mnemonic: P
+*TemplateView*pasteButton.quickHelpLabel: Paste clipboard contents to selection.
+*TemplateView*deleteButton.acceleratorText: DEL
+*TemplateView*deleteButton.labelString: Delete
+*TemplateView*deleteButton.mnemonic: D
+*TemplateView*deleteButton.quickHelpLabel: Delete selected widgets.
+*TemplateView*optionsButton.labelString: Options
+*TemplateView*optionsButton.mnemonic: O
+*TemplateView*createOnClick.accelerator: Ctrl<Key>r
+*TemplateView*createOnClick.acceleratorText: ^R
+*TemplateView*createOnClick.labelString: Create on Click
+*TemplateView*createOnClick.mnemonic: r
+*TemplateView*createOnClick.quickHelpLabel: Left mouse button (Create or Select).
+*TemplateView*helpButton.labelString: Help
+*TemplateView*helpButton.mnemonic: H
+*TemplateView*onHelp.labelString: On Help
+*TemplateView*onHelp.mnemonic: H
+*TemplateView*onHelp.quickHelpLabel: Show help on help system.
+*TemplateView*onContext.mnemonic: C
+*TemplateView*onContext.quickHelpLabel: Get help after clicking in a window.
+*TemplateView*onWidResEditor.accelerator: Ctrl<Key>F1
+*TemplateView*onWidResEditor.acceleratorText: ^F1
+*TemplateView*onWidResEditor.quickHelpLabel: Shows help for this window.
+*TemplateView*quickHelp.labelString: The quick help line.
+*TemplateView*templateFrame.quickHelpLabel: Icon View of templates.
+*TemplateView*saveAsDialog.dialogTitle: Save Template
+
+
+! ----------------------------------------------
+! end of resource file TemplateView.rf
+! ----------------------------------------------

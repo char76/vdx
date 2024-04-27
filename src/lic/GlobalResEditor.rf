@@ -1,0 +1,68 @@
+! ----------------------------------------------
+! File: GlobalResEditor.rf
+! Resource file of interface GlobalResEditor
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*GlobalResEditor*fileMenuButton.labelString: File
+*GlobalResEditor*fileMenuButton.mnemonic: F
+*GlobalResEditor*fileImport.accelerator: Ctrl<Key>i
+*GlobalResEditor*fileImport.acceleratorText: ^I
+*GlobalResEditor*fileImport.labelString: Import
+*GlobalResEditor*fileImport.mnemonic: I
+*GlobalResEditor*fileImport.quickHelpLabel: Import a file at cursor position.
+*GlobalResEditor*fileApply.accelerator: Ctrl<Key>a
+*GlobalResEditor*fileApply.acceleratorText: ^A
+*GlobalResEditor*fileApply.labelString: Apply
+*GlobalResEditor*fileApply.mnemonic: A
+*GlobalResEditor*fileApply.quickHelpLabel: Update all WYSIWYG views.
+*GlobalResEditor*fileClose.accelerator: Ctrl<Key>C
+*GlobalResEditor*fileClose.acceleratorText: ^C
+*GlobalResEditor*fileClose.labelString: Close
+*GlobalResEditor*fileClose.mnemonic: C
+*GlobalResEditor*fileClose.quickHelpLabel: Close the window.
+*GlobalResEditor*editMenuButton.labelString: Edit
+*GlobalResEditor*editMenuButton.mnemonic: E
+*GlobalResEditor*editCut.accelerator: Shift<Key>osfDelete
+*GlobalResEditor*editCut.acceleratorText: ^DEL
+*GlobalResEditor*editCut.labelString: Cut
+*GlobalResEditor*editCut.mnemonic: C
+*GlobalResEditor*editCut.quickHelpLabel: Move selected text to clipboard.
+*GlobalResEditor*editCopy.accelerator: Ctrl<Key>osfInsert
+*GlobalResEditor*editCopy.acceleratorText: ^INS
+*GlobalResEditor*editCopy.labelString: Copy
+*GlobalResEditor*editCopy.mnemonic: o
+*GlobalResEditor*editCopy.quickHelpLabel: Copy text to clipboard.
+*GlobalResEditor*editPaste.accelerator: Shift<Key>osfInsert
+*GlobalResEditor*editPaste.acceleratorText: S-INS
+*GlobalResEditor*editPaste.labelString: Paste
+*GlobalResEditor*editPaste.mnemonic: P
+*GlobalResEditor*editPaste.quickHelpLabel: Insert text from clipboard.
+*GlobalResEditor*helpMenuButton.labelString: Help
+*GlobalResEditor*helpMenuButton.mnemonic: H
+*GlobalResEditor*onHelp.labelString: On Help
+*GlobalResEditor*onHelp.mnemonic: H
+*GlobalResEditor*onHelp.quickHelpLabel: Help for the help system.
+*GlobalResEditor*onContext.labelString: On Context
+*GlobalResEditor*onContext.mnemonic: C
+*GlobalResEditor*onContext.quickHelpLabel: Get help after a widget is clicked.
+*GlobalResEditor*helpHelp.accelerator: Ctrl<Key>F1
+*GlobalResEditor*helpHelp.acceleratorText: ^F!
+*GlobalResEditor*helpHelp.labelString: On Window
+*GlobalResEditor*helpHelp.mnemonic: W
+*GlobalResEditor*helpHelp.quickHelpLabel: Help on this window.
+*GlobalResEditor*fileImportDialog.dialogTitle: Import
+*GlobalResEditor*text.quickHelpLabel: Enter a text in resource file syntax.
+*GlobalResEditor*quickHelpLabel.labelString: This is the Quick Help Line.
+*GlobalResEditor*fontChooserButton.labelString: F
+*GlobalResEditor*fontChooserButton.quickHelpLabel: Open a font chooser for the selected font.
+*GlobalResEditor*colorSelectButton.labelString: C
+*GlobalResEditor*colorSelectButton.quickHelpLabel: Open a color selection for the selected color.
+*GlobalResEditor*applyButton.labelString: A
+*GlobalResEditor*applyButton.quickHelpLabel: Apply changes to WYSIWYG view.
+
+
+! ----------------------------------------------
+! end of resource file GlobalResEditor.rf
+! ----------------------------------------------

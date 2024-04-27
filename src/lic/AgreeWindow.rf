@@ -1,0 +1,16 @@
+! ----------------------------------------------
+! File: AgreeWindow.rf
+! Resource file of interface AgreeWindow
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*AgreeWindow*label_1.fontList: -adobe-helvetica-bold-r-normal--14-*-*-*-*-*-iso8859-1
+*AgreeWindow*label_1.labelString: Do you agree to all the terms of following statement?
+*AgreeWindow*pushButton_1.labelString: Agree
+*AgreeWindow*pushButton_1_1.labelString: Don't agree
+
+
+! ----------------------------------------------
+! end of resource file AgreeWindow.rf
+! ----------------------------------------------

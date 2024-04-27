@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo vcclose: $1
+
+to_close=$1
+rcs_dir=`dirname $to_close`/RCS
+
+if [ ! -d $rcs_dir ]; then
+    mkdir $rcs_dir
+fi
+ci -m"Checked in from VDX" $to_close

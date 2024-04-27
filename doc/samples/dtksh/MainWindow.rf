@@ -1,0 +1,21 @@
+! ----------------------------------------------
+! File: MainWindow.rf
+! Resource file of interface MainWindow
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*MainWindow*cascadeButton.labelString: File
+*MainWindow*cascadeButton.mnemonic: F
+*MainWindow*pushButton.accelerator: Ctrl<Key>x
+*MainWindow*pushButton.acceleratorText: Ctrl-x
+*MainWindow*pushButton.labelString: Exit
+*MainWindow*pushButton.mnemonic: x
+*MainWindow*pushButton_1.labelString: ...
+*MainWindow*fileSelectionDialog.dialogTitle: Select Directory
+*MainWindow*pushButton_2.labelString: Find
+
+
+! ----------------------------------------------
+! end of resource file MainWindow.rf
+! ----------------------------------------------

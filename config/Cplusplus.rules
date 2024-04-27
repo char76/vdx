@@ -1,0 +1,109 @@
+#ifndef CplusplusLinkRule
+#define CplusplusLinkRule(program,options,objects,libraries) \
+$(CXXLINK) -o program options objects libraries $(EXTRA_LOAD_FLAGS)
+#endif /* CplusplusLinkRule */
+
+/*
+ * NormalCplusplusProgramTarget - Like NormalTargetProgram, but uses
+ * C++ linking rules.
+ */
+#ifndef NormalCplusplusProgramTarget
+#define	NormalCplusplusProgramTarget(program,objects,deplibs,locallibs,syslibs)	@@\
+ProgramTargetName(program): objects deplibs				@@\
+	RemoveTargetProgram($@)						@@\
+	CplusplusLinkRule($@,$(CXXLDOPTIONS),objects,locallibs $(LDLIBS) syslibs) @@\
+									@@\
+clean::									@@\
+	$(RM) program
+#endif /* NormalCplusplusProgramTarget */
+
+/*
+ * SimpleCplusplusProgramTarget - generate rules for compiling and linking
+ * programs that only have one C++ source file.  It should only be used in
+ * Imakefiles that describe a single program.
+ */
+#ifndef SimpleCplusplusProgramTarget
+#define SimpleCplusplusProgramTarget(program)				@@\
+           OBJS = program.o						@@\
+           SRCS = program.CCsuf						@@\
+									@@\
+ComplexCplusplusProgramTarget(program)
+#endif /* SimpleCplusplusProgramTarget */
+
+/*
+ * ComplexCplusplusProgramTarget - generate rules for compiling and linking
+ * the program specified by $(OBJS) and $(SRCS), installing the program and
+ * its man page, and generating dependencies.  It should only be used in 
+ * Imakefiles that describe a single program.
+ */
+#ifndef ComplexCplusplusProgramTarget
+#define	ComplexCplusplusProgramTarget(program)				@@\
+        PROGRAM = program						@@\
+									@@\
+AllTarget(program)							@@\
+									@@\
+program: $(OBJS) $(DEPLIBS)						@@\
+	RemoveTargetProgram($@)						@@\
+	CplusplusLinkRule($@,$(CXXLDOPTIONS),$(OBJS),$(LOCAL_LIBRARIES) $(LDLIBS)) @@\
+InstallProgram(program,$(BINDIR))					@@\
+InstallManPage(program,$(MANDIR))					@@\
+DependTarget()								@@\
+LintTarget()								@@\
+									@@\
+clean::									@@\
+	$(RM) program
+#endif /* ComplexCplusplusProgramTarget */
+
+/*
+ * ObjectCplusplusCompile - compile fragment for a normal object file
+ */
+#ifndef ObjectCplusplusCompile
+#define ObjectCplusplusCompile(options) $(RM) $@			@@\
+	$(CXX) -c $(CXXFLAGS) options $*.CCsuf
+#endif
+
+/*
+ * NormalLibObjCplusplusCompile - compile fragment for a normal library 
+ * object file
+ */
+#ifndef NormalLibObjCplusplusCompile
+#define NormalLibObjCplusplusCompile(options) ObjectCplusplusCompile(options)
+#endif
+
+/*
+ * NormalCplusplusObjectRule - for simple libraries
+ */
+#ifndef NormalCplusplusObjectRule
+#define NormalCplusplusObjectRule()					@@\
+.CCsuf.o:								@@\
+	NormalLibObjCplusplusCompile($(_NOOP_))
+#endif
+
+#ifndef SpecialCplusplusObjectRule
+#define SpecialCplusplusObjectRule(baseobj,basedep,options)		@@\
+baseobj.o:	basedep.CCsuf						@@\
+	ObjectCplusplusCompile(options)
+#endif /* SpecialCplusplusObjectRule */
+
+#include <Library.tmpl>
+
+#if !DoSharedLib || (DoNormalLib && !SeparateSharedCompile)
+#define _SharedObjCplusplusCompile(options) $(_NULLCMD_)
+#else
+#define _SharedObjCplusplusCompile(options) NormalSharedLibObjCplusplusCompile(options)
+#endif
+
+#if !DoNormalLib
+#define _NormalObjCplusplusCompile(options) $(_NULLCMD_)
+#else
+#define _NormalObjCplusplusCompile(options) NormalLibObjCplusplusCompile(options)
+#endif
+
+#ifndef SpecialCplusplusLibObjectRule
+#define SpecialCplusplusLibObjectRule(basename,depends,options)		@@\
+basename.o: basename.CCsuf depends					@@\
+	_DebuggedObjCompile(options)				@@\
+	_ProfiledObjCompile(options)				@@\
+	_SharedObjCplusplusCompile(options)				@@\
+	_NormalObjCplusplusCompile(options)
+#endif /* SpecialCplusplusLibObjectRule */

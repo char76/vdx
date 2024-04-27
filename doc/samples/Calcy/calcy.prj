@@ -1,0 +1,5 @@
+PALETTE "Templates.pal"
+INTERFACE "CalcWindow.i"
+LANG "c"
+STARTUP "CalcWindow"
+SOURCEDIR ""

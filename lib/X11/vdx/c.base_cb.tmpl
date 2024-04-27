@@ -1,0 +1,17 @@
+
+/* --------------------------------- */
+/* $(METHOD)_CB()                    */
+/* --------------------------------- */
+
+static void $(METHOD)_CB(wg, clientData, callData)
+    Widget wg;
+    XtPointer clientData;
+    XtPointer callData;
+{
+    /* Calling method which is implemented in $(INTERFACE).c */
+
+    $(METHOD)(($(INTERFACE)*)clientData, wg, callData);
+}
+
+
+

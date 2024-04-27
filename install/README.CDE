@@ -1,0 +1,22 @@
+The CDE version is build with XiGraphics CDE. To
+run vdx on TriTeal CDE you have to rebuild libvdx.so.
+Follow these steps:
+
+Change to vdxlib source directory.
+
+	cd src/vdxlib
+
+Run the shell script config.sh.
+
+	./config.sh
+
+Answer yes, when the script asks you for CDE.
+Otherwise type 'n' for NO.
+
+If libvdx.so is built successfully, type 'make install'.
+Now run the vdx.
+
+Problems? Send email to:
+		
+		 dirk@bredex.de
+

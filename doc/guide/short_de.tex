@@ -1,0 +1,2654 @@
+% --------------------------------------------------------------------------
+% 
+% Benutzerhandbuch für den View Designer/X
+% 
+% --------------------------------------------------------------------------
+
+
+\documentstyle[epsf,palatino,twoside,umlaut,german,makeidx,refman]{report} 
+
+\tolerance 400%
+\emergencystretch 1em%
+%\hfuzz .2
+%\vfuzz\hfuzz
+
+%\sloppy
+
+
+% -- A5 --
+%\setlength\textheight {165mm}
+%\setlength\fullwidth  {110mm}
+%\setleftmarginwidth{2.5cm}
+
+
+\setleftmarginwidth{4cm}
+
+
+\makeindex
+
+\def\glossarname{Glossar}
+
+\def\lazyglossar{ \newpage
+	      \addcontentsline{toc}{chapter}{\glossarname}
+	\longthickhrule\bigskip
+     {\secshape\Large\bf\sf \glossarname \par}
+     \bigskip\longthickhrule\bigskip
+    \markboth{\uppercase{\glossarname}}{\uppercase{\glossarname}}%
+    \thispagestyle{plain}
+}
+
+\def\lazyindex{
+	\newpage
+	      \addcontentsline{toc}{chapter}{\indexname}
+	\printindex
+}
+
+% ------------------------------------
+% Zapfding-Font
+% ------------------------------------
+\font\symbolfont=pzdr at 14pt
+
+\def\arrow{{$\rightarrow$}}
+
+\newenvironment{mylist}[1]{ \begin{list}{}{
+	\listparindent0cm \itemindent0cm \labelsep0.1cm
+	\settowidth{\labelwidth}{\bf #1} 
+	\setlength{\leftmargin}{\labelwidth}
+	\addtolength{\leftmargin}{\labelsep}	
+	\renewcommand{\makelabel}[1]{##1 \hfill}
+}}{\end{list}}
+
+\newenvironment{lazy}{\bigskip\hrulefill\begin{alltt}\small}{\end{alltt}\hrulefill\bigskip}
+
+\def\syntax#1{{\em \marginlabel{Syntax:}}{\tt #1}}
+\def\desc#1{{\em \marginlabel{Beschreibung:}}{#1}}
+\def\function#1#2{\syntax{#1}
+
+\desc{#2}}
+
+\def\myitem#1{\marginlabel{\em #1}}
+
+\def\showkey#1{{\tt <#1>}}
+
+\newtheorem{myexample}{Beispiel}[chapter]
+\newenvironment{exam}{\smallskip\begin{myexample}\rm \ }{\hfill$\Box$\end{example}}
+
+
+\def\epsfsize#1#2{\ifnum#1>\hsize\hsize\else#1\fi}
+
+\newcommand{\psfigure}[2] {
+	\begin{figure} 
+	\begin{center}
+	\ \epsfbox{#1}
+	\end{center}
+	\caption{\label{#1} #2}
+	\end{figure}
+}
+
+\newcommand{\psmargin}[1] {
+	\marginpar{
+	\begin{center}
+	\ \epsffile{#1}
+	\end{center}
+	}
+}
+
+\newcommand{\marginchar}[1] {
+	\parskip1mm
+	\marginpar{
+		\begin{center}
+			{\myfont #1}
+		\end{center}
+	}
+}
+
+\def\telefon{\marginchar{\char37}}
+\def\brief{\marginchar{\char41}}
+\def\finger{\marginchar{\char43}}
+\def\haken{\marginchar{\char51}}
+
+
+% ------------------------------------
+% headings
+% ------------------------------------
+
+\headheight 1cm
+
+% ------------------------------------
+% masse
+% ------------------------------------
+
+\parindent0.0cm		% Keine Einrueckung beim Absatzbeginn
+%\footheight0.0cm
+%\footskip0.0cm
+%\textheight20.5cm
+%\textwidth14cm
+%\headwidth14cm
+%\oddsidemargin1cm
+%\evensidemargin1cm
+
+\pagestyle{headings}
+
+% ------------------------------------
+% Beginn des Dokumentes
+% ------------------------------------
+
+\begin{document}
+
+% ------------------------------------
+% nocite
+% ------------------------------------
+
+\pagenumbering{roman}
+
+\hfill \ \epsffile{logo_new.ps}
+\ \vskip14cm
+
+{\Large \sf
+\hfill View Designer/X \par
+\hfill Benutzerhandbuch \par
+}
+\hfill {\small \sf Version 1.1} \par
+
+\smallskip
+\longhrule
+\smallskip
+\hfill {\small \sf \today} \par
+
+\thispagestyle{empty} 
+\newpage
+%\maketitle
+
+{\small
+Copyright {\copyright} 1996, 1997, Dirk Lässig
+
+\bigskip
+
+Die in diesem Handbuch erwähnten Software- und Hardwarebezeichnungen
+sind in den meisten Fällen auch eingetragene Warenzeichen und 
+unterliegen als solche den gesetzlichen Bestimmungen.
+}
+
+\newpage
+
+\tableofcontents				  	% Inhaltsverzeichnis
+\newpage
+
+\chapter{Einleitung}
+
+\pagenumbering{arabic}
+
+\section{Zielsetzung}
+
+	Niemand kann abstreiten, daß UNIX-ähnliche
+	Betriebssysteme die wohl durchdachtesten aber auch 
+	benutzer{\bf un}freundlichsten Systeme sind. Zwar bietet das
+	Fenstersystem X-Window und das Motif-Toolkit die Möglichkeit,
+	für den Benutzer leicht bedienbare Anwendungen zu erstellen,
+	aber dies ist ohne Werkzeugunterstützung sehr aufwendig.
+
+	Der View Designer/X ist ein solches Werkzeug, das den 
+	Anwendungsentwicklern helfen soll, grafische 
+	Benutzeroberflächen zu erstellen.
+
+\section{Leistungsumfang der Version 1.1}
+
+	Die aktuelle Version des View Designer/X bietet
+        insbesondere folgende Features:
+
+	\begin{itemize}
+
+	\item	Objektorientierte Bedienung mit Drag \& Drop
+	\item 	Interaktive WYSIWYG-Ansicht
+	\item 	Widget Resource Editor
+	\item 	Widgetbaumansicht (Browser)
+	\item	Schablonen von Widget-Bäumen (Templates) 
+	\item	Wiederverwendung von Interfaces durch Links
+	\item 	Generieren von C- und C++-Code
+	\item	Veränderbare Codegenerierung
+
+	\end{itemize}
+
+
+\section{Benutzung des Handbuches}
+
+	Um die Funktionsweise der View Designers besser zu
+	verstehen, sind Kenntnisse im Bereich 
+	C/C++-Programmierung und Motif-Tool\-kit notwendig. Sollten Sie keine
+	Kenntnisse dieser Art besitzen, sei auf weiterführende Literatur
+	verwiesen. 
+
+	Um das Durcharbeiten dieses Handbuches zu unterstützen, wurden
+	folgende Konventionen angewendet.
+	
+	\begin{itemize}
+	\item \myitem{Beispiel}In der linken Spalte einer Seite befinden sich
+	wichtige Begriffe, die auf den Inhalt des Textes bezogen sind. Sie
+	ermöglichen das schnelle Auffinden von Themen.
+
+	\item Wenn auf Tastaturbedienung eingegangen wird, so ist eine Taste
+	bzw. Tastenkombination in folgender Form dargestellt: \showkey{F1}
+	Hiermit ist die erste Funktionstaste auf der Tastatur gemeint.
+	Mit \showkey{Strg-X} wird auf die Tastenkombination
+	Strg und X verwiesen, d.h. die Taste Strg ist gedrückt und
+	gleichzeitig ist die Taste X zu betätigen.
+
+	\item Wichtige Begriffe werden mit {\em kursiver} Schrift
+	dargestellt. Mit {\tt Typewriter}-Schrift wird Quellcode dargestellt.
+	\end{itemize}
+
+	Es folgen nun einige Abschnitte, in denen einzelne Teile des 
+	View Designers kurz vorgestellt werden. In den
+	späteren Abschnitten wird mit Hilfe eines Beispiels 
+	die Arbeitsweise dieses Werkzeuges näher erläutert.
+	Im hinteren Teil des Handbuches wird auf einige Besonderheiten
+	des View Designer genauer eingegangen.
+	Doch zuerst gibt folgenden Abschnitt einen Einblick in die
+	Grundfunktionsweise. 
+
+\section{Grundlagen der Funktionalität}
+
+	\myitem{\bf Projekte}Der View Designer unterstützt die Entwickung von
+	Anwendungen mit	Motif. Er bearbeitet jeweils ein Projekt, das die
+	zu erstellende Anwendung zum Ziel hat. Projekte bestehen aus
+	Interfaces und zusätzlichen Einstellungen.
+
+	\psfigure{overview_de.eps}{Überblick über die Funktionsweise}
+
+	\myitem{\bf Interfaces}Die Interfaces stellen die
+	Benutzeroberfläche der späteren Anwendung dar. Sie bestehen aus einem
+	Widget-Baum, d.h. Widgets, die hierarchisch angeordnet. Widgets sind
+	grafische Elemente, aus denen sich ein Motif-Benutzer-Interface
+	zusammensetzt.
+	Die Widgets gehören zu einer Widget-Klasse und haben
+	bestimmte Einstellungen, wie den Namen und die Ressourcen. Ressourcen
+	sind je nach Klasse, zu der ein Widget gehört, unterschiedlich.
+	Sie bestimmen das Aussehen und Verhalten eines Widgets innerhalb des
+	Interfaces. 
+
+	Der View Designer unterstützt das Design von Interfaces auf
+	interaktive Weise. Widgets werden mit den Werkzeugen des View
+	Designers erzeugt, bearbeitet und
+	gegebenenfalls gelöscht. In einer Wysiwyg-Ansicht wird das spätere
+	aussehen eines Interface dargestellt. Die Hierarchie der Widgets ist
+	mit dem Browser veränderbar, und die Eigenschaften von Widgets werden
+	mit dem Widget Resource Editor bearbeitet. Weitere Hilfsmittel
+	vereinfachen das Erstellen von Interfaces, z.B. Schablonen.
+
+	Interfaces werden in Dateien mit der Endung {\tt .i}
+	gespeichert. Die Quellcodegenerierung erzeugt zu jedem Interface
+	mehrere Dateien, die den Programm-Code zum Erzeugen des User
+	Interfaces einhält.
+
+
+	\myitem{\bf Projekteinstellungen}Neben Interfaces besitzt ein Projekt
+	weitere Eigenschaften. Dazu gehören die Art der Quellcodegenerierung,
+	der Name der Anwendung, das erste darzustellende Interface und
+	Compiler- und Linker-Optionen. Diese Eigenschaften und die Namen der
+	Interfaces werden in der Projektdatei ({\tt .prj}) gespeichert.
+
+
+
+\chapter{Benutzeroberfläche}
+
+	In diesem Kapitel wird der wichtigste Teil der 
+	Benutzeroberfläche des View Designers erläutert. Sie lernen die
+	Werkzeuge des View Designers kennen und werden mit der Funktionsweise
+	vertraut gemacht. Im darauffolgenden Kapitel wird dieses 
+	Wissen durch ein Beispiel vertieft.
+
+\section{Hauptfenster}
+
+	% Menus
+	\index{Hauptfenster}
+	Die Abbildung \ref{mainwindow.eps} zeigt das Hauptfenster des
+	View Designers. Es ist der Ausgangspunkt für
+	das Erstellen von Benutzeroberflächen in Motif und die 
+	Generierung des dazugehörenden Quellcodes. 
+
+	% Bild
+
+	\psfigure{mainwindow.eps}{Das Hauptfenster}
+
+
+	Im oberen Teil des Hauptfensters befindet sich die Menüleiste.
+	Über die Menüs der Menüleiste können neue Projekte
+	erstellt, geöffnet, bearbeitet und gespeichert
+	werden. Weitere Fenster des View Designers sind über 
+	die Menüs zu erreichen. 
+	Auch die globalen benutzerdefinierten Optionen
+	werden mit den entsprechenden Menüs des Hauptfensters
+	verändert. Das Online-Hilfesystem ist ebenfalls über die
+	Menüleiste erreichbar.
+
+
+	\myitem{\bf File-Menü}
+	Das Menü File enthält Funktionen, mit denen ein Projekt
+	erzeugt, gelesen und gespeichert werden kann. Ein Projekt
+	ist eine Ansammlung von Benutzeroberflächen und weiteren
+	Einstellungen, die mit dem View Designer bearbeitet
+	werden. Aus einem Projekt wird nach dem Generieren des
+	Quellcodes die spätere Anwendung. Beabsichtigen Sie also, ein
+	Programm mit einer Benutzeroberfläche zu entwickeln, so
+	sollten Sie dafür ein Projekt erzeugen. Es folgt nun die
+	Beschreibung der Menüpunkte des File-Menüs.
+
+
+	\myitem{New}
+		Es wird ein neues Projekt erzeugt. Dabei werden Sie
+		nach dem Namen des Projektes gefragt. Der Name
+		bestimmt den Dateinamen des ausführbaren
+		Programms und der Projektdatei, in der
+		Informationen über das Projekt gespeichert werden.
+		Danach werden Sie gefragt, ob Sie die Änderungen des
+		bisherigen Projekts verwerfen wollen.
+
+	\myitem{Open}\index{Projektdatei}Wählen 
+		Sie diesen Menüpunkt, um ein bereits
+		gespeichertes Projekt zu laden. Dabei geben Sie in
+		dem Dateiauswahldialog einen Datei\-namen an, der auf 
+		die Projektdatei verweist. Dieser Dateiname hat immer
+		die Endung {\tt .prj}. Zu einem Projekt gehört
+		jedoch nicht nur die Projektdatei, sondern auch die
+		Dateien der User Interfaces. Diese werden in separaten
+		Dateien mit der Endung {\tt .i} abgelegt. Auch diese
+		Dateien werden beim Laden eines Projektes gelesen.
+
+	\myitem{Save} Mit diesem Menüpunkt können Sie ein Projekt
+		speichern. Falls Sie das Projekt das erste mal
+		sichern, wird ein Dateiauswahldialog angezeigt, in dem
+		Sie den Dateinamen und das Verzeichnis spezifizieren
+		können.
+		Beim Speichern werden auch alle User Interfaces in den
+		entsprechenden Dateien ({\tt .i}) gespeichert. Die
+		Projektdatei und die Interface-Dateien befinden sich
+		nach dem Speichern im gleichen Verzeichnis.
+	
+	\myitem{Save as} Hier wird ein Dateiauswahldialog angezeigt, mit
+		dem Sie das Projekt in einem anderen Verzeichnis und
+		unter einem anderen Namen sichern können. 
+
+	\myitem{New Templates}\index{Schablonen}Mit 
+		diesem Menüeintrag erzeugen Sie einen neuen
+		Schablonenordner. Dieser wird nach Auswahl des Menüpunktes
+		sichtbar gemacht. In dem Ordner können Sie nach belieben
+		eigene Schablonen erstellen. Nach dem Abspeichern der
+		Schablonen sind sie mit dem nächsten Menüpunkt wieder ladbar.
+
+	\myitem{Open Templates} Die mit {\em New Templates} erzeugten und
+		dann abgespeicherten Schablonen können hiermit sichtbar gemacht
+		werden. Dabei wird ein Dateiauswahl-Dialog geöffnet, in dem
+		eine Datei mit den Endung {\tt .pal} auszuwählen ist. Diese
+		wird nach erfolgreichem lesen im Schablonen-Ordner angezeigt
+		und kann damit wieder bearbeitet werden.
+
+	\myitem{Exit} Die Anwendung wird beendet. Dabei wird
+		überprüft, ob sich am geladenen Projekt etwas verändert
+		hat. Ist dies der Fall, macht der View Designer Sie darauf
+		aufmerksam und fragt Sie, ob Sie die Anwendung
+		wirklich verlassen wollen.
+		Er beendet erst seine Arbeit, wenn Sie
+		die gestellte Frage mit 'Yes' beantworten. Auch wenn Sie das
+		Projekt vor dem Verlassen nicht Speichern, wird das
+		automatische Speichern veranlaßt, so daß Sie beim nächsten
+		Start des View Designer das alte Projekt zurückholen
+		können.
+		
+
+
+	\myitem{\bf Project-Menü}
+	Im Menü Project können Einstellungen am momentan 
+	geladenen Projekt vorgenommen werden. Auch das Generieren
+	des Quellcodes ist im Project-Me\-nü mög\-lich.
+
+	\myitem{Settings}\index{Projekteinstellungen}Mit 
+		diesem Menüpunkt wird ein Dialog
+		geöffnet, der Einstellungen am Projekt ermöglicht.
+		Diese Einstellungen sind z.B. der Projektname, das
+		Verzeichnis, in dem der generierte Quellcode abgelegt
+		wird, der Name des Startup-Interfaces
+		und der Name des Codegenerierungsmodells (z.B. c oder c++).
+	
+	\myitem{Import Interface}\index{Interface!laden}Nach 
+		Anwählen dieses Menüpunktes
+		wird ein Dateiauswahldialog angezeigt, mit dem
+		Sie eine Interface-Datei ({\tt .i}) in das Projekt
+		einfügen können. Das Interface wird geladen und
+		kann danach bearbeitet werden.
+	
+	\myitem{Generate}\index{Quellcode!generieren}Mit 
+		diesem Menüeintrag wird ein
+		Dialog geöffnet, mit dem die
+		Quellcodegenerierung veranlaßt wird.
+		In diesem Dialog können Optionen
+		für das Generieren des Quellcodes festgelegt
+		werden. Mit Hilfe von Buttons wird eingestellt,
+		welche Dateien der View Designer
+		überschreiben soll. Aus dem generierten {\em Imakefile}
+		erstellt {\tt xmkmf} ein Makefile. Das 
+		{\em Main Program} enthält die Funktion {\tt main()}
+		und erzeugt und öffnet das Startup-Interface.
+		Die {\em Stubs} sind Dateien, die leere
+		Funktionsrümpfe für Callbacks enthalten. All diese
+		Dateien werden gewöhnlich vom Entwickler verändert.
+		Deshalb besteht in diesem Dialog die Möglichkeit,
+		die Generierung dieser Dateien 
+		auszuschalten.
+	
+	\myitem{Execute}\index{xmkmf}\index{make}Das 
+		Ausführen von {\tt xmkmf}, {\tt make
+		depend}, {\tt make} und der Ziel\-an\-wen\-dung ist mit
+		diesem Menüpunkt möglich. Es wird ein Dialog
+		geöffnet, mit dem das auszuführende Programm
+		ausgewählt wird. Die Ausgaben dieser Programme 
+		erscheinen im unteren Teil des Hauptfensters. Es kann
+		sich jeweils nur ein Programm zur selben Zeit in
+		Ausführung befinden. Möchten Sie ein laufendes
+		Programm stoppen, so wählen Sie ebenfalls diesen
+		Menüpunkt. Es erscheint der Dialog, der nun
+		zusätzlich ein Icon enthält, mit dem man das Programm
+		beenden kann.
+
+
+	\myitem{\bf Widgets-Menü}\index{Widget!erzeugen}Um 
+	die Widgets eines User Interfaces zu
+	erzeugen, kann man zum einen die Widget\-klas\-sen-Palette 
+	öffnen oder die Menüpunkte im Widget-Menü benutzen.
+
+	\myitem{Palette}
+		Der Menüpunkt Palette öffnet ein Fenster, welches
+		Icon-Ansichten der Widget-Klassen enthält. Über
+		die Icons in diesem Fenster kön\-nen Sie Widgets
+		erzeugen. Dazu klicken Sie mit der Maus auf ein
+		Icon. 
+
+	Die weiteren Untermenüs des Widget-Menüs enthalten
+	ebenfalls Einträge zum Erzeugen von Widgets. Dabei sind die
+	Widget-Klassen gruppiert in Shells, Managers, Primitives
+	und Dialogs.
+
+		
+	\myitem{{\bf Options-Menü}}\index{Optionen}Die 
+	Möglichkeit der Einstellung 
+	von globalen Optionen ist durch das Menü
+	Options gegeben. Die Optionen werden in der Datei
+	{\tt .vdxrc} im Home-Ver\-zeich\-nis des Benutzers gespeichert.
+
+	\myitem{Generic}\index{Generic Options}Hiermit wird
+		ein Dialog zum Einstellen von allgemeinen Optionen
+		geöffnet. In ihm können Sie einstellen, ob der {\em Quick
+		Start Dialog} beim Programmstart angezeigt wird, oder ob Sie
+		das automatische Speichern von Projekten ({\em Auto Saving})
+		einschalten wollen. Zum automatischen Speichern können
+		weiterhin noch die Parameter Abspeicherintervall ({\em Auto
+		Save Time}) und	Abspeicherpfad ({\em Auto Save Path})
+		verändert werden. Der Hauptschablonenordner ({\em Main Template
+		Folder}) ist der Ordner, der beim Anklicken des
+		Schablonen-Icons geöffnet wird. Hier wird der Dateiname des
+		Hauptschablonenordners eingetragen. Weiterhin können Sie in
+		diesem Dialog einstellen, ob Sie die Quick-Help-Zeilen in
+		allen Fenstern ausschalten möchten und ob ein User Interface
+		nach dem Laden eines Projektes oder Importieren eines
+		Interfaces mit der Wysiwyg-Ansicht sofort sichtbar werden soll.
+
+	\myitem{Grid}\index{Grid}Mit 
+		dem Menüpunkt Grid öffnen Sie einen
+		Dialog, in dem Sie die Rasterweite der WYSIWYG-Ansicht
+		bestimmen können. Der Rasterwert wird beim Erzeugen,
+		Verschieben, Vergrößern und Verkleinern
+		von Widgets verwendet.
+
+	\myitem{Update policy}\index{WYSIWYG-Ansicht}Da 
+		das Auffrischen der WYSIWYG-Ansicht nach dem
+		Verändern eines Interfaces auf langsamen Rechnern
+		unter Umständen unangenehme Wartezeiten verursacht,
+		kann das Update-Verhalten mit diesem Menüpunkt
+		minimiert werden. Sie können dann das Auffrischen eines
+		Widgets-Baums explizit mit Hilfe des Menüpunktes
+		Refresh im Kontextmenü des Widgets 
+		\index{Widget-Kontextmenü}
+		durchführen.
+
+	\myitem{Default Shell}\index{Default Shell}User Interfaces
+		werden durch das Erzeugen eines Widgets kreiert. Ist dieses
+		Widget kein Shell-Widget, wird automatisch ein Shell-Widget
+		als Eltern-Widget eingefügt. Dieses Shell-Widget wird von der
+		Klasse erzeugt, die in diesem Menü einstellbar
+		ist. Gewöhnlich sollte die Default-Shell eine TopLevelShell
+		sein. Dies ist auch die Standardeinstellung.
+	
+	\myitem{View Defaults}\index{View Defaults}Die Standardeinstellungen
+		für das Verhalten und das Aussehen des Browsers, Menü-Editors
+		und Resource-Editors werden mit diesem Menüpunkt verändert. Es
+		erscheint ein Dialog, in dem diese Einstellungen möglich
+		sind. Im Widget Tree Browser und Menü-Editor kann man die
+		Darstellung der Icon- bzw. Baumansicht beeinflussen. Zu jedem
+		Werkzeug kann die Eigenschaft des {\em Automatic Load}
+		verändern 
+		werden. Alle diese Einstellungen sind auch in den Menüleisten
+		der Fenster zugänglich, dort werden Sie jedoch nicht
+		gespeichert. 
+		
+
+	\myitem{Default Public}\index{Default Public}Hier wird eine
+	Eigenschaft der Ressource-Zeilen im Widget Resource Editor eingestellt.
+	Es handelt sich dabei um die Möglichkeit, einen Ressource-Wert nicht
+	nur im generierten Quell-Code zu setzen, sondern auch in einem
+	Ressource-File. So wird die Beschriftung eines Push-Buttons gewöhnlich
+	im Ressource-File vorgenommen, da dabei ohne Neukompilation die
+	Beschriftung verändert werden kann. Dies ist sehr sinnvoll, wenn ein
+	Programm in mehreren Sprachen ausgeliefert werden soll. In diesem
+	Dialog können nun derartige Ressourcen vordefiniert werden, womit das
+	Umstellen im Widget Resource Editor entfällt.
+
+	\myitem{\bf Help-Menü}\index{Online-Hilfe}\index{Hilfesystem}Als 
+	letztes Menü der Menüleiste des Hauptfensters ist
+	noch das Help-Menü zu erläutern. Es bietet Zugang zum
+	Hilfesystem des View Designers.
+
+	\myitem{On Help}
+		Das Hilfesystem wird mit einem Text geöffnet, der
+		die Funktionsweise der Online-Hilfe erklärt. Falls
+		Sie die Online-Hilfe das erste mal benutzen möchten,
+		sollten Sie vorher diesen Text lesen.
+		
+	\myitem{Tutotial}
+		Der Menüpunkt Tutorial öffnet das Hilfesystem mit
+		dem Einstieg zum Online-Benutzerhandbuch.
+
+	\myitem{On Context}
+		Wählen Sie On Context aus, so verändert sich der
+		Mauszeiger und Sie müssen ein Dialogelement
+		an\-klicken, über das Sie genauer informiert werden
+		wollen.
+
+	\myitem{About}
+		Der Dialog, der sich nach anwählen dieses
+		Menüpunktes öffnet, zeigt das Copyright des
+		View Designers. Falls der View Designer lizenziert wurde,
+		steht in diesem Dialog eine Information über die Lizenz.
+
+
+	% Toolbar
+	\myitem{\bf Toolbar}
+	Um ein schnelleres Arbeiten zu ermöglichen, sind unterhalb
+	der Menüleiste einige Icons angeordnet. Über sie können 
+	leichter folgende Aktionen durchgeführt werden:
+
+	Mit diesem Icon können Sie ein Projekt \psmargin{OpenProject.eps}
+	öffnen. Dabei wird ein Dateiauswahl-Dialog angezeigt, mit dem Sie
+	eine Datei mit der Endung {\tt .prj} laden. Dieses Icon aktiviert also
+	die gleiche Aktion wie der Menüpunkt {\em Open} im File-Menü.
+
+	Hiermit lösen Sie die gleiche Aktion wie\psmargin{SaveProject.eps}
+	mit dem Menüpunkt {\em Save} im File-Menü aus. Es wird also das
+	aktuelle 
+	Projekt gespeichert. Wurde das Projekt vorher noch nie gespeichert,
+	wird ein Dateiauswahl-Dialog angezeigt.
+
+	Dieses Icon lädt den Hauptschablonenordner,\psmargin{Templates.eps}
+	der in den {\em Generic-Optionen} eingestellt wird. Es öffnet sich ein
+	Fenster, mit dem Sie die Templates benutzen und bearbeiten können.
+
+	Die Widget-Klassen-Palette öffnet sich\psmargin{WidgetPalette.eps}
+	nachdem Sie auf dieses Icon klicken. Diese Palette zeigt Ihnen alle
+	Widget-Klassen, die dem System bekannt sind, und die benutzt werden,
+	um Widgets zu erzeugen. Im Widgets-Menü können Sie ebenfalls diese
+	Palette mit dem Menüpunkt {\em Palette} öffnen.
+
+	Der Dialog zum Generieren eines Projektes wird\psmargin{Generate.eps}
+	mit diesem Icon angezeigt. In diesem können Sie angeben, welche
+	Dateien überschrieben werden. Die gleiche Aktion ist im Project-Menü
+	mit {\em Generate} verfügbar.
+
+	Das Ausführen von den Programmen xmkmf, make\psmargin{Execute.eps}
+	und der generieren Applikation ist mit dem Execute-Dialog möglich, den
+	Sie sowohl mit diesem Icon als auch mit dem Menüpunkt {\em Execute} im
+	Project-Menü öffnen können.
+
+	\myitem{Test Mode} Der\index{Test-Mode}
+	Toggle-Button {\em Test-Mode} dient zum Umschalten der 
+	WYSI\-WYG-Darstel\-lung vom Layout- in den Test-Mode. Im Layout-Mode
+	wird das Aussehen eines Interfaces verändert. Es können
+	interaktiv Widgets verschoben und deren Ressourcen
+	verändert werden. Im Test-Mode wird das spätere Verhalten
+	des Interfaces geprüft.
+
+	\psmargin{Logo_16.eps}Das Anzeigen der Produktinformationen können Sie
+	mit diesem Icon auslösen. Die gleiche Aktion ist im Help-Menü
+	auslösbar. 
+
+	% Interface IconView
+
+	\myitem{\bf Icon-Ansicht}\index{Icon-Ansicht!im
+		Hauptfenster}In 
+	der Mitte des Hauptfensters befindet sich die Icon-Ansicht
+	der im Projekt vorhandenen User Interfaces. In der
+	Icon-Ansicht können Objekte mit der linken Maus\-taste
+	selektiert werden. Wird dazu die Control-Taste gedrückt,
+	wird das Objekt zur vorhandenen Selektion hinzugefügt.
+	Wird ein Icon selektiert, die Maustaste nicht losgelassen
+	und mit gedrückter Maustaste andere Icons \glqq
+	berührt\grqq, so werden alle \glqq berührten{\grqq} Objekte
+	selektiert. Drückt man die linke Maustaste neben einem Icon
+	und zieht die Maus, so erscheint ein Rechteck. Alle Objekte,
+	die sich in diesem Rechteck befinden, werden selektiert.
+
+	Der Name eines \index{Interface!Name ändern}
+	Interfaces wird durch den Namen des ersten Widgets
+	(Shell-Widget) bestimmt.
+	Wird also der Interface-Name geän\-dert, verändert sich auch
+      	der Name dieses Widgets.
+	Auch die Namen eines Interfaces sind in der Icon-Ansicht
+	leicht zu ändern. Durch gleichzeitiges Drücken der
+	Alt- und der linken Maustaste wird ein Eingabefeld geöffnet.
+	In diesem Eingabefeld kann der Name des Objektes verändert
+	werden. Die Änderungen werden wirksam, wenn an eine andere
+	Stelle in der Icon-Ansicht geklickt wird, oder wenn Sie die Taste
+	\showkey{Enter} betätigen. Falls das Ändern des Namens abgebrochen
+	werden soll, drücken Sie die Taste \showkey{Esc}.
+
+	\index{Interface!Kontextmenü}
+	Durch Drücken der rechten Maustaste wird ein Kontextmenü
+	angezeigt. Wird die Maustaste über einem selektierten Objekt
+	gedrückt, gilt das Kontextmenü für alle selektierten
+	Objekte. Wenn ein Menüpunkt ausgewählt wird, wie zum
+	Beispiel {\em Browse}, so werden Browser für alle
+	selektierten Objekte geöffnet. Für einige Menüpunktes des Kontextmenüs
+	gibt es eine Tastaturanbindung. Dabei sind ein oder mehrere Widgets 
+	auszuwählen und eine Taste z.B. \showkey{B} 
+	für Browse zu drücken. Der Fokus
+	sollte sich aber in der Icon-Ansicht befinden, d.h. diese ist mit
+	einem schwarzen Rahmen versehen.
+
+	Über das Kontextmenü des Interfaces
+	können folgende Aktionen ausgeführt werden:
+
+	\myitem{Browse}\index{Browse}\index{Baumansicht!öffnen}Hiermit 
+		wird der Browser geöffnet. Die Aktion ist auch mit der Taste
+		\showkey{B} erreichbar.
+		Der Browser stellt den
+		Widgetbaum eines Interfaces dar. Die einzelnen
+		Widgets des Baumes sind als Icons angezeigt, auf
+		die die gleichen Mechanismen anwendbar sind, wie in
+		der Icon-Ansicht. Im Browser kann jedoch zusätzlich
+		die Struktur des Baumes mit Hilfe des Clipboards oder
+		mit Drag \& Drop verändert werden.
+
+	\myitem{Save}\index{Interface!speichern}Speichern 
+		des Interfaces. Das Interface wird in
+		einer eigenen Datei gespeichert. Der Name der Datei
+		besteht aus dem Namen des Interfaces und der
+		Erweiterung {\tt .i}.
+	
+	\myitem{Save As} Mit diesem Menüpunkt wird das Interface 
+		unter einem anderen Dateinamen gespeichert.
+
+	\myitem{Create Link}\index{Link!erzeugen}Erzeugen 
+		eines Links in einem anderen
+		Interface. Möchte man das Interface an einer anderen
+		Stelle wiederverwenden, kann dies mit Hilfe eines
+		Links geschehen. Dazu ist nach Auswählen des
+		Menü\-punktes in der WYSIWYG-Ansicht eines anderen 
+		Interfaces das neue Eltern-Widget anzuklicken. 
+
+	\myitem{Generate}\index{Quellcode!generieren}Quellcodedateien 
+		eines einzelnen Interfaces 
+		werden generiert. Dies ist sinnvoll, wenn Sie nur ein
+		Interface verändert haben und nicht alle Dateien
+		erzeugen möch\-ten, wie es im Project-Menü der
+		Fall ist. Es werden hierbei auch keine Stub-Dateien
+		erzeugt.
+
+	\myitem{Show}\index{WYSIWYG-Ansicht}Diese Aktion zeigt die
+		WYSIWYG-Darstellung und ist auch über die Taste
+		\showkey{S} erreichbar. In der
+		Darstellung wird das spätere Aussehen des Interfaces
+		dargestellt. Diese Sicht bietet Mög\-lichkeiten zum
+		Verschieben und Verändern der Größe von
+		Widgets.
+
+	\myitem{Hide} Schließen der WYSIWYG-Darstellung (Taste \showkey{H}).
+
+	\myitem{Delete}\index{Delete!im Interface-Kon\-text\-menü}\index{Interface!löschen}Hiermit 
+		löschen Sie ein Interface 
+		aus dem Projekt. Es 
+		wird nicht die Datei ge\-löscht. Es wird
+		lediglich das Interface aus dem Projekt entfernt.
+
+	Die Aktion {\em Show} wird auch ausgelöst, wenn auf einem
+	Icon ein Doppelklick mit der linken Maustaste ausgeführt
+	wird.
+
+	\myitem{\bf Output}\index{Output}\index{Ausgaben}In 
+	dem Dialogelement Output erscheinen Meldungen, die
+	auf dem Standard\-aus\-ga\-be- oder Fehlerausgabekanal geschrieben
+	werden. Dies
+	können Fehlermeldungen und Warnungen von Xlib, X-Toolkit,
+	Motif oder Informationen vom View Designer sein. Mit dem
+	Button {\em Clear} werden alle bisherigen Ausgaben 
+	gelöscht.
+
+	\index{Quick-Help}
+	Am unteren Rand des Hauptfensters befindet sich die 
+	Quick-Help-Zeile. Hier erscheinen kurze Hilfetexte zu 
+	Dialogelementen, Menü\-punkten und Icons. In fast jedem
+	Fenster des View Designers 
+	gibt es eine solche Zeile. Sie kann mit den Generic-Optionen
+	abgeschaltet werden.
+
+\section{WYSIWYG-Ansicht}
+	
+	\index{WYSIWYG-Ansicht}
+	Der Sinn eines Interface Builders ist das Erstellen von
+	Benutzeroberflächen. Dies kann nur effektiv gelöst
+	werden, wenn das Ziel (User Interface) während des
+	Bearbeitens sichbar ist. 
+
+	\myitem{\bf Selektieren}\index{Widget!auswählen}Abbildung 
+	\ref{wysiwyg.eps} zeigt
+	die WYSIWYG-Darstellung eines User Interfaces. Es ist ein
+	Button mit der Bezeichnung {\em Cancel} selektiert.
+	Das Selektieren eines Widgets erfolgt mit der linken Maustaste.
+	Auch hier ist durch gleichzeitiges Drücken der Control-Taste
+	eine Mehrfachselektion möglich.
+	
+	\psfigure{wysiwyg.eps}{WYSIWYG-Darstellung eines Interfaces}
+
+	\myitem{\bf Größe
+	ändern}\index{Grid}\index{Widget!Größe ändern}Die 
+	linke Maustaste wird jedoch auch zum Verändern der
+	Größe der Widgets benutzt. Dazu wird in eines der acht
+	durch die kleinen Rechtecke angedeuteten Bereiche des Widgets
+	geklickt. Die Maustaste ist festzuhalten und die Maus ist
+	zu verschieben. Wird die Maustaste dann losgelassen, ändert
+	sich die Größe des Widgets. Die neue Größe wird
+	während des Vorgangs durch ein Rechteck angezeigt. Für die neue
+	Größe wird das im Optionen-Menü des Hauptfensters 
+	einzustellende Raster ({\em Grid}) berücksichtigt.
+
+
+	\myitem{\bf Verschieben}\index{Widget!verschieben}\index{Drag
+		\& Drop}Im View Designer wird wie in jeder Motif-Anwendung
+	die mittleren Maustaste für Drag \& Drop benutzt. 
+	So kann ein Widget
+	innerhalb seines Eltern-Widgets verschoben werden. Auch ein
+	Verschieben von einem Eltern-Widget zu einem anderen oder
+	gar in ein anderes Interface ist möglich. Dabei wird in der
+	WYSIWYG-Darstellung ein Rechteck mit der Größe des zu
+	verschiebenden Widgets angezeigt. Je nach eingestelltem Raster
+	wird dieses Rechteck relativ zum neuen Eltern-Widget verschoben, so
+	daß die neue Position des Widgets stets zu erkennen ist.
+
+	\myitem{\bf Kopieren}\index{Widget!kopieren}\index{Drag \& Drop}Der
+	Drag \& Drop Mechanismus wird ebenfalls zum Erzeugen von
+	Kopien benutzt. Dabei ist während des Vorgangs die 
+	Control-Taste zu drücken. Nach Loslassen der mittleren
+	Maustaste wird das entsprechende Widget kopiert. Das neue Widget
+	kann dabei einen Namen erhalten, der vom ursprünglichen
+	Namen abweicht, da ein Name innerhalb eines Interfaces nur
+	einmal vorkommen kann.
+
+	\myitem{\bf Kontext\-menü}\index{Widget!Kontextmenü}Mit 
+	der rechten Maustaste wird ein Kon\-text\-menü
+	(Popup-Menü) geöffnet.
+       	Ist das Widget selektiert, so gilt dieses Popup-Menü für
+	alle selektierten Widgets. Im Popup-Menü eines Widgets
+	befinden sich folgende Me\-nü\-punkte:
+
+	\myitem{Edit}\index{Edit}\index{Widget Resource 
+		Editor!öffnen}Durch 
+		Anwählen von Edit oder Drücken der Taste \showkey{E} wird der
+		Widget Resource Editor geöffnet. Mit ihm ist das
+		Verändern der Resourcen eines Widgets möglich.
+		Der Widget Resource Editor kann ebenfalls durch einen
+		Doppelklick mit der linken Maustaste geöffnet werden.
+
+	\myitem{Browse}\index{Baumansicht!öffnen}Wie 
+		beim Menüpunkt Browse im Interface-Kon\-text\-menü
+		öffnet dieser Menü\-punkt oder die Taste \showkey{B} den
+		Browser. Jedoch wird im 
+		Browser nicht das gesamte Interface sichtbar, sondern
+		ein Widget-Teilbaum, d.h. das ausgewählte Widget und
+		alle seine Kinder.
+
+	\myitem{Align}\index{Align}\index{Widget!ausrichten}In 
+		dem Untermenü Align stehen Ihnen acht
+		Menü\-punkte zur Verfü\-gung. Diese sind erst
+		aktiviert, wenn Sie mehr als ein Widget 
+		selektiert haben. Dabei spielt
+		das erste selektierte Widget eine besondere Rolle.
+		Es gibt die Geometrie vor, die von den anderen Widgets
+		nach der Align-Aktion teilweise übernommen wird.
+
+		\begin{mylist}{Horizontal Centers}
+		\item[Left] Alle selektierten Widgets werden an der 
+			linken Kante des ersten Widgets ausgerichtet.
+
+		\item[Right] Die Ausrichtung erfolgt an der rechten
+			Kante des ersten Widgets.
+ 
+		\item[Top] Alle Widgets sind nach der Align-Aktion
+			an der oberen Kante des ersten Widgets
+			ausgerichtet.
+
+		\item[Bottom] Die Widgets sind hiernach an der unteren
+			Kante des ersten Widgets ausgerichtet.
+
+		\item[Horizontal Center] Alle bis auf das erste Widget
+			werden horizontal verschoben und sind danach
+			zentriert angeordnet.
+
+		\item[Vertical Center] Die Zentrierung erfolgt nach
+			einer vertikalen Verschiebung.
+	
+		\item[Width] Alle Widgets passen ihre Breite dem
+			ersten selektierten Widget an.
+
+		\item[Height] Es erfolgt eine Anpassung an die
+			Höhe des ersten Widgets.
+	
+		\end{mylist}
+
+	\myitem{Cut}\index{Cut}\index{Clipboard}Das 
+		Widget wird in die Zwischenablage (Clipboard)
+		kopiert und danach zerstört (Taste \showkey{X}). Haben Sie
+		mehrere 
+		Widgets selektiert und das Kontextmenü für eines
+		der selektierten Widgets geöffnet, werden alle
+		selektierten Widgets in das Clipboard verschoben.
+		Mit dem Menüpunkt Paste können diese Widgets aus
+		dem Clipboard wieder in ein Interface eingefügt werden.
+
+	\myitem{Copy}\index{Copy}\index{Clipboard}Im 
+		Gegensatz zum Menüpunkt Cut werden die
+		Widgets nach dem kopieren ins Clipboard nicht 
+		zerstört. {\em Copy} ist auch mit der Taste \showkey{C}
+		erreichbar. Auch hiernach werden die kopierten Widgets
+		mit der Paste-Aktion in ein Interface wieder eingefügt.
+
+	\myitem{Paste}\index{Paste}\index{Clipboard}Die 
+		mit Cut oder Copy ins Clipboard
+		übertragenen Widgets werden mit diesem Menüpunkt
+		wieder in ein Interface eingefügt. Dabei ist das 
+		ausgewählte Widget zu dem das Kontextmenü
+		geöffnet wurde, das neue Eltern-Widget. Falls die
+		Widgets im Clipboard keine Kinder des neuen
+		Eltern-Widgets werden können, ist der Menüpunkt
+		Paste nicht anwählbar. Ansonsten ist {\em Paste} auch über die
+		Taste \showkey{V} auslößbar.
+
+	\myitem{Menu Editor}\index{Menü 
+		Editor!öffnen}\index{Menu Editor}Dieser 
+		Punkt ist nur bei Menu-Bars, Popup-Menüs und
+		Pulldown-Me\-nüs sicht\-bar (Taste \showkey{M}). Es wird ein
+		spezielles Fenster geöffnet, welches das Erzeugen von 
+		Menüstrukturen erlaubt. So können sehr schnell
+		Menüs mit Push-Buttons, Toggle-Buttons, Labels,
+		Separators und Untermenüs aufgefüllt werden.
+
+	\myitem{Visibility}\index{Visibility}\index{Dialog}Nur 
+		wenn es sich bei dem ausgewählten Widget um
+		einen Dialog handelt, ist dieser Menüpunkt sichtbar.
+		Mit ihm kann ein Dialog sichtbar und unsichtbar
+		gemacht werden. Dialoge sind Teile eines Interfaces,
+		deren Sichtbarkeit im laufenden Programm nur temporär 
+		ist, wie z.B. ein Dateiauswahldialog
+		(FileSelectionBoxDialog) zum Laden eines Dokumentes.
+		
+
+	\myitem{Refresh}\index{Refresh}\index{WYSIWYG-Ansicht}Die 
+		WYSIWYG-Darstellung wird mit diesem
+		Menü\-punkt oder der Taste \showkey{F} aktualisiert.
+
+	\myitem{Delete}\index{Delete!im 
+		Widget-Kon\-text\-menü}\index{Widget!löschen}Das 
+		Widget wird gelöscht. Hat dieses
+		Widget Kinder, so werden Sie gefragt,
+		ob Sie das Widget und alle Kinder 
+		wirklich löschen wollen. Durch Betätigen der Taste
+		\showkey{Entf} werden ebenfalls alle selektieren Widgets
+		gelöscht.
+		
+
+\section{Widget Resource Editor}
+		
+	\index{Widget Resource Editor}
+	\index{Ressourcen!ändern}
+	Mit dem Widget Resource Editor (Siehe Abbildung 
+	\ref{resourceedit.eps}) können die Ressourcen eines
+	Widgets verändert werden. Er kann durch das Kontextmenü
+	eines Widget mit dem Menüpunkt Edit oder durch einen
+	Doppelklick auf ein Widget geöffnet werden.
+
+	\myitem{\bf File}\index{File!im Widget Resource Editor}Im File-Menü
+	befinden sich Aktionen zum Laden  
+	({\em Load} oder Taste \showkey{Strg-L}) eines selektierten Widgets in
+	den Editor, zum Speichern der 
+	veränderten Ressourcen ({\em Apply} oder Taste \showkey{Strg-A}) und
+	zum Schließen ({\em Close} oder Taste \showkey{Strg-C}) des 
+	Fensters. 
+
+	\myitem{\bf View}\index{Category}\index{View!im Widget Resource
+	Editor}Mit  
+	dem View-Menü kann zwischen verschiedenen Sichten auf die Ressourcen
+	eines Widget umgeschaltet werden. Welche Sicht gerade aktiv ist, wird
+	in der Zeile unterhalb der Menüleiste angezeigt. Mit den
+	Tastenkombinationen von \showkey{Strg-1} bis \showkey{Strg-5} kann die
+	Umschaltung der Sichten bequem per Tastatur vorgenommen werden.
+
+	\myitem{Core}\index{Core}In 
+		dieser Kategorie befinden sich alle Ressourcen 
+		der Widgetklasse Core. Diese Klasse ist Basisklasse
+		aller Widgets, so daß diese Ressourcen in
+		jedem Widget zu finden sind.
+		Dies sind grundlegende Ressourcen wie z.B. 
+		{\tt XmNx, XmNy, XmNwidht, XmNheight}.
+
+	\myitem{Specific}\index{Specific}Hier 
+		sind alle Ressourcen zusammengefaßt, 
+		die für die jeweilige Widgetklasse spezifisch sind 
+		(z.B. XmNlabelString).
+
+	\myitem{Constraint}\index{Attachments}\index{Constraint}Die 
+		Constraint-Ressourcen werden von der Widgetklasse
+		des Eltern-Widgets bestimmt. Nicht jedes Widget besitzt
+		Ressourcen in dieser Kategorie. Bestimmt das
+		Eltern-Widget das Aussehen des Kind-Widgets, und
+		benötigt es dazu weitere Daten für jedes Kind,
+		so werden dazu gewöhnlich Constraints benutzt.
+		Die Kinder eines Widget vom Typ {\tt XmForm} besitzen
+		solche Ressourcen, mit denen eingestellt wird, welches
+		Layout das Kind bevorzugt (Attachments).
+
+	\myitem{Callbacks}\index{Callback}Diese 
+		Kategorie beinhaltet alle Callback-Ressourcen.
+		Callbacks sind Funktionen, die bei bestimmten
+		Ereignissen ausgeführt werden. Ein solcher Callback
+		kann zum Beispiel aufgerufen werden, wenn Sie mit
+		dem Mauszeiger auf einen Push-Button klicken. Die
+		Callbacks enthalten die eigentliche Funktionalität
+		Ihrer Anwendung. Der View Designer kann Ihnen die
+		Arbeit für die Implementierung dieser Funktionen
+		nicht abnehmen.
+
+	\myitem{Extra}\index{Extra}\index{Widget!Name}In 
+		der Kategorie Extra können spezielle
+		Einstellungen gemacht werden, die eigentlich keine
+		Ressourcen sind. So wird hier der Name des Widgets
+		festgelegt. Der Toggle-Button {\em Manage} muß 
+		angewählt sein, damit das Widget nach dem Erzeugen
+		auch sichtbar gemacht wird.
+
+	% Bild
+
+	\psfigure{resourceedit.eps}{Widget Resource Editor}
+
+	
+	\myitem{\bf Automatic Load}\index{Automatic Load}Normalerweise
+	wird stets ein neuer Ressource Editor
+	geöffnet, wenn Edit im Kontextmenü des Widgets
+	ausgewählt wurde.
+	Der Toggle-Button {\em Automatic Load} im Options-Menü wird benutzt,
+	um einen Ressource Editor als denjenigen auszuwählen, in dem die
+	Ressourcen geladen werden. Wenn Sie nun zu einem Widget den
+	Resource Editor öffnen, wird kein neuer
+	Widget Resource Editor angezeigt. Die Ressourcen werden dafür
+	in den durch {\em Automatic Load} markierten Editor geladen. Ob ein
+	Editor markiert wurde, ist auch in der Status-Zeile unterhalb der
+	Menüleiste angezeigt.
+	
+	\myitem{\bf Ressource-Zeilen}\index{Ressource-Zeilen}In 
+	der Mitte des Widget Resource Editors befinden sich in einem
+	Scrolled-Window die Zeilen zum Ändern von Ressourcen.
+	Jeweils links zeigt ein Toggle-Button den Namen der Ressource
+	an. Ist der Toggle-Button angewählt bedeutet das, daß
+	die Ressource im Quelltext oder im Ressourcefile gesetzt wird.
+	Ist das nicht der Fall, wird der Default-Wert wirksam. Hinter
+	den Toggle-Buttons befinden sich Eingabefelder, Option-Menüs
+	oder Toggle-Buttons. Es ist vom Typ der Ressource abhängig,
+	welches Dialogelement zum Verändern dargestellt wird. Ist die
+	Ressource z.B. vom Typ Boolean, dann wird sie mit einem
+	Toggle-Button verändert. Hinter den Eingabefeldern befinden
+	sich kleine Push-Buttons über die ein Text Editor, ein Font 
+	Chooser oder ein Fenster zum Auswählen einer Farbe
+	geöffnet wird. Die Option-Menüs auf der rechten Seite dienen
+	zum Festlegen der Quelle der Ressourcewerte.
+	Hier können folgende Werte eingestellt werden:
+
+	\myitem{private}\index{private}\index{Quellcode}Der 
+			Ressourcewert wird in den generierten 
+			Quelltext geschrieben. Der View Designer
+			unterscheidet zwei Arten von Quelltextdateien,
+			die vom Entwickler ver\-än\-derbaren (Stubs)
+			und die Dateien, die stets überschrieben
+			werden. In einer von den stets überschriebenen
+			Dateien wird auch der Ressourcewert beim
+			Erzeugen des Widgets gesetzt.
+
+	\myitem{public}\index{Ressource-Datei}\index{public}Es 
+			wird eine Zeile im externen
+			Ressourcefile generiert. Beim Generieren des 
+			Quellcodes für ein User Interface wird
+			zusätzlich zu den C- bzw. C++-Quellen eine
+			Datei mit der Endung {\tt .rf} erzeugt.
+			Aus allen diesen Dateien ({\tt .rf}) entsteht
+			beim Compilieren des Quellcodes ein großes
+			Ressourcefile mit dem Namen {\em
+			Projektname}{\tt .ad}.
+
+	\myitem{load}\index{load}Bei 
+			Ressourcen vom Typ Pixmap kann mit diesem
+			\index{Xpm-Datei}\index{Pixmap}
+			Menüpunkt eingestellt werden, daß die
+			Pixmap-Datei (im Xpm-Format) zur Laufzeit
+			des Programms geladen wird. Das Textfeld der
+			Ressource muß dabei den Dateinamen der 
+			Xpm-Datei enthalten. Dieser Dateiname kann ein
+			absoluter oder relativer Pfad zur Xpm-Datei
+			sein, oder nur den Dateinamen ohne Verzeichnis
+			enthalten. Ist letzteres der Fall, so wird die
+			Datei mit {\tt XtResolvePathname()} 
+			\index{XtResolvePathname()}, sowohl
+			zum Darstellen in der WYSIWYG-Ansicht also
+			auch in der späteren Anwendung, im
+			Unterverzeichnis {\tt pixmaps} gesucht.
+
+	\myitem{include}\index{include}Xpm-Dateien 
+			können auch in den Quelltext
+			\index{Xpm-Datei}\index{Pixmap}
+			eingebunden werden. Wenn Sie Ihre Anwendung
+			nicht mit dem Laden von Dateien belasten
+			wollen, die
+			{\em vielleicht} im Pfad sind oder auch vom
+			Benutzer gelöscht wurden, dann ist es sinnvoll,
+ 			diese in den Quelltext zu integrieren.
+			Die Xpm-Datei wird dabei mit {\tt \#include} in das
+			Programm eingebunden.
+
+	\myitem{method} Zeigt\index{method}\index{Callback} das 
+			Option-Menü diesen Text an, so sollte
+			der Name einer Callback-Funktion im 
+			Textfeld stehen. Diese
+			Funktion befindet sich in der schon
+			erwähnten Stub-Datei eines Interfaces. 
+			Sie wird vom Entwickler implementiert. 
+			Im Test-Mode der WYSIWYG-Ansicht können Sie
+			prüfen, ob beim entsprechenden Callback ihre
+			Funktion aufgerufen wird. Dabei erscheinen
+			im unteren Teil des Hauptfensters Meldungen, die
+			Aufschluß darüber geben, welches Widget
+			welche Funktion aufgerufen hat.
+
+	\myitem{manage} Der Name eines Widgets wird statt einer 
+			Callback-Funktion \index{manage}\index{Dialog}
+			im Eingabefeld angegeben. Das eingetragene Widget
+			(z.B. ein Dialog) sollte sich im gleichen
+			Interfaces befinden und wird bei einem dem Callback
+			entsprechenden Ereignis sichtbar gemacht.
+			Das ist bei Dialogen sinnvoll, da diese gewöhnlich
+			unsichtbar sind und erst bei einem Ereignis, z.B.
+			dem Anklicken eines Menüpunktes, dem
+			Benutzer präsentiert werden.
+
+	Auch im Widget Ressource Editor befindet sich am unteren Rand
+	eine Quick-Help-Zeile, die schnellen Aufschluß über
+	einzelne Dialogelemente gibt.
+
+	Mit dem Push-Button {\em Apply} am unteren Rand der Editors
+	werden die 
+	Veränderungen der Ressourcen übernommen. 
+	{\em Close} schließt das Fenster und verwirft die Änderungen, wenn
+	sie nicht vorher mit Apply übernommen wurden.
+	Mit dem Help-Button gelangen Sie zur Online-Hilfe.
+
+\section{Browser}
+
+	\index{Baumansicht}
+	Wie in Abbildung \ref{browser.eps} zu sehen, besitzt der
+	View Designer eine Baumdarstellung. Sie bietet einen
+	Überblick über die Widget-Hierarchie eines Interfaces
+	oder Widget-Teilbaums. Die Brow\-ser-Ansicht wird
+	über das Kontextmenü des Interfaces oder Widgets
+	geöffnet. Mit Hilfe des Plus- bzw. Minussymbols können
+	Teil\-bäu\-me auf- bzw. zugeklappt werden. Das Icon gibt 
+	Aufschluß über die Klasse des Widgets.
+
+	\myitem{\bf File}\index{File!im Browser}Das File-Menü bietet
+	Aktionen die sich auf das geladene Widget im Browser beziehen.
+
+	\myitem{Load}\index{Load!im Browser}Dieser Menüpunkt und auch die
+		Tastenkombination \showkey{Strg-L} lädt ein ausgewähltes
+		Widget in den Browser. Ein Widget kann in der Wysiwyg-Ansicht
+		oder 
+		in einer Icon- bzw. Baumansicht ausgewählt werden. Ist ein
+		Interface in der Icon-Ansicht des Hauptfensters ausgewählt, so
+		wird das Shell-Widget dieses Interfaces in den Browser geladen.
+
+	\myitem{Load Parent}\index{Load Parent!im Browser}Diese Aktion, die
+		auch mit \showkey{Strg-P} aktiviert wird, lädt das
+		Eltern-Widget des momentan geladenen Widgets in den
+		Browser. Befindet sich bereits das Shell-Widgets eines
+		Interfaces im Browser, so hat diese Aktion keine Wirkung.
+
+	\myitem{Close}\index{Close!im Browser}Hiermit wird das Fenster
+		geschlossen. Dies ist auch mit \showkey{Strg-C} möglich.
+
+	\myitem{\bf View}\index{View!im Browser}Die Darstellung des
+	Widget-Baumes ist durch dieses Menü veränderbar. Die
+	Standard-Einstellungen des Menüs sind mit dem View-Defaults-Dialog des
+	Hauptfensters zu ändern. Wenn Sie also die Änderungen der Ansicht
+	nicht nur in diesem Browser wollen, benutzen Sie diesen Dialog.
+
+	\myitem{Small Icons}\index{Small Icons!im Browser}Ist dieser
+		Menü-Punkt angewählt, so erscheinen in der Baum-Ansicht
+		verkleinerte Icons. Damit werden mehr Widgets im Fenster
+		sichtbar.
+	
+	\myitem{With Icons}\index{With Icons!im Browser}Ob Sie überhaupt Icons
+		in der Baum-Ansicht sehen wollen, ist mit diesem Menü-Punkt
+		einstellbar.
+
+	\myitem{With Class Names}\index{With Class Names!im
+		Browser}Standardmäßig sind die Namen der Widget-Klassen zu
+		jedem Widget sichtbar. Sie befinden sich hinter dem Namen des
+		Widgets mit kursiven Zeichensatz. Dieser Menü-Punkt schaltet
+		die Darstellung der Widget-Klassen-Namen aus.
+
+	\myitem{\bf Widget}\index{Widget!Menü im Browser}Dieses Menü enthält
+	Aktionen, die auch im Kontextmenü eines Widgets zu finden sind. Die
+	Aktionen beziehen sich auf die selektierten Widgets in der
+	Baum-Ansicht. Wenn also keine Widgets im Browser selektiert sind, sind
+	die Menüpunkte nicht anwählbar.
+
+	\myitem{\bf Options}\index{Automatic Load!im Browser}Im Optionen-Menü
+	befindet sich nur der Toggle-Button {\em Automatic Load}. Dieser hat
+	die gleiche Funktion wie im Widget Resource Editor. Der Browser kann
+	also als derjenige markiert werden, in dem stets der Widget-Baum
+	dargestellt wird, wenn {\em Browse} in einem Kontextmenü ausgewählt
+	wurde. 
+
+	\psfigure{browser.eps}{Der Browser}
+
+	\myitem{\bf Drag \& Drop}\index{Drag \& Drop}Zusätzlich 
+	zu den Möglichkeiten, die es auch in der
+	Icon-Ansicht gibt, können Objekte innerhalb eines Baumes
+	verschoben werden. Hierzu wird wieder der Drag \& Drop
+	Mechanismus von Motif benutzt. Mit der mittleren Maustaste
+	kön\-nen Objekte angeklickt und an einer anderen Stelle des
+	Baumes fallengelassen werden. Dabei
+	gibt es zwei Möglichkeiten für das Einfügen in den
+	Baum. Während des Vorgangs wird durch einen Pfeil 
+	im Mauszeiger angezeigt, um welche Art von Einfügen 
+	es sich handelt. Diese beiden Zustände hängen von
+	der Position des Mauszeigers innerhalb des Baumes ab.
+
+	\begin{enumerate}
+	\item Einfügen als Kind. Es erscheint ein Pfeil mit einem
+		Winkel. Das Objekt wird als letztes Kind eines Objektes
+		eingefügt, über dem sich gerade der Mauszeiger 
+		befindet.
+	\item Einfügen als Nachbar. Es erscheint ein Pfeil ohne
+		Winkel. Der Mauszeiger befindet sich zwischen zwei
+		Objekten und das Quellobjekt wird zwischen 
+		diesen beiden Objekten eingefügt.
+	\end{enumerate}
+	
+	Auch hier kann durch gleichzeitiges Drücken der
+	Control-Taste ein Kopieren statt einem Verschieben
+	veranlaßt werden. 
+
+	Nicht alle Widgets dürfen Kinder haben. So hat ein
+	Push-Button niemals einen Push-Button als Kind. Das Verschieben
+	oder Kopieren eines Objektes kann also nicht immer zustande
+	kommen. Dies äußert sich durch ein 
+	{\glqq}zurückschnappen{\grqq} des
+	Mauszeigers, nachdem das Objekt fallengelassen wurde.
+
+	Die Baumansicht bietet ansonsten die gleichen Möglich\-keiten
+	wie die Icon-An\-sicht. Es können ein oder mehrere
+	Objekte selektiert und ein Popupmenü zu Objekten geöffnet
+	werden. Ein Doppelklick öffnet den Widget Resource Editor.
+	Auch das Ändern des Namens mit der Tastenkombination
+	Alt- und linke Maustaste ist möglich. So kann in der
+	Browser-Ansicht die Namensvergabe an Widgets sehr schnell
+	erfolgen, schneller als mit dem Widget Resource Editor.
+
+\section{Menü-Editor}
+		
+	\index{Menü Editor}
+	Um ein effizientes Erstellen von Menüs zu gewährleisten,
+	besitzt der View Designer einen Menü-Editor (Siehe
+	Abbildung \ref{menuedit.eps}). Dieser wird mit dem Kontextmenü
+	eines Widgets geöffnet. Bei dem Widget handelt es sich
+	dabei um eines, bei dem ein Menü-Editor
+	auch Sinn macht (z.B. MenuBar, PopupMenu, PulldownMenu,
+	RadioBox).
+
+	Der Menü-Editor hat ebenfalls eine Menüleiste. Die gleichen Aktionen,
+	die auch im Browser zur Verfügung stehen, sind hier anwählbar. So
+	dient das File-Menü ebenfalls dazu, ein Widget in den Menü-Editor zu
+	laden oder den Editor zu schließen. Das View-Menü beeinflußt die
+	Darstellung der Icon-Ansicht, das Widget-Menü bietet Aktionen, die
+	sich auf die selektierten Widgets in der Icon-Ansicht beziehen und das
+	Options-Menü enthält wieder den Toggle-Button Automatic Load. Die
+	Standard-Einstellungen des Menü-Editors sind auch im Dialog {\em View
+	Defaults} zu verändern.
+	
+	\psfigure{menuedit.eps}{Menü-Editor}
+
+	\index{Icon-Ansicht!Menü Editor}
+	Die Icon-Ansicht des Menü-Editors 
+	zeigt alle Kinder des zu bearbeitenden
+	Objektes. Sie bietet die bereits erläuterten Möglichkeiten
+	einer Icon-Ansicht. In der Abbildung ist hier die
+	Namensänderung des Push-Buttons {\em Exit} zu sehen.
+
+	\myitem{\bf Order}\index{Order}Die 
+	Pfeilknöpfe dienen zum Verändern der Reihenfolge der
+	Kinder. Dazu ist ein Widget zu selektieren. Durch
+	Drücken des jeweiligen Pfeilknopfes, wird das Objekt 
+	nach oben bzw. nach unten verschoben.
+
+	\myitem{\bf Add item}\index{Add item}Die 
+	Button unter der Bezeichnung {\em Add item} dienen
+	zum Erzeugen von Widgets. Dabei stellt {\em SubMenu} eine 
+	Besonderheit dar, da durch diesen Button gleichzeitig ein
+	CascadeButton und ein PulldownMenu erzeugt wird. 
+	Im CascadeButton ist automatisch die Ressource {\tt
+	\index{XmNsubMenuId}
+	XmNsubMenuId} gesetzt, so daß nach Motif-Art ein
+	Untermenü entsteht.
+	Die erzeugten
+	Widgets werden als letztes Kind eingefügt und können danach 
+	weiter bearbeitet werden. So kann durch Drücken von Alt-
+	und linker Maustaste über einem Icon der Name des Widgets
+	verändert werden. Ein Doppelklick auf einem Icon
+	öffnet den Widget Resource Editor und mit der rechten
+	Maustaste erhalten Sie das Kontextmenü des Widgets. Haben
+	Sie ein Untermenü (SubMenu) erzeugt, so steht ihnen im
+	Kontextmenü des Widgets vom Typ PulldownMenu ein Eintrag
+	Menu Editor zur Verfügung, der einen weiteren Menü-Editor 
+	für das Untermenü öffnet. So können beliebig
+	tiefe Menüstrukturen erzeugt und bearbeitet werden.
+
+\section{Projekteinstellungen}
+
+	\psfigure{settings.eps}{Projekteinstellungen}
+
+	\index{Projekteinstellungen}\index{Settings}
+	Die Projekteinstellungen sind über den Menüpunkt {\em Settings} im
+	Project-Menü erreichbar. Er öffnet ein Fenster, das in der Abbildung
+	\ref{settings.eps} zu sehen ist. Hier können Sie Einstellungen am
+	Projekt vornehmen, die sich hauptsächlich auf die
+	Quellcode-Generierung beziehen.
+
+	\myitem{\bf Project File}Im Eingabefeld {\em Project File} wird der
+	Dateiname der Projektdatei \index{Project File}\index{Application
+	Class}\index{Executable}
+	bestimmt. Er hat immer der Endung {\tt .prj}. Die Endung kann bei der
+	Eingabe auch entfallen, da sie automatisch angefügt wird. Wenn der
+	Name des Projektes eingegeben ist, und Sie mit \showkey{Tab} ins
+	nächste Eingabefeld  springen, wird automatisch der Inhalt der Felder
+	{\em Application Class} und {\em Executable} beeinflußt. Diese
+	Vorgaben sind ein Vorschlag und können verändert werden. Es sei aber
+	darauf hingewiesen, daß das Executable möglichst kleingeschrieben und
+	die Application Class mit einen Großbuchstaben beginnen sollte. Die
+	Application Class bestimmt den späteren Namen der Ressourcedatei.
+
+	\myitem{\bf Generation Model}Welche Art von Quellcode sie generieren
+	wollen, hängt von der 
+	Einstellung des Menüs {\em Generation Model} ab. 
+	\index{Quellcode}\index{Generation Model}Der View Designer
+	kommt standardmäßig mit den Codegenerierungmodellen C und C++. Diese
+	Generierung umfaßt ein Imakefile, ein Hauptprogramm und die, mit dem
+	VDX erstellten, User Interfaces. Wie Sie die Codegenerierung
+	beeinflussen lesen Sie auf Seite \pageref{codegeneration}.
+	Im Hauptprogramm wird ein bestimmtes User Interface als 
+	erstes erzeugt \index{Startup-Interface}
+	und angezeigt. Welches Interface sie als erstes darstellen wollen, ist
+	mit dem Menü {\em Startup Interface} einstellbar.
+
+
+	\myitem{\bf Source Path}\index{Source Path}Die Quellcodegenerierung
+	findet standardmäßig im 
+	gleichen Verzeichnis statt, in dem sich auch das Projekt befindet. Mit
+	dem Eingabefeld {\em Source Path} kann ein alternativer Pfad
+	vorgegeben werden. Sie könnten zum Beispiel den Pfad um das
+	Verzeichnis {\tt src} ergänzen, um den Quellcode von den Dateien des
+	Interface-Builders zu trennen. Existiert das Verzeichnis noch nicht,
+	wird es mit dem Generieren erzeugt. Der kleine Knopf neben dem
+	Eingabefeld öffnet einen Dateiauswahl-Dialog, der benutzt werden kann,
+	um den Pfad einzustellen.
+
+	
+	\myitem{\bf More Source Files}\index{More Source Files}Ein Programm
+	besteht bekanntlich nicht nur aus einer 
+	Benutzeroberfläche. Weitere Quellcode-Dateien können in das
+	Eingabefeld {\em More Source Files} durch Leerzeichen getrennt
+	eingetragen werden. Möchten Sie eine einfache Liste Ihrer
+	Quellcode-Dateien, so klicken Sie auf den kleinen Knopf neben dem
+	Eingabefeld. Es öffnet sich ein Dialog, der alle C- und C++-Dateien im
+	Quellcode-Verzeichnis anzeigt. Wählen Sie die zusätzlichen Dateien
+	aus.
+
+	\myitem{\bf Extra ..}\index{Extra Compiler Options}Weitere Compiler-
+	\index{Extra Linker Options}\index{Extra Libraries}und Linker-Optionen
+	können in den darauffolgenden  
+	Eingabefeldern eingeben. Eine zusätzliche Compiler-Option könnte
+	z.B. {\tt -I/opt/\-dbms\-/include} sein, mit der Header-Dateien in dem
+	angegeben Pfad gesucht werden. Eine Linker-Option wäre z.B. {\tt
+	-L/opt/dbms/lib} und Extra-Libraries könnte {\tt -lsql} sein.
+	Für die Bedeutung der Optionen sei hiermit auf die Benutzeranleitung
+	des Compilers und Linkers verwiesen.
+
+	Die Beschreibung eines Projektes können sie in dem untersten Text-Feld
+	eingeben. 
+
+
+\section{Schablonen}
+
+	Das Schablonenfenster (Abbildung \ref{template_window.eps}) bietet die
+	Sicht auf eine Schablonen-Datei ({\tt .pal}). Diese Datei enthält
+	verschiedene Widgets bzw. Widget-Bäume, die als Schablonen
+	dienen. Die Hauptschablonen sind über ein Icon im Hauptfenster zu
+	öffnen. Klickt man auf dieses Icon, so erscheint das
+	Schablonenfenster.
+
+	\psfigure{template_window.eps}{Schablonen-Fenster}
+
+	Die Icon-Ansicht stellt den Inhalt der Schablonendatei dar. Sie hat im
+	Gegensatz zu anderen Icon-Ansichten eine Besonderheit: Wird ein Icon
+	angeklickt, ändert sich der Mauszeiger und der View Designer wartet
+	darauf, wo er eine Kopie der Schablone erzeugen soll. Klicken Sie dann
+	in eine 
+	Wysiwyg-Ansicht, so wird ein neues Widget erzeugt, das die gleichen
+	Ressource-Einstellungen wie die Schablone hat. Falls Sie nicht in die
+	Wysiwyg-Ansicht klicken, sondern an eine andere Stelle des
+	Bildschirms, wird ein neues Interface erstellt, bei dem die Schablone
+	als Vorlage dient. Mit der 
+	rechten Maustaste können Sie den Vorgang abbrechen.
+
+	Die Menü-Leiste des Schablonen-Fensters enthält ähnliche Menüs
+	wie die des Browsers und Menü-Editors. So ist das View-Menü und das
+	Widget-Menü identisch. Mit dem View-Menü wird somit das Aussehen
+	der Icon-Ansicht beeinflußt. Das Widget-Menü bietet ebenfalls die
+	gleichen Aktionen, die mit dem Kontextmenü eines Widgets möglich sind.
+	
+	\myitem{\bf File}Etwas anders ist jedoch das File-Menü. Es bietet die
+	Möglichkeit, die veränderten Schablonen zu speichern ({\em Save} oder
+	\showkey{Strg-S}). Durch {\em Save As} wird ein Dateiauswahl-Dialog
+	sichtbar, mit dem Sie die Schablonen in einer anderen Datei speichern.
+	{\em Close} oder \showkey{Strg-C} schließt das Fenster. Falls die
+	Schablonen verändert wurden, macht der View Designer darauf
+	aufmerksam.
+
+	\myitem{\bf Paste to Templates}\index{Paste!to Template}Eine
+	Besonderheit steckt im Widget-Menü. Dort gibt es neben den bekannten
+	Operationen eines Widgets einen Menüpunkt {\em Paste to
+	Templates}. Hier wird der Inhalt der Zwischenablage (Clipboard) in den
+	Schablonenordner eingefügt. Diese Operation bezieht sich somit nicht
+	auf ein ausgewähltes Widget im Ordner. Sie ist anwählbar, wenn sich
+	ein Widget in der Zwischenablage befindet.
+
+	\myitem{\bf Create On Click}\index{Create On Click}Mit diesem
+	Menüpunkt, der sich im Options-Menü befindet,
+	kann das vorher beschriebene Verhalten beim Klicken auf ein Icon in
+	der Icon-Ansicht verändert werden. Wird die Option ausgeschaltet,
+	können die Icons mit der linken Maustaste selektiert werden. Diese
+	Option, die Fenstergröße und die Darstellung der Icons, die im
+	View-Menü verändert werden kann, werden beim Abspeichern mit gesichert,
+	so daß sie beim nächsten mal wieder den gleichen Schablonenordner
+	vorfinden. 
+
+	\myitem{\bf Drag \& Drop}\index{Drag \& Drop!in den Schablonen}Auch im
+	Schablonenordner steht der Drag \& Drop-Mechanismus zur Verfügung. Sie
+	können Widgets in den Ordner fallen lassen, dann werden diese in die
+	Schablonen eingefügt. Aber auch umgekehrt wird eine Kopie einer
+	Schablone erzeugt, wenn sie in ein Interface fallengelassen wird.
+
+\chapter{Beispielanwendung}
+
+	Anhand der Beispielanwendung {\glqq}Textedit{\grqq} wird im 
+	folgenden die Anwendungserstellung mit dem View Designer
+	genauer erläutert.
+
+	Erzeugen Sie für diese Anwendung ein eigenes Verzeichnis,
+	in dem die Dateien des View Designers und der Quellcode
+	abgelegt werden. Wechseln Sie in das neue Verzeichnis
+	und starten Sie den View Designer.
+
+\section{Projekteinstellungen}
+
+	\index{Projekteinstellungen}
+	Nachdem Sie den View Designer gestartet haben, ist bereits ein
+	ein Projekt mit den Namen {\em Untitled} geladen.
+	Mit dem Settings-Dialog kann das Projekt umbenannt werden.
+	Dazu wählen Sie im Menü {\em Project} des Hauptfensters
+	den Menü\-punkt {\em Settings}. Es erscheint der Dialog, der
+	bereits in Abbildung \ref{settings.eps} zu sehen war.
+
+	Unser Projekt soll {\glqq}Textedit{\grqq} heißen, und so
+	tragen Sie in das erste Eingabefeld {\tt Textedit.prj} ein.
+	Wenn Sie die Endung {\tt .prj} weglassen, wird
+	sie automatisch hinzugefügt. Die Datei {\tt Textedit.prj}
+	ist die Projektdatei und enthält Informationen über
+	das Projekt. Weiterhin kann in diesem Dialog die Art der
+	Quell\-codegenerierung ausgewählt werden. In unserem Fall
+	ist das Option-Menü auf {\em c++} geschaltet, da wir
+	C++-Code erzeugen möch\-ten. Klicken Sie auf OK, wird das Fenster
+	geschlossen und die Änderungen der Einstellungen gespeichert.
+
+	
+
+\section{Erzeugen eines Interfaces}
+	
+	Ein Interface wird implizit erzeugt, d.h. wenn Sie ein neues
+	Widget erzeugen, \index{Interface!erzeugen}
+	welches kein Eltern-Widget hat, so entsteht automatisch ein neues
+	Interface. Wenn dieses Widget eine Shell ist, so ist diese Shell
+	das oberste und bisher einzige Widget des Interfaces. Handelt
+	es sich um ein Widget einer anderen Klasse, so wird automatisch
+	ein Shell-Widget erzeugt. Dieses Shell-Widget ist von der
+	Klasse Default-Shell, die im Options-Menü des Hauptfensters
+	eingestellt werden kann. Eine Ausnahme beim impliziten
+	Erzeugen eines Interfaces sind Dialoge.
+	Sie können nicht ohne ein Eltern-Widget existieren, sondern
+	müssen ein Teil eines Interfaces sein.
+	
+      	Es gibt zwei Möglichkeiten zum Erzeugen eines Widgets.
+	\begin{enumerate} \index{Widget!erzeugen}
+	\item Es werden die Menüs des Hauptfensters genutzt. Dazu
+		befinden sich im Me\-nü {\em Widgets} die Untermenüs
+		{\em Shells}, {\em Manager}, {\em Primitives} und
+		{\em Dialogs}. Diese Untermenüs enthalten alle 
+		Widget-Klassen. Es sind Tear-Off-Menüs, d.h. mit dem
+		obersten gestrichelten Menüeintrag können sie
+		{\glqq}angepinnt{\grqq} und somit 
+		stets geöffnet bleiben.
+	\item Es wird die Palette der Widget-Klassen geöffnet, d.h.
+		mit dem Menüpunkt {\em Palette} im Menü {\em
+		Widgets} oder mit dem Icon in der Toolbar der 
+		Hauptfensters. Diese Palette ist ebenso unterteilt wie
+		das Widget-Menü.
+		
+		Die Icon-Ansichten zeigen die einzelnen Widget-Klassen,
+		jedoch aus Platzgrün\-den ohne Namen. Der Name einer
+		Widget-Klas\-se erscheint in der Quick-Help-Zeile am
+		unteren Rand des Fensters. Dazu ist der Mauszeiger auf
+		ein Icon zu verschieben, zu dem Sie den Namen der
+		Widget-Klasse herausfinden wollen.
+
+	\end{enumerate}
+	Wird nun ein Menüpunkt im Hauptfenster ausgewählt,
+	ein Icon in der	Palette angeklickt oder der Menüpunkt 
+	{\em Create} im Kontextmenü des Icons angewählt, erscheint
+	ein veränderter Mauszeiger. Klickt man mit der
+	linken Maustaste an irgendeine
+	Stelle des Bildschirms (vorausgesetzt, es existiert noch
+	kein Interface), hält die Maustaste gedrückt und zieht
+	die Maus, so erscheint ein Rechteck. Dieses Rechteck zeigt
+	die zukünftige Größe des Widgets an. 
+	Läßt man die Maustaste los, so wird das Widget erzeugt.
+
+	\index{Default-Shell}
+	Für unser Beispiel des Text-Editors wollen wir zuerst ein
+	Widget vom Typ XmMainWindow erzeugen. Da als Default-Shell 
+	TopLevelShell\footnote{ Im später generierten Quellcode wird
+				ein Interface als Popup-Shell
+				abgebildet. Die notwendige 
+				ApplicationShell wird immer erzeugt.
+				Deshalb braucht man hier keine
+				ApplicationShell erzeugen.}
+	eingestellt ist, brauchen wir uns um das Shell-Widget 
+	keine Gedanken zu machen. Wir wählen also den Menüpunkt
+	{\em MainWindow} aus dem Untermenü {\em Manager} und erzeugen
+	ein Widget nach dem eben erläuterten Verfahren. Es entsteht
+	dabei ein Shell-Widget vom Typ TopLevel\-Shell mit dem Namen
+	{\em Interface\_1} und ein Widget von Typ XmMainWindow mit dem Namen
+	{\em mainWindow\_1}. 
+	In der Icon-Ansicht des Hauptfensters erscheint nun ein	Icon,
+	welches das neue Interface repräsentiert.
+
+	Als nächstes brauchen wir eine Menüleiste. Durch den
+	Menüpunkt {\em MenuBar} im Untermenü 
+	{\em Manager} können wir diese erzeugen. Dabei fällt auf,
+	das {\tt XmCreateMenuBar()} keine Widget-Klasse wie XmMainWindow,
+	sondern eine Con\-ve\-nience-Funktion ist. Im späteren Quellcode
+	wird auch diese Funktion zum Erzeugen der Menüleiste aufgerufen.
+	Bei der Widget-Klasse XmMainWindow wird dazu die Funktion 
+	{\tt XtCreate\-Widget()} benutzt.
+	
+	Wählen wir nun den Menüpunkt {\em MenuBar} aus,
+	so erscheint wieder der veränderte Mauszeiger. Wir klicken
+	nun jedoch nicht irgendwo hin, sondern in unsere frisch 
+	entstandene WYSI\-WYG-Ansicht, und ziehen die Maus, um ein
+	Widget beliebiger Größe zu erzeugen. Nach dem Loslassen
+	der Maustaste erscheint in der Ansicht die Menüleiste.
+
+	\psfigure{interface_1.eps}{Das neue Interface}
+
+	\index{WYSIWYG-Ansicht}
+	Abbildung \ref{interface_1.eps} zeigt die WYSIWYG-Ansicht
+	des neuen Interfaces. Man sieht, daß die 
+	Menüleiste direkt an der oberen Kante des XmMainWindow-Widgets
+	positioniert ist. 
+
+\section{Benutzung des Menü-Editors}
+	
+	\psfigure{menuedit_bar.eps}{Menü-Editor}
+
+	\index{Menü Editor!benutzen}
+	Nun nutzt eine leere Menüleiste wenig. Drücken Sie die
+	rechte Maustaste auf der Menüleiste und wählen Sie den
+	Menüpunkt {\em Menu Editor} aus. Es wird der in Abbildung
+	\ref{menuedit_bar.eps} gezeigte Menü-Editor geöffnet. 
+	Jedoch ist die Icon-Ansicht im Gegensatz zur Abbildung noch
+	leer.
+
+	\psfigure{browser_bar.eps}{Die Menü-Hierarchie}
+
+	In eine Menüleiste können nur Untermenüs eingefügt 
+	werden, d.h. nur der Push-Button {\em SubMenu} ist anwählbar.
+	Um zwei Menüs zu erzeugen, drücken Sie zweimal den
+	Push-Button {\em SubMenu}. Es entstehen vier Widgets: zwei 
+	Cascade-Buttons und zwei Pulldown-Menüs. Jeweils ein
+	Pulldown-Menü ist mit einem Cascade-Button verbunden,
+	d.h. die Ressource {\tt XmNsubMenuId} enthält den Namen der
+	Pull\-down-Menüs. Die Namen der neuen Widgets sagen relativ
+	wenig aus und sollten deshalb umbenannt werden 
+	(Alt-linke Maustaste). Der Vorgang des Umbenennens ist in
+	Abbildung \ref{menuedit_bar.eps} gezeigt. Wird der Name eines
+	Pulldown-Menüs geändert, so ändert sich auch die
+	Ressource {\tt XmNsubMenuId} im Cascade-Button.
+
+	\index{Icon-Ansicht!Menu Editor}
+	In der Icon-Ansicht können ebenfalls Kontextmenüs zu den
+	Widgets geöffnet werden. Um einen Menü-Editor zum 
+	Untermenü {\em FileMenu} zu öffnen, ist somit nur der
+	Menüpunkt {\em Menu Editor} im jeweiligen Kontextmenü
+	auszuwählen. So kön\-nen auch die Untermenüs gefüllt
+	werden, so daß die Widget-Hierarchie entsteht, die
+	der Browser in Abbildung \ref{browser_bar.eps} darstellt.
+
+\section{Benutzung des Widget Resource Editors}
+
+	\psfigure{resourceedit_new.eps}{Ändern von Ressourcen}
+
+	\index{Widget Resource Editor!benutzen}
+	Zwar haben die erzeugten Widgets durch das Umbenennen alle
+	einen sinnvollen Namen, für den zukünftigen Benutzer
+	des Interfaces, sind diese jedoch unbrauchbar. Wir müssen
+	also zu jedem Push-Button die Ressource {\tt XmNlabelString}
+	ändern. Da unsere Anwendung vielleicht auch die 
+	Vorzüge der Internationalisierung nutzen soll, wäre
+	es schön, wenn diese Ressourcen in einem externen 
+	Resourcefile abgelegt werden.
+
+	Wählen Sie einen Menüpunkt, z.B. das Widget 
+	{\tt New\-Button}, und öffnen Sie den Widget Resource Editor.
+	Schalten Sie {\em Automatic load} ein. In der {\em Category
+	Specific} befindet sich die Ressource {\tt XmNlabel\-String}. 
+	Die Ressourcen sind alphabetisch sortiert und
+	werden ohne das Prefix {\tt XmN} dargestellt. Wenn Sie
+	den Eintrag im Text-Feld ändern, wird automatisch der 
+	Toggle-Button angewählt. Er zeigt an, daß es sich um
+	eine gesetzte Ressource handelt. Dies kann mit dem 
+	Toggle-Button auch wieder rückgängig gemacht werden.
+	Außerdem wird
+	ein Stern vor dem Namen der Ressource sichtbar. Das bedeutet,
+	daß der Eintrag geändert aber noch nicht {\em Apply}
+	angewählt wurde. Im Option-Menü am Ende der Ressourcezeile
+	kann eingestellt werden, ob die Ressource im Quelltext 
+	({\em private}) oder im externen Ressourcefile ({\em public})
+	gesetzt wird. Wir wollen, daß
+	sie von außen verändert werden kann, und wählen
+	deshalb {\em public}.
+
+	Nach dem Sie {\em Apply} gedrückt haben, werden alle 
+	Änderungen übernommen. Sie schließen den
+	Editor jedoch noch nicht, sondern wählen das nächste
+	Widget aus, z.B. {\tt OpenButton}. Mit Doppelklick oder
+	dem Menüpunkt Edit im Kontextmenü des Widgets
+	werden nun die Ressourcen dieses Widgets
+	im bereits geöffneten Editor sichtbar. Hätten Sie
+	{\em Automatic load} nicht angewählt, wäre ein neues
+	Fenster geöffnet worden.
+
+	\index{Callback}
+	Im Widget Resource Editor werden auch die Callbacks definiert.
+	Die Kategorie {\em Callbacks} enthält alle möglichen
+	Callbacks des Widgets. In die Textfelder wird der Name einer
+	Funktion eingegeben, die als Callback ausgeführt werden soll.
+	Diese Funktion wird vom Anwendungsentwickler implementiert,
+	und befindet sich in einer separaten Datei, die vom View
+	Designer im normalen Fall nicht überschrieben wird. 
+	Das Editieren dieser Funktionen wird von View Designer nicht
+	unterstützt, so daß der Entwickler seinen gewohnten Editor benutzen
+	kann.
+
+	\psfigure{editwindow.eps}{Das Ergebnis}
+
+	Bisher haben wir nur eine Menüleiste in unserem Interface.
+	Nun brauchen wir noch ein Text-Widget, in dem die Datei
+	editiert werden kann. Wird ein Text-Widget als Kind des XmMainWindow
+	erzeugt, so füllt dieses Widget den gesamten Platz unterhalb
+	der Menüleiste. Weiterhin erscheint eine Scrollbar, die sich am
+	unteren Rand der Text-Widgets plaziert. Ändern wir nun die Ressource
+	XmNeditMode auf XmMULTI\_LINE\_EDIT, dann wird aus dem bisher
+	einzeiligen Text-Widget ein mehrzeiliger.
+
+	Drei Teile des Interfaces sieht man in der Abbildung jedoch
+	nicht. Das sind zwei FileSelectionBox-Dialoge zum Laden
+	und Speichern und einen
+	MessageBox-Dialog, der beim Beenden des Programms angezeigt 
+	wird. 
+
+\section{Dialoge und Callbacks}
+
+	\index{Callback}\index{Dialog}
+	Um einen Dialog zu erzeugen, ist die gleiche Vorgehensweise 
+	anzuwenden wie bei anderen Widgets. Klicken Sie z.B. in
+	der Palette eine Dialog-Widgetklasse an, so wird wie gewohnt der
+	Mauszeiger verändert. Klicken Sie nun in die WYSIWYG-Ansicht.
+	Er erscheint ein Dialog, der sich in einem separaten Fenster
+	befindet. Im Kontextmenü des Dialoges befindet sich ein
+	\index{Visibility}
+	zusätzlicher Menüpunkt {\em Visibility}, mit dem die
+	Sichtbarkeit des Dialoges eingestellt wird. Der Zustand 
+	der Sichtbarkeit ({\em Visibility}) bezieht sich nicht auf 
+	den generierten Quellcode, sondern nur auf den View Designer. 
+	In der künftigen
+	Anwendung wird ein Dialog immer unsichtbar (nicht
+	gemanaget) erzeugt. Will man aber, daß der
+	Dialog gleich nach dem Erzeugen sichtbar wird, ist im
+	Widget Resource Editor in der {\em Category Extra} dieser 
+	Zustand	zu ändern.
+
+	Mit dem View Designer kann ein Dialog an einen Callback
+	angebunden werden. Wenn ein Callback ausgelöst wird, wird
+	der mit ihm verbundene Dialog gemanaget. Dazu ist im Widget
+	Resource Editor in der {\em Category Callbacks} im Eingabefeld
+	statt einem Methodennamen der Name des Dialoges einzutragen.
+	Das Optionmenü muß außerdem von {\em method} auf 
+	{\em manage} geschaltet werden. 
+
+	\index{Test-Mode}
+	Eine so erzeugte Anbindung eines Dialoges an einen Callback
+	läßt sich im Test-Mode simulieren. Sie macht vor allem
+	Sinn, wenn z.B. ein FileSelectionBox-Dialog von einem
+	Push-Button {\em Open} geöffnet werden soll.
+	In unserem Beispiel werden Dialoge an die Menüpunkte
+	{\em Open}, {\em Save as} und {\em Exit} angebunden.
+
+\section{Quellcode-Generierung}
+
+	\index{Quellcode!generieren}
+	Um den Quellcode des gesamten Projektes zu generieren,
+	wählen Sie im Menü {\em Project} den Menüpunkt
+	{\em Code generation}. Es wird ein Dialog angezeigt, mit dem
+	Sie beeinflussen können, welche Dateien vom View Designer generiert
+	werden.
+
+	\begin{enumerate}
+	\item Ist {\em Main program} angewählt, wird der Quellcode
+		für das Hauptprogramm generiert.
+	\item Mit {\em Imakefile} wird eine Imake-Datei erzeugt, aus
+		der dann mit {\tt xmkmf} das Makefile des Projektes
+		generiert wird.
+	\item Der Quellcode für ein Interface spaltet sich in zwei
+		Module auf, ein vom View Designer und
+		ein vom Entwickler verwaltetes. Das vom Entwickler
+		enthält die implementierten Callbacks, und sollte
+		deshalb vom View Designer nicht überschrieben
+		werden. Beim Generieren des ersten Quellcode ist es
+		jedoch sinnvoll, die Rümpfe (Stubs) für die 
+		Callbacks mitzuerzeugen.
+	\end{enumerate}
+
+	Nach Drücken von
+	{\em Ok} erscheint eine Liste von erzeugten Dateien.
+	Hier können Sie sich vergewissern, ob keine 
+	wichtige Datei überschrieben wird. Klicken Sie dann auf
+	{\em Write}, so werden die Dateien endgültig geschrieben.
+
+	Für unser Beispiel entstehen folgende Dateien:
+
+	\myitem{\tt TextWin\-dow.C} In dieser Datei programmiert der 
+				Anwendungsentwickler die Callbacks.
+				Diese Callbacks sind im Fall der
+				Codegenerierung unter C++ Methoden
+				einer Klasse Namens {\tt Text\-Window}.
+				Auch die Initialisierung des Moduls
+				befindet sich in dieser Datei. In C++
+				handelt es sich um den Konstruktor
+				der Klasse {\tt TextWindow}.
+
+	\myitem{\tt TextWin\-dow.h} Diese Header-Datei enthält die 
+				Klassendefinition für
+				{\tt Text\-Win\-dow}. Hier können
+				neue Instanzvariablen hinzugefügt
+				werden, die im Konstruktor 
+				initialisiert und in den Callbacks
+				verändert werden. Auch das
+				Hinzufügen von neuen Methoden ist
+				denkbar.
+
+	\myitem{\tt TextWin\-dow.rf} Für alle Ressourcen, die im
+				Resource Editor auf {\em public}
+				geschaltet werden, wird in dieser
+				Datei eine Zeile generiert. Alle
+				Dateien eines Projektes mit der Endung
+				{\tt .rf} werden zu einer großen
+				Datei Namens {\tt Textedit.ad}
+				zusammen kopiert.
+				Die Dateien mit der Endung {\tt .rf}
+				sollten niemals editiert werden.
+
+	\myitem{\tt TextWin\-dow\_base.C} Diese Datei enthält die
+				Implementierung der Klasse
+				{\tt Text\-Window\_\-base}. Sie ist die
+				Basisklasse von {\tt TextWindow} und
+				enthält die Layout-In\-for\-mation des
+				Interfaces, da in ihr der Widget-Baum
+				erzeugt wird.
+				Auch diese Datei sollte
+				nicht verändert werden.
+	
+
+	\myitem{\tt TextWin\-dow\_base.h} Dies ist die Header-Datei mit der
+				Klassendefinition zum vorherigen 
+				Modul und sollte auch nicht editiert
+				werden.
+
+	\myitem{\tt textedit.C} Diese Datei enthält das 
+				Hauptprogramm mit der 
+				{\tt main()}-Funktion, in der das
+				Startup-Interface erzeugt und geöffnet
+				wird.
+
+	\myitem{\tt VcView.C} {\tt VcView} ist die Basisklasse
+				aller Interfaces. Dies gilt nur für
+				die C++-Code\-gene\-rie\-rung. {\tt VcView}
+				enthält allgemeine 
+				Funktionalität, die von jedem
+				Interface benötigt wird.
+
+	\myitem{\tt VcView.h}	Die Header-Datei für die Klasse 
+				{\tt VcView}.
+
+	\myitem{\tt Imakefile}  Das Imakefile des Projektes. Mit
+				Hilfe von {\tt xmkmf} kann hiermit
+				ein Makefile generiert werden.
+
+	Um den erzeugten Quellcode zu compilieren, sollte als erstes
+	{\tt xmkmf} ausgeführt werden. Es entsteht ein Makefile.
+	Nach Ausführen von {\tt make depend} werden die
+	Abhängigkeiten ins Makefile eingetragen. Mit {\tt make}
+	wird dann das ausführbare Programm compiliert und 
+	gebunden.
+
+	\index{xmkmf} \index{make}
+	Das Ausführen von {\tt xmkmf}, {\tt make depend},
+	{\tt make} und dem erzeugten Programm ist auch von der
+	Oberfläche des View Designers aus möglich.
+	Dazu ist im Menü {\em Project} der Menüpunkt
+	{\em Execute} auszuwählen.
+
+	Das Programm besteht momentan aus einer {\glqq}toten{\grqq}
+	Benutzeroberfläche. Durch Implementierung der Callbacks wird
+	der Text-Editor zum Leben erweckt. 
+	Wie die Oberfläche mit Funktionalität verknüpft wird, entnehmen Sie
+	bitte dem mitgelieferten Beispiel TextEdit. Es befindet sich im
+	Verzeichnis {\tt doc/sam\-ples/TextEdit}. 
+	Dabei sind die Veränderungen der
+	Dateien {\tt TextWindow.h}, {\tt TextWindow.C} und {\tt textedit.C}
+	zu beachten. Auch auf die anderen Beispiele in Verzeichnis
+	{\tt doc/sam\-ples} sei verwiesen.
+	
+\chapter{Weitere Funktionalitäten}
+
+	In diesem Abschnitt folgen einige Erklärungen zu 
+	zusätzlichen Funktionalitäten, die Ihnen das Arbeiten
+	mit dem View Designer erleichtern sollen.	
+
+\section{Online-Hilfe}
+	
+	\index{Online-Hilfe} \index{Hilfesystem}
+	Der View Designer besitzt neben den Quick-Help-Zeilen ein
+	eingebautes Hilfesystem. Diese Online-Hilfe ist von vielen
+	Punkten zugänglich und bietet damit eine entsprechende
+	Hilfestellung bei der Arbeit.
+
+	\myitem{\bf Help On Help}
+	Das Hilfesystem erreichen Sie z.B. durch das Help-Menü des
+	Hauptfensters. Die Online-Hilfe kann sich selbsterklären,
+	wenn Sie den Menüpunkt On Help wählen. Es wird das 
+	Online-Hilfesystem geöffnet. In dem
+	sichtbaren Text finden Sie Erläuterungen zur Verwendung
+	dieses Fensters.
+
+	\myitem{\bf On Context}\index{Kontexthilfe}Ein
+	Online-Hilfesystem zeichnet sich dadurch aus, daß es
+	an vielen Stellen der Anwendung dem Benutzer zur Seite steht.
+	Falls Sie zu einigen Fenstern Fragen haben, können Sie den
+	Menüpunkt On Context im Hilfe-Menü des Hauptfensters
+	verwenden. Der Mauszeiger ändert sich und der View Designer
+	erwartet nun,
+	daß Sie ein Dialogelement in einem Fenster anklicken. 
+	Nachdem Sie so dem Hilfesystem mitteilen
+	zu welchem Fenster Sie gern Hilfestellung hätten, sucht das
+	Hilfesystem nach einen entsprechenden Eintrag. Das
+	Hilfefenster wird geöffnet und enthält einen Hilfetext.
+
+	Diese Kontexthilfe ist auch durch Drücken der Taste \showkey{F1}
+	erreichbar. Dazu muß sich aber der Tastatur-Fokus auf dem
+	Dialogelement befinden, zu dem Sie eine Hilfestellung haben wollen.
+
+	\myitem{\bf Tutorial}\index{Tutorial}Da
+	Sie bereits dieses Handbuch lesen, haben Sie eine
+	Vorstellung von der Funktionalität des View Designer. Ein
+	Online-Handbuch ist aber auch von der Online-Hilfe aus
+	zugänglich. Es beschreibt nochmals die Verwendung des
+	View Designers.
+
+
+\section{Benutzung von Schablonen}
+
+	\index{Schablone}
+	Schablonen von Widgets machen Sinn, wenn Sie eine große
+	Anwendung erstellen, bei der viele Widgets die gleiche Form
+	haben. Um einheitliches Aussehen Ihrer Oberfläche zu
+	erreichen, können Sie Widgets mit voreingestellten
+	Ressourcen erzeugen. Es entfällt so die Arbeit, alle
+	Einstellungen nochmals vorzunehmen.
+
+	Eine Schablone kann nicht nur aus einem Widget bestehen.
+	Da ein Widget auch Kinder haben kann, sind Schablonen von
+	Widget-Bäumen möglich. 
+
+	\myitem{\bf Schablone erzeugen}\index{Schablone!erzeugen}Wenn
+		Sie ein Widget, welches Sie wiederverwenden wollen,
+		innerhalb eines Interfaces erstellt haben,
+		öffnen Sie zuerst das Schablonenfenster. Mit dem Drag \&
+		Drop Mechanismus wird dieses Widget zu einer Schablone.
+		Klicken Sie also mit der mittleren Maustaste auf
+		das Widget und ziehen Sie es in das Schablonenfenster.
+		Dabei bleibt das originale Widget erhalten. In den
+		Schablonen taucht nun ein Icon auf. Dieses Icon hat
+		ein Kontextmenü, welches dem des Widgets gleicht.
+		So können Sie die Einstellungen der Ressourcen
+		nachträglich durch den Widget Resource Editor
+		ändern. Auch das Öffnen der Browser-Ansicht 
+		und andere bekannte Aktionen sind möglich.
+
+	\myitem{\bf Schablone verwenden}\index{Schablone!verwenden}Nun
+		soll aus der eben erstellten Schablone ein
+		neues Widget entstehen. Klicken Sie mit der linken
+		Maustaste auf das
+		entsprechende Icon. Der Mauszeiger wird verändert
+		und der View Designer wartet darauf, daß Sie
+		ihm mitteilen, welches das Eltern-Widget
+		des zu erzeugenden Widgets werden soll. Klicken Sie
+		nun mit der linken Maustaste auf das Eltern-Widget,
+		und es wird das neue Widget erzeugt, das die
+		Ressourceeinstellungen der Schablone erhält.
+
+	Das eben erläuterte Verfahren ist nicht das einzige, um aus
+	Schablonen neue Widgets zu erzeugen. Mit Drag \& Drop und
+	mit der Verwendung des Clipboard ist dies ebenfalls möglich.
+
+
+\section{Erzeugen von Links auf Interfaces}
+
+	\index{Link}
+	Der Nachteil von Schablonen ist, daß 
+	erzeugte Widgets ihre Ressourceeinstellungen nicht den
+	Veränderungen der Schablonen anpassen. Sie haben z.B. ein
+	Formular für Kundendaten erstellt, und es an vielen
+	Stellen in ihrer Anwendung verwendet. Nun ändert Ihr
+	Auftraggeber seine Anforderungen hinsichtlich der Kundendaten.
+	Das Formular muß nun an allen Stellen der Anwendung den Kundendaten
+	angepaßt werden.
+	Sie können sich vorstellen, wieviel Arbeit das bedeutet.
+
+	Mit Links werden Interfaces wiederverwendet. Ein Link auf ein
+	Interface wird innerhalb anderer Interfaces erzeugt. Ändern
+	Sie das ursprüngliche Interface so sind diese Änderungen
+	in anderen Interfaces vorhanden. Auch die Funktionalität,
+	die Sie durch Implementierung von Callbacks und anderen
+	Funktionen für des originale Interface entwickelt haben, ist in der
+	späteren Anwendung in den anderen Interfaces verfügbar.
+
+	\myitem{\bf Beispiel}
+		Ein Kundenformular wird als Interface implementiert.
+		Sie haben Funktionen geschrieben, die die Kundendaten
+		in das Formular eintragen und die veränderten Daten aus dem
+		Formular lesen. Verwenden Sie das Interface als Link,
+		so steht diese Funktionalität in den anderen
+      		Interfaces zur Verfügung. Kommt zu den Kundendaten
+		ein Feld hinzu, und ändert sich somit die 
+		Formularmaske, so sind diese Änderungen an allen
+		Stellen verfügbar.
+
+	Interfaces sind also wiederverwendbare Komponenten, die mit
+	Hilfe von Links in andere Interfaces eingebunden werden
+	können.
+
+	\myitem{\bf Erzeugen}\index{Link!erzeugen}Nachdem
+		ein Interface als wiederverwendbare
+		Komponente kreiert wurde, benutzen Sie den 
+		Menüpunkt Create Link im Kontextmenü des
+		Interfaces. Der Mauszeiger verändert sich, und
+		es wird nun erwartet, daß Sie das Eltern-Widget des
+		neuen Links anklicken. Der Link wird erzeugt
+		und stellt sich im View Designer als Frame-Widget
+		mit Kindern dar. Diese Kinder haben die gleiche
+		Widget-Hierarchie wie das ursprüngliche Interface.
+		Ein Link wird jedoch als ganzes betrachtet und ist
+		somit ein Frame-Widget in der Hierarchie des
+		zweiten Interfaces. Sie können das Aussehen der
+		Komponente nur im ursprünglichen Interface verändern.
+
+	\index{Interface!Schnittstelle}
+	Der Sachverhalt, daß Interfaces als Ergebnis
+	wiederverwendbare Komponenten sind, ist nicht nur bei der
+	Benutzung von Links entscheidend. Auch beim dynamischen
+	Erzeugen von Widget-Hie\-rar\-chi\-en sind die mit dem View
+	Designer erstellten Module verwendbar. In dem generierten Quellcode
+	werden Interfaces als C-Strukturen oder C++-Klassen abgebildet.
+	Die Initialisierungsfunktion befindet
+	sich in dem vom Entwickler veränderbaren Teil des Quellcodes
+	und hat folgende Form:
+
+	\bigskip \hrule
+	\begin{verbatim}
+	InterfaceName *
+	createInterfaceName(Widget parent,
+	                    ArgList args, 
+	                    Cardinal n);  
+
+	\end{verbatim}
+	\hrule \bigskip
+
+	Dabei ist {\tt parent} das Eltern-Widget, {\tt args} ist eine
+	vom Xt-Toolkit bekannte Ressourcenliste und {\tt n} gibt
+	die Größe der Liste an. In
+	der Darstellung ist {\tt Interface\-Name} nur ein 
+	Platzhalter für den Namen des	Interfaces.
+	Diese Funktion erzeugt ein
+	Objekt und gibt den Zeiger auf das Objekt
+	zurück. Sie können diese Funktion auch verändern und
+	z.B. einen Zeiger auf die darzustellenden Daten übergeben.
+	Wird jedoch das Interface als Link verwendet, so ist diese
+	Funktion als Schnittstelle definiert, und sollte somit nicht
+	verändert werden.
+
+\section{Weitere Drag \& Drop Möglichkeiten}
+
+	\index{Drag \& Drop}
+	An vielen Stellen des View Designers haben Sie bereits
+	die Mög\-lichkeiten des Drag \& Drop kennengelernt.
+	Folgende Aufstellung soll Ihnen alle Möglichkeiten des
+	Verschiebens und Kopierens von Objekten aufzeigen:
+	
+
+	\myitem{\bf Widgets erzeugen}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget-Klasse & WYSIWYG-Ansicht	\\
+	\hfill Widget-Klasse & Browser-Ansicht\\
+	\hfill Widget-Klasse & Schablonen\\
+	\end{tabular}
+
+	\myitem{\bf Widgets verschieben}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & WYSIWYG-Ansicht	\\
+	\hfill Widget & Browser-Ansicht\\
+	\end{tabular}
+
+	\myitem{\bf Widgets kopieren}
+	\begin{tabular}{p{3cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & WYSIWYG-Ansicht	\\
+	\hfill Widget & Browser-Ansicht\\
+	\hfill Widget & Schablonen\\
+	\end{tabular}
+
+ 	\myitem{\bf Text exportieren}
+	\begin{tabular}{p{4cm}@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	\hfill Widget & Text-Eingabefeld\\
+	\hfill Widget-Klasse & Text-Eingabefeld\\
+	\hfill Interface & Text-Eingabefeld\\
+	\end{tabular}
+
+
+\chapter{Konfiguration der Code-Generierung}
+
+	Ein Vorteil der Code-Generierung des View Designers
+	ist die Benutzung von Tem\-plate-Dateien. Hierdurch
+	kann der Anwendungsentwickler die Quell\-code-Gene\-rierung
+	auf seine Bedürfnisse anpassen. Wie dies möglich
+	ist, wird in folgenden Abschnitten erläutert. 
+	\label{codegeneration}
+
+\section{Codegenerierungsmodelle}
+
+	\index{Codegenerierungsmodell}\index{lang.cf}
+	Bei der Generierung des Quellcodes werden Dateien aus dem
+	Verzeichnis {\tt lib/X11/\-vdx} gelesen. In {\tt lang.cf}
+	befindet sich die Aufzählung aller bekannten
+	Codegenerierungsmodelle.
+
+	\index{Projekteinstellungen}
+ 	In den Projekteinstellungen kann bekanntlich
+	die Programmiersprache festgelegt werden, in der
+	der Quellcode zu generieren ist. Es handelt sich 
+	dabei nicht
+	nur um die Programmiersprache, sondern um eine
+	Menge von Template-Dateien, die die Generierung
+	benutzt. Im Lieferumfang des View Designers
+	sind zwei Modelle enthalten, {\em c} und {\em c++}.
+	Ein weiteres von Ihnen angepaßtes Modell 
+	z.B. {\em my-c++} wäre denkbar.
+	Im Option-Menü des Projekteinstellungsdialoges
+	würde somit ein dritter Eintrag hinzukommen.
+
+	\myitem{\bf Modell 
+	erstellen}\index{Codegenerierungs\-modell!erstellen}\index{addLang}Ein
+	neues Codegenerierungsmodell wird mit dem
+	Shell-Skript {\em addLang} erzeugt. Es befindet
+	sich im gleichen Verzeichnis wie die Template-Dateien.
+	Wechsel Sie in das Verzeichnis 
+	{\tt lib/X11/vdx}. Ein bereits vorhandenes
+	Modell wird benutzt, um ein neues zu erstellen.
+	Geben Sie 
+	\begin{verbatim}
+	addLang c++ my-c++
+	\end{verbatim}
+	ein, um das c++-Modell nach my-c++ zu kopieren. Wenn
+	Sie nun den View Designer starten, existiert in
+	den Projekteinstellungen ein neuer Menüpunkt. Sie
+	können jetzt Quellcode nach dem Modell my-c++
+	generieren. Dieser Quellcode ist identisch mit
+	dem c++-Quellcode. Die neuen Template-Dateien mit dem
+	Prefix my-c++ können Sie jedoch verändern, und somit auf die
+	Codegenerierung einwirken.
+
+\section{Template-Dateien}
+	
+	\index{Template-Datei}
+	Die Template-Dateien eines Codegenerierungsmodells haben als
+	Prefix den Namen des Modell. Alle Dateien des Modells my-c++
+	besitzen also das Prefix my-c++. Dabei spielt die Datei
+	{\tt my-c++.tmpl} eine besondere Rolle. In ihr sind Templates 
+	aufgeführt, die zur Generierung eines Interfaces verwendet
+	werden. {\tt my-c++.def.\-tmpl} wird zum Erstellen der Datei
+	{\tt InterfaceName.h}. Dieses Template ist jedoch nicht das einzige,
+	das zur Generierung von {\tt Interface\-Name.h} benutzt wird.
+	Bestimmte Teile der Datei entstehen durch Einfügen weiterer
+	Templates.
+
+	Folgende Dateien entstehen aus den Template-Dateien:
+	
+	{\tt
+	\begin{center}
+	\begin{tabular}{r@{\hspace{0.5cm}\arrow\hspace{0.5cm}}l}
+	my-c++.rf.tmpl       & InterfaceName.rf \\
+	my-c++.def\_base.tmpl & InterfaceName\_\-base.h \\
+	my-c++.impl\_base.tmpl& InterfaceName\_\-base.C \\
+	my-c++.def.tmpl      & InterfaceName.h \\
+	my-c++.impl.tmpl     & InterfaceName.C \\
+	my-c++.VcView\_h.tmpl & VcView.h \\
+	my-c++.VcView\_C.tmpl & VcView.C \\
+	\end{tabular}
+	\end{center}
+	}
+
+	Es existieren weitere Template-Dateien zum Generieren des
+	Hauptprogramms und des Imakefiles.
+
+\section{Ersetzungen}
+	
+	\index{Template-Datei!Ausdrücke}
+	Wenn eine Template-Datei geladen wird, sucht der 
+	View Designer nach folgenden Ausdrücken, wobei VARNAME
+	ein Variablenname ist, der in der Codegenerierung
+	des View Designers definiert ist.
+
+	{\tt \$(VARNAME)} -- VARNAME ist eine Zeichenkette, die
+		anstelle des Ausdrucks in die Datei eingefügt wird.
+
+	{\tt \$(VARNAME,code1,code2)} -- VARNAME ist eine bool'sche
+		Variable. Hat sie den Wert wahr, so wird {\tt code1}
+		in den Text eingefügt. Ist der Wert falsch, wird
+		der Ausdruck mit {\tt code2} ersetzt.
+
+	{\tt \$(VARNAME,sub-template)} -- VARNAME ist eine Menge
+		von Strukturen. Für jedes Element der Menge wird
+		die Template-Datei {\tt sub-template} geladen.
+		Ausdrücke in dem Sub-Template werden in gleicher
+		Weise ersetzt, wie in anderen Templates auch.
+
+	Variablen können z.B. der Name des Interfaces oder die
+	Ressourcen eines Widgets sein.
+
+	Wie in dem Beispiel auf Seite \pageref{tmpl-sample}
+	zu sehen, lassen sich mit diesen 
+	Mitteln recht einfach Dateien generieren. Es handelt sich
+	dabei um die Datei {\tt c++.def\_base.\-tmpl}. Aus ihr entsteht
+	die Header-Datei des Basismoduls. 
+	
+	Die Ausdrücke {\tt \$(NAME)} werden durch den Namen des
+	Interfaces ersetzt. Für
+	{\tt \$(LINKS,c++.links\_for\-ward.tmpl)} wird die Datei
+	{\tt c++.links\_for\-ward.tmpl} gelesen und die Ausdrücke für
+	alle Links im Interface expandiert.
+	
+	Sie können durch Erzeugen von neuen Codegenerierungsmodellen
+	und durch das Ändern der Template-Dateien neue Ideen in 
+	den generierten Code einbringen. Die Schnittstelle zum 
+	View Designer sind dabei die gerade eingeführten 
+	Ausdrücke und die Zeichenketten, die statt der Ausdrücke
+	eingefügt werden. Welche Ausdrücke es gibt, und durch welche
+	Zeichenketten sie ersetzt werden, wie im folgenden Abschnitt
+	erläutert.
+
+\section{Beschreibung der Schnittstelle}
+
+	Um eine Übersicht der Codegenerierungsschnittstelle zu vereinfachen
+	wird folgende 
+	Notation verwendet. Am Anfang einer Zeile steht die Bezeichnung der
+	Ausdrucks. Für den Ausdruck {\tt 
+	\$(CREATION)} also {\tt CREATION}. Um den Typ zu kennzeichnen, werden
+	die 
+	Buchstaben {\tt (S)} für String, {\tt (B)} für Boolean und {\tt (A)} 
+	für ein Array verwendet. Wird auf die Elemente eines Arrays verwiesen,
+	so werden die Bezeichner durch einen Punkt getrennt. Beispiel:
+
+	{\tt RESOURCES (A)}\\
+	{\tt RESOURCES} ist ein Array der gesetzten Ressourcen eines Widgets. 
+	Für alle Elemente des Arrays wird das angegebene {\em
+	sub-template} expandiert und anstelle von {\tt RESOURCES} eingefügt.
+	
+	{\tt RESOURCES.RESOURCENAME (S)}\\
+	Der {\tt RESOURCENAME} ist eine Zeichenkette, die den Namen einer
+	Ressource enthält. Dies kann zum Beispiel {\tt labelString} sein.
+
+	Die Schnittstelle der Codegenerierung gliedert sich in zwei Teile. Der
+	eine Teil ist die Schnittstelle zum Hauptprogramm und zum
+	Imakefile, und der andere Teil ist die Schnittstelle für die
+	Interfaces. 
+
+\subsection{Imakefile und Hauptprogramm}
+
+	Wird der Quellcode für ein Projekt erzeugt, so können Sie zu allen
+	Interfaces auch ein Imakefile und ein Hauptprogramm erzeugen. 
+
+	Alle im folgenden erläuterten Verwendungszwecke von Ausdrücken, sind
+	aus den vorhandenen Codegenerierungsmodellen (C und C++)
+	abgeleitet. Wenn Sie Ihre Codegenerierung verändern, dann können Sie
+	sich neuen Verwendungszwecke ausdenken.
+
+	{\tt PROGRAM (S)}\\
+	Der Ausdruck {\tt PROGRAM} enthält den Namen der Programms. Dabei ist
+	der Name der ausführbaren Datei gemeint. Dieser Name ergibt sich aus
+	dem Dateinamen der Projektdatei. Dieser Ausdruck wird vorallem im
+	Template des Imakefiles verwendet, um die Regel für das Linken des
+	Programms zu erzeugen.
+
+	{\tt STARTUP (S)}\\
+	Das Startup-Interface des Projektes. Dieses Interface wird als erstes
+	geöffnet. Im View Designer kann mit dem Settings-Dialog das
+	Startup-Interface bestimmt werden. {\tt STARTUP} enthält den Namen des
+	Interfaces, der gewöhnlich mit dem Namen der Interface-Klasse (in C++)
+	oder der 
+	Interface-Struktur (in C) identisch ist. Der Ausdruck wird im
+	Hauptprogramm verwendet, um das Startup-Interface zu erzeugen und
+	anzuzeigen. 
+	
+	{\tt APPL\_CLASS (S)}\\
+	Dieser Ausdruck enthält eine Zeichenkette, die die Application Class
+	des Programms bezeichnet. Dabei unterscheidet sie sich vom
+	Programmnamen nur darin, daß der erste Buchstabe groß geschrieben
+	wird. Die 
+	Application Class bestimmt auch den Namen des externen Resourcefiles.
+	Daher wird dieser Ausdrück sowohl im Imakefile wie auch im
+	Hauptprogramm verwendet.
+
+	{\tt OBJECTS (S)}\\
+	Eine Zeichenkette, die alle Objekt-Dateien enthält. Sie wird im
+	Template des Imakefiles verwendet. Alle Dateien haben die Endung 
+	{\tt .o} und sind durch ein Leerzeichen voneinander getrennt.
+
+	{\tt SOURCES (S)}\\
+	Auch dieser Ausdruck wird im Imakefile verwendet. Er enthält alle
+	Quellcode-Dateien des Projektes. Die Dateien haben die Endung {\tt .c}
+	oder {\tt .C} und sind durch ein Leerzeichen voneinander getrennt. Die
+	Aufzählung der Quellcode-Dateien wird normalerweise von der {\em make
+	depend} Regel benötigt.
+
+	{\tt RESOURCEFILES (S)}\\
+	Alle öffentlichen (public) Ressourcen werden in Dateien mit der Endung
+	{\tt .rf} geschrieben. Diese werden beim Erzeugen des Programm zu
+	einem gemeinsamen Resourcefile zusammen kopiert. Normalerweise trägt
+	diese Datei den Namen {\tt \$(APPL\_CLASS).ad}. Aus der Datei entsteht
+	dann wiederum eine Header-Datei, die die Fallback-Ressourcen des
+	Projektes enthält. {\tt RESOURCEFILES} enthält also alle Dateien mit
+	der Endung {\tt .rf} durch ein Leerzeichen getrennt.
+
+
+\subsection{Interfaces}
+
+	Für jedes Interface eines Projektes werden folgende Ausdrücke
+	ersetzt. Die generierten Quellcodedateien entstehen mit folgender
+	Schnittstelle.
+
+	{\tt SHELLCREATION (S)}\\
+	Diese Zeichenkette enthält einen Funktionsaufruf zum Erzeugen des
+	Shell-Widgets. Dies ist ein Aufruft der Funktion {\tt
+	XtCreateWidget()}. Die übergebenen Parameter werden jedoch
+	vorausgesetzt und haben folgende Bedeutung:
+	{\tt Widget parent} sollte auf das Eltern-Widget des zu erzeugenden
+	Widgets gesetzt sein. {\tt ArgList args} enthält alle gesetzten
+	Ressourcen des Widgets. {\tt Cardinal n} ist die Anzahl der
+	Ressourcen. Bevor dieser Ausdruck in einer Template-Datei verwendet
+	wird, sollten die Variablen definiert und auf richtige Werte gesetzt
+	werden. 
+	
+	{\tt SHELLIDENTIFIER (S)}\\
+	Der Variablenname des Shell-Widgets. Gewöhnlich wird die Variable
+	durch die eben beschriebene Funktion gesetzt.
+
+	{\tt SHELLRESOURCES (A)}\\
+	Dies ist ein Array und enthält alle gesetzten Ressourcen eines
+	Widgets. Für jede einzelne Ressource wird die angegebene Datei 
+	geladen und ausgefüllt. Alle so entstandenen Quelltextsegmente werden
+	zusammengefügt und an der Stelle des Ausdrucks {\tt SHELLRESOURCES} in
+	das Quelltext-Template eingefügt. Normalerweise werden hierbei die
+	Variable {\tt ArgList args} mit {\tt XtSetArg()} und die Variable {\tt
+	Cardinal n} gesetzt.
+
+	{\tt SHELLRESOURCES.RESOURCENAME (S)}\\
+	Diese Zeichenkette enthält den Namen der zu setzenden Ressource. Der
+	Name kann 
+	zum Beispiel {\tt labelString} sein. Es gibt zwei Möglichkeiten diese
+	Zeichenkette in {\tt XtSetArg()} zu verwenden:
+	\begin{enumerate}
+	\item Durch Zusammenfügen mit dem Prefix {\tt XmN}, also z.B. {\tt
+	XmNlabelString}. Dies hat jedoch den Nachteil, das in späteren
+	Versionen des View Designer weitere, Motif fremde, Widget-Klassen
+	eingebunden werden, die nicht den Prefix {\tt XmN} verwenden und somit
+	eine Inkompatibilität entsteht.
+	\item Die Zeichenkette kann in Anführungszeichen eingeschlossen
+	werden. Dies hat die gleiche Bedeutung wie das Makro {\tt
+	XmNlabelString}, ist jedoch portabler.
+	\end{enumerate}
+
+	{\tt SHELLRESOURCES.RESOURCEVALUE (S)}\\
+	Der Wert der zusetzenden Ressource befindet sich in dieser
+	Zeichenkette. Dabei kann dieser Wert eine C-Konstante sein, z.B.
+	eine Zahl, oder es wird eine der Konvertierungsfunktion
+	aufgerufen:
+	\begin{enumerate}
+	\item {\tt Pixmap createPixmapFromData(char**);}\\
+		Es wird eine, in den Quellcode eingebundene (include), 
+		Pixmap erzeugt.
+	\item {\tt Pixmap createPixmapFromFile(char*);}\\
+		Die Pixmap wird zur Laufzeit des Programms geladen (load).
+	\item {\tt RES\_CONVERT(type, string);}\\
+		Dies ist keine Funktion, sondern ein Makro. Es soll den
+		Ressourcewert, der als {\tt char *} in {\tt string} übergeben
+		wird, in den Typ {\tt type} konvertieren. Dabei wird der Typ
+		ebenfalls als Zeichenkette (z.B. {\grqq}XmString{\grqq})
+		angegeben. 
+	\end{enumerate}
+
+
+	{\tt NAME (S)}\\
+	Hier ist der Name des Interfaces enthalten. Er kann als Klassenname
+	(z.B. {\tt class \$(NAME)}) oder auch anders verwendet werden. 
+	Es sei noch darauf hingewiesen, daß der Name des Interfaces gleich dem
+	Namen des Shell-Widgets ist.
+
+	{\tt LINKS (A)}\\
+	Alle Interfaces die innerhalb eines anderen Interfaces als Link
+	verwendet werden, sind in diesem Array enthalten. Es wird
+	hauptsächlich zum Einbinden des Header-Dateien verwendet, das die
+	Schnittstelle des gelinkten Interfaces bekannt sein muß.
+
+	{\tt LINKS.LINK\_CLASS (S)}\\
+	Der Name des gelinkten Interfaces befindet sich in diesem
+	Ausdruck. Aus ihm kann die Präprozessor-Anweisung 
+	{\verb! #include "$(LINK_CLASS).h"!} zusammengesetzt werden.
+	
+	{\tt WIDGETS (A)}\\
+	Alle Widgets eines Interfaces, ausgenommen das Shell-Widgets, sind in
+	diesem Array zusammengefaßt. Dabei befinden sich die Widgets in einer
+	bestimmten Reihenfolge in dem Array. Die Reihenfolge des Erzeugens der
+	Widgets, wird so festgelegt. Dabei sind die Elemente nicht alle vom
+	Typ Widget. Die gelinkten Interfaces befinden sich ebenfalls unter den
+	Elementen von {\tt WIDGETS}.
+
+
+	{\tt WIDGETS.ISLINK (B)}\\
+	Der bool'sche Ausdruck ist wahr, wenn das Element kein Widget sondern
+	ein Link ist.
+
+  	{\tt WIDGETS.MANAGE (B)}\\
+	Wenn das Widget gemanaged werden soll, ist dieser Ausdruck wahr. Falls
+	nicht, sollte die Funktion {\tt XtManangeChild()} nicht aufgerufen
+	werden. 
+
+  	{\tt WIDGETS.IDENTIFIER (S)}\\
+	Die Zeichenkette enthält den Namen des Widgets, der auch als
+	Variablenname verwendet wird.
+
+	{\tt WIDGETS.TYPE (S)}\\
+	Der Typ der Variable kann verschieden sein. Im Normalfall ist er {\tt
+	Widget}, er kann jedoch auch ein Zeiger auf ein gelinktes Interface
+	sein. 
+
+	{\tt WIDGETS.PARENT (S)}\\
+	Der Name des Eltern-Widgets befindet sich in dieser Zeichenkette. Er
+	ist zum Setzen der Variable {\tt Widget parent} zu benutzen.
+
+
+	{\tt WIDGETS.CREATION (S)}\\
+	Das Erzeugen des Widgets bzw. Links, wird mit Hilfe der hier
+	enthaltenen Funktionen gemacht. Es wird vorausgesetzt, daß die
+	Variablen {\tt Widget parent}, {\tt ArgList args} und {\tt Cardinal n}
+	definiert sind und die richtigen Werte haben (vgl. {\tt
+	SHELL\-CREATION}). Der Unterschied zum Erzeugen den Shell-Widgets sind
+	die verschiedenen Funktionen die verwendet werden. So wird nicht nur
+	die Funktion {\tt XtCreate\-Widget()}, sondern z.B auch {\tt
+	XmCreateMenuBar()} oder {\tt createCreditCard()} verwendet, wenn
+	CreditCard ein gelinktes Interface ist.
+
+	{\tt WIDGETS.INTERFACE (S)}\\
+	Hierin befindet sich der Name des Interfaces, zu dem das Widget
+	gehört. Er kann benutzt werden, um auf die Klasse bzw. Struktur des
+	Interfaces zuzugreifen.
+
+	{\tt WIDGETS.RESOURCES (A)}\\
+	Die zu setzenden Ressourcen sind in diesem Array enthalten. Es wird
+	wie das Array {\tt SHELLRESOURCES} verwendet.
+
+	{\tt WIDGETS.RESOURCES.RESOURCENAME (S)}\\
+	Auch die Verwendung dieser Zeichenkette ist mit den
+	Shell-Widget-Ressourcen identisch. Es ist auch wieder zu beachten, daß
+	der Ressourcename nicht mit dem Präfix {\tt XmN} zusammengefügt wird. 
+
+	{\tt WIDGETS.RESOURCES.RESOURCEVALUE (S)}\\
+	Die Verwendung dieser Zeichenkette ist auch der Zeichenkette der
+	Shell-Widget-Ressourcen ähnlich. Selbst die bereits erläuterten
+	Funktionen zum Umwandeln von Ressourcen werden hier verwendet.
+
+
+	{\tt METHODS (A)}\\
+	In einem Interface sind bekanntlich Callbacks zu implementieren. Diese
+	Callbacks werden als Methoden eines Interfaces angesehen. Alle
+	Methoden befinden sich in dem Array {\tt METHODS}. Es wird benutzt, um
+	die Methoden zu deklarieren und {\em Stubs} für Callbacks zu erzeugen.
+
+	{\tt METHODS.METHOD (S)}\\
+	Der eigentliche Methodenname. Die Zeichenketten des Ausdrucks ist
+	identisch mit der, die im Widget Resource Editor in der Kategorie
+	Callbacks als Methode eingetragen wurden. 
+
+	{\tt METHODS.INTERFACE (S)}\\
+	Um keine Namenskonflikte zu riskieren oder den Scope der
+	Interface-Klasse zu bilden, kann der Name des Interfaces verwendet
+	werden. Innerhalb eines Interfaces ist der Methodenname immer der
+	einzige. 
+
+	{\tt CALLBACKS (A)}\\
+	Das Array {\tt CALLBACKS} unterscheidet sich von {\tt ME\-THODS}
+	dadurch, daß es nicht ein 
+	Element für eine Methode, sondern ein Element für das Setzen eines
+	Callbacks hat. D.h. eine Methode kann bei zwei unterschiedlichen
+	Callback-Ereignissen aufgerufen werden. Es gibt also mindestens soviel
+	Elemente in {\tt CALLBACKS} wie in {\tt METHODS}.
+
+	{\tt CALLBACKS.IS\_LINK (B)}\\
+	Diese bool'sche Variable hat den Wert wahr, wenn das Objekt, für das
+	der Callback zu setzen ist, kein Widget sondern ein Link auf ein
+	anderes Interfaces ist.
+
+	{\tt CALLBACKS.IS\_MANAGE\_CB (B)}\\
+	Ist wahr, wenn zum Callback-Ereignis ein anderes Widgets gemanaged
+	werden soll. Er wird also keine Methode aus {\tt METHODS} aufgerufen,
+	sondern eine Funktion, die {\tt XtManageChild()} ausführt.
+
+	{\tt CALLBACKS.NAME (S)}\\
+	Der Name des Callbacks z.B. {\tt activateCallback}. Hier ist ebenfalls
+	wie bei Ressourcenamen zu beachten, daß aus der Zeichenkette eine
+	C-String gebildet wird. 
+
+	{\tt CALLBACKS.WIDGET\_IDENTIFIER (S)}\\
+	Der Name des Widgets, zu dem der Callback gesetzt werden soll. Es muß
+	sich nicht in jedem Fall um ein Widget handeln. Hat {\tt IS\_LINK} den
+	Wert wahr, so kann hier auch der Name des Links enthalten sein. Der
+	Callback wird dann zum Frame-Widget des Links hinzugefügt.
+
+	{\tt CALLBACKS.METHOD (S)}\\
+	Der Name der Methode, die beim Callback-Ereignis ausgeführt werden
+	soll. Dies muß nicht die gleiche Funktion sein, die bei {\tt
+	XtAddCallback()} übergeben wird. In C++ ist das auch gar nicht
+	möglich. Es 
+	wird vielmehr eine {\em static member function} als Callback
+	ausgeführt. Diese bekommt als {\em client data} den Zeiger auf die
+	Instanz des Interfaces ({\tt this}) mit. In dieser Funktion wird dann
+	die abstrakte virtuelle Methode aufgerufen, die vom Entwickler zu
+	überladen und zu implementieren ist.
+
+
+	{\tt CALLBACKS.WIDGET\_TO\_MANAGE (S)}\\
+	Wenn {\tt IS\_MANAGE\_CB} den Wert wahr hat, dann befindet sich in
+	diesem Ausdruck der Name der Widgets, das im Falle des
+	Callback-Ereignisses zu managen ist.
+
+
+	{\tt RELATIONS (A)}\\
+	Eine bestimmte Art von Ressourcen wird erst gesetzt, nachdem alle
+	Widgets erzeugt sind. Dies sind Ressourcen vom Typ Widget, d.h. alle
+	Ressourcen, die mit einem Widget als Wert gesetzt werden, setzt die
+	Codeerzeugung erst nach dem Erzeugen aller Widgets. Das bringt den
+	Vorteil, daß alle Widget bereits vorhanden sind und keine Rücksicht
+	auf die Reihenfolge des Erzeugens genommen werden muß.
+
+	{\tt SOURCEWIDGET (S)}\\
+	Diese Zeichenkette enthält den Namen des Widgets, für das die
+	Ressource gesetzt werden soll.
+
+	{\tt RESOURCENAME (S)}\\
+	Der Name der Ressource, die vom Typ Widget ist und gesetzt werden
+	soll. Er kann z.B. {\tt leftWidget} oder {\tt subMenuId} sein.
+	Auch hier ist das Präfix {\tt XmN} zu beachten.
+
+	{\tt DESTINATIONWIDGET (S)}\\
+	Das Widget, das als Ressourcewert übergeben wird, z.B. das Widget, an
+	das sich das Source-Widget festhalten soll, wenn beide Kinder eines
+	XmForms und die Ressource {\tt leftWidget} gesetzt wird.
+
+	{\tt SOURCE\_ISLINK (B)}\\
+	{\tt DESTINATION\_ISLINK (B)}\\
+	Auch hier ist wieder zu beachten, daß die Objekte Links sein
+	können. Dann ist jeweils das Frame-Widget zu benutzen.
+
+	{\tt HEADERS (A)}\\
+	Alle in einem Interface verwendeten Widget-Klassen benötigen
+	unterschiedliche Header-Dateien. In diesem Array befinden sich alle
+	benötigten Header-Dateien.
+
+	{\tt HEADERS.HEADER (S)}\\
+	Der relative Pfadname der Header-Datei, aus der dann die
+	Include-Anweisung zusammengesetzt wird, z.B. 
+	{\verb!#include <$(HEADER)>!}
+
+	{\tt LOCALHEADERS (A)}\\
+	Durch das Einbinden von Xpm-Dateien werden weitere Header benötigt.
+	Auch hier befinden sich im Array alle benötigten Header-Dateien, die
+	identisch sind mit den einzubindenden Xpm-Dateien.
+
+	{\tt LOCALHEADERS.HEADER (S)}\\
+	Der Dateiname der Xpm-Datei.
+
+	{\tt RESOURCEFILE (S)}\\
+	Werden Ressource auf {\em public} gesetzt, dann ist die Ressource in
+	einem externen Ressourcefile zusetzen. Alle öffentlichen Ressourcen
+	eines Interfaces werden in dem Ausdruck {\tt RESOURCEFILE} in die
+	Datei mit der Endung {\tt .rf} eingefügt.
+
+
+\begin{figure}
+\begin{maxipage}
+\begin{small}
+	{\baselineskip0.4cm \label{tmpl-sample}
+	\begin{verbatim}
+	// -----------------------------------------------------
+	// $(NAME)_base.h
+	// 
+	// This file was automaticly generated by
+	// View Designer/X                          
+	//
+	// Don't edit this file, please !
+	// -----------------------------------------------------
+
+	#ifndef _$(NAME)_base_H_
+	#define _$(NAME)_base_H_
+	
+	#include <X11/Intrinsic.h>
+	#include "VcView.h"
+	
+	$(LINKS,c++.links_forward.tmpl)
+	
+	// -----------------------------------------------------
+	// Class definition 
+	// class $(NAME)_base is a derived class of VcView
+	// -----------------------------------------------------
+	
+	class $(NAME)_base : public VcView {
+	private:
+	  void createWidgets();
+	  void addRelations();
+	  void addCallbacks();
+	
+	protected:
+	  Widget $(SHELLIDENTIFIER);
+	$(WIDGETS,c++.widgetdeclaration.tmpl)
+	
+	$(METHODS,c++.static_cb_declaration.tmpl)
+	
+	
+		  // override the following methods in class $(NAME)
+	
+	$(METHODS,c++.cb_abstract_declaration.tmpl)
+	
+	public:
+	  $(NAME)_base(Widget parent = NULL, ArgList args = NULL, 
+	                                     Cardinal n = 0);
+	
+	  Widget getTop() { return $(SHELLIDENTIFIER); }
+	  Pixmap createPixmapFromData(char **data);
+	  Pixmap createPixmapFromFile(char *filename);
+	  static void manageWidget(Widget wg, XtPointer c,
+	                                      XtPointer call);
+	};
+	
+	#endif /* Don't add stuff after this #endif */
+	\end{verbatim}
+	}
+\end{small}
+\end{maxipage}
+\caption{Beispiel für eine Template-Datei}
+\end{figure}
+
+\lazyglossar
+
+\myitem{Dialog}
+	Ein Teil eines User Interfaces, dessen Sichtbarkeit
+	temporär ist. Zu bestimmten Ereignissen und um
+	detailierte Informationen anzuzeigen, werden Dialoge
+	sichtbar gemacht.
+
+\myitem{Drag \& Drop}
+	Verfahren bei der Benutzung von grafischen Oberflächen,
+	das es ermöglicht, Objekte zu kopieren, zu verschieben
+	oder mit anderen Objekten zu verknüpfen. Unter OSF/Motif
+	wird durch klicken auf ein Objekt und ziehen der Maus das
+	Verfahren angewendet. Dazu wird die mittlere Maustaste
+	benutzt.
+
+\myitem{Imake}
+	Ein Paket um sehr leicht Makefiles zu erzeugen. Das
+	Imake-Paket gehört zum Standardumfang des X Window Systems
+	und wird somit hauptsächlich benutzt, um Makefiles
+	für X-Programme zu generieren. Die Quelle von Imake
+	ist ein sehr einfaches Imakefile.
+
+
+\myitem{Option-Menü}
+	Ein Teil eines User Interfaces, mit dem aus mehreren
+	Zuständen einer ausgewählt wird. Es ist dabei nur der
+	momentane Zustand sichtbar. Durch Klicken mit der Maus
+	wird ein Menü mit allen möglichen Zuständen angezeigt,
+	aus dem einer ausgewählt wird.
+
+\myitem{OSF} 
+	Abkürzung für Open Software Foundation. Ein
+	Zusammenschluß von verschiedenen Firmen um
+	offene System durchzusetzen. Produkte der OSF sind
+	z.B. Motif, DCE oder OSF/1.
+	
+\myitem{OSF/Motif}
+	Toolkit basierend auf dem X Window System. Es definiert
+	viele Widget-Klassen und Funktionen zum Erstellen von
+	grafischen Benutzeroberflächen.
+
+\myitem{Push-Button}
+	Ein Teil eines User Interfaces (Widget), der durch Anklicken oder
+	durch Aktivieren mit der Tastatur eine bestimmte Aktion auslöst.
+	Vielfach wird dieses Widget im deutschen auch Schaltfläche genannt.
+
+\myitem{Shell-Widget}
+	Stellt die Schnittstelle zur Außenwelt (Window-Ma\-na\-ger)
+	dar. Das Shell-Widget und seine Kinder 
+	erscheinen in einem separaten Fenster, welches vom
+	Window-Manager verwaltet wird.
+
+
+\myitem{Toggle-Button}
+	Ein Widget, das zwei Zustände (z.B. an/aus) annehmen kann.
+
+
+\myitem{User Interface}
+	Grafische Benutzeroberfläche.
+
+\myitem{Widget}
+	Objekt eines User Interfaces. Jedes Widget hat ein
+	Aussehen und Verhalten. Diese Eigenschaften
+	werden durch Ressourcen bestimmt. Widgets sind z.B.
+	Text-Eingabefelder und Menüs.
+
+\myitem{Widget-Klasse}
+	In einer Widget-Klasse sind die Eigenschaften eines
+	Widgets definiert. Widget-Klassen bilden eine Hierarchie.
+	Die Basis aller ist die Widget-Klasse Core. 
+
+\myitem{Window-Manager}
+	Eine eigenständiges Programm, das die Fenster von
+	Anwendungen verwaltet (Grö\-ße ändern, Verschieben
+        usw.). Der Window-Manager von OSF/Motif ist der {\bf mwm}.
+
+
+\myitem{X Window System}
+	Fenstersystem für offene Systeme. Unter dem X Window System
+	können grafische Benutzeroberflächen entwickelt und
+	angewandt werden. Es wurde vom Massachusatts Institute of
+	Technology (M.I.T.) entwickelt.
+
+\lazyindex
+
+\end{document}
+% end of document
+% don't add stuff after this 
+  

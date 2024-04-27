@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+export MLXVC_HOME=replace_mlxvc_home
+export XFILESEARCHPATH=$XFILESEARCHPATH:$MLXVC_HOME/lib/X11/%L/%T/%N%S:$MLXVC_HOME/lib/X11/%T/%N%S
+
+exec $MLXVC_HOME/bin/mlxvc.bin $*

@@ -1,0 +1,51 @@
+! ----------------------------------------------
+! File: WidgetPalette.rf
+! Resource file of interface WidgetPalette
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*WidgetPalette*quickHelp.labelString: This is the Quick Help Line.
+*WidgetPalette*fileButton.labelString: File
+*WidgetPalette*fileButton.mnemonic: F
+*WidgetPalette*fileClose.accelerator: Ctrl<Key>c
+*WidgetPalette*fileClose.acceleratorText: ^C
+*WidgetPalette*fileClose.labelString: Close
+*WidgetPalette*fileClose.mnemonic: C
+*WidgetPalette*fileClose.quickHelpLabel: Hide the widget class palette.
+*WidgetPalette*viewButton.labelString: View
+*WidgetPalette*viewButton.mnemonic: V
+*WidgetPalette*withNamesButton.labelString: With Names
+*WidgetPalette*withNamesButton.mnemonic: N
+*WidgetPalette*withIconsButton.labelString: With Icons
+*WidgetPalette*withIconsButton.mnemonic: I
+*WidgetPalette*shellsButton.labelString: Shells
+*WidgetPalette*shellsButton.mnemonic: S
+*WidgetPalette*managersButton.labelString: Managers
+*WidgetPalette*managersButton.mnemonic: M
+*WidgetPalette*primitivesButton.labelString: Primitives
+*WidgetPalette*primitivesButton.mnemonic: P
+*WidgetPalette*dialogsButton.labelString: Dialogs
+*WidgetPalette*dialogsButton.mnemonic: D
+*WidgetPalette*optionsButton.labelString: Options
+*WidgetPalette*optionsButton.mnemonic: O
+*WidgetPalette*createOnClickButton.labelString: Create On Click
+*WidgetPalette*createOnClickButton.mnemonic: C
+*WidgetPalette*asChildOfSelectedButton.labelString: As Child
+*WidgetPalette*asChildOfSelectedButton.mnemonic: A
+*WidgetPalette*helpButton.labelString: Help
+*WidgetPalette*onHelp.labelString: On Help
+*WidgetPalette*onHelp.mnemonic: H
+*WidgetPalette*onContext.labelString: On Context
+*WidgetPalette*onContext.mnemonic: C
+*WidgetPalette*helpHelp.accelerator: Ctrl<Key>F1
+*WidgetPalette*helpHelp.acceleratorText: ^F1
+*WidgetPalette*helpHelp.labelString: On Window
+*WidgetPalette*helpHelp.mnemonic: W
+*WidgetPalette*helpHelp.quickHelpLabel: Show help.
+*WidgetPalette*WidgetPanedWindow.quickHelpLabel: Press left button on icons.
+
+
+! ----------------------------------------------
+! end of resource file WidgetPalette.rf
+! ----------------------------------------------

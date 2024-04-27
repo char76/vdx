@@ -1,0 +1,47 @@
+#ifdef VcTop
+#define AlternateVcLibDir  YES
+#define AlternateVcInclude YES
+VCTOP	=	VcTop
+#else
+#define AlternateVcLibDir  NO
+#define AlternateVcInclude NO
+VCTOP	=
+#endif
+
+#ifndef CplusplusCmd
+#include <Cplusplus.tmpl>
+#endif
+
+#ifdef UseLac
+#  ifdef AlternateVcInclude
+CXXEXTRA_INCLUDES = -I$(VCTOP)/include
+#  endif
+#  ifdef AlternateVcLibDir
+#    define LacLdOption 	-L$(VCTOP)/lib -llac -llwid
+#  else
+#    define LacLdOption	/**/
+#  endif
+#else
+#  define LacLdOption	/**/ 
+#endif
+
+
+#ifdef AlternateMotifLibDir
+#  define MotifLibDirOption -L$(MOTIFLIBDIR)
+#else
+#  define MotifLibDirOption /**/
+#endif
+
+#ifndef LocalLibraries
+#define LocalLibraries /**/
+#endif
+
+#ifndef XpmLib
+#define XpmLib -lXpm
+#endif
+
+LOCAL_LIBRARIES =  MotifLibDirOption LacLdOption LocalLibraries XpmLib XmClientLibs -lm
+
+DEPENDFLAGS = $(CXXINCLUDES) $(CXXDEFINES)
+
+

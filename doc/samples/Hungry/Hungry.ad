@@ -1,0 +1,48 @@
+! ----------------------------------------------
+! File: OrderWindow.rf
+! Resource file of interface OrderWindow
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*OrderWindow.title: Are you hungry?
+*OrderWindow*apply_button.labelString: Apply
+*OrderWindow*close_button.labelString: Close
+*OrderWindow*help_button.labelString: Help
+*OrderWindow*helpDialog.dialogTitle: A little help.
+*OrderWindow*helpDialog.messageString: If you want a Burger, click the Burger button.\nTo order a Pizza, click the Pizza button.\nChoose a credit card and press Apply to order.\nClick on Close button to exit the application.
+*OrderWindow*helpDialog.okLabelString: Close
+
+
+! ----------------------------------------------
+! end of resource file OrderWindow.rf
+! ----------------------------------------------
+! ----------------------------------------------
+! File: FirstInterface.rf
+! Resource file of interface FirstInterface
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*FirstInterface*amex_toggle.labelString: American Express
+*FirstInterface*visa_toggle.labelString: Visa Card
+*FirstInterface*master_toggle.labelString: Master Card
+
+
+! ----------------------------------------------
+! end of resource file FirstInterface.rf
+! ----------------------------------------------
+! ----------------------------------------------
+! File: SecondInterface.rf
+! Resource file of interface SecondInterface
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*SecondInterface*burger_toggle.labelString: Burger
+*SecondInterface*pizza_toggle.labelString: Pizza
+
+
+! ----------------------------------------------
+! end of resource file SecondInterface.rf
+! ----------------------------------------------

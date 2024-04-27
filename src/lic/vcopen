@@ -1,0 +1,9 @@
+#!/bin/sh
+
+to_open=$1
+
+if [ -w $to_open ]; then
+    echo "File $to_open already locked."
+else
+    co -l $to_open
+fi

@@ -1,0 +1,68 @@
+#ifndef OptimizedCplusplusDebugFlags
+#define OptimizedCplusplusDebugFlags OptimizedCDebugFlags
+#endif
+#ifndef DebuggableCplusplusDebugFlags
+#define DebuggableCplusplusDebugFlags DebuggableCDebugFlags
+#endif
+#ifndef DefaultCplusplusDebugFlags
+#define DefaultCplusplusDebugFlags OptimizedCplusplusDebugFlags
+#endif
+
+#ifndef CplusplusCmd
+#if HasGcc
+#define CplusplusCmd g++
+#else
+#define CplusplusCmd CC
+#endif
+#endif
+#ifndef CplusplusYaccCmd
+#define CplusplusYaccCmd YaccCmd
+#endif
+
+#ifndef CplusplusStandardDefines
+#define CplusplusStandardDefines StandardDefines
+#endif
+#ifndef CplusplusExtraDefines
+#define CplusplusExtraDefines /**/
+#endif
+#ifndef CplusplusExtraIncludes
+#define CplusplusExtraIncludes /**/
+#endif
+#ifndef CplusplusDependIncludes
+#define CplusplusDependIncludes /**/
+#endif
+#ifndef CplusplusOptions
+#define CplusplusOptions /**/
+#endif
+#ifndef CplusplusSpecialOptions
+#define CplusplusSpecialOptions /**/
+#endif
+
+#ifndef CCsuf
+#define CCsuf cxx
+#endif
+
+.SUFFIXES: .CCsuf
+
+              CXX = CplusplusCmd
+    CXXDEBUGFLAGS = DefaultCplusplusDebugFlags
+ CXXEXTRA_DEFINES = CplusplusExtraDefines
+CXXEXTRA_INCLUDES = CplusplusExtraIncludes
+  CXXIDL_INCLUDES = 
+   CXXSTD_DEFINES = CplusplusStandardDefines
+       CXXOPTIONS = CplusplusOptions
+      CXXINCLUDES = $(INCLUDES) $(TOP_INCLUDES) $(CXXEXTRA_INCLUDES) $(CXXIDL_INCLUDES) 
+       CXXDEFINES = $(CXXINCLUDES) $(CXXSTD_DEFINES) $(THREADS_CXXDEFINES) $(CXXEXTRA_DEFINES)
+         CXXFLAGS = $(CXXDEBUGFLAGS) $(CXXOPTIONS) $(THREADS_CXXFLAGS) $(CXXDEFINES)
+     CXXLDOPTIONS = $(CXXDEBUGFLAGS) $(CXXOPTIONS) -L$(USRLIBDIR) $(EXTRA_LDOPTIONS) $(THREADS_CXXLDFLAGS) $(LOCAL_LDFLAGS) $(LDPRELIB)
+#if AlternateUsrLibDir && HasLdRunPath
+      CXXENVSETUP = LD_RUN_PATH=$(USRLIBDIR)
+          CXXLINK = $(CXXENVSETUP) $(CXX)
+#else
+          CXXLINK = $(CXX)
+#endif
+
+	   CCYACC = CplusplusYaccCmd
+
+#include <Cplusplus.rules>
+

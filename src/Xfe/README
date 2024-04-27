@@ -1,0 +1,13 @@
+XfeWidgets
+----------
+
+This is the Xfe Widget library. This work is provided by netscape
+under the terms of the NPL. Please read the file LICENSE for more
+information. The changes are described in file CHANGES.
+
+To compile this library:
+
+	xmkmf
+
+	make
+

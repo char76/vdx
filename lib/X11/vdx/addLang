@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ $# != 2 ] ; then
+	echo usage: $0 source-lang dest-lang
+	exit 1
+fi
+
+for i in `ls $1.*tmpl`
+do
+	new=$2${i#$1}
+	echo Creating $new
+	cat $i | sed -e "s/,$1\./,$2\./g" >$new
+done
+
+
+the_line=`grep "^$1 " lang.cf`
+the_line=$2${the_line#$1}
+
+grep -v $2 lang.cf >lang.cf.tmp
+echo $the_line >>lang.cf.tmp
+echo >>lang.cf.tmp
+mv lang.cf.tmp lang.cf
+
+

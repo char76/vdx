@@ -1,0 +1,5 @@
+PALETTE "Templates.pal"
+INTERFACE "MLXHelp.i"
+LANG "c++lac"
+STARTUP "MLXHelp"
+SOURCEDIR "/home/lazy/prj/lic-hpux/src/lac"

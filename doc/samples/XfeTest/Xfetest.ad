@@ -1,0 +1,35 @@
+! -----------------------------------------
+! This file was automaticly generated
+! by VDX 
+!
+!             Do not edit!
+!
+! Global resources for project xfetest
+! Application Class: Xfetest
+! -----------------------------------------
+
+*XfeTab.buttonLayout: button_label_only
+*Tab0.labelString: 1
+*Tab1.labelString: 2
+*Tab2.labelString: 3
+
+
+! End of file
+
+! ----------------------------------------------
+! File: ToolBoxSample.rf
+! Resource file of interface ToolBoxSample
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*ToolBoxSample*xfeButton.labelString: Start
+*ToolBoxSample*xfeButton_3.labelString: Stop
+*ToolBoxSample*xfeButton_3_1.labelString: Low
+*ToolBoxSample*xfeButton_3_2.labelString: High
+*ToolBoxSample*progress.labelString:  
+
+
+! ----------------------------------------------
+! end of resource file ToolBoxSample.rf
+! ----------------------------------------------

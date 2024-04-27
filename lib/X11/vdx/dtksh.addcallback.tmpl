@@ -1,0 +1,4 @@
+$(IS_MANAGE_CB,
+  XtAddCallback  ${a$(INTERFACE)[$(WIDGET_IDENTIFIER)]} "$(NAME)" \\
+                 "XtManageChild ${a$(INTERFACE)[$(WIDGET_TO_MANAGE)]}" ,
+  XtAddCallback  ${a$(INTERFACE)[$(WIDGET_IDENTIFIER)]} "$(NAME)" $(INTERFACE)_$(METHOD) )

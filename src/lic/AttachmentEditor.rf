@@ -1,0 +1,144 @@
+! ----------------------------------------------
+! File: AttachmentEditor.rf
+! Resource file of interface AttachmentEditor
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*AttachmentEditor*fileButton.labelString: File
+*AttachmentEditor*fileButton.mnemonic: F
+*AttachmentEditor*loadButton.accelerator: Ctrl<Key>l
+*AttachmentEditor*loadButton.acceleratorText: ^L
+*AttachmentEditor*loadButton.labelString: Load
+*AttachmentEditor*loadButton.mnemonic: L
+*AttachmentEditor*loadButton.quickHelpLabel: Load selected widget into browser.
+*AttachmentEditor*applyButton.accelerator: Ctrl<Key>a
+*AttachmentEditor*applyButton.acceleratorText: ^A
+*AttachmentEditor*applyButton.labelString: Apply
+*AttachmentEditor*closeButton.labelString: Close
+*AttachmentEditor*closeButton.mnemonic: C
+*AttachmentEditor*closeButton.quickHelpLabel: Close this window.
+*AttachmentEditor*viewButton.labelString: View
+*AttachmentEditor*smallIconButton.accelerator: Ctrl<Key>s
+*AttachmentEditor*smallIconButton.acceleratorText: ^S
+*AttachmentEditor*smallIconButton.labelString: Small Icons
+*AttachmentEditor*smallIconButton.mnemonic: S
+*AttachmentEditor*smallIconButton.quickHelpLabel: Display small icons in Tree View.
+*AttachmentEditor*withIconButton.accelerator: Ctrl<Key>I
+*AttachmentEditor*withIconButton.acceleratorText: ^I
+*AttachmentEditor*withIconButton.labelString: With Icons
+*AttachmentEditor*withIconButton.mnemonic: I
+*AttachmentEditor*withIconButton.quickHelpLabel: Display icons Tree View.
+*AttachmentEditor*withClassNameButton.accelerator: Ctrl<Key>n
+*AttachmentEditor*withClassNameButton.acceleratorText: ^N
+*AttachmentEditor*withClassNameButton.labelString: With Class Names
+*AttachmentEditor*withClassNameButton.mnemonic: N
+*AttachmentEditor*withClassNameButton.quickHelpLabel: Display class names of widgets.
+*AttachmentEditor*widgetButton.labelString: Widget
+*AttachmentEditor*widgetButton.mnemonic: W
+*AttachmentEditor*editButton.acceleratorText: E
+*AttachmentEditor*editButton.labelString: Edit
+*AttachmentEditor*editButton.mnemonic: E
+*AttachmentEditor*editButton.quickHelpLabel: Show Widget Resource Editor for selected widgets.
+*AttachmentEditor*browseButton.acceleratorText: B
+*AttachmentEditor*browseButton.labelString: Browse
+*AttachmentEditor*browseButton.mnemonic: B
+*AttachmentEditor*browseButton.quickHelpLabel: Show Browser for selected widgets.
+*AttachmentEditor*menuEditButton.acceleratorText: M
+*AttachmentEditor*menuEditButton.labelString: Menu Editor
+*AttachmentEditor*menuEditButton.mnemonic: M
+*AttachmentEditor*menuEditButton.quickHelpLabel: Show Menu Ediotor for selected widgets.
+*AttachmentEditor*cutButton.acceleratorText: X
+*AttachmentEditor*cutButton.labelString: Cut
+*AttachmentEditor*cutButton.mnemonic: u
+*AttachmentEditor*cutButton.quickHelpLabel: Copy selection to clipboard and delete selection.
+*AttachmentEditor*copyButton.acceleratorText: C
+*AttachmentEditor*copyButton.labelString: Copy
+*AttachmentEditor*copyButton.mnemonic: C
+*AttachmentEditor*copyButton.quickHelpLabel: Copy selection to clipboard.
+*AttachmentEditor*pasteButton.acceleratorText: V
+*AttachmentEditor*pasteButton.labelString: Paste
+*AttachmentEditor*pasteButton.mnemonic: P
+*AttachmentEditor*pasteButton.quickHelpLabel: Paste clipboard contents to selected widgets.
+*AttachmentEditor*deleteButton.acceleratorText: DEL
+*AttachmentEditor*deleteButton.labelString: Delete
+*AttachmentEditor*deleteButton.mnemonic: D
+*AttachmentEditor*deleteButton.quickHelpLabel: Delete selected widgets.
+*AttachmentEditor*helpButton.labelString: Help
+*AttachmentEditor*helpButton.mnemonic: H
+*AttachmentEditor*onHelp.labelString: On Help
+*AttachmentEditor*onHelp.mnemonic: H
+*AttachmentEditor*onHelp.quickHelpLabel: Show help on help system.
+*AttachmentEditor*onContext.mnemonic: C
+*AttachmentEditor*onContext.quickHelpLabel: Get help after clicking in a window.
+*AttachmentEditor*onWidResEditor.accelerator: Ctrl<Key>F1
+*AttachmentEditor*onWidResEditor.acceleratorText: ^F1
+*AttachmentEditor*onWidResEditor.quickHelpLabel: Show help for this window.
+*AttachmentEditor*optionsButton.labelString: Options
+*AttachmentEditor*optionsButton.mnemonic: O
+*AttachmentEditor*automaticLoadButton.accelerator: Ctrl<Key>t
+*AttachmentEditor*automaticLoadButton.acceleratorText: ^T
+*AttachmentEditor*automaticLoadButton.labelString: Automatic Load
+*AttachmentEditor*automaticLoadButton.mnemonic: t
+*AttachmentEditor*quickHelpLabel.labelString: Quick Help messages will appear in this line.
+*AttachmentEditor*childrenLabel.labelString: Children
+*AttachmentEditor*pushButton_1.quickHelpLabel: Apply changes to all children.
+*AttachmentEditor*pushButton_2.labelString: Close
+*AttachmentEditor*pushButton_2.quickHelpLabel: Close Attachment Editor. Changes will be lost.
+*AttachmentEditor*pushButton_3.labelString: Help
+*AttachmentEditor*pushButton_3.quickHelpLabel: Get help for this window.
+*AttachmentEditor*resizableToggle.labelString: resizable
+*AttachmentEditor*resizableToggle.quickHelpLabel: The resource XmNresizable
+*AttachmentEditor*bottomAttachment.labelString: Bottom:
+*AttachmentEditor*bottomAttachment.quickHelpLabel: Attachment of the child's bottom edge. XmNbottomAttachment
+*AttachmentEditor*bottomAttachNone.quickHelpLabel: Attach none.
+*AttachmentEditor*bottomAttachForm.quickHelpLabel: Attach form's bottom border.
+*AttachmentEditor*bottomAttachWidget.quickHelpLabel: Attach another widget's top border.
+*AttachmentEditor*bottomAttachPosition.quickHelpLabel: Attach a position. Depends on XmForm's fractionBase resource.
+*AttachmentEditor*bottomAttachSelf.quickHelpLabel: Attach self. 
+*AttachmentEditor*bottomWidget.quickHelpLabel: The attached widget. XmNbottomWidget
+*AttachmentEditor*bottomOffsetLabel.labelString: Off:
+*AttachmentEditor*bottomPositionLabel.labelString: Pos:
+*AttachmentEditor*bottomOffset.quickHelpLabel: Offset to the attached point. XmNbottomOffset
+*AttachmentEditor*bottomPosition.quickHelpLabel: The attached Position. XmNbottomPosition
+*AttachmentEditor*leftAttachment.labelString: Left:
+*AttachmentEditor*leftAttachment.quickHelpLabel: Attachment of the child's left edge. XmNleftAttachment
+*AttachmentEditor*leftAttachNone.quickHelpLabel: Attach none.
+*AttachmentEditor*leftAttachForm.quickHelpLabel: Attach form's left border.
+*AttachmentEditor*leftAttachWidget.quickHelpLabel: Attach another widget's right border.
+*AttachmentEditor*leftAttachPosition.quickHelpLabel: Attach a position. Depends on XmForm's fractionBase resource.
+*AttachmentEditor*leftAttachSelf.quickHelpLabel: Attach self. 
+*AttachmentEditor*leftWidget.quickHelpLabel: The attached widget. XmNleftWidget
+*AttachmentEditor*leftOffsetLabel.labelString: Off:
+*AttachmentEditor*leftPositionLabel.labelString: Pos:
+*AttachmentEditor*leftOffset.quickHelpLabel: Offset to the attached point. XmNleftOffset
+*AttachmentEditor*leftPosition.quickHelpLabel: The attached Position. XmNleftPosition
+*AttachmentEditor*rightAttachment.labelString: Right:
+*AttachmentEditor*rightAttachment.quickHelpLabel: Attachment of the child's right edge. XmNrightAttachment
+*AttachmentEditor*rightAttachNone.quickHelpLabel: Attach none.
+*AttachmentEditor*rightAttachForm.quickHelpLabel: Attach form's right border.
+*AttachmentEditor*rightAttachWidget.quickHelpLabel: Attach another widget's left border.
+*AttachmentEditor*rightAttachPosition.quickHelpLabel: Attach a position. Depends on XmForm's fractionBase resource.
+*AttachmentEditor*rightAttachSelf.quickHelpLabel: Attach self. 
+*AttachmentEditor*rightWidget.quickHelpLabel: The attached widget. XmNrightWidget
+*AttachmentEditor*rightOffsetLabel.labelString: Off:
+*AttachmentEditor*rightPositionLabel.labelString: Pos:
+*AttachmentEditor*rightOffset.quickHelpLabel: Offset to the attached point. XmNrightOffset
+*AttachmentEditor*rightPosition.quickHelpLabel: The attached Position. XmNrightPosition
+*AttachmentEditor*topAttachment.labelString: Top:
+*AttachmentEditor*topAttachment.quickHelpLabel: Attachment of the child's top edge. XmNtopAttachment
+*AttachmentEditor*topAttachNone.quickHelpLabel: Attach none.
+*AttachmentEditor*topAttachForm.quickHelpLabel: Attach form's top border.
+*AttachmentEditor*topAttachWidget.quickHelpLabel: Attach another widget's bottom border.
+*AttachmentEditor*topAttachPosition.quickHelpLabel: Attach a position. Depends on XmForm's fractionBase resource.
+*AttachmentEditor*topAttachSelf.quickHelpLabel: Attach self. 
+*AttachmentEditor*topWidget.quickHelpLabel: The attached widget. XmNtopWidget
+*AttachmentEditor*topPositionLabel.labelString: Pos:
+*AttachmentEditor*topOffsetLabel.labelString: Off:
+*AttachmentEditor*topOffset.quickHelpLabel: Offset to the attached point. XmNtopOffset
+*AttachmentEditor*topPosition.quickHelpLabel: The attached Position. XmNtopPosition
+
+
+! ----------------------------------------------
+! end of resource file AttachmentEditor.rf
+! ----------------------------------------------

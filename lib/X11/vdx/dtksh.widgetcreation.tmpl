@@ -1,0 +1,17 @@
+
+  # ---------------------------------------------  
+  # Create Widget $(IDENTIFIER)
+  # ---------------------------------------------
+
+  parent=${a$(INTERFACE)[$(PARENT)]}
+
+  # Creating Widget 
+  $(USE_CREATEFUNCTION,
+  $(CREATEFUNCTION) widget $parent $(IDENTIFIER) \\
+$(RESOURCES,dtksh.resources.tmpl),
+  XtCreateWidget widget $(IDENTIFIER) $(WIDGETCLASSNAME) $parent \\
+$(RESOURCES,dtksh.resources.tmpl))
+
+  $(MANAGE,XtManageChild $widget ,)
+
+  a$(INTERFACE)[$(IDENTIFIER)]=$widget

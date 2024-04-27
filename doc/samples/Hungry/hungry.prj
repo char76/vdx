@@ -1,0 +1,7 @@
+PALETTE "Templates.pal"
+INTERFACE "OrderWindow.i"
+INTERFACE "FirstInterface.i"
+INTERFACE "SecondInterface.i"
+LANG "c"
+STARTUP "OrderWindow"
+SOURCEDIR ""

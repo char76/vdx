@@ -1,0 +1,15 @@
+! ----------------------------------------------
+! File: FirstInterface.rf
+! Resource file of interface FirstInterface
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*FirstInterface*amex_toggle.labelString: American Express
+*FirstInterface*visa_toggle.labelString: Visa Card
+*FirstInterface*master_toggle.labelString: Master Card
+
+
+! ----------------------------------------------
+! end of resource file FirstInterface.rf
+! ----------------------------------------------

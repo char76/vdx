@@ -1,0 +1,21 @@
+The changes of this portion of 'Covered Code' regarding NPL
+are documented in this file.
+You may reach the original behaviour of this portion of 'Covered Code',
+if you do not define the cpp-macro VDX_CHANGES.
+
+The following files are changed:
+
+BmButton.c	at line 276
+Geometry.c	at line 472
+Manager.c	at line 896
+Manager.c	at line 928
+ToolBox.c	at line 1132
+ToolBox.c	at line 1162
+StringDefs.h    at line 507
+
+Following files are added:
+
+Imakefile
+
+For more a detailed description of this changes you should examine
+the changed source code.

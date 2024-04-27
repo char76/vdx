@@ -1,0 +1,15 @@
+! ----------------------------------------------
+! File: TransformDialog.rf
+! Resource file of interface TransformDialog
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*TransformDialog*messageBox.dialogTitle: Transform Widget Class
+*TransformDialog*messageBox.messageString: Do you want to change the widget class?
+*TransformDialog*widgetClassOptionMenu.labelString: New Widget Class:
+
+
+! ----------------------------------------------
+! end of resource file TransformDialog.rf
+! ----------------------------------------------

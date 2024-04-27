@@ -1,0 +1,43 @@
+/****************************************************************
+ *
+ *  $RCSfile: Imakefile,v $
+ *  $Date: 1998/06/07 14:15:14 $
+ *  $Revision: 1.3 $
+ *
+ *  Copyright 1997 1998, Dirk Laessig
+ *  ALL RIGHTS RESERVED
+ *  See the file Copyright for more information
+ *
+ *  Dirk Laessig
+ *  Muehlenpfordtstr. 5
+ *  38106 Braunschweig
+ *  Germany
+ ****************************************************************/
+/*
+ * $Log: Imakefile,v $
+ * Revision 1.3  1998/06/07 14:15:14  lazy
+ * Added Drawer
+ *
+ * Revision 1.2  1998/05/13 18:47:49  lazy
+ * Fix after test.
+ *
+ * Revision 1.1.1.1  1998/04/24 23:45:54  lazy
+ * Imported to CVS
+ *
+# Revision 1.1  1998/02/02  09:28:45  lazy
+# Initial revision
+#
+ */
+
+HEADERS = ButtonBox.h ButtonBoxP.h CellTable.h CellTableP.h \
+Bubble.h BubbleP.h DrawerP.h Drawer.h
+
+OBJS = 	ButtonBox.o CellTable.o Bubble.o Drawer.o
+
+SRCS = 	ButtonBox.c CellTable.c Bubble.c Drawer.c
+
+EXTRA_INCLUDES = -I..
+
+LIBNAME=lwid
+
+NormalLibraryTarget($(LIBNAME),$(OBJS))

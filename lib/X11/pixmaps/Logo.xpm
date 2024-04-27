@@ -1,0 +1,129 @@
+/* XPM */
+static char *Logo[] = {
+/* width height num_colors chars_per_pixel */
+"    72    90       31            1",
+/* colors */
+". c #000000",
+"# c #303030",
+"a c #306565",
+"b c #656565",
+"c c #659a65",
+"d c #659a9a",
+"e c #9a9a9a",
+"f c #9acf9a",
+"g c #9acfcf",
+"h c #cfcfcf",
+"i c #cfffcf",
+"j c #cfffff",
+"k c #ffffff",
+"l c #0c0c0c",
+"m c #181818",
+"n c #282828",
+"o c #343434",
+"p c #414141",
+"q c #515151",
+"r c #5d5d5d",
+"s c #696969",
+"t c #797979",
+"u c #868686",
+"v c #929292",
+"w c #a2a2a2",
+"x c #aeaeae",
+"y c #bababa",
+"z c #cbcbcb",
+"A c #d7d7d7",
+"B c #e7e7e7",
+"C c #f3f3f3",
+/* pixels */
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkCuutAkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkpjjivkkkkkkkkBuuhkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkCdjjjivkkkkkkxvjjwtAkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkujjjjjwzBBkCuyjjjjxhkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkujjjjjjxvvuujjjjjjtkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkujjjjjjjjjjjjjjjjjtkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkktjjjjjjjjjjjjjjjjjukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkABkkkkBwgjjjjjjjjjjjjjjjjgykkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkktvtwzBegjjjjjjjjjjjjjijjjBeCkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkzgjjzxvjjjjjjjjjjjjjjjjjjjjgxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkujjjjjjjjjjjjjjjjjjjjjjjjjjjgewwkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkujjjjjjjjjjjjjjjjjjjjjjjjjjjjAhgttrrkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkBvjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjAAwkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkBvjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjAAvkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkBvjjjjjjjjjjjeuutijjjjjjjjjjjjjjiitkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkujjjjjjjjjjeAkkkvwjjjjjjjjjjjjjxxhkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkujjjjjjjjjeAkkkkkhwjjjjjjjjjjjuzzkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkAwjjjjjjjjjtkkkkkkktjjjjjjjjjjukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkzxjjjjjjjjivkkkkkkktjjjjjjjjjdCkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkAwjjjjjjjjjjtkkkkkkktjjjjjjjjjuCkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkAejjjjjjjjjjjxzkkkkkxgjjjjjjjjjukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"AAejjjjjjjjjjjjjeAkkkxvjjjjjjjjjjukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"ttjjjjjjjjjjjjjjiwtttgjjjjjjjjjjjwAkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"uujjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"uujjjieAjjjjjjjjjjjjjjjjjjjjjjjjjjAekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"BBbuuvAujjjjjjjjjjjjjjjjjjjjjjjjjjjAeekkkBwwwzkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkBCkkkzxjjjjjjjjjjjjjjjjjjjjjjjjjjjuukkkuhhzuCkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkvijjjjjjjjjjjjjjjjjjjjjjjjjuCCkkAwjjjuBkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkxgjjjjjjjjjjjjjjjjjjAuuddxjukkkkujjjjjukkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkxgjjjjjjjjjjjjjjjjjiekeBCzukkkkAejjjjjukkkkkkkAxkkkkkkkkkkkkkkkk",
+"kkkkkkkkxgjjjjjjjjjjjjjjjjAvkehvuBkkkkxvjjjjjigtykkCwtegxkkkkkkkkkkkkkkk",
+"kkkkkkkkxzjjjjjjjjjjjjjjjjgwAejjjuuyuugjjjjjjjjjguuugjjjgxkkkkkkkkkkkkkk",
+"kkkkkkkkxgjjijjhttgAjjjjjjguvjjjjjjgjjjjjjjjjjjjjjjjjjjjjuCkkkkkkkkkkkkk",
+"kkkkkkkkxgjjjjgwkkxewjjjjjehvjjjjjjjjjjjjjjjjjjjjjjjjjjjjukkkkkkkkkkkkkk",
+"kkkkkkkkBugjjwxkkkkkBejjjjtkujjjjjjjjjjjjjjjjjjjjjjjjjjjivkkkkkkkkkkkkkk",
+"kkkkkkkkkkyueAkkkkkkkwgjjiskAwjjjjjjjjjjjjjjjjjjjjjjjjjjvBkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkAkkkkkkkkkwgtuykkujjjjjjjjjjjjjjjjjjjjjjjjjjuCkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkykkkkkxgjjjjjjjjjjjjjjjjjjjjjjjjjukkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkxgjjjjjjjjjjjjjjjjjjjjjjjjjvBkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkktjjjjjjjjjjjjjjjjjijjjjjjjjAvkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkCvjjjjjjjjjjjxuuuujijjjjjjjjjuzkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkzeetgjjjjjjjjjjxzkkkCvijjjjjjjjjiwuhkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkqxiijjjjjjjjjjjgwkkkkkCujjjjjjjjjjjiwuAkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkktjjjjjjjjjjjjjjukkkkkkkujjjjjjjjjjjjjgwkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkktjjjjjjjjjjjjjjtkkkkkkkujjjjjjjjjjjjjhwkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkktjjjjjjjjjjjjjjwAkkkkkkujjjjjjjjjjjjjgwkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkutdijjjjjjjjjjjgwkkkkkCujjjjjjjjjjjjwuAkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkCvtgjjjjjjjjjjxeBkBBujjjjjjjjjjAtvhkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkBvjjjjjjjjjjjivudvjjjjjjjjjjjbkkkkkkkkkkkkkk",
+"ssrrrrrtCkkkkkkkkkkkkkkCrrrrrpigfffwfffffffwffwffgijjjjjvBkkkkkkkkkkkkkk",
+"vv......ykkkkkkkkkkkkkks.....ngdddddddddddddddddddddgjjAvkkkkkkkkkkkkkkk",
+"CCm.....pCkkkkkkkkkkkkBl....ltgdddtdddddddddddddddddddggzkkkkkkkkkkkkkkk",
+"kkz......ykkkkkkkkkkkk#.....qujdddddddddcddddddddddddddgukkkkkkkkkkkkkkk",
+"kkkq.....mBkkkkkkkkkkx.....lyujdddddddfhiAiAiAiffddddddddzkkkkkkkkkkkkkk",
+"kkkz......ukkkkkkkkkBn.....uzxjdddddddgjjjjjjjjjjiddddddeukkkkkkkkkkkkkk",
+"kkkkt.....lCkkkkkkkkt.....mCxgjddddcddgjjjjjjjjjjjfddddddwzkkkkkkkkkkkkk",
+"kkkkBm.....ukkkkkkkBm.....ukeAjdds##bbgjjjjjjjjjjjwaddddduBkkkkkkkkkkkkk",
+"kkkkku.....lzkkkkkkp.....pCkkwAdal....qgjjjjjjjjduw.mqcdstkkkkkkkkkkkkkk",
+"kkkkkkp.....pkkkkky......ykkkkeon.....uujjjjjjjqCkCn...olskkkkkkkkkkkkkk",
+"kkkkkky......zkkkBn.....pkkkkkk#......vAwjjjjjuCkkkr.....skkkkkkkkkkkkkk",
+"kkkkkkkp.....qkkku......zkkkkkk#......vkujjjjjdCkkCn.....skkkkkkkkkkkkkk",
+"kkkkkkkAm.....ukAm.....qkkkkkkk#......vkAwjjjjukkkB......skkkkkkkkkkkkkk",
+"kkkkkkkkt.....mCq.....lCkkkkkkk#......vkkuAAAxykkkB......tkkkkkkkkkkkkkk",
+"kkkkkkkkBn.....s......tkkkkkkkk#......vkkBeeeeCkkkv......Bkkkkkkkkkkkkkk",
+"kkkkkkkkkx...........lCkkkkkkkk#......vkkkkkkkkkBvn.....pCCAAAkkkkkAAAAk",
+"kkkkkkkkkk#..........ykkkkkkkkk#......thhhhhhhhrn......lykAm.lwkkkxl..sk",
+"kkkkkkkkkkx.........pCkkkkkkkkk#......................lykkkAm.lwkxl..skk",
+"kkkkkkkkkkks........xkkkkkkkkkk#....................lrhkkkkkv..ltl..mCkk",
+"kkkkkkkkkkkB.......pCkkkkkkkkkk#...................phkkkkkkkkt.....mhkkk",
+"kkkkkkkkkkkkvqqqqqqykkkkkkkkkkktqqqqqqqqqqqqqqqqqehCkkkkkkkkkkt...mzkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkCq...lxkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkq..mm.lxkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkq..lzt..oCkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkq..lzkkb..pkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkq..lzkkkAm..pk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+};
+SIMPLE  =                    T                                                  BITPIX  =                    8                                                  NAXIS   =                    2                                                  NAXIS1  =                   72                                                  NAXIS2  =                   90                                                  HISTORY Written by XV 3.10a(PNG)                                                END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Q  Ћ€€€„  A€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Q  Ћ€€e  A€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Q  Ћy  4у€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Q   Ѓ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€уQ   Ѓ€€€€€€€€€€€€€€€€ТQQQQQQЇ€€€€€€€€€€€yQQQQQQQQQQQQQQQQQЪѕу€€€€€€€€€€y   Ћ€€€€€€€€€€€€€€€з       Aу€€€€€€€€€€0                   Aѕ€€€€€€€€y     ѕ€€€€€€€€€€€€€€i        Ѓ€€€€€€€€€€0                    ]ѕ€€€€€Т  y  у€€€€€€€€€€€€Ѓ         Aу€€€€€€€€€0                      Ї€€€„ Ґ€Ѓ  i€€€€€€€€€€€€0          Ї€€€€€€€€€0      yѕѕѕѕѕѕѕѕ](      Ї€„ Ґ€€€Ѓ  i€€€€€€€€€€Ѓ           у€€€€€€€€0      Т€€€€€€€€€зТ(     Aуу„„„€€€€€„„„„€€€€€€€€€з(     i      y€€€€€€€€0      Т€€зЪЪЪЪу€€€Т      з€€€€€€€€€€€€€€€€€€€€€€y     уQ     у€€€€€€€0      Т€€Ж„„„ЃЇ€€€з      y€€€€€€€€€€€€€€€€€€€€€„     Ж€„     Q€€€€€€€0      Т€„ҐооооЖ€€€з      i€€€€€€€€€€€€€€€€€€€€€A     Q€€€Ж      Ћ€€€€€€0      Т€ЖоооооЗу€€у(     i€€€€€€€€€€€€€€€€€€€€Ї      Ћ€€€з(     A€€€€€€0      Т„ҐоооооЖу€€€]     i€€€€€€€€€€€€€€€€€€€€A     A€€€€€Ї      Ї€€€€Ъ4(     ЖЖоооооооQу€у(   4i€€€€€€€€€€€€€€€€€€€Ж     Ћ€€€€€€A     Aу€€Ґ„ЗR    QЉооооооооЗЖҐ QЗiy€€€€€€€€€€€€€€€€€€з     Ж€€€€€€€з     Ж€Ъ„оЗЗi00eeЉоооооооооооҐRЗЗЗЗЗЖз€€€€€€€€€€€€€€€€€y     у€€€€€€€€y     уЃЉоЗЗЗЗЗЗЉоооооооооооіЗЗЗЗЗЗҐЋ€€€€€€€€€€€€€€€€Ћ      Ж€€€€€€€€€з(     ЖЋЃоЗЗЗЗЗЗЗЉоооооооооозЗЗЗЗЗЗЪЖ€€€€€€€€€€€€€€€€€Q     з€€€€€€€€€€Ѓ     ЇЖоЗЗЗЗЗЗЗіѕз„з„з„зііЗЗЗЗЗЗЗЗЋ€€€€€€€€€€€€€€€€Ћ      Ї€€€€€€€€€€€€0     QЖоЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЉЖ€€€€€€€€€€€€€€€уу     Aу€€€€€€€€€€€€з    yЉЗЗЗyЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЉЉЋ€€€€€€€€€€€€€€€ТТ      Ї€€€€€€€€€€€€€€i     (ЉЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЗЉоо„Т€€€€€€€€€€€€€€€ii]]]]]yу€€€€€€€€€€€€€€у]]]]]AзЉіііҐіііііііҐііҐііЉзоооооТз€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€зТооооооооооозТЖЗТоооооооооооe€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€уТyЉооооооооооЃЪз€ззЖоооооооооо„yТѕ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖyЗзоооооооооооЉҐ€€€€€уЖооооооооооооҐЖ„€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yооооооооооооооҐ„€€€€€€ЖоооооооооооооЉҐ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yооооооооооооооy€€€€€€€ЖоооооооооооооѕҐ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yооооооооооооооЖ€€€€€€€ЖоооооооооооооЉҐ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€QЃззоооооооооооЉҐ€€€€€уЖооооооооооозҐЖ„€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЋЪЪyЉооооооооооЃЋ€€€уТзооооооооозҐЖѕ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€уТоооооооооооЃЖЖЖЖозоооооооооЖЋ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yооооооооооооооооозоооооооо„Т€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЃЉоооооооооооооооооооооооооТз€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Ї€€€€€ЃЉоооооооооооооооооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€„€€€€€€€€€ҐЉyЖЇ€€ЖооооооооооооооооооооооооооЖу€€€€€€€€€€€€€€€€€€€€€€€€ЇЖЪ„€€€€€€€ҐЉоозi€„ҐооооооооооооооооооооооооооТз€€€€€€€€€€€€€€€€€€€€€€зЖЉооҐЃ€€€€€зЪооооy€ЖооооооооооооооооооооооооооозТ€€€€€€€€€€€€€€€€€€€€€€ЃЉооооЉҐ€€ЃЪҐоооооЪѕТооооооооооооооооооооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€ЃЉоозооѕyyЉ„ооооооЉЖТооооооЉоооооооооооооооооооооЖу€€€€€€€€€€€€€€€€€€€€€ЃЋооооооооооооооооЉҐ„ЪоооЖЖЇЖЖЉоооооооооЉЖЖЖЉоооЉЃ€€€€€€€€€€€€€€€€€€€€€€ЃЉоооооооооооооооо„Т€ЪѕТЖз€€€€ЃТооооозЉyЇ€€уҐyЪЉЃ€€€€€€€€€€€€€€€€€€€€€€€ЃЉооооооооооооооооозЪ€ЪзуЋЖ€€€€„ЪоооооЖ€€€€€€€„Ѓ€€€€€€€€€€€€€€€€€€€€€€€€ЃЉоооооооооооооооооо„ЖЖЗЗЃоЖ€€€€ЖоооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ТзоооооооооооооооооооооооооЖуу€€„ҐоооЖз€€€€€€€€€€€€€€€€€€€€€€€€€€€зу€€€ЋЃоооооооооооооооооооооооооооЖЖ€€€ЖѕѕЋЖу€€€€€€€€€€€€€€€€€€€€€€€€€ззeЖЖТ„Жооооооооооооооооооооооооооо„ЪЪ€€€зҐҐҐЋ€€€€€€€€€€€€€€€€€€€€€€€€€€ЖЖооозЪ„оооооооооооооооооооооооооо„Ъ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖЖооооооооооооооооооооооооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yyоооооооооооооозҐyyyЉоооооооооооҐ„€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€„„ЪоооооооооооооЪ„€€€ЃТооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€„ЪоооооооооооЃЋ€€€€€ЃЉоооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€„Ґооооооооооy€€€€€€€yоооооооооЖу€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЋЃоооооооозТ€€€€€€€yоооооооооЗу€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€„Ґоооооооооy€€€€€€€yооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖоооооооооЪ„€€€€€ѕҐоооооооооооЖЋЋ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖооооооооооЪ„€€€ТҐоооооооооооооЃЃѕ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€зТоооооооооооЪЖЖyзооооооооооооооззy€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€зТооооооооооооооооооооооооооооооо„„Т€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€зТоооооооооооооооооооооооооооооооо„„Ґ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Жоооооооооооооооооооооооооооо„ѕЉyy]]€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖоооооооооооооооооооооооооооЉЪҐҐ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЋЉооЋЃТооооооооооооооооооооЉЃ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yТyҐЋзЪЉооооооооооооозооозЪу€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€„з€€€€зҐЉооооооооооооооооЉЇ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€yоооооооооооооооооЖ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Жоооооооооооооооооy€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖооооооЃТТЖЖооооооy€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ЖоооооҐЋзз€уЖЇооооЃѕ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€уЗооозТ€€€€€€ЃТооҐy„€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€AоозТ€€€€€€€€зЖЖѕ€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€уЖЖy„€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

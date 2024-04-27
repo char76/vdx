@@ -1,0 +1,21 @@
+HALLO LESER
+-----------
+
+Dies ist der Parsing-Algorithmus im LIC.
+Es steht eine API zu Verfuegung:
+	YResult *parse( char *filename );
+	void    free_YResult( YResult *to_free );
+parse() legt eine Struktur an, die mit free_YResult() freigegeben wird. Als
+Dateiname wird die zu parsende Datei uebergeben. Kommt eine NULL zurueck,
+so konnte die Datei nicht geoeffnet werden.
+
+Die Elemente der Strukur YResult sind in parse.h dokumentiert.
+Will man die API benutzen, muss man parse.h "includen".
+
+Dateien:
+	y.y		YACC-File
+	l.l		LEX-File
+	check_main.c	testen der API
+	libparse.a	Bibliothek zum Einbinden
+
+

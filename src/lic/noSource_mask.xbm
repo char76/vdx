@@ -1,0 +1,4 @@
+#define noSource_mask_width 1
+#define noSource_mask_height 1
+static char noSource_mask_bits[] = {
+   0x00};

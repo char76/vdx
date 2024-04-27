@@ -1,0 +1,7 @@
+include $(TOPDIR)/config/Makeoptions.linux-m2.0s
+
+
+       ARCH = linuxelf-m2.0s-debug
+
+    DEFINES = -D_POSIX_SOURCE -D_XOPEN_SOURCE
+CDEBUGFLAGS = -g -Wall -fno-builtin

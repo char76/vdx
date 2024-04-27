@@ -1,0 +1,17 @@
+! ----------------------------------------------
+! File: FontSelect.rf
+! Resource file of interface FontSelect
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*FontSelect*sampleText.value: Pferde essen keinen Gurkensalat.\nabcdefgeijklmnopqrstuvwxyz\nABCDEFGEIJKLMNOPQRSTUVWXYZ\n"!§$%&/()=?+-*#~
+*FontSelect*okButton.labelString: OK
+*FontSelect*cancelButton.labelString: Cancel
+*FontSelect*helpButton.labelString: Help
+*FontSelect*quickHelp.labelString: This is the Quick Help Line.
+
+
+! ----------------------------------------------
+! end of resource file FontSelect.rf
+! ----------------------------------------------

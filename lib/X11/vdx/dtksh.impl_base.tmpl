@@ -1,0 +1,26 @@
+#
+# User interface of $(NAME)
+#
+# Created by VDX $(VDX_VERSION) - Don't edit!
+#
+# User: $(USER)
+# Date: $(DATE)
+#                         
+
+
+create$(NAME)_base () {
+
+  # Create the popup shell
+
+  XtCreatePopupShell a$(NAME)[shell] $(NAME) TopLevelShell $topLevel
+  a$(NAME)[$(SHELLIDENTIFIER)]=${a$(NAME)[shell]}
+
+  # Create other widgets
+
+$(WIDGETS,dtksh.widgetcreation.tmpl)
+
+$(CALLBACKS,dtksh.addcallback.tmpl)
+
+$(RELATIONS,dtksh.relations.tmpl)
+
+}

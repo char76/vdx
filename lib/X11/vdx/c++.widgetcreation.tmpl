@@ -1,0 +1,25 @@
+  
+  /* ---------- Creating Widget:    $(IDENTIFIER) -------------- */
+  parent = $(PARENT);
+
+  /* Converters must be registered, so call XtInitializeWidgetClass() */
+  if($(WIDGETCLASS) != NULL) {
+    XtInitializeWidgetClass($(WIDGETCLASS));
+  }
+
+  /* Building resource list */
+  n = 0;
+$(RESOURCES,c++.resources.tmpl)
+
+  /* Creating Widget */
+  $(IDENTIFIER) = $(CREATION);
+  $(MANAGE,
+  /* Manage the Widget */
+  XtManageChild($(ISLINK,$(IDENTIFIER)->getTop(),$(IDENTIFIER)));
+  ,)
+  $(IS_POPUPMENU,
+  /* Add an event handler to parent */
+  addPopupMenuHandler($(ISLINK,$(IDENTIFIER)->getTop(),$(IDENTIFIER)), parent);
+  ,)
+
+

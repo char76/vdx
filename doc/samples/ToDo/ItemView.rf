@@ -1,0 +1,23 @@
+! ----------------------------------------------
+! File: ItemView.rf
+! Resource file of interface ItemView
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*ItemView.title: ToDo Item - Detail View
+*ItemView*okButton.labelString: OK
+*ItemView*cancelButton.labelString: Cancel
+*ItemView*helpButton.labelString: Help
+*ItemView*label_1.labelString: Title:
+*ItemView*veryHighToggle.labelString: very high
+*ItemView*highToggle.labelString: high
+*ItemView*middleToggle.labelString: middle
+*ItemView*lowToggle.labelString: low
+*ItemView*niceToHaveToggle.labelString: nice to have
+*ItemView*label.labelString: Priority
+
+
+! ----------------------------------------------
+! end of resource file ItemView.rf
+! ----------------------------------------------

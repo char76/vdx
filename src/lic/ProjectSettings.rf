@@ -1,0 +1,47 @@
+! ----------------------------------------------
+! File: ProjectSettings.rf
+! Resource file of interface ProjectSettings
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*ProjectSettings.title: Project Settings
+*ProjectSettings*PSNameLabel.labelString: Project File:
+*ProjectSettings*PSNameText.quickHelpLabel: Name of project file.
+*ProjectSettings*applClassLabel.labelString: Application Class:
+*ProjectSettings*applClassText.quickHelpLabel: Application class of executable determines the resource file name.
+*ProjectSettings*langLabel.labelString: Generation Model:
+*ProjectSettings*PSLangOptionMenu.quickHelpLabel: Programming languages for code generation.
+*ProjectSettings*PSStartLabel.labelString: Startup Interface:
+*ProjectSettings*PSSourceDirLabel.labelString: Source Path:
+*ProjectSettings*PSSourceDirText.quickHelpLabel: Directory in which the source code is generated.
+*ProjectSettings*moreSourceFilesButton.labelString: ...
+*ProjectSettings*moreSourceFilesButton.quickHelpLabel: Open a selection box for source file selection.
+*ProjectSettings*sourcePathButton.labelString: ...
+*ProjectSettings*sourcePathButton.quickHelpLabel: Open a file selection box.
+*ProjectSettings*PSSourceDirFileSB.dialogTitle: Source directory
+*ProjectSettings*execFileLabel.labelString: Executable:
+*ProjectSettings*execFileText.quickHelpLabel: File name of the executable.
+*ProjectSettings*moreSourceLabel.labelString: More Source Files:
+*ProjectSettings*moreSourceText.quickHelpLabel: More source files e.g. for application logic code.
+*ProjectSettings*extraCompilerOptionLabel.labelString: Extra Compiler Options:
+*ProjectSettings*extraCompilerOptionText.quickHelpLabel: Compiler options e.g. -g -I/opt/yard/include
+*ProjectSettings*extraLinkerOptionLabel.labelString: Extra Linker Options:
+*ProjectSettings*extraLinkerOptionText.quickHelpLabel: Extra linker options e.g. -g -L/opt/yard/lib
+*ProjectSettings*descriptionLabel.labelString: Description:
+*ProjectSettings*descriptionText.quickHelpLabel: Any comment that describes the project.
+*ProjectSettings*extraLibrariesText.quickHelpLabel: Extra libraries e.g. -lsql -lm
+*ProjectSettings*extraLibrariesLabel.labelString: Extra Libraries:
+*ProjectSettings*startupOptionMenu.quickHelpLabel: Programming languages for code generation.
+*ProjectSettings*psOkButton.labelString: OK
+*ProjectSettings*psOkButton.quickHelpLabel: Apply changes and close this window.
+*ProjectSettings*psCancelButton.labelString: Cancel
+*ProjectSettings*psCancelButton.quickHelpLabel: Close this window without saving changes.
+*ProjectSettings*psHelpButton.labelString: Help
+*ProjectSettings*psHelpButton.quickHelpLabel: Show help for this window.
+*ProjectSettings*quickHelp.labelString: This is the quick help line.
+
+
+! ----------------------------------------------
+! end of resource file ProjectSettings.rf
+! ----------------------------------------------

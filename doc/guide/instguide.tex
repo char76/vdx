@@ -1,0 +1,86 @@
+\documentstyle[epsf,palatino,umlaut,twoside,german,refman]{article} 
+
+\sloppy
+\parindent0.0cm		% Keine Einrueckung beim Absatzbeginn
+
+\pagestyle{headings}
+
+\title{
+	View Designer/X 1.0 - Installationshinweise
+}
+
+\author{
+	Dirk Lässig
+}
+
+% ------------------------------------
+% Beginn des Dokumentes
+% ------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+\section{Installation der Dateien}
+
+	Auf der mitgelieferten Diskette befindet sich der View Designer/X
+	als komprimiertes Tar-Archiv. Sie können den VDX an einer beliebigen
+	Stelle im Dateisystem installieren. 
+
+	\begin{itemize}
+
+	\item Legen Sie die Installationsdiskette in das Diskettenlaufwerk
+	ein.
+
+	\item Wechseln Sie in ein Verzeichnis, in das Sie den VDX installieren
+	wollen. Ein solches Verzeichnis könnte z.B. das Verzeichnis
+	{\tt /usr/local} oder {\tt /opt} sein.
+
+	\item Geben Sie folgendes Kommando ein, um die Dateien des VDX von
+	der Diskette in das Dateisystem zu übertragen:\par
+	{\tt tar xzvf /dev/fd0}\par
+	Falls die Diskette nicht im ersten Laufwerk ({\tt /dev/fd0}) liegt,
+	modifizieren Sie das Kommando.
+
+	\item Das Tar-Kommando erzeugt ein neues Verzeichnis, in das Sie
+	nun wechseln und das Shell-Skript {\tt ./install.sh} ausführen.
+	
+	\end{itemize}
+
+	Im {\tt bin}-Verzeichnis befindet sich das ausführbare Programm
+	{\tt vdx}, mit dem Sie den View Designer/X starten können.
+	Der VDX läuft dabei noch im Demonstationsmodus, da keine
+	Lizenzinformationen installiert wurden.
+
+\section{Installation der Lizenznummer}
+
+	Haben Sie von Ihrem Händler das Produkt VDX gekauft, so hat er
+	Ihnen eine Lizenznummer mitgeteilt. Diese Lizenznummer
+	ist mit dem Programm {\tt addVdxLicense} zum VDX hinzuzufügen. Erst
+	danach kann der View Designer im normalen Modus betrieben werden.
+	Das Programm {\tt addVdxLicense} befindet sich im {\tt
+	bin}-Verzeichnis des installierten Dateibaumes. Geben Sie folgendes
+	Kommando ein:\par
+	{\tt addVdxLicense Lizenznummer}\par
+	Dabei stellt {\tt Lizenznummer} die Zahlenkombination dar, die
+	Ihnen vom Händler übermittelt wurde.
+
+
+\section{Registrierkarte}
+
+	Wir hoffen, daß Ihnen der View Designer/X ein große Hilfe bei
+	Ihrer Entwicklungsarbeit ist. Damit wir Ihnen auch weiterhin ein
+	gutes Produkt anbieten können, bitten wir Sie, Vorschläge und
+	Kommentare an uns zu senden.
+
+	{\bf Bitte vergessen Sie nicht die Registrierkarte auszufüllen und
+	abzuschicken.}
+
+\end{document}
+
+
+
+

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+VDX_HOME=/home/char/dev/Motif/vdx-svn
+export VDX_HOME
+
+XFILESEARCHPATH=$VDX_HOME/lib/X11/%T/%N%S:/usr/lib/X11/%T/%N%S
+export XFILESEARCHPATH
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$VDX_HOME/lib:/usr/local/metro/lib
+export LD_LIBRARY_PATH  
+
+exec $VDX_HOME/bin/vdx.bin $*

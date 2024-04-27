@@ -1,0 +1,198 @@
+\begin{theindex}
+
+  \item Add item, 16
+  \item addLang, 32
+  \item Align, 10
+  \item Application Class, 19
+  \item Attachments, 11
+  \item Automatic Load, 11
+    \subitem in Browser, 15
+
+  \indexspace
+
+  \item Browse, 8
+
+  \indexspace
+
+  \item Callback, 11, 13, 26
+  \item Category, 11
+  \item Clipboard, 10
+  \item Close
+    \subitem in Browser, 14
+  \item Code generation model, 32
+    \subitem creating, 32
+  \item Constraint, 11
+  \item Context help, 29
+  \item Copy, 10
+  \item Core, 11
+  \item Create On Click, 20
+  \item Cut, 10
+
+  \indexspace
+
+  \item Default Public, 6
+  \item Default Shell, 6, 22
+  \item Delete
+    \subitem in Widget Context Menu, 11
+    \subitem Interface context menu, 8
+  \item Dialog, 11, 14, 26
+  \item Drag \& Drop, 9, 15, 31
+    \subitem in Templates, 20
+
+  \indexspace
+
+  \item Edit, 10
+  \item Executable, 19
+  \item Extra, 11
+  \item Extra Compiler Options, 19
+  \item Extra Libraries, 19
+  \item Extra Linker Options, 19
+
+  \indexspace
+
+  \item File
+    \subitem in Browser, 14
+    \subitem in Widget Resource Editor, 11
+  \item Folder, 16
+
+  \indexspace
+
+  \item Generic Options, 5
+  \item Grid, 6, 9
+
+  \indexspace
+
+  \item Help System, 6, 29
+
+  \indexspace
+
+  \item Icon View
+    \subitem Main Window, 7
+    \subitem Menu Editor, 16
+  \item Icon view
+    \subitem Menu Editor, 23
+  \item include, 13
+  \item Interface, 30
+    \subitem changing name, 7
+    \subitem deleting, 8
+    \subitem importing, 5
+    \subitem Kontextmenu, 7
+    \subitem saving, 8
+
+  \indexspace
+
+  \item lang.cf, 32
+  \item Link, 30
+    \subitem creating, 8, 30
+  \item Load
+    \subitem in Browser, 14
+  \item load, 13
+  \item Load Parent
+    \subitem in Browser, 14
+
+  \indexspace
+
+  \item Main Window, 3
+  \item make, 5, 28
+  \item manage, 14
+  \item Menu Editor, 10, 16
+    \subitem opening, 10
+    \subitem using, 23
+  \item method, 13
+  \item More Source Files, 19
+
+  \indexspace
+
+  \item Online Help, 6, 29
+  \item Options, 5
+  \item Output, 8
+
+  \indexspace
+
+  \item Paste, 10
+    \subitem to Template, 20
+  \item Pixmap, 13
+  \item private, 13
+  \item Project File, 19
+  \item project file, 3
+  \item Project options, 32
+  \item Project Settings, 5, 16, 21
+  \item public, 13
+
+  \indexspace
+
+  \item Quick Help, 8
+
+  \indexspace
+
+  \item Refresh, 11
+  \item Resource file, 13
+  \item Resource lines, 13
+  \item Resources
+    \subitem changing, 11
+
+  \indexspace
+
+  \item Settings, 16
+  \item Small Icons
+    \subitem in Browser, 14
+  \item Source Code, 13
+    \subitem generating, 5, 8
+  \item Source code
+    \subitem generating, 27
+  \item Source Path, 19
+  \item Specific, 11
+  \item Startup Interface, 19
+
+  \indexspace
+
+  \item Template, 29
+    \subitem creating, 29
+    \subitem using, 29
+  \item Template file, 32
+    \subitem expressions, 33
+  \item Templates, 3
+  \item Test Mode, 7, 27
+  \item Tree View, 14
+    \subitem opening, 8, 10
+  \item Tutorial, 29
+
+  \indexspace
+
+  \item View
+    \subitem in Browser, 14
+    \subitem in Widget Resource Editor, 11
+  \item View Defaults, 6
+  \item Visibility, 11, 27
+
+  \indexspace
+
+  \item Widget
+    \subitem aligning, 10
+    \subitem changing size, 9
+    \subitem context menu, 9
+    \subitem copying, 9
+    \subitem creating, 5, 21
+    \subitem deleting, 11
+    \subitem Menu in Browser, 14
+    \subitem moving, 9
+    \subitem Name, 11
+    \subitem selecting, 9
+  \item Widget Resource Editor, 11
+    \subitem opening, 10
+    \subitem use, 25
+  \item With Class Names
+    \subitem in Browser, 14
+  \item With Icons
+    \subitem in Browser, 14
+  \item WYSIWYG, 6
+  \item WYSIWYG View, 8, 9, 11, 22
+
+  \indexspace
+
+  \item xmkmf, 5, 28
+  \item XmNsubMenuId, 16
+  \item Xpm file, 13
+  \item XtResolvePathname(), 13
+
+\end{theindex}

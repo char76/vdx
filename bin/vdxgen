@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+VDX_HOME=/home/lazy/prj/lic
+export VDX_HOME
+
+XFILESEARCHPATH=$VDX_HOME/lib/X11/%T/%N%S:/usr/lib/X11/%T/%N%S
+export XFILESEARCHPATH
+
+export LD_LIBRARY_PATH=$VDX_HOME/lib:/usr/local/metro/lib
+
+exec $VDX_HOME/bin/vdxgen.bin $*

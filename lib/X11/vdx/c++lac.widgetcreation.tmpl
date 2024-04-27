@@ -1,0 +1,17 @@
+  
+  /* ---------- Creating Widget:    $(IDENTIFIER) -------------- */
+  parent = $(PARENT);
+
+  /* Building resource list */
+  n = 0;
+$(RESOURCES,c++lac.resources.tmpl)
+
+  /* Creating Widget */
+  $(IDENTIFIER) = $(CREATION);
+  $(MANAGE,
+  /* Manage the Widget */
+  XtManageChild($(ISLINK,$(IDENTIFIER)->getTop(),$(IDENTIFIER)));
+  ,)
+  addQuickHelp($(ISLINK,$(IDENTIFIER)->getTop(),$(IDENTIFIER)));
+  addHelpId($(ISLINK,$(IDENTIFIER)->getTop(),$(IDENTIFIER)),$(HELPID));
+

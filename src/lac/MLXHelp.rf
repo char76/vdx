@@ -1,0 +1,87 @@
+! ----------------------------------------------
+! File: MLXHelp.rf
+! Resource file of interface MLXHelp
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*MLXHelp.defaultFontList: -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1
+*MLXHelp.title: Help System
+*MLXHelp*titleDialog.dialogTitle: Change Section Title
+*MLXHelp*titleDialog.selectionLabelString: Title:
+*MLXHelp*findDialog.cancelLabelString: Close
+*MLXHelp*findDialog.dialogTitle: Find Dialog
+*MLXHelp*findDialog.okLabelString: Find
+*MLXHelp*findDialog.selectionLabelString: Search for:
+*MLXHelp*findBeginToggle.labelString: Search from the beginning
+*MLXHelp*findCaseToggle.labelString: Case sensitive
+*MLXHelp*File.labelString: File
+*MLXHelp*File.mnemonic: F
+*MLXHelp*Save.accelerator: Ctrl<Key>s
+*MLXHelp*Save.acceleratorText: ^S
+*MLXHelp*Save.labelString: Save
+*MLXHelp*Save.mnemonic: S
+*MLXHelp*Save.quickHelpLabel: Save help file.
+*MLXHelp*exportLatex.accelerator: Ctrl<Key>e
+*MLXHelp*exportLatex.acceleratorText: ^e
+*MLXHelp*exportLatex.labelString: Export ...
+*MLXHelp*exportLatex.mnemonic: E
+*MLXHelp*exportLatex.quickHelpLabel: Export whole help document to a file.
+*MLXHelp*Exit.accelerator: <Key>Escape
+*MLXHelp*Exit.acceleratorText: Esc
+*MLXHelp*Exit.labelString: Close
+*MLXHelp*Exit.mnemonic: C
+*MLXHelp*Exit.quickHelpLabel: Hide the help view.
+*MLXHelp*Edit.labelString: Edit
+*MLXHelp*Edit.mnemonic: E
+*MLXHelp*View.labelString: View
+*MLXHelp*View.mnemonic: V
+*MLXHelp*contentsButton.accelerator: Ctrl<Key>c
+*MLXHelp*contentsButton.acceleratorText: ^C
+*MLXHelp*contentsButton.labelString: Contents
+*MLXHelp*contentsButton.mnemonic: C
+*MLXHelp*contentsButton.quickHelpLabel: Show or hide the contents tree view.
+*MLXHelp*Navigate.labelString: Navigate
+*MLXHelp*Navigate.mnemonic: N
+*MLXHelp*findButton.accelerator: Ctrl<Key>f
+*MLXHelp*findButton.acceleratorText: ^F
+*MLXHelp*findButton.labelString: Find ...
+*MLXHelp*findButton.quickHelpLabel: Find a specific string in the help document.
+*MLXHelp*historyBack.accelerator: Ctrl<Key>Left
+*MLXHelp*historyBack.acceleratorText: ^Left
+*MLXHelp*historyBack.labelString: History Backward
+*MLXHelp*historyBack.mnemonic: B
+*MLXHelp*historyBack.quickHelpLabel: Back to the last section in the history.
+*MLXHelp*historyForward.accelerator: Ctrl<Key>Right
+*MLXHelp*historyForward.acceleratorText: ^Right
+*MLXHelp*historyForward.labelString: History Forward
+*MLXHelp*historyForward.mnemonic: F
+*MLXHelp*historyForward.quickHelpLabel: Forward in the history.
+*MLXHelp*lastSection.accelerator: Ctrl<Key>Prior
+*MLXHelp*lastSection.acceleratorText: ^Page up
+*MLXHelp*lastSection.labelString: Last Section
+*MLXHelp*lastSection.mnemonic: L
+*MLXHelp*lastSection.quickHelpLabel: To the preceding section in the contents tree.
+*MLXHelp*nextSection.accelerator: Ctrl<Key>Next
+*MLXHelp*nextSection.acceleratorText: ^Page down
+*MLXHelp*nextSection.labelString: Next Section
+*MLXHelp*nextSection.mnemonic: N
+*MLXHelp*nextSection.quickHelpLabel: To the next section in the contents tree.
+*MLXHelp*backButton.quickHelpLabel: Back in the history.
+*MLXHelp*frame.quickHelpLabel: The contents tree. Click the tree node.
+*MLXHelp*text.fontList: -adobe-times-medium-r-normal--14-*-*-*-*-*-iso8859-1
+*MLXHelp*text.quickHelpLabel: Help text of the selected section. Click the hypertext links.
+*MLXHelp*forwardButton.quickHelpLabel: Forward in the history.
+*MLXHelp*titleLabel.labelString: Title:
+*MLXHelp*titleText.quickHelpLabel: The title of the selected section.
+*MLXHelp*exportDialog.dialogTitle: Export
+*MLXHelp*exportDialog.okLabelString: Export
+*MLXHelp*exportType.labelString: Export Format:
+*MLXHelp*plainText.labelString: Plain Text
+*MLXHelp*latexFormat.labelString: Latex
+*MLXHelp*htmlText.labelString: HTML
+
+
+! ----------------------------------------------
+! end of resource file MLXHelp.rf
+! ----------------------------------------------

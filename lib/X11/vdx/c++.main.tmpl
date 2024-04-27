@@ -1,0 +1,34 @@
+// ----------------------------------------
+// Main programm 
+// 
+// This file was automaticly generated.
+// ----------------------------------------
+
+/*
+
+$(DESCRIPTION)
+
+*/
+
+#include <stdio.h>
+
+#include "$(STARTUP).h"
+
+char *fallback = 
+#include "$(APPL_CLASS)_res.h"
+;
+
+// ---------------------------
+//      main()
+// ---------------------------
+
+main(int argc, char **argv)
+{
+  VcView::init("$(APPL_CLASS)", argc, argv, fallback);    // init X-Toolkit
+
+
+  $(STARTUP) *mw = new $(STARTUP)();          // build startup interface
+  mw->open();                                 // show it
+
+  VcView::run();                             // run Application mainloop
+}

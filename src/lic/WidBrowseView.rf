@@ -1,0 +1,91 @@
+! ----------------------------------------------
+! File: WidBrowseView.rf
+! Resource file of interface WidBrowseView
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*WidBrowseView*fileButton.labelString: File
+*WidBrowseView*fileButton.mnemonic: F
+*WidBrowseView*loadButton.accelerator: Ctrl<Key>l
+*WidBrowseView*loadButton.acceleratorText: ^L
+*WidBrowseView*loadButton.labelString: Load
+*WidBrowseView*loadButton.mnemonic: L
+*WidBrowseView*loadButton.quickHelpLabel: Load selected widget into browser.
+*WidBrowseView*loadParentButton.accelerator: Ctrl<Key>p
+*WidBrowseView*loadParentButton.acceleratorText: ^P
+*WidBrowseView*loadParentButton.labelString: Load Parent
+*WidBrowseView*closeButton.labelString: Close
+*WidBrowseView*closeButton.mnemonic: C
+*WidBrowseView*closeButton.quickHelpLabel: Close this window.
+*WidBrowseView*viewButton.labelString: View
+*WidBrowseView*smallIconButton.accelerator: Ctrl<Key>s
+*WidBrowseView*smallIconButton.acceleratorText: ^S
+*WidBrowseView*smallIconButton.labelString: Small Icons
+*WidBrowseView*smallIconButton.mnemonic: S
+*WidBrowseView*smallIconButton.quickHelpLabel: Display small icons in Tree View.
+*WidBrowseView*withIconButton.accelerator: Ctrl<Key>I
+*WidBrowseView*withIconButton.acceleratorText: ^I
+*WidBrowseView*withIconButton.labelString: With Icons
+*WidBrowseView*withIconButton.mnemonic: I
+*WidBrowseView*withIconButton.quickHelpLabel: Display icons Tree View.
+*WidBrowseView*withClassNameButton.accelerator: Ctrl<Key>n
+*WidBrowseView*withClassNameButton.acceleratorText: ^N
+*WidBrowseView*withClassNameButton.labelString: With Class Names
+*WidBrowseView*withClassNameButton.mnemonic: N
+*WidBrowseView*withClassNameButton.quickHelpLabel: Display class names of widgets.
+*WidBrowseView*widgetButton.labelString: Widget
+*WidBrowseView*widgetButton.mnemonic: W
+*WidBrowseView*editButton.acceleratorText: E
+*WidBrowseView*editButton.labelString: Edit
+*WidBrowseView*editButton.mnemonic: E
+*WidBrowseView*editButton.quickHelpLabel: Show Widget Resource Editor for selected widgets.
+*WidBrowseView*browseButton.acceleratorText: B
+*WidBrowseView*browseButton.labelString: Browse
+*WidBrowseView*browseButton.mnemonic: B
+*WidBrowseView*browseButton.quickHelpLabel: Show Browser for selected widgets.
+*WidBrowseView*menuEditButton.acceleratorText: M
+*WidBrowseView*menuEditButton.labelString: Menu Editor
+*WidBrowseView*menuEditButton.mnemonic: M
+*WidBrowseView*menuEditButton.quickHelpLabel: Show Menu Ediotor for selected widgets.
+*WidBrowseView*cutButton.acceleratorText: X
+*WidBrowseView*cutButton.labelString: Cut
+*WidBrowseView*cutButton.mnemonic: u
+*WidBrowseView*cutButton.quickHelpLabel: Copy selection to clipboard and delete selection.
+*WidBrowseView*copyButton.acceleratorText: C
+*WidBrowseView*copyButton.labelString: Copy
+*WidBrowseView*copyButton.mnemonic: C
+*WidBrowseView*copyButton.quickHelpLabel: Copy selection to clipboard.
+*WidBrowseView*pasteButton.acceleratorText: V
+*WidBrowseView*pasteButton.labelString: Paste
+*WidBrowseView*pasteButton.mnemonic: P
+*WidBrowseView*pasteButton.quickHelpLabel: Paste clipboard contents to selected widgets.
+*WidBrowseView*deleteButton.acceleratorText: DEL
+*WidBrowseView*deleteButton.labelString: Delete
+*WidBrowseView*deleteButton.mnemonic: D
+*WidBrowseView*deleteButton.quickHelpLabel: Delete selected widgets.
+*WidBrowseView*createButton.labelString: Create
+*WidBrowseView*createButton.mnemonic: C
+*WidBrowseView*helpButton.labelString: Help
+*WidBrowseView*helpButton.mnemonic: H
+*WidBrowseView*onHelp.labelString: On Help
+*WidBrowseView*onHelp.mnemonic: H
+*WidBrowseView*onHelp.quickHelpLabel: Show help on help system.
+*WidBrowseView*onContext.mnemonic: C
+*WidBrowseView*onContext.quickHelpLabel: Get help after clicking in a window.
+*WidBrowseView*onWidResEditor.accelerator: Ctrl<Key>F1
+*WidBrowseView*onWidResEditor.acceleratorText: ^F1
+*WidBrowseView*onWidResEditor.quickHelpLabel: Show help for this window.
+*WidBrowseView*optionsButton.labelString: Options
+*WidBrowseView*optionsButton.mnemonic: O
+*WidBrowseView*automaticLoadButton.accelerator: Ctrl<Key>t
+*WidBrowseView*automaticLoadButton.acceleratorText: ^T
+*WidBrowseView*automaticLoadButton.labelString: Automatic Load
+*WidBrowseView*automaticLoadButton.mnemonic: t
+*WidBrowseView*quickHelp.labelString: The quick help line.
+*WidBrowseView*treeFrame.quickHelpLabel: Tree View of a widget.
+
+
+! ----------------------------------------------
+! end of resource file WidBrowseView.rf
+! ----------------------------------------------

@@ -1,0 +1,9 @@
+#define PassCDebugFlags CDEBUGFLAGS="-g -Wall" CXXDEBUGFLAGS="-g -Wall"
+#define IHaveSubdirs
+ 
+SUBDIRS = Calcy Hungry TextEdit ToDo
+
+MakeSubdirs($(SUBDIRS))
+
+DependSubdirs($(SUBDIRS))
+

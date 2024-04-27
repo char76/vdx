@@ -1,0 +1,17 @@
+! ----------------------------------------------
+! File: ToolBoxSample.rf
+! Resource file of interface ToolBoxSample
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*ToolBoxSample*xfeButton.labelString: Start
+*ToolBoxSample*xfeButton_3.labelString: Stop
+*ToolBoxSample*xfeButton_3_1.labelString: Low
+*ToolBoxSample*xfeButton_3_2.labelString: High
+*ToolBoxSample*progress.labelString:  
+
+
+! ----------------------------------------------
+! end of resource file ToolBoxSample.rf
+! ----------------------------------------------

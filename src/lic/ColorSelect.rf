@@ -1,0 +1,16 @@
+! ----------------------------------------------
+! File: ColorSelect.rf
+! Resource file of interface ColorSelect
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*ColorSelect*quickHelp.labelString: This is the Quick Help Line.
+*ColorSelect*okButton.labelString: OK
+*ColorSelect*cancelButton.labelString: Cancel
+*ColorSelect*colorList.quickHelpLabel: Contents of rgb.txt.
+
+
+! ----------------------------------------------
+! end of resource file ColorSelect.rf
+! ----------------------------------------------

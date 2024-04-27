@@ -1,0 +1,14 @@
+! ----------------------------------------------
+! File: HelpView.rf
+! Resource file of interface HelpView
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*HelpView.title: ToDo - Help View
+*HelpView*pushButton_1.labelString: Close
+
+
+! ----------------------------------------------
+! end of resource file HelpView.rf
+! ----------------------------------------------

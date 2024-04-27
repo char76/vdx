@@ -1,0 +1,27 @@
+       ARCH = linuxelf-m1.2
+
+        CXX = g++
+         CC = gcc
+    CXXLINK = g++
+     CCLINK = gcc
+         AR = ar crl
+     RANLIB = ranlib
+         RM = rm -f
+     DEPEND = gcc -M
+       YACC = bison
+        LEX = flex
+   COMPRESS = gzip -f
+
+   INCLUDES = -I/usr/X11R6/include
+       LIBS = -L/usr/X11R6/lib \
+		-lXm -lXpm -lXt -lSM -lICE -lXext -lX11 -lm
+
+#    DEFINES = -D_POSIX_SOURCE -D_XOPEN_SOURCE -DCDE_WIDGETS
+    DEFINES = -D_POSIX_SOURCE -D_XOPEN_SOURCE -DWITHOUT_LAC
+#CDEBUGFLAGS = -g -Wall -fno-builtin
+CDEBUGFLAGS = -O -Wall -fno-builtin
+    OPTIONS = $(CDEBUGFLAGS) $(INCLUDES) $(DEFINES) $(EXTRA_CFLAGS)
+     CFLAGS = $(OPTIONS)
+   CXXFLAGS = $(OPTIONS)
+DEPENDFLAGS = $(INCLUDES) $(DEFINES) $(EXTRA_CFLAGS)
+

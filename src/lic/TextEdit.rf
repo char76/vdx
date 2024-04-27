@@ -1,0 +1,59 @@
+! ----------------------------------------------
+! File: TextEdit.rf
+! Resource file of interface TextEdit
+! This file was automaticly generated.
+!                DO NOT EDIT
+! ----------------------------------------------
+
+*TextEdit*fileMenuButton.labelString: File
+*TextEdit*fileMenuButton.mnemonic: F
+*TextEdit*fileImport.accelerator: Ctrl<Key>i
+*TextEdit*fileImport.acceleratorText: ^I
+*TextEdit*fileImport.labelString: Import
+*TextEdit*fileImport.mnemonic: I
+*TextEdit*fileExport.accelerator: Ctrl<Key>e
+*TextEdit*fileExport.acceleratorText: ^E
+*TextEdit*fileExport.labelString: Export
+*TextEdit*fileExport.mnemonic: E
+*TextEdit*fileCloseAndSave.accelerator: Ctrl<Key>s
+*TextEdit*fileCloseAndSave.acceleratorText: ^S
+*TextEdit*fileCloseAndSave.labelString: Save and Close
+*TextEdit*fileCloseAndSave.mnemonic: S
+*TextEdit*fileCloseAndSave.quickHelpLabel: Put the text in the resource entry and close this window.
+*TextEdit*fileClose.accelerator: Ctrl<Key>C
+*TextEdit*fileClose.acceleratorText: ^C
+*TextEdit*fileClose.labelString: Close
+*TextEdit*fileClose.mnemonic: C
+*TextEdit*fileClose.quickHelpLabel: Close the window.
+*TextEdit*editMenuButton.labelString: Edit
+*TextEdit*editMenuButton.mnemonic: E
+*TextEdit*editCut.accelerator: Shift<Key>osfDelete
+*TextEdit*editCut.acceleratorText: ^DEL
+*TextEdit*editCut.labelString: Cut
+*TextEdit*editCut.mnemonic: C
+*TextEdit*editCopy.accelerator: Ctrl<Key>osfInsert
+*TextEdit*editCopy.acceleratorText: ^INS
+*TextEdit*editCopy.labelString: Copy
+*TextEdit*editCopy.mnemonic: o
+*TextEdit*editPaste.accelerator: Shift<Key>osfInsert
+*TextEdit*editPaste.acceleratorText: S-INS
+*TextEdit*editPaste.labelString: Paste
+*TextEdit*editPaste.mnemonic: P
+*TextEdit*helpMenuButton.labelString: Help
+*TextEdit*helpMenuButton.mnemonic: H
+*TextEdit*onHelp.labelString: On Help
+*TextEdit*onHelp.mnemonic: H
+*TextEdit*onContext.labelString: On Context
+*TextEdit*onContext.mnemonic: C
+*TextEdit*helpHelp.accelerator: Ctrl<Key>F1
+*TextEdit*helpHelp.acceleratorText: ^F!
+*TextEdit*helpHelp.labelString: On Window
+*TextEdit*helpHelp.mnemonic: W
+*TextEdit*fileImportDialog.dialogTitle: Import
+*TextEdit*fileExportDialog.dialogTitle: Export
+*TextEdit*quickHelpLabel.labelString: This is the Quick Help Line.
+
+
+! ----------------------------------------------
+! end of resource file TextEdit.rf
+! ----------------------------------------------

@@ -1,0 +1,39 @@
+INTERFACE "ColorSelect.i"
+INTERFACE "FontSelect.i"
+INTERFACE "MainWindow.i"
+INTERFACE "MenuEdit.i"
+INTERFACE "TextEdit.i"
+INTERFACE "WidgetPalette.i"
+INTERFACE "AgreeWindow.i"
+INTERFACE "WidBrowseView.i"
+INTERFACE "WidResEditor.i"
+INTERFACE "TemplateView.i"
+INTERFACE "ProjectSettings.i"
+INTERFACE "AttachmentEditor.i"
+INTERFACE "GlobalResEditor.i"
+INTERFACE "TransformDialog.i"
+LANG "c++lac"
+STARTUP "MainWindow"
+SOURCEDIR "/usr/local/projects/vdx/src/lic/"
+APPL_CLASS "Vdx"
+EXEC_FILE "vdx"
+MORE_SOURCE ""
+EXTRA_CC_OPTIONS ""
+EXTRA_LD_OPTIONS ""
+EXTRA_LIBRARIES ""
+DESCRIPTION ""
+GLOBAL_RESOURCES "Vdx*background:	        ivory3
+Vdx*XmText.background:	#b9b49c
+Vdx*SensitiveViewScrolledWindow.ClipWindow.background: #bebeaf
+Vdx*SensitiveViewScrolledWindow.SensitiveContainer.background: #bebeaf
+Vdx*foreground:   black
+Vdx*WidResEditor*XlCellTable.horizontalSpacing: 2
+Vdx*WidResEditor*XlCellTable.verticalSpacing: 2
+
+Vdx*fontList:	-adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1,\
+                -adobe-helvetica-medium-o-*-*-12-*-*-*-*-*-iso8859-1=italic,\
+               -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1=bold
+Vdx*FontList:	-adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1,\
+                -adobe-helvetica-medium-o-*-*-12-*-*-*-*-*-iso8859-1=italic,\
+               -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1=bold
+"

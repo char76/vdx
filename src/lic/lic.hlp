@@ -1,0 +1,847 @@
+*MLXHelp.help_0.title: VDX 1.2
+*MLXHelp.help_0.ident: HID_TOP
+*MLXHelp.help_0.hypertextLinks: 9 275 288 7 12 42 22 402 417 29 480 497 
+*MLXHelp.help_0.sections:  9 23 37 7 22 29 8
+*MLXHelp.help_0.text: This is the help system of View Designer/X. On the left side you see the contents tree. Click the tree nodes to display the specific contents of a section. The highlighted characters are hypertext links. With arrow buttons you are able to navigate through your history.\n\
+\n\
+See release notes for more details of this release.\n\
+\n\
+If this is the first time you are using the View Designer/X, read the section Getting Started. To learn more about special features of VDX read the section Extended Features.\n
+
+
+*MLXHelp.help_9.title: Release Notes
+*MLXHelp.help_9.ident: HID_RELEASE_NOTES
+*MLXHelp.help_9.hypertextLinks: 6 243 255 27 258 280 26 283 302 35 328 347 30 387 412 28 359 384 36 305 325 
+*MLXHelp.help_9.text: Welcome to Release 1.2 of VDX\n\
+\n\
+With the VDX 1.2 you are able to create graphical user interfaces with OSF/Motif and generate source code in C or C++ for the designed interfaces.\n\
+\n\
+The main features of this User Interface Builder:\n\
+* interactive WYSIWYG View\n\
+* Widget Resource Editor\n\
+* Widget Tree Browser\n\
+* Widget tree template\n\
+* reusable components by links\n\
+* C and C++ code generation\n\
+* adaptable code generation\n\
+* support for Motif 2.0 widgets\n\
+\n\
+You should send a bug report and additional comments to following mailing address:\n\
+\n\
+dirk@bredex.de\n\
+\n\
+My surface mailing address:\n\
+\n\
+Dirk Laessig\n\
+Mühlenpfordtstr. 5\n\
+D-38106 Braunschweig\n\
+Germany\n\
+\n
+
+
+*MLXHelp.help_23.title: Agreement
+*MLXHelp.help_23.ident: HID_AGREEMENT
+*MLXHelp.help_23.hypertextLinks: 
+*MLXHelp.help_23.text: Copyright (C) 1996, 1997, 1998 Dirk Laessig\n\
+All rights reserved. \n\
+\n\
+LICENSE AGREEMENT\n\
+between licensee and Dirk Lässig, Mühlenpfordtstr. 5, 38106 Braunschweig, Germany - called as author.\n\
+\n\
+Topic of this agreement is the program VDX and other written material, in following called as software. The author calls his attention to the fact, that it is impossible to make software without any defect in every kind of application and combination. Topic of this agreement is only software usable in the sense of program description and user guide. \n\
+\n\
+Please read the following terms carefully. If you do not agree to all the terms, do not download, install or use the software. By downloading, installing or clicking on Agree button you accept all terms of this agreement.\n\
+\n\
+License\n\
+Author hereby grants to you non-transferable and non-exclusive license to use the software, subject to the terms and conditions of this license.\n\
+\n\
+Software can be used for test, validation and non-commercial purposes without a license key and without paying a license fee. \n\
+\n\
+After purchasing a license key commercial use is allowed. Distribution of this license key is prohibited.\n\
+\n\
+Ownership and Protection of Confidential Information\n\
+Author shall at all times retain sole title to and ownership of the software, except that title to and ownership of any portion of the software that is owned by a third party shall remain with applicable third party.\n\
+\n\
+The software and the associated documentation contains copyrighted and/or proprietary information. You may not disclose or otherwise make available the software and associated documentation to any person other than your employees for the purposes necessary for your use of the software as authorized herein. You may not remove copyright notices or any other proprietary legends on the software or the associated documentation. You have no right to change, to disassemble and to create derived software.\n\
+\n\
+Warranty\n\
+The software is provided on an 'AS IS' basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose and non-infringement. The entire risk as to the quality and performance of the Software is borne by you. Should the Software prove defective, you assume the entire cost of any service and repair. \n\
+\n\
+Limitation of Liability\n\
+Author's liability arising out the manufacture, sale or supplying of the software for its use or disposition, whether based upon warranty, contract, tort, patent or copyright infringement or misappropriation of intellectual property or otherwise, shall not exceed the license fee paid by you for the software. In no event shall author be liable to you or any other person or entity for special, incidental or consequential damages (including but not limited to, loss of profits, loss of savings, loss of data, or loss of use damages) arising out of the use or disposition of the software. In no event will the author be liable for any claim brought by you more than one year after the cause of action arose or reasonable should have been disclosed.\n\
+\n\
+Termination\n\
+Author may terminate the license granted thereunder at any time by written notice to you if you (i) fail to pay the license fee when due, or (ii) breach any provision of this license and fail to remedy such breach within 30 days after author provides you with notice of such breach. In the event of such termination, you must immediately discontinue use of the software and notify the author in writing that the software has been destroyed.\n\
+\n\
+General\n\
+If any provision hereof shall be deemed by any court to be invalid, illegal, or unenforceable, such provision will be enforced to that maximum extent permissible by law, and the validity, legality and enforceability of the remaining provision hereof shall not be affected or impaired. \n\
+\n\
+This license supersedes all prior agreements and understanding between you and the author related to the software and is intended to be the complete and exclusive statement of the terms of your license to use the software.\n\
+\n\
+This license shall be governed by, and constructed in accordance with the laws of Federal Republic of Germany. Law-court for this agreement is Braunschweig.\n
+
+
+*MLXHelp.help_37.title: Purchase
+*MLXHelp.help_37.ident: HID_REGISTRATION
+*MLXHelp.help_37.hypertextLinks: 
+*MLXHelp.help_37.text: To purchase a license key you have to contact a distributor. You will receive a license key that removes the restrictions of the demo version.
+
+*MLXHelp.help_7.title: Using Help
+*MLXHelp.help_7.ident: HID_USING_HELP
+*MLXHelp.help_7.hypertextLinks: 
+*MLXHelp.help_7.text: This application provides two kinds of help systems. This window and Quick Help lines. \n\
+\n\
+Quick Help:\n\
+You can get short information of user interface elements by moving the mouse pointer. A little line in the bottom of the window displays the information.\n\
+\n\
+Help System:\n\
+The help window informs you about more details. On the left side you see the contents tree of a help document. Click the plus or minus signs to expand or collapse the tree. Click the book icon or labels to show the contents of a section. If you don't want to see the contents tree, you can switch it of by using menu item Contents in the View menu. \n\
+Highlighted characters are hypertext links. Click the links to jump to another section with related information. You can use arrow buttons to navigate through your history of section.\n\
+If you want to search for a word to find sections in the entire help document, choose menu item Find in Navigate menu. A little dialog enables you to enter a word. After pressing the Find button, the search begins. If it finds the word in some sections, the first section is displayed and all words are emphasized. To find the next section press the Find button again.\n\
+May be you don't want to read the help document on your computer screen. With menu item Export in File menu you are able to save the help document. The file selection box contains an option menu, which enables you to save the document in a specific file format. Currently Plain Text, LaTeX and HTML are supported.\n
+
+
+*MLXHelp.help_22.title: Getting Started
+*MLXHelp.help_22.ident: HID_USING_HELP
+*MLXHelp.help_22.hypertextLinks: 26 299 306 27 308 323 6 328 340 24 210 218 25 223 242 4 395 406 5 431 449 28 531 546 
+*MLXHelp.help_22.sections:  24 25 26 27 6 4 5 28
+*MLXHelp.help_22.text: This section contains information about basic functionality of View Designer/X. Read this section before using View Designer/X.\n\
+\n\
+If you want to know, how to create a project or user interface read the sections Projects and Creating Interfaces, or if you want to know more about the basic tools like Browser, Resource Editor and WYSIWYG View read these sections. Often the View Designer provides Drag & Drop and displays objects in Icon and Tree View. After designing an interface you have to generate the source code. Read section Code Generation for more details.
+
+*MLXHelp.help_24.title: Projects
+*MLXHelp.help_24.ident: HID_PROJECTS
+*MLXHelp.help_24.hypertextLinks: 30 1179 1203 15 513 513 15 497 512 2 1582 1600 1 1608 1619 15 1793 1816 
+*MLXHelp.help_24.text: The goal of creating a project is the design of user interfaces for a new application. And thats why a project consists of a collection of user interfaces.\n\
+\n\
+Parts of a project are also templates and several settings. These settings are the source path (the directory, in which the generated source code is placed), the startup interface (the first user interface of an application) and the code generation model (describes the way of code generation). These settings could be changed by using the Settings Dialog.\n\
+\n\
+The informations of the project are stored in the project file that has always the extension '*.prj'. It contains filenames of the interfaces and templates. Interfaces and templates are stored in other files but in the same directory as the project file.\n\
+\n\
+The source path is a directory where the generated code is placed. This path may be different from the location of a project. So you are able to save the project and interface files in another directory as the source code of the application.\n\
+\n\
+When a user interface application is started, the first interface is created and shown. This first interface is called startup interface.\n\
+\n\
+The View Designer/X has a flexible code generation. It is possible to create or change a code generation model. In the delivered package exist only two generation models (C, C++). The project contains the specification of the used generation model. If you want to modify or create such a model, examine the files in directory <View Designer/X Install Directory>/lib/X11/vdx/*.tmpl .\n\
+\n\
+If you want to create a new project, use the New Project Dialog in the Main Window. If you have started the View Designer/X a new project named 'Untitled.prj' already exists. You are able the change the name and other settings of this project by using the Project Settings Dialog.
+
+*MLXHelp.help_25.title: Creating Interfaces
+*MLXHelp.help_25.ident: HID_CREATING_INTERFACES
+*MLXHelp.help_25.hypertextLinks: 1 243 254 14 266 286 4 967 978 6 1218 1225 5 1228 1246 36 1433 1454 6 473 485 6 855 867 
+*MLXHelp.help_25.text: To create a user interface you only have to create a widget with no parent. If the created widget is not a shell widget, then also a shell widget is created.\n\
+\n\
+There are two ways to create a widget.\n\
+\n\
+* Use the menu items in the Widgets menu of Main Window\n\
+\n\
+* use the Widget Class Palette and click an icon\n\
+\n\
+In both cases the mouse pointer is changed and the View Designer/X waits for further input. Now you have to click in root window or any other window, which is not the WYSIWYG View. Do not release the mouse button and drag the mouse. A rectangle shows the size of new widget. If you release the mouse button, a new widget is created.\n\
+\n\
+After interface creation, you have to create several widgets in this interface. Use the same mechanism described before, but don't click on root window. The parent of a new widget is determined by the widget in the WYSIWYG View, you have clicked.\n\
+\n\
+If you have already created a widget and you want to copy this widget, use the Drag & Drop mechanism to create a new widget, which have the same resources as the original widget.\n\
+\n\
+Another possibility of creating a widget is the clipboard. Use the popup menu of a widget, which can be reached by pressing the right mouse button in WYSIWYG,  Icon and Tree View. This popup menu contains menu items (Cut, Copy and Paste) to work with the clipboard.\n\
+\n\
+By using the templates you are able to create widgets with predefined resources. Read the section Using Widget Template to learn more about templates.\n
+
+
+*MLXHelp.help_26.title: Browse Widget Trees
+*MLXHelp.help_26.ident: HID_BROWSE_WIDGET_TREES
+*MLXHelp.help_26.hypertextLinks: 1 260 271 4 709 720 
+*MLXHelp.help_26.text: To examine and modify the structure of an interface you should open the Widget Tree Browser. Choose the menu item Browse in the popup menu of an interface or widget. You can get such a popup menu, in the Icon, Tree or WYSIWYG Views. (e.g. click an icon in the Main Window's Icon View by using right mouse button).\n\
+\n\
+The Tree Browser is a simple window, which contains the Tree View of a widget tree. Every object in the tree has a popup menu, which can be used to apply actions to the object (e.g. Cut, Copy, Paste or Edit). If you do a double click on the object, the default action is applied. This default action opens a Widget Resource Editor. \n\
+\n\
+If you want to modify the structure of widget tree, use the Drag & Drop mechanism. Press the middle mouse button on an object and don't release it. Drag the mouse. The cursor is changed and shows, how an object is inserted (between two neighbors or as child). If you release the mouse button, the action is applied. May be you don't want to move, but you want to copy a object. Therefore press the Control key while dragging the object.
+
+*MLXHelp.help_27.title: Change the Properties of Widgets
+*MLXHelp.help_27.ident: HID_CHANGE_THE_PROPERTIES_OF_WIDGETS
+*MLXHelp.help_27.hypertextLinks: 3 40 62 5 82 92 6 96 108 11 1195 1206 10 1124 1146 13 1243 1254 
+*MLXHelp.help_27.text: The properties are changed by using the Widget Resource Editor. Double click in a Tree, Icon or WYSIWYG View of a widget or choose the menu item Edit in a popup menu of a widget. In a Widget Resource Editor all resources of a widget are displayed. You can change these resources and apply changes with the Apply button.\n\
+\n\
+The resources are divided in categories. The option menu in the top of the window shows which category is displayed. Use this option menu to switch to another category.\n\
+\n\
+The resource entries have different types. The type is determined by resource type (e.g. XmString or Boolean). A resource entry for the type Boolean has a toggle button, which is used to change the value of resource. A resource entry of type XmString has a Text entry to change the value.\n\
+\n\
+The toggle button on left side of an entry displays whether the resource is set. If this toggle button isn't set, the resource has its default value, which means the resource is never set.\n\
+\n\
+With little push buttons on the right side of an entry additional editors can be opened. If the resource entry is of type Pixel, the push button opens a Color Selection Window. If the type is FontList or RenderTable, then a FontChooser is raised. Otherwise it is a simple Text Editor.\n\
+\n\
+The source of resource values are changed by means of option menus on the right side. The item 'private' in this menus means, that a value is set in the source code. 'public' means the value is set in external resource files. The resource entries of type Pixmap have the items 'include' for including the Xpm file and 'load' for loading Xpm file while program execution. Callback entries in category Callbacks have the items 'method' and 'manage'. 'Method' means, that the identifier in the resource entry is a function or C++-method in your source code. If you switch the option menu to 'manage', then a identifier in the entry is a widget name. This widget is managed, if the callback is invoked. This is useful for a dialog box, which are managed by push buttons (e.g. File open).\n\
+\n\
+The category Extra doesn't have any resource entries. Therefore the name and the manage state could be changed in this category. In the text entry you have to edit the name of the widget. This name is used as an identifier in the source code and as the name of the widget while creating it (see X toolkit function XtCreateWidget()). The name must be unique in the interface and must be a valid identifier of the programming language C. The manage state determines the visibility of a widget after creation. The widget is managed by the X toolkit function XtManageChild(). Some widgets shouldn't be managed, e.g. pulldown menus. That's why the manage state of this widgets couldn't be changed. Normally the manage state is always true, but for dialogs it is false, because dialogs appears only temporary.\n\
+
+
+*MLXHelp.help_6.title: WYSIWYG View
+*MLXHelp.help_6.ident: HID_WYSIWYG_VIEW
+*MLXHelp.help_6.hypertextLinks: 1 494 519 4 1564 1575 12 2802 2813 
+*MLXHelp.help_6.text: The WYSIWYG View shows the real look of the interface. In the popup menu of the interface exists a menu item Show. Use this menu item to make the WYSIWYG View visible. Normally this View is visible by default.\n\
+\n\
+In the WYSIWYG View the geometry of an interface can be modified. Use left mouse button to resize a widget. Click the widget, which you want to resize and drag the mouse. A rectangle appears and shows the new size of a widget. The size depends on grid value, which can be changed in Main Window's Option menu.\n\
+\n\
+If you want to select a widget, press the left mouse button, but don't drag the mouse. If the widget is selected, it is marked by a black border. To add a widget to the current selection, press the Control key while selecting a widget. The first widget of the selection is emphasized, because it's geometry is imported for alignment.\n\
+\n\
+If you click a widget with right mouse button, the popup menu of a widget is shown. In this popup menu actions can be applied, e.g. opening Widget Resource Editor with a menu item Edit. If the widget is selected and there are other widgets, which are also selected, the action is applied to all these widgets. Example: If you have two selected push buttons and choose the menu item Delete, then these two widgets are destroyed at the same time.\n\
+\n\
+The geometry of widgets is also modified by the alignment actions. Select multiple widgets and open the popup menu for one of these widgets. Choose a menu item in the Align submenu. The new geometry depends on the first emphasized widget in the selection.\n\
+\n\
+The Drag & Drop mechanism is used to move or copy a widget. Press the middle mouse button on a widget and drag the mouse. A rectangle shows, where the widget is placed. The new position also depends on grid value. With this mechanism you can reparent a widget, if you drop it on a new parent. By pressing the Control key while dragging, the widget is copied instead of moved. So you don't need to create a second push button, when you copy the first push button.\n\
+\n\
+The popup menu (or context menu) of widgets in the WYSIWYG View contains following items:\n\
+\n\
+* Edit (creates a Widget Resource Editor for the widget),\n\
+* Browser (creates a Browser which displays the tree structure of the widget),\n\
+* Align (to modify widget's geometry),\n\
+* Cut, Copy and Paste (to work with the clipboard),\n\
+* Refresh (make an update for the WYSIWYG View),\n\
+* Delete (destroys a widget). \n\
+\n\
+Some menu items only exist for widgets of a specific class. A dialog has an additional menu item Visibility, which toggles the visibility state of the dialog. This state is only important for the WYSIWYG View and has no effect to widget's visibility in the generated application. A menu widget like a menu bar has an additional item Menu Editor. This creates an instance of the Menu Editor for quick menu creation.\n
+
+
+*MLXHelp.help_4.title: Drag & Drop
+*MLXHelp.help_4.ident: HID_DRAG___DROP
+*MLXHelp.help_4.hypertextLinks: 5 4 24 6 29 41 
+*MLXHelp.help_4.text: The Tree View, Icon View and WYSIWYG View provide Drag & Drop facilities. The middle mouse button is used to move and copy objects. \n\
+\n\
+To move an object press the middle mouse button over the specific object and don't release the button. Now drag the mouse to the new position of the object. If you release the mouse button, then the moving action is applied.\n\
+\n\
+To copy an object use the same mechanism described before, but while dragging the object, you should press the Control key.\n\
+\n\
+If you drag an object and drop it on a text widget, the name of the object is exported and inserted in the text. This is useful in the Widget Resource Editor. If you want to attach a child of a XmForm to another widget, drag it from the Tree, Icon or Wysiwyg View and drop it on the resource entry (e.g. leftWidget in the category Constraints).\n
+
+
+*MLXHelp.help_5.title: Icon and Tree View
+*MLXHelp.help_5.ident: HID_ICON_AND_TREE_VIEW
+*MLXHelp.help_5.hypertextLinks: 26 1016 1030 12 1034 1045 3 1076 1098 1 1155 1166 
+*MLXHelp.help_5.text: Getting popup menus:\n\
+Click an object with the right mouse button to get a popup menu. To apply an action to the object you can choose a menu item of the popup menu. If the object is selected, the action is applied to all selected objects.\n\
+\n\
+Select an object:\n\
+To select an object press the left mouse button. When you do so, all other objects will be unselected. Press the Control key and the left mouse button to add a object to current selection.\n\
+You can also choose multiple objects by pressing the left mouse button on an icon (don't release) and dragging the mouse across icons, which you want to have selected. The Icon and Tree View also provides the 'rubber band' behavior.\n\
+\n\
+Rename an object:\n\
+You can change the name of an object in the Icon or Tree View, by pressing the Meta key and left mouse button. An entry appears, in which you can change the name of an object. Click another object to apply the changed name to the object.\n\
+\n\
+Default action:\n\
+With a double click you can activate a default action. In the Widget Browser or Menu Editor this default action opens the Widget Resource Editor. If you make a double click on an interface icon in the Main Window, a Wysiwyg View of the interface is opened or raised.\n
+
+
+*MLXHelp.help_28.title: Code Generation
+*MLXHelp.help_28.ident: HID_CODE_GENERATION
+*MLXHelp.help_28.hypertextLinks: 17 504 519 1 523 534 
+*MLXHelp.help_28.text: A project consists of interfaces. For every interface two modules are generated. The first module, named InterfaceName_base.c(.C), contains the creation of widgets. This module is overwritten every time the source code is generated. The second module, named InterfaceName.c(.C), is the file, in which you have to write your own code. \n\
+\n\
+When you generate source code of an interface for the first time, the file InterfaceName.c(.C) should be also generated by setting the toggle button Overwrite Stubs in Generate Dialog of Main Window. The View Designer/X creates this file with callback stubs, so you only have to modify this file and fill in your own callback code.\n\
+\n\
+During creation of an interface in the running program, an interface specific structure is allocated. This structure is in C++ source code a specific class named InterfaceName. In the header file InterfaceName.h you can modify this structure (or class) and add your own instance variables. Such variables normally contain the data, which is displayed in the interface (e.g. a pointer to a record queried from the database).\n\
+\n\
+The View Designer/X is able to generate an Imakefile and a main program of the project. This main program is named ProjectName.c(.C). In this file the main() function is generated, which creates the startup interface and runs the application main loop. The Imakefile should be used to generate a Makefile by executing xmkmf. The Imakefile and main program will only be generated, when the corresponding toggle buttons in the Generate Dialog are set.\n
+
+
+*MLXHelp.help_29.title: Extended Features
+*MLXHelp.help_29.ident: HID_EXTENDED_FEATURES
+*MLXHelp.help_29.hypertextLinks: 36 236 245 30 309 324 35 210 229 
+*MLXHelp.help_29.sections:  35 36 30
+*MLXHelp.help_29.text: This section contains information about features, which improve your work with View Designer/X. You don't need to read this section, if you are using View Designer/X for the first time.\n\
+\n\
+Links are used to make components reusable.\n\
+With templates you are able to create widgets with predefined resources. \n\
+The code generation of View Designer/X is more flexible than the code generation of other interface builder.\n
+
+
+*MLXHelp.help_35.title: Reusable Components
+*MLXHelp.help_35.ident: HID_REUSABLE_COMPONENTS
+*MLXHelp.help_35.hypertextLinks: 
+*MLXHelp.help_35.text: If you are developing a large application, you will use interface components that shows the same type of values in more than one user interface (e.g. a form for the address of customers could be used as a form for the address of suppliers). With View Designer/X you are prepared to design such components and use them in other interfaces.\n\
+\n\
+At first you have to create an interface, that you want to reuse (e.g. create a address form). Now choose the menu item Create Link in the popup menu of address interface. The cursor is changed and you have to click a parent in another interface. The link that is created appears as a frame widget which has the widgets of linked interface as its children. The link could be moved and the resources could be changed. The resources of a link are same as the resources of a frame widget. If you modify the original interface, the changes are visible in all links.\n\
+\n\
+All interfaces you have designed can be taken as reusable component. In generated source code of an interface a function createInterfaceName() is implemented (if interface is named AddressForm, the function is named createAddressForm()). This type of function is used be View Designer, when it creates a link. Instead of XtCreateWidget() for a real Widget, the function createAddressForm() is used. \n
+
+
+*MLXHelp.help_36.title: Using Widget Templates
+*MLXHelp.help_36.ident: HID_USING_WIDGET_TEMPLATE
+*MLXHelp.help_36.hypertextLinks: 
+*MLXHelp.help_36.text: In this context templates are widgets with predefined properties. So you are able to create a template of a push button, which has a specific size. If you create push buttons derived from this template, all of them have the same size. \n\
+\n\
+Use menu item Templates in the Main Window's Project menu to open the Template window. Create a widget as a part of an interface and change the resource values (e.g. size, color). Now you have to use the Drag & Drop mechanism to create a template. Drag the widget and drop it on Template window. An icon appears and indicate that the template is created.\n\
+\n\
+How to use the template? Click the Template icon with left mouse button. The cursor is changed and View Designer/X waits for further input. Now you have to click the new parent. If this is done, the new widget is created from the Template.\n\
+\n\
+The Templates belong to a project and they are saved in a special file. This file has the name Templates.pal as default. To change the name, use the Settings Dialog in the Main Window.\n
+
+
+*MLXHelp.help_30.title: Adaption of Code Generation
+*MLXHelp.help_30.ident: HID_ADAPTION_OF_CODE_GENERATION
+*MLXHelp.help_30.hypertextLinks: 
+*MLXHelp.help_30.sections:  31 33 34 32
+*MLXHelp.help_30.text: The View Designer/X gives you the chance to manipulate the code generation to add your own ideas. The directory <Install Directory>/lib/X11/vdx contains files, which can be changed.\n\
+\n\
+In the file lang.cf the generation models are listed. This file consists of three columns. The first contains the name of the model, which appears in the Settings Dialog of Main Window. The second column defines the file name extension of implementation files. The third column contains a boolean value, which is true, if the generated code is based on a special library. This should be set to false, because the current version of View Designer/X does not support such a library.\n\
+\n\
+To create a new code generation model, change your current directory to <Install Directory>/lib/X11/vdx. In this directory a shell script named addLang exist. This script creates a new code generation model. Type:\n\
+         addLang   c++    my-c++\n\
+to copy the code generation from 'c++' to your new 'my-c++'. The effect of running this script is that new files named 'my-c++.*.tmpl' are created. These files hold the information about the new code generation model. You can change these files to add your own ideas. In the Main Window's Settings Dialog the new code generation must appear as a menu item in the option menu.\n
+
+
+*MLXHelp.help_31.title: Toplevel file
+*MLXHelp.help_31.ident: HID_TOPLEVEL_FILE
+*MLXHelp.help_31.hypertextLinks: 
+*MLXHelp.help_31.text: The Toplevel file for c++ generation model is named c++.tmpl and contains following lines:\n\
+\n\
+c++.rf.tmpl                     *           rf                      n\n\
+c++.def_base.tmpl       _base  h                       n\n\
+c++.impl_base.tmpl     _base  C                      n\n\
+c++.def.tmpl                  *            h                       y\n\
+c++.impl.tmpl                *            C                      y\n\
+c++.VcView_h.tmpl    >            VcView.h      n\n\
+c++.VcView_C.tmpl   >            VcView.C     n\n\
+\n\
+Every line in this file is processed while generating code for a user interface. As a result of every line a file is created.\n\
+\n\
+Left column is the template of code generation that is used as the input of generation process. The name of the destination file depends on the second and third column and the interface name. If the second column contains a string like '_base', then this string is appended to the interface name. The '*' means, that nothing is attached to the interface name. The filename extension depends on the third column. The last column is important for overwriting an existing file. If it contains 'y', the resulting file could be changed by the developer. The character 'n' means, that the View Designer/X does not care overwriting.\n\
+\n\
+The last two lines describe only copy actions. The file c++.VcView_h.tmpl is always copied to VcView.h. It is not modified by the View Designer/X.\n\
+\n\
+Example:\n\
+The source code for interface MainWindow is generated. Following files are created: MainWindow.rf, MainWindow_base.h, MainWindow_base.C, MainWindow.h, MainWindow.C, VcView.h and VcView.C.\n\
+\n\
+- Comment: The structure of the toplevel file will be changed in the next version.\n
+
+
+*MLXHelp.help_33.title: Substitutions
+*MLXHelp.help_33.ident: HID_SUBSECTION
+*MLXHelp.help_33.hypertextLinks: 
+*MLXHelp.help_33.text: When a template file is processed the View Designer/X substitutes the following expressions:\n\
+\n\
+$(VARNAME)	\n\
+- VARNAME is of type string and the expression is replaced by this string.\n\
+\n\
+$(VARNAME,code1,code2)\n\
+- VARNAME is a boolean, and the expression is replaced by code1, if VARNAME is true. Otherwise the expression is replaced by code2.\n\
+\n\
+$(VARNAME,sub-template)\n\
+- VARNAME is an array. The expression is replaced by processing the template sub-template. This sub-template is processed for every element of the array. Such an array are widgets of an interface or resources of a widget.\n\
+\n\
+VARNAME is a variable name of code generation and is defined by View Designer/X. Such variables are named IS_LINK or RESOURCES.\n\
+\n\
+Examples:\n\
+1. If a object of an interface is not a widget but a link, the expression:\n\
+\n\
+$(IS_LINK,object->getWidget(),object) ;\n\
+\n\
+is replaces with:\n\
+\n\
+object->getWidget();\n\
+\n\
+2. Assume, the name of an interface is 'AddressForm'. In the template of a header file the class of the interface is defined:\n\
+\n\
+class $(NAME) : public $(NAME)_base {\n\
+...\n\
+};\n\
+\n\
+By replacing  the expression $(NAME) with the string 'AddressForm' the class definition looks like the following:\n\
+\n\
+class AddressForm : public AddressFrom _base {\n\
+...\n\
+};\n\
+\n\
+3. An interface uses several widget classes and that's why Motif header files must be included. The collection of header files can be accessed with the variable HEADERS. Every element of this collection has the variable HEADER. The code in the template:\n\
+\n\
+$(HEADERS,make-header.tmpl)\n\
+\n\
+The file 'make-header.tmpl' looks like this\n\
+\n\
+#include <$(HEADER)>\n\
+\n\
+If widget XmText is used, the variable HEADERS contains header file 'Xm/Text.h'. After replacing 'make-header.tmpl' a bit of source code is generated:\n\
+\n\
+#include <Xm/Text.h>\n\
+\n\
+Following widget classes are used: XmForm, XmText and XmPushButton. The replaced code segment of HEADERS expression is:\n\
+\n\
+#include <Xm/Form.h>\n\
+#include <Xm/Text.h>\n\
+#include <Xm/PushB.h>\n\
+\n
+
+
+*MLXHelp.help_34.title: Interfaces
+*MLXHelp.help_34.ident: HID_INTERFACES
+*MLXHelp.help_34.hypertextLinks: 
+*MLXHelp.help_34.text: This section describes the substitutions of an interface. If source code of an interface is generated, the following substitutions exist and can be used in template files. For better explanation the elements of a collection appears with preceding collection name. Example:\n\
+\n\
+The collection RESOURCES contains all resources of a widget. RESOURCENAME is the name of the resource. To show that RESOURCENAME belongs to RESOURCES, it appears as RESOURCES.RESOURCENAME.\n\
+\n\
+To show the type of a substitution, a letter in brackets is appended to the substitution identifier. (String (S), Boolean (B), Array (A))\n\
+\n\
+For every user interface following substitutions exist:\n\
+\n\
+SHELLCREATION (S)\n\
+The function that creates a shell widget. Normally XtCreateWidget() is used to create a widget. This function requires the parent of new widget, the resources and the number of resources. That's why the following variables must be defined and must have the right values:\n\
+Widget    parent \n\
+ArgList  args\n\
+Cardinal n\n\
+\n\
+SHELLIDENTIFIER (S)\n\
+This substitution contains a string which is equal to the name of the widget. The string could be used to label the variable of the widget.\n\
+\n\
+SHELLRESOURCES (A)\n\
+This array contains elements those are resources of the shell widget.  The elements can be used to call XtSetArg() and fill in a ArgList. This ArgList is required by SHELLCREATION.\n\
+\n\
+SHELLRESOURCES.RESOURCENAME (S)\n\
+The name of a resource as a string (e.g. labelString). The string could be used to construct a C string constant (e.g. "labelString") or to create the well known XmNlabelString. It's better to use a C string constant because in future releases the VDX is able to integrate non-Motif widgets.\n\
+\n\
+SHELLRESOURCES.RESOURCEVALUE (S)\n\
+The value of the resource. This could be a value like an integer constant or a function call to a convert function. The following convert functions must exist:\n\
+\n\
+Pixmap createPixmapFromData(char **) - converts an included Xpm file to pixmap.\n\
+\n\
+Pixmap createPixmapFromFile(char *) - loads Xpm file at runtime and converts it to a pixmap.\n\
+\n\
+RES_CONVERT(type, string) - is a macro and converts a resource value in string format to resource type.\n\
+\n\
+NAME (S)\n\
+The name of the interface (e.g. MainWindow). The name can be used to define a C++ class or C structure.\n\
+\n\
+LINKS (A)\n\
+Array of all linked classes in an interface. The array is needed to include the associated header file of the interfaces.\n\
+\n\
+LINKS.LINK_CLASS (S)\n\
+This string contains the name of the linked interface. \n\
+\n\
+WIDGETS (A)\n\
+Array of all widget in the interface. The order of widgets in this array is the same as the order of creation. This array does not contain the shell widget of the interface.\n\
+\n\
+WIDGETS.ISLINK (B)\n\
+The boolean is true, if this widget is a link. This boolean is used to decide how to get access to the widget.\n\
+\n\
+WIDGETS.MANAGE (B)\n\
+Is true, if widget must be managed by XtManageChild().\n\
+\n\
+WIDGETS.IDENTIFIER (S)\n\
+This string contains the name of the widget. It can be used to define a variable and to assign a value to it.\n\
+\n\
+WIDGETS.PARENT (S)\n\
+The name of parent. To create a widget the parent is necessary.\n\
+\n\
+WIDGETS.TYPE (S)\n\
+Normally the type of the object in an interface is 'Widget', if the object is a widget. But if the object is a link to another interface, the type is a pointer to the name of the linked interface\n\
+\n\
+WIDGETS.CREATION (S)\n\
+Is similar to SHELLCREATION. The variables parent, args and n must exist. But it is possible, that this function is not XtCreateWidget(). If a menu bar is created, the function to do that is XmCreateMenuBar(). A linked interface is created by createInterfaceName(), where InterfaceName is the name of the linked interface.\n\
+\n\
+WIDGETS.INTERFACE (S)\n\
+Name of interface that the widget belongs to. It can be used to access the interface structure or the class.\n\
+\n\
+WIDGETS.RESOURCES (A)\n\
+Same as SHELLRESOURCES.\n\
+\n\
+WIDGETS.RESOURCES.RESOURCENAME (S)\n\
+The name of the resource (e.g. labelSting).\n\
+\n\
+WIDGETS.RESOURCES.RESOURCEVALUE (S)\n\
+The resource value. Either a C constant like a number or a call to a convert function.\n\
+\n\
+METHODS (A)\n\
+An array for method declaration. Methods are callbacks.\n\
+\n\
+METHODS.METHOD (S)\n\
+The name of a method.\n\
+\n\
+METHODS.INTERFACE (S)\n\
+The interface, which the method belongs to. This could be used to build a scope for the method (e.g. MainWindow::do_exit()).\n\
+\n\
+\n\
+CALLBACKS (A)\n\
+An array to add callbacks. This is not the same as METHODS, because the array may contain a method more than one time.\n\
+\n\
+CALLBACKS.IS_LINK (B)\n\
+Is true, if widget is a link to another interface.\n\
+\n\
+CALLBACKS.IS_MANAGE_CB (B)\n\
+If true, at this callback event another widget should be managed.\n\
+\n\
+CALLBACKS.NAME (S)\n\
+The resource name of the callback (e.g. activateCallback).\n\
+\n\
+CALLBACKS.WIDGET_IDENTIFIER (S)\n\
+Name of widget, first parameter for XtAddCallback().\n\
+\n\
+CALLBACKS.METHOD\n\
+The name of the method. This is the same as the method name in the array METHODS.\n\
+\n\
+CALLBACKS.WIDGET_TO_MANAGE (S)\n\
+If IS_MANAGE_CB is true, this is the widget, which should be managed.\n\
+\n\
+RELATIONS (A)\n\
+An array that contains resource settings for resource type widget (e.g. leftWidget or subMenuId). It is important to do this in another place than widget creation, because all widgets must exist.\n\
+\n\
+RELATIONS.SOURCEWIDGET (S)\n\
+The widget, which has the resource to set.\n\
+\n\
+RELATIONS.DESTINATIONWIDGET (S)\n\
+The widget, which is referred.\n\
+\n\
+RELATIONS.SOURCE_ISLINK (B)\n\
+Is true, if source widget is a link.\n\
+\n\
+RELATIONS.DESTINATION_ISLINK (B)\n\
+Is true, if destination widget is a link.\n\
+\n\
+RELATIONS.RESOURCENAME (S)\n\
+The resource name of the widget (e.g. leftWidget).\n\
+\n\
+HEADERS (A)\n\
+All Motif header files. The used widget classes in an interface must be defined by including the header file.\n\
+\n\
+HEADERS.HEADER (S)\n\
+The filename of the header file, e.g Xm/PushB.h\n\
+\n\
+LOCALHEADERS (A)\n\
+The Xpm files that has to be included.\n\
+\n\
+LOCALHEADERS.HEADER (S)\n\
+The file name of the Xpm file (e.g. Nose.xpm).\n\
+\n\
+RESOURCEFILE\n\
+The complete public resources to create a resource file.\n
+
+
+*MLXHelp.help_32.title: Imakefile and Main Program
+*MLXHelp.help_32.ident: HID_IMAKEFILE_AND_MAIN_PROGRAM
+*MLXHelp.help_32.hypertextLinks: 
+*MLXHelp.help_32.text: The Imakefile and main program are generated from templates c++.Imakefile.tmpl and c++.main.tmpl, if the code generation is set to 'c++'. Following substitutions exist:\n\
+\n\
+PROGRAM (S)\n\
+The program name. This is the basename of the project file. It's used to build a rule in Imakefile.\n\
+\n\
+STARTUP (S)\n\
+Startup interface of program. In main program the first interface is created and shown.\n\
+\n\
+APPL_CLASS (S)\n\
+The application class of the resulting program. It's used in Imakefile to create a resource file ( $(APPL_CLASS).ad ) and in main program it is a parameter to create the first application shell.\n\
+\n\
+OBJECTS (S)\n\
+All object files of project.\n\
+\n\
+SOURCES (S)\n\
+All source files of project.\n\
+\n\
+RESOURCEFILES (S)\n\
+All *.rf files of the project. These files are appended to a large resource file $(APPL_CLASS).ad.\n\
+
+
+*MLXHelp.help_8.title: Windows
+*MLXHelp.help_8.ident: HID_WINDOWS
+*MLXHelp.help_8.hypertextLinks: 1 73 84 3 88 110 
+*MLXHelp.help_8.sections:  1 3 10 11 12 13 14 21 38 43 44 45 46 47
+*MLXHelp.help_8.text: This section contains help for user interfaces of this application, like Main Window or Widget Resource Editor. The contents of this section is displayed by pressing key F1 or clicking on a help button. \n\
+\n
+
+
+*MLXHelp.help_1.title: Main Window
+*MLXHelp.help_1.ident: HID_MAIN_WINDOW
+*MLXHelp.help_1.hypertextLinks: 2 162 182 21 299 317 15 824 851 17 1002 1017 20 1123 1130 14 1229 1249 18 1557 1561 6 1586 1598 5 2285 2294 40 1932 1946 39 1845 1858 
+*MLXHelp.help_1.sections:  2 15 17 18 19 20 39 40 41 42
+*MLXHelp.help_1.text: The Main Window consists of five parts:\n\
+Menubar, Toolbar, Interface Icon View, Output Window, Quick Help Line.\n\
+\n\
+Menubar - File menu:\n\
+The menu item New is used to create a new project. If you have started View Designer/X, an empty project named Untitled.prj already exist. The menu item Open shows a file selection box for selecting a project file. This project file is opened and the contents of project is loaded. The menu item Save, saves the current project. If you want to save a project in another directory, choose menu item 'Save as'. To create a new Template Folder choose menu item 'New  Templates' and an existing Template Folder should be opened by  'Open Templates'. The menu item Exit terminates the running View Designer/X.\n\
+\n\
+Menubar - Project menu:\n\
+The item Settings should be chosen if you want to change the settings of current project. To add an interface file to the current project, choose item 'Interface add'. The source code for the whole project is generated, if you click item 'Code generation'. The View Designer/X is able to execute xmkmf, make utility and generated application. Choose menu item Execute to execute one of these programs.\n\
+\n\
+Menubar - Widgets menu:\n\
+The item Palette shows another window (Widget Class Palette), which is used to create new widgets. You may also use the submenus Shells, Manager, Primitives and Dialogs to create widgets.\n\
+\n\
+Menubar - Option menu:\n\
+With Option menu you can change several global settings for View Designer/X. Menu item Generic shows a dialog containing generic options of VDX. Menu item Grid changes the grid of the WYSIWYG View. The Update Policy submenu is used to modify the update mechanism in the WYSIWYG. This mechanism is invoked, if you change a resource or the layout of the interface. The default shell is used while creating a non-shell widget on the root window. View Defaults changes the behavior of Widget Resource Editor, Menu Editor and Browser. Default Public is a list of resources which should always be set in the resource file.\n\
+\n\
+Menubar - Help menu:\n\
+Here you have access to the help system of the View Designer/X.\n\
+\n\
+The Toolbar:\n\
+The icons in the toolbar are used to access actions of View Designer/X quickly. Click the toggle button Test mode to switch the WYSIWYG View in test mode.\n\
+\n\
+Interface Icon View:\n\
+The icons in this part of Main Window are views to the interfaces of the current project. You can select icons by pressing the left mouse button. Press the right mouse button to get a popup menu of the interface.\n\
+\n\
+Output Window:\n\
+You see the stdout and stderr output of the View Designer/X in this window.\n\
+\n\
+In the quick help line you see various messages, if you move mouse pointer over the user interface.\n
+
+
+*MLXHelp.help_2.title: New Project
+*MLXHelp.help_2.ident: HID_NEW_PROJECT
+*MLXHelp.help_2.hypertextLinks: 15 201 224 
+*MLXHelp.help_2.text: To create a new project select menu item 'New ...' from Main Window's File Menu. A little dialog comes up and asks for the name of new project. You are also able to change the name of a project in the Project Settings Dialog.\n\
+\n\
+File name, application class and name of the executable depends on project name.\n\
+\n
+
+
+*MLXHelp.help_15.title: Project Settings
+*MLXHelp.help_15.ident: HID_PROJECT_SETTINGS
+*MLXHelp.help_15.hypertextLinks: 36 281 290 30 864 888 28 984 1016 
+*MLXHelp.help_15.text: In this dialog you change the properties of a project.\n\
+\n\
+The project name is the file name of the project file. The project file has always the extension ".prj". It contains the settings and the name of interface files (".i").\n\
+\n\
+The name of Template file you can change in the entry Templates. It has always the extension ".pal". This file contains the Templates of the current project.\n\
+\n\
+The Source Path is a path where the source code is generated. The little button on the right side opens an file selection box. In this file selection box you can choose a directory, in which generated source code is placed.\n\
+\n\
+The main window of an application is mostly the first window that is opened. Enter the name of the first interface in entry Startup Interface. In the generated source code (main program) this interface is created and opened.\n\
+\n\
+This View Designer/X has a flexible code generation. You can choose a code generation model with the option menu Code Generation. Read the section Code Generation for more details.\n
+
+
+*MLXHelp.help_17.title: Generate Dialog
+*MLXHelp.help_17.ident: HID_GENERATE_DIALOG
+*MLXHelp.help_17.hypertextLinks: 
+*MLXHelp.help_17.text: In this Dialog you specify which files are generated. \n\
+\n\
+If you toggle the Main Program button, an additional source file is generated. This file is the main program and contains the function main().\n\
+\n\
+To create an Imakefile click the toggle button Imakefile. Use xmkmf to generate a Makefile.\n\
+\n\
+If the toggle button Overwrite Stubs is set, the View Designer/X generates files for every interface of project, which you have to edit and add your own code.\n\
+\n\
+At the first time set all toggle buttons.\n
+
+
+*MLXHelp.help_18.title: Grid Dialog
+*MLXHelp.help_18.ident: HID_GRID_DIALOG
+*MLXHelp.help_18.hypertextLinks: 6 36 48 
+*MLXHelp.help_18.text: You are able to specify the grid of WYSIWYG View. The grid is used while moving, placing or resizing a widget.\n\
+\n\
+By means of the slider you can set the grid value. The radio buttons are used to turn the grid on or off.\n
+
+
+*MLXHelp.help_19.title: Overwrite Dialog
+*MLXHelp.help_19.ident: HID_OVERWRITE_DIALOG
+*MLXHelp.help_19.hypertextLinks: 
+*MLXHelp.help_19.text: The files, generated by View Designer/X are shown in a list. Select or unselect files. All selected files will be written, if you have pressed the Write button.\n\
+\n\
+Every file in the list has a comment in brackets, which tells you more about the danger of overwriting the file.\n
+
+
+*MLXHelp.help_20.title: Execute Dialog
+*MLXHelp.help_20.ident: HID_EXECUTE_DIALOG
+*MLXHelp.help_20.hypertextLinks: 
+*MLXHelp.help_20.text: The View Designer/X is able to run a program. These programs are xmkmf, make utility and generated applications. There is only one program that can be executed at a time. Use the toggle buttons to choose the program. If a program is running, an additional push button appears in this dialog. Press this button to stop the running program by sending SIGKILL.\n
+
+
+*MLXHelp.help_39.title: View Defaults
+*MLXHelp.help_39.ident: HID_VIEW_DEFAULTS
+*MLXHelp.help_39.hypertextLinks: 38 24 31 12 33 44 3 49 71 5 348 365 
+*MLXHelp.help_39.text: The default behavior of Browser, Menu Editor and Widget Resource Editor should be changed by this dialog. This changes are saved in .vdxrc.\n\
+\n\
+Automatic Load means the Window is the only one instance.  Every time you want to open the Browser or Editor the widget is loaded the opened instance.\n\
+\n\
+Other options influence the appearence of the icons in Tree or Icon View.\n
+
+
+*MLXHelp.help_40.title: Default Public
+*MLXHelp.help_40.ident: HID_DEFAULT_PUBLIC
+*MLXHelp.help_40.hypertextLinks: 3 4 26 3 523 545 
+*MLXHelp.help_40.text: The Widget Resource Editor enables to change the source of a resource value. Private means the value is set in the source code and public means it is set in the resource file.  But some resources should always be set in a resource file, e.g. XmNlabelString. This dialog enables to change the list of these default public resources. The list of default public resources are saved in .vdxrc.\n\
+\n\
+Type the resource name in the entry and click on Add. To remove a resource name in the list, select it and click on Delete.\n\
+\n\
+If the Widget Resource Editor is opened, these resources are predefined as public.
+
+*MLXHelp.help_41.title: Generic Options
+*MLXHelp.help_41.ident: HID_GENERIC_OPTIONS
+*MLXHelp.help_41.hypertextLinks: 
+*MLXHelp.help_41.text: This dialog contains a set of generic options.\n\
+\n\
+Quick Start Dialog: If toggle button is set the Quich Start Dialog is shown at program startup.\n\
+\n\
+Auto Saving: If you want to save your project automaticly switch auto saving on.\n\
+\n\
+Auto Save Time: Change the interval of savings in minutes.\n\
+\n\
+Auto Save Path: The directory where the auto saved project is placed.\n\
+\n\
+Main Template Folder: A template file which is opened by the Template  icon in the top of the main window.\n\
+\n\
+Quick Help: If the toggle button ist set the Quick Help Lines in the bottom of the windows are visible.\n\
+\n\
+Wysiwyg after load: When a project is loaded from a file the Wysiwyg View is automaticly shown if this toggle button is set.\n\
+\n
+
+
+*MLXHelp.help_42.title: Quick Start Dialog
+*MLXHelp.help_42.ident: HID_QUICK_START_DIALOG
+*MLXHelp.help_42.hypertextLinks: 41 497 512 
+*MLXHelp.help_42.text: The Quick Start Dialog is shown at program startup. You can quickly perform one of three actions.\n\
+\n\
+Open Project: Load a project from a file. The text entry contains the file name of the last opened project.\n\
+\n\
+New Project: This action creates a new project with the name from the text entry.\n\
+\n\
+Recover Project: To recover an auto saved project choose this action. The path in the text entry refers to the auto saved project.\n\
+\n\
+If you don't want to see the Quick Start Dialog, you should configure the Generic Options.
+
+*MLXHelp.help_3.title: Widget Resource Editor
+*MLXHelp.help_3.ident: HID_WIDGET_RESOURCE_EDITOR
+*MLXHelp.help_3.hypertextLinks: 27 1072 1100 
+*MLXHelp.help_3.sections:  48
+*MLXHelp.help_3.text: In the Widget Resource Editor you change the main properties of a widget. These properties are separated into categories. The View menu is used to switch between these categories.\n\
+\n\
+The category Core shows the resources of the core widget class. The Specific category contains resources that are specific for the widget class (e.g. XmNlabelString). If a parent of a widget has constraint resources, then the category Constraints is not empty. If you want to specify functions which are invoked by a callback, switch to category Callbacks. In the category Extra you are able to edit additional properties like name of a widget.\n\
+\n\
+Set the Automatic Load toggle button in Options menu to pin up the resource editor. If you make a double click or choose the edit menu item in the context menu, then the resources of a widget are displayed in pinned window. This is a convenient method to edit resources.\n\
+\n\
+If you have changed a resource value, click on apply or press Ctrl-A to make the changes visible.\n\
+\n\
+For more details about using the Widget Resource Editor, read the section Change Properties of Widgets.\n
+
+
+*MLXHelp.help_48.title: Other Resources
+*MLXHelp.help_48.ident: HID_OTHER_RESOURCES
+*MLXHelp.help_48.hypertextLinks: 
+*MLXHelp.help_48.text: The dialog shows a list of resources which are not editable by VDX. A list items consist of the resource name and the resource type. This information shall help to integrate widget classes.\n\
+\n\
+After adding the widget class to libvdx.so you are able to determine the resources you have to integrate. This is done by changing the file enum.cf for enum types and resource.cf for resources of other types.\n
+
+
+*MLXHelp.help_10.title: Color Select
+*MLXHelp.help_10.ident: HID_COLOR_SELECT
+*MLXHelp.help_10.hypertextLinks: 
+*MLXHelp.help_10.text: In this window you are able to change the color in a resource entry. Use the sliders Red, Green and Blue to change the color. You see the result in the fields below. If you want to use a named color click in the list on the right side. This list contains all color names specifed in rgb.txt. In the text entry you can change your selection. By pressing return key the changed value is shown by the sliders and the frame.\n\
+\n\
+To put the new color in the resource entry click the OK button and otherwise Cancel.\n
+
+
+*MLXHelp.help_11.title: Font Chooser
+*MLXHelp.help_11.ident: HID_FONT_CHOOSER
+*MLXHelp.help_11.hypertextLinks: 
+*MLXHelp.help_11.text: With option menus in the top of this window, you can specify the fonts that are displayed in the list below. The left menu is for choosing the company (e.g. adobe). The middle menu is the font family menu (e.g. courier, helvetica). With right menu you have to choose the size of a font.\n\
+\n\
+The font, you have selected in the list, is shown in the entry and a sample text shows how the font looks like.\n\
+\n\
+After choosing a font press OK to apply changes to the resource entry. Otherwise press Cancel.\n
+
+
+*MLXHelp.help_12.title: Menu Editor
+*MLXHelp.help_12.ident: HID_MENU_EDITOR
+*MLXHelp.help_12.hypertextLinks: 
+*MLXHelp.help_12.text: The Menu Editor is for quick menu creation. It can be opened on menu bars, pulldown menus, popup menus and radio boxes. The Icon View shows the children of a specific widget.\n\
+\n\
+You can sort the children by pressing the arrow keys. To do this, you have to select only one widget in the Icon View.\n\
+\n\
+To add children to the menu, use a push button on the left side. After you have added a menu entry, you can use the popup menu of icons to edit the widgets. For quick name changing press the Meta-left mouse button on the icon.
+
+*MLXHelp.help_13.title: Text Editor
+*MLXHelp.help_13.ident: HID_TEXT_EDITOR
+*MLXHelp.help_13.hypertextLinks: 
+*MLXHelp.help_13.text: This Text Editor is a simple window, which gives a possibility to edit text in resource entries.\n\
+\n\
+You can import and export files with the menu items in the File menu. The Edit menu contains items for cut and paste.\n\
+\n\
+To apply changes to the resource entry, choose the menu item Save And Close in the File menu.
+
+*MLXHelp.help_14.title: Widget Palette
+*MLXHelp.help_14.ident: HID_WIDGET_PALETTE
+*MLXHelp.help_14.hypertextLinks: 
+*MLXHelp.help_14.text: This window shows the widget classes those can be used to create widgets. The widget classes are separated into Shells, Managers, Primitives and Dialogs.\n\
+\n\
+To create widgets press the left mouse button on an icons or press the right mouse button to get an popup menu. This popup menu contains the name of a widget class and a menu item Create.\n\
+\n\
+Use the View menu to show or hide the icon boxes and to show the names of the icons.
+
+*MLXHelp.help_21.title: File Selection Box
+*MLXHelp.help_21.ident: HID_FILE_SELECTION_BOX
+*MLXHelp.help_21.hypertextLinks: 
+*MLXHelp.help_21.text: The Dialog shows directories and files in two list boxes. To change the directory select a list item  and click the Filter button or do a double click on an item. If you have selected a file click on Ok button or do a double click on the list item.\n\
+\n\
+In the entry field Filter you can enter a mask of the visible files. The entry field Selection shows the current selected file.\n\
+\n\
+If you don't want to choose a specific file, click on Cancel button.\n
+
+
+*MLXHelp.help_38.title: Widget Browser
+*MLXHelp.help_38.ident: HID_WIDGET_BROWSER
+*MLXHelp.help_38.hypertextLinks: 5 20 29 39 575 588 
+*MLXHelp.help_38.text: The Browser shows a tree view of a user interface or a part of a user interface. The Browser is a view to a widget and it's children.\n\
+\n\
+Using the File menu you can load a selected widget into the browser. Load Parent shows the parent of the current top widget. Choosing Close or pressing Ctrl-C hides the browser window.\n\
+\n\
+The view menu is used to change the appearence of the tree view. The Widget menu applies a action to the current selected widget and the Options menu contains the Automatic Load toggle button.\n\
+\n\
+The defaults for View and Options menu should be changed by View Defaults menu item in Main Windows's Options menu.\n
+
+
+*MLXHelp.help_43.title: Templates
+*MLXHelp.help_43.ident: HID_TEMPLATES
+*MLXHelp.help_43.hypertextLinks: 36 49 71 
+*MLXHelp.help_43.text: To get more information on Templates see section Using Widget Templates.\n\
+\n\
+Templates are saved in files with extension '.pal'. To save a template choose menu item Save or Save As in File menu.\n\
+\n\
+The appearence of the icon box can be modified by View menu. To apply an action to a selected template use the Widget menu. The menu item 'Paste to Templates' in the menu is used to paste a widget from the clipboard into the template folder. If menu item 'Create on Click' in Options menu is set, a widget is created by clicking on an icon.\n
+
+
+*MLXHelp.help_44.title: Project Settings
+*MLXHelp.help_44.ident: HID_PROJECT_SETTINGS
+*MLXHelp.help_44.hypertextLinks: 
+*MLXHelp.help_44.text: Here are the properties of the project.\n\
+\n\
+Project File: The file name of the project.\n\
+\n\
+Application Class: The name of the resource file depens on the application class.\n\
+\n\
+Generation Model: The type of the generated code (C or C++).\n\
+\n\
+Startup Interface: The first interface of the generated application.\n\
+\n\
+Source Path: The source code can placed in another directory as the project.\n\
+\n\
+Executable: The name of the generated executable.\n\
+\n\
+More Source File: Normaly a project consist of more than a user interface. To add files to your project enter  the names separated by spaces or click on the button to get a selection dialog.\n\
+\n\
+Extra Compiler Options: For debug, optimizing and include options, e.g. -g -I/opt/yard/include.\n\
+\n\
+Extra Linker Options: For debug or library path options, e.g. -g -L/opt/yard/lib.\n\
+\n\
+Extra Libraries: For additional libaries, e.g. -lsql.\n\
+\n\
+Description: Any kind of user defined information.\n
+
+
+*MLXHelp.help_45.title: Attachment Editor
+*MLXHelp.help_45.ident: HID_ATTACHMENT_EDITOR
+*MLXHelp.help_45.hypertextLinks: 
+*MLXHelp.help_45.text: The Attachment Editor enables you to set XmForm's constraint resources conveniently. Select a child in the Icon View labeled with Children. The current resource settings for the child are displayed on the right side of the window. Now you can change the resources. When another child is selected your changes are saved but not applied yet. To apply the changes of all children click on Apply button, choose menu item Apply or press Ctrl-A.\n\
+\n\
+The view defaults of Attachment Editor can be changed by the View Defaults dialog. This dialog can be reached via menu item View Defaults in Main Window's Option menu.\n
+
+
+*MLXHelp.help_46.title: Global Resources
+*MLXHelp.help_46.ident: HID_GLOBAL_RESOURCES
+*MLXHelp.help_46.hypertextLinks: 
+*MLXHelp.help_46.text: Using this Window global resources written in X resource file syntax can be added to the project. After applying this resources the WYSIWYG views will be updated.\n\
+\n\
+The tools Font Chooser and Color Selection can be used to insert and update resource values. To insert a color move the cursor to the position, where the color value should be inserted. Click on the Color Selection icon. A color selection box is displayed. Now you can choose a color value. After clicking on Ok the value is inserted at cursor position. If you want to update a color value, select the value in the text. The old value will be replaced by the new value. The same mechanism is used to insert or update fonts.\n
+
+
+*MLXHelp.help_47.title: Transform
+*MLXHelp.help_47.ident: HID_TRANSFORM
+*MLXHelp.help_47.hypertextLinks: 
+*MLXHelp.help_47.text: Using this dialog the widget class of a widget can be changed. Choose the new widget class with the option menu.\n\
+\n\
+Please note that all resources settings not provided be the new widget class will be lost.\n
+
+
