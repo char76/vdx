@@ -9,4 +9,5 @@
 			     dirk@bredex.de
 
 
-    2024.04.27 - compiled and tested Ubuntu 22.04 LTS by char
+	From SourceForge:
+    View Designer/X (VDX) is a Motif Interface Builder developed for Linux. I developed this software in the late 90's as a product for Linux.
