@@ -10,4 +10,4 @@
 
 
 	From SourceForge:
-    View Designer/X (VDX) is a Motif Interface Builder developed for Linux. I developed this software in the late 90's as a product for Linux.
+    View Designer/X (VDX) is a Motif Interface Builder developed for Linux. I(dirklaessig) developed this software in the late 90's as a product for Linux.
