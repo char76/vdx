@@ -31,9 +31,9 @@ $ sudo apt install libx11-dev libxt-dev libxaw-dev libxmu-dev libxpm-dev libxext
 ```
 If you need libXp, please check https://askubuntu.com/questions/944838/libxp-so-6-missing-for-ubuntu-17-04
 ```
-sudo add-apt-repository ppa:zeehio/libxp
-sudo apt update
-sudo apt install libxp6 libxp-dev
+$ sudo add-apt-repository ppa:zeehio/libxp
+$ sudo apt update
+$ sudo apt install libxp6 libxp-dev
 ```
 
 ## 2. Build
@@ -60,3 +60,8 @@ type "make install" then please check "install" directory
 
 ## 4. Execution
 execute ./install/vdx-v1.3.0-linux-m3-lac/bin/vdx
+
+## 5. TODO
+* enable xmPrintShellWidgetClass
+  - cannot resolve this class at link. So comment out this class in LClassInfo.C
+* integrate ViewKlass https://sourceforge.net/projects/viewklass/ 
