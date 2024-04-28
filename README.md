@@ -54,7 +54,7 @@ Enter configuration to build
 ```
 
 ## 3. Install
-Please check "install" directory
+type "make install" then please check "install" directory
 
 ## 4. Execution
 execute ./install/vdx-v1.3.0-linux-m3-lac/bin/vdx
