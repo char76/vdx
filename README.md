@@ -13,6 +13,8 @@
     View Designer/X (VDX) is a Motif Interface Builder developed for Linux.
     I(dirklaessig) developed this software in the late 90's as a product for Linux.
 ----
+![vdx](https://github.com/char76/vdx/assets/1542010/81959fba-050a-4442-8fef-f903b7f384f0)
+
 ## 0. Introduction
 
 My name is Charley Shin.
