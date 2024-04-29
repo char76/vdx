@@ -25,9 +25,9 @@ Please visit Sourceforge https://sourceforge.net/projects/vdx/
 
 ## 1. Requirements
 
-libX11, libXt, libXaw, libXmu, libXpm, libXm
+libX11, libXt, libXaw, libXmu, libXpm, libXm and so on.
 ```
-$ sudo apt install libx11-dev libxt-dev libxaw-dev libxmu-dev libxpm-dev libxext-dev libxau-dev libxft-dev libxrender-dev libice-dev libsm-dev libmotif-common libmotif-dev
+$ sudo apt install libx11-dev libxt-dev libxaw-dev libxmu-dev libxpm-dev libxext-dev libxau-dev libxft-dev libxrender-dev libice-dev libsm-dev libmotif-common libmotif-dev x11proto-print-dev
 ```
 If you need libXp, please check https://askubuntu.com/questions/944838/libxp-so-6-missing-for-ubuntu-17-04
 ```
