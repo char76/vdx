@@ -31,7 +31,7 @@ Xfetest.ad: Xfetest.rf  ToolBoxSample.rf
 	cat Xfetest.rf  ToolBoxSample.rf > Xfetest.ad
 
 Xfetest_res.h:	Xfetest.ad
-	cat Xfetest.ad | /usr/local/projects/vdx/bin/ad2fbh.script >Xfetest_res.h
+	cat Xfetest.ad | ../../../bin/ad2fbh.script >Xfetest_res.h
 
 xfetest.C: Xfetest_res.h
 
