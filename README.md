@@ -35,8 +35,8 @@ $ sudo add-apt-repository ppa:zeehio/libxp
 $ sudo apt update
 $ sudo apt install libxp6 libxp-dev
 ```
- ### only aarch64
-If you **can not** search the libs as below in apt, you can search and download the libs in https://launchpad.net/ubuntu
+ #### only aarch64
+If you **can not** find the libs as below in apt, you can search and download the libs in https://launchpad.net/ubuntu
  * multiarch-support
  * x11proto-print-dev
  * libxp6
