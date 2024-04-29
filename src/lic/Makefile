@@ -91,7 +91,7 @@ TransformDialog.rf
 	cat lic.ad *.rf lic_msg.ad lic.hlp | $(REPLACE) >Vdx.ad
 
 fallback.h:	Vdx.ad
-	cat Vdx.ad | $(TOPDIR)/bin/ad2fbh.script >fallback.h
+	LC_ALL=de_DE.UTF-8 cat Vdx.ad | LC_ALL=de_DE.UTF-8 $(TOPDIR)/bin/ad2fbh.script >fallback.h
 
 
 install:
