@@ -19,12 +19,12 @@
 
 My name is Charley Shin.
 
-Original author is dirklaessig. I just change sources, compile and tested in Ubuntu 22.04.4.
+Original author is dirklaessig. I just change sources, compile and tested in Ubuntu 22.04.4(amd64) and raspberry pi 5(aarch64).
 
 Please visit Sourceforge https://sourceforge.net/projects/vdx/
 
 ## 1. Requirements
-
+ #### common - amd64 & aarch64
 libX11, libXt, libXaw, libXmu, libXpm, libXm and so on.
 ```
 $ sudo apt install libx11-dev libxt-dev libxaw7-dev libxmu-dev libxpm-dev libxext-dev libxau-dev libxft-dev libxrender-dev libice-dev libsm-dev libmotif-common libmotif-dev x11proto-print-dev
@@ -35,7 +35,12 @@ $ sudo add-apt-repository ppa:zeehio/libxp
 $ sudo apt update
 $ sudo apt install libxp6 libxp-dev
 ```
-
+ ### only aarch64
+If you can search the libs as below in apt, you can search and download the libs in https://launchpad.net/ubuntu
+ * multiarch-support
+ * x11proto-print-dev
+ * libxp6
+ * libxp-dev
 ## 2. Build
 execute build then enter 11 as below
 ```
