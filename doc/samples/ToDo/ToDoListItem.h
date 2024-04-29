@@ -20,8 +20,8 @@ enum Priority {
 
 class ToDoListItem {
 private:
-  const unsigned int titleLen = 32;
-  const unsigned int descriptionLen = 512;
+  static constexpr unsigned int titleLen = 32;
+  static constexpr unsigned int descriptionLen = 512;
 
   char title[titleLen+1];
   char description[descriptionLen+1];

@@ -1,151 +1,151 @@
-\indexentry{Main Window}{3}
-\indexentry{project file}{3}
-\indexentry{Templates}{3}
-\indexentry{Project Settings}{5}
-\indexentry{Interface!importing}{5}
-\indexentry{Source Code!generating}{5}
-\indexentry{xmkmf}{5}
-\indexentry{make}{5}
-\indexentry{Widget!creating}{5}
-\indexentry{Options}{5}
-\indexentry{Generic Options}{5}
-\indexentry{Grid}{6}
-\indexentry{WYSIWYG}{6}
-\indexentry{Default Shell}{6}
-\indexentry{View Defaults}{6}
-\indexentry{Default Public}{6}
-\indexentry{Online Help}{6}
-\indexentry{Help System}{6}
-\indexentry{Test Mode}{7}
-\indexentry{Icon View!Main Window}{7}
-\indexentry{Interface!changing name}{7}
-\indexentry{Interface!Kontextmenu}{7}
-\indexentry{Browse}{8}
-\indexentry{Tree View!opening}{8}
-\indexentry{Interface!saving}{8}
-\indexentry{Link!creating}{8}
-\indexentry{Source Code!generating}{8}
-\indexentry{WYSIWYG View}{8}
-\indexentry{Delete!Interface context menu}{8}
-\indexentry{Interface!deleting}{8}
-\indexentry{Output}{8}
-\indexentry{Quick Help}{8}
+\indexentry{Main Window}{4}
+\indexentry{project file}{4}
+\indexentry{Templates}{4}
+\indexentry{Project Settings}{6}
+\indexentry{Interface!importing}{6}
+\indexentry{Source Code!generating}{6}
+\indexentry{xmkmf}{6}
+\indexentry{make}{6}
+\indexentry{Widget!creating}{6}
+\indexentry{Options}{6}
+\indexentry{Generic Options}{6}
+\indexentry{Grid}{7}
+\indexentry{WYSIWYG}{7}
+\indexentry{Default Shell}{7}
+\indexentry{View Defaults}{7}
+\indexentry{Default Public}{7}
+\indexentry{Online Help}{7}
+\indexentry{Help System}{7}
+\indexentry{Test Mode}{8}
+\indexentry{Icon View!Main Window}{8}
+\indexentry{Interface!changing name}{8}
+\indexentry{Interface!Kontextmenu}{8}
+\indexentry{Browse}{9}
+\indexentry{Tree View!opening}{9}
+\indexentry{Interface!saving}{9}
+\indexentry{Link!creating}{9}
+\indexentry{Source Code!generating}{9}
 \indexentry{WYSIWYG View}{9}
-\indexentry{Widget!selecting}{9}
-\indexentry{Grid}{9}
-\indexentry{Widget!changing size}{9}
-\indexentry{Widget!moving}{9}
-\indexentry{Drag \& Drop}{9}
-\indexentry{Widget!copying}{9}
-\indexentry{Drag \& Drop}{9}
-\indexentry{Widget!context menu}{9}
-\indexentry{Edit}{10}
-\indexentry{Widget Resource Editor!opening}{10}
-\indexentry{Tree View!opening}{10}
-\indexentry{Align}{10}
-\indexentry{Widget!aligning}{10}
-\indexentry{Cut}{10}
-\indexentry{Clipboard}{10}
-\indexentry{Copy}{10}
-\indexentry{Clipboard}{10}
-\indexentry{Paste}{10}
-\indexentry{Clipboard}{10}
-\indexentry{Menu Editor!opening}{10}
-\indexentry{Menu Editor}{10}
-\indexentry{Visibility}{11}
-\indexentry{Dialog}{11}
-\indexentry{Refresh}{11}
-\indexentry{WYSIWYG View}{11}
-\indexentry{Delete!in Widget Context Menu}{11}
-\indexentry{Widget!deleting}{11}
-\indexentry{Widget Resource Editor}{11}
-\indexentry{Resources!changing}{11}
-\indexentry{File!in Widget Resource Editor}{11}
-\indexentry{Category}{11}
-\indexentry{View!in Widget Resource Editor}{11}
-\indexentry{Core}{11}
-\indexentry{Specific}{11}
-\indexentry{Attachments}{11}
-\indexentry{Constraint}{11}
-\indexentry{Callback}{11}
-\indexentry{Extra}{11}
-\indexentry{Widget!Name}{11}
-\indexentry{Automatic Load}{11}
-\indexentry{Resource lines}{13}
-\indexentry{private}{13}
-\indexentry{Source Code}{13}
-\indexentry{Resource file}{13}
-\indexentry{public}{13}
-\indexentry{load}{13}
-\indexentry{Xpm file}{13}
-\indexentry{Pixmap}{13}
-\indexentry{XtResolvePathname()}{13}
-\indexentry{include}{13}
-\indexentry{method}{13}
-\indexentry{Callback}{13}
-\indexentry{manage}{14}
-\indexentry{Dialog}{14}
-\indexentry{Tree View}{14}
-\indexentry{File!in Browser}{14}
-\indexentry{Load!in Browser}{14}
-\indexentry{Load Parent!in Browser}{14}
-\indexentry{Close!in Browser}{14}
-\indexentry{View!in Browser}{14}
-\indexentry{Small Icons!in Browser}{14}
-\indexentry{With Icons!in Browser}{14}
-\indexentry{With Class Names!in Browser}{14}
-\indexentry{Widget!Menu in Browser}{14}
-\indexentry{Automatic Load!in Browser}{15}
-\indexentry{Drag \& Drop}{15}
-\indexentry{Menu Editor}{16}
-\indexentry{Icon View!Menu Editor}{16}
-\indexentry{Folder}{16}
-\indexentry{Add item}{16}
-\indexentry{XmNsubMenuId}{16}
-\indexentry{Project Settings}{16}
-\indexentry{Settings}{16}
-\indexentry{Project File}{19}
-\indexentry{Application Class}{19}
-\indexentry{Executable}{19}
-\indexentry{Startup Interface}{19}
-\indexentry{Source Path}{19}
-\indexentry{More Source Files}{19}
-\indexentry{Extra Compiler Options}{19}
-\indexentry{Extra Linker Options}{19}
-\indexentry{Extra Libraries}{19}
-\indexentry{Paste!to Template}{20}
-\indexentry{Create On Click}{20}
-\indexentry{Drag \& Drop!in Templates}{20}
-\indexentry{Project Settings}{21}
-\indexentry{Widget!creating}{21}
-\indexentry{Default Shell}{22}
-\indexentry{WYSIWYG View}{22}
-\indexentry{Menu Editor!using}{23}
-\indexentry{Icon view!Menu Editor}{23}
-\indexentry{Widget Resource Editor!use}{25}
-\indexentry{Callback}{26}
-\indexentry{Callback}{26}
-\indexentry{Dialog}{26}
-\indexentry{Visibility}{27}
-\indexentry{Test Mode}{27}
-\indexentry{Source code!generating}{27}
-\indexentry{xmkmf}{28}
-\indexentry{make}{28}
-\indexentry{Online Help}{29}
-\indexentry{Help System}{29}
-\indexentry{Context help}{29}
-\indexentry{Tutorial}{29}
-\indexentry{Template}{29}
-\indexentry{Template!creating}{29}
-\indexentry{Template!using}{29}
-\indexentry{Link}{30}
-\indexentry{Link!creating}{30}
-\indexentry{Interface}{30}
-\indexentry{Drag \& Drop}{31}
-\indexentry{Code generation model}{32}
-\indexentry{lang.cf}{32}
-\indexentry{Project options}{32}
-\indexentry{Code generation model!creating}{32}
-\indexentry{addLang}{32}
-\indexentry{Template file}{32}
-\indexentry{Template file!expressions}{33}
+\indexentry{Delete!Interface context menu}{9}
+\indexentry{Interface!deleting}{9}
+\indexentry{Output}{9}
+\indexentry{Quick Help}{9}
+\indexentry{WYSIWYG View}{10}
+\indexentry{Widget!selecting}{10}
+\indexentry{Grid}{10}
+\indexentry{Widget!changing size}{10}
+\indexentry{Widget!moving}{10}
+\indexentry{Drag \& Drop}{10}
+\indexentry{Widget!copying}{10}
+\indexentry{Drag \& Drop}{10}
+\indexentry{Widget!context menu}{10}
+\indexentry{Edit}{11}
+\indexentry{Widget Resource Editor!opening}{11}
+\indexentry{Tree View!opening}{11}
+\indexentry{Align}{11}
+\indexentry{Widget!aligning}{11}
+\indexentry{Cut}{11}
+\indexentry{Clipboard}{11}
+\indexentry{Copy}{11}
+\indexentry{Clipboard}{11}
+\indexentry{Paste}{11}
+\indexentry{Clipboard}{11}
+\indexentry{Menu Editor!opening}{11}
+\indexentry{Menu Editor}{11}
+\indexentry{Visibility}{12}
+\indexentry{Dialog}{12}
+\indexentry{Refresh}{12}
+\indexentry{WYSIWYG View}{12}
+\indexentry{Delete!in Widget Context Menu}{12}
+\indexentry{Widget!deleting}{12}
+\indexentry{Widget Resource Editor}{12}
+\indexentry{Resources!changing}{12}
+\indexentry{File!in Widget Resource Editor}{12}
+\indexentry{Category}{12}
+\indexentry{View!in Widget Resource Editor}{12}
+\indexentry{Core}{12}
+\indexentry{Specific}{12}
+\indexentry{Attachments}{12}
+\indexentry{Constraint}{12}
+\indexentry{Callback}{12}
+\indexentry{Extra}{12}
+\indexentry{Widget!Name}{12}
+\indexentry{Automatic Load}{12}
+\indexentry{Resource lines}{14}
+\indexentry{private}{14}
+\indexentry{Source Code}{14}
+\indexentry{Resource file}{14}
+\indexentry{public}{14}
+\indexentry{load}{14}
+\indexentry{Xpm file}{14}
+\indexentry{Pixmap}{14}
+\indexentry{XtResolvePathname()}{14}
+\indexentry{include}{14}
+\indexentry{method}{14}
+\indexentry{Callback}{14}
+\indexentry{manage}{15}
+\indexentry{Dialog}{15}
+\indexentry{Tree View}{15}
+\indexentry{File!in Browser}{15}
+\indexentry{Load!in Browser}{15}
+\indexentry{Load Parent!in Browser}{15}
+\indexentry{Close!in Browser}{15}
+\indexentry{View!in Browser}{15}
+\indexentry{Small Icons!in Browser}{15}
+\indexentry{With Icons!in Browser}{15}
+\indexentry{With Class Names!in Browser}{15}
+\indexentry{Widget!Menu in Browser}{15}
+\indexentry{Automatic Load!in Browser}{16}
+\indexentry{Drag \& Drop}{16}
+\indexentry{Menu Editor}{17}
+\indexentry{Icon View!Menu Editor}{17}
+\indexentry{Folder}{17}
+\indexentry{Add item}{17}
+\indexentry{XmNsubMenuId}{17}
+\indexentry{Project Settings}{17}
+\indexentry{Settings}{17}
+\indexentry{Project File}{20}
+\indexentry{Application Class}{20}
+\indexentry{Executable}{20}
+\indexentry{Startup Interface}{20}
+\indexentry{Source Path}{20}
+\indexentry{More Source Files}{20}
+\indexentry{Extra Compiler Options}{20}
+\indexentry{Extra Linker Options}{20}
+\indexentry{Extra Libraries}{20}
+\indexentry{Paste!to Template}{21}
+\indexentry{Create On Click}{21}
+\indexentry{Drag \& Drop!in Templates}{21}
+\indexentry{Project Settings}{22}
+\indexentry{Widget!creating}{22}
+\indexentry{Default Shell}{23}
+\indexentry{WYSIWYG View}{23}
+\indexentry{Menu Editor!using}{24}
+\indexentry{Icon view!Menu Editor}{24}
+\indexentry{Widget Resource Editor!use}{26}
+\indexentry{Callback}{27}
+\indexentry{Callback}{27}
+\indexentry{Dialog}{27}
+\indexentry{Visibility}{28}
+\indexentry{Test Mode}{28}
+\indexentry{Source code!generating}{28}
+\indexentry{xmkmf}{29}
+\indexentry{make}{29}
+\indexentry{Online Help}{30}
+\indexentry{Help System}{30}
+\indexentry{Context help}{30}
+\indexentry{Tutorial}{30}
+\indexentry{Template}{30}
+\indexentry{Template!creating}{30}
+\indexentry{Template!using}{30}
+\indexentry{Link}{31}
+\indexentry{Link!creating}{31}
+\indexentry{Interface}{31}
+\indexentry{Drag \& Drop}{32}
+\indexentry{Code generation model}{33}
+\indexentry{lang.cf}{33}
+\indexentry{Project options}{33}
+\indexentry{Code generation model!creating}{33}
+\indexentry{addLang}{33}
+\indexentry{Template file}{33}
+\indexentry{Template file!expressions}{34}

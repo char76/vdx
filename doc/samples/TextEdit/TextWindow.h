@@ -9,6 +9,7 @@
 #ifndef _TextWindow_H_
 #define _TextWindow_H_
 
+#include <stdlib.h>
 #include "TextWindow_base.h"
 #include <limits.h>
 

@@ -1080,7 +1080,7 @@ hungry.c: Hungry_res.h
 emptyrule::
 
 clean::
-	$(RM) *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* tags TAGS make.log MakeOut  "#"*
+	$(RM) *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* tags TAGS make.log MakeOut  "#"* Hungry_res.h
 
 Makefile::
 	-@if [ -f Makefile ]; then set -x; \

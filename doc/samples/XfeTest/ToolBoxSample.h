@@ -13,6 +13,7 @@
 #ifndef _ToolBoxSample_H_
 #define _ToolBoxSample_H_
 
+#include <stdlib.h>
 #include "ToolBoxSample_base.h"
 
 class ToolBoxSample : public ToolBoxSample_base {

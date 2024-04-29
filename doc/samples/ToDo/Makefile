@@ -1085,7 +1085,7 @@ todo.C: Todo_res.h
 emptyrule::
 
 clean::
-	$(RM) *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* tags TAGS make.log MakeOut  "#"*
+	$(RM) *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* tags TAGS make.log MakeOut  "#"* Todo_res.h
 
 Makefile::
 	-@if [ -f Makefile ]; then set -x; \

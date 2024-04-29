@@ -11,6 +11,7 @@
 
 #include "VcView.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <X11/Shell.h>
 #include <X11/StringDefs.h>
 #include <Xm/RowColumn.h>
