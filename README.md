@@ -36,13 +36,13 @@ $ sudo apt update
 $ sudo apt install libxp6 libxp-dev
 ```
  #### only aarch64
-If you **can not** find the libs as below in apt, you can search and download the libs in https://launchpad.net/ubuntu
+If you **can not** find the libs as follow in apt, you can search and download the libs in https://launchpad.net/ubuntu
  * multiarch-support
  * x11proto-print-dev
  * libxp6
  * libxp-dev
 ## 2. Build
-execute build then enter 11 as below
+execute build then enter 11 as follow
 ```
 $ ./build
 1) hpux-matzen
