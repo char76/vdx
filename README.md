@@ -24,7 +24,7 @@ Original author is dirklaessig. I just change sources, compile and tested in Ubu
 Original sources are in Sourceforge https://sourceforge.net/projects/vdx/
 
 ## 1. Requirements
- #### common - amd64 & aarch64
+ #### - common - amd64 & aarch64
 libX11, libXt, libXaw, libXmu, libXpm, libXm and so on.
 ```
 $ sudo apt install libx11-dev libxt-dev libxaw7-dev libxmu-dev libxpm-dev libxext-dev libxau-dev libxft-dev libxrender-dev libice-dev libsm-dev libmotif-common libmotif-dev x11proto-print-dev
@@ -35,7 +35,7 @@ $ sudo add-apt-repository ppa:zeehio/libxp
 $ sudo apt update
 $ sudo apt install libxp6 libxp-dev
 ```
- #### only aarch64
+ #### - only aarch64
 If you **can not** find the libs as follow in apt, you can search and download the libs in https://launchpad.net/ubuntu
 
 Or you can download at Releases page
