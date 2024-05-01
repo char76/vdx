@@ -17,11 +17,11 @@
 
 ## 0. Introduction
 
-My name is Charley Shin.
+My name is Charley Shin. I will maintain this git repository.
 
-Original author is dirklaessig. I just change sources, compile and tested in Ubuntu 22.04.4(amd64) and raspberry pi 5(aarch64).
+Original author is dirklaessig. I just change sources, compile and tested in Ubuntu 22.04.4(amd64) and Raspberry Pi 5(aarch64 or arm64).
 
-Please visit Sourceforge https://sourceforge.net/projects/vdx/
+Original sources are in Sourceforge https://sourceforge.net/projects/vdx/
 
 ## 1. Requirements
  #### common - amd64 & aarch64
