@@ -37,6 +37,9 @@ $ sudo apt install libxp6 libxp-dev
 ```
  #### only aarch64
 If you **can not** find the libs as follow in apt, you can search and download the libs in https://launchpad.net/ubuntu
+
+Or you can download at Releases page
+
  * multiarch-support
  * x11proto-print-dev
  * libxp6
