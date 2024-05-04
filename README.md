@@ -15,6 +15,8 @@
 ----
 ![vdx](https://github.com/char76/vdx/assets/1542010/81959fba-050a-4442-8fef-f903b7f384f0)
 
+![cde](https://github.com/char76/vdx/assets/1542010/d1628829-f493-4dea-a9cd-21085d4d27d3)
+
 ## 0. Introduction
 
 My name is Charley Shin. I will maintain this git repository.
