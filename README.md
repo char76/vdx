@@ -45,7 +45,7 @@ Or you can download at Releases page
  * libxp6
  * libxp-dev
 ## 2. Build
-execute build then enter 11 as follow
+execute build then enter 11 as follow or if you want to build with CDE(It will be must built and installed in system. Please refer to https://sourceforge.net/p/cdesktopenv/wiki/LinuxBuild/), enter 2
 ```
 $ ./build
 1) hpux-matzen
@@ -62,12 +62,11 @@ $ ./build
 12) solaris
 Enter configuration to build
 ```
-
 ## 3. Install
 type "make install" then please check "install" directory
 
 ## 4. Execution
-execute ./install/vdx-v1.3.0-linux-m3-lac/bin/vdx
+execute ./install/[build type]/bin/vdx
 
 ## 5. TODO
 * enable xmPrintShellWidgetClass
