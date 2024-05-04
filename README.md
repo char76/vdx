@@ -45,7 +45,7 @@ Or you can download at Releases page
  * libxp6
  * libxp-dev
 ## 2. Build
-execute build then enter 11 as follow or if you want to build with CDE(It will be must built and installed in system. Please refer to https://sourceforge.net/p/cdesktopenv/wiki/LinuxBuild/), enter 2
+execute build then enter 11 as follow or if you want to build with CDE(It must be built and installed in system. Please refer to https://sourceforge.net/p/cdesktopenv/wiki/LinuxBuild/), enter 2
 ```
 $ ./build
 1) hpux-matzen
