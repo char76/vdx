@@ -359,7 +359,7 @@ Widget LicView::init( char *applClass, int &argc, char **argv, char *fbRes )
 
 #ifdef CDE_WIDGETS
   if(!DtAppInitialize(context, display, topLevel, argv[0], applClass)) {
-    fprintf(stderr, "DtAppInitialze() returns FALSE\n");
+    fprintf(stderr, "DtAppInitialize() returns FALSE\n");
   }
 #endif
 
