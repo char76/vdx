@@ -42,11 +42,6 @@ LOCAL_SHLIB = $(LIBPATH) -L../vdxlib/$(ARCH) -lvdx
 $(ARCH)/vdx.bin: $(LOCAL_LIBS) ../vdxlib/$(ARCH)/libvdx.so
 
 all:: 
-	cd $(TOPDIR); topdir=`pwd`; \
-	    cat bin/vdx | \
-	    sed -e "s!^VDX_HOME=.*!VDX_HOME=$$topdir!" >bin/vdx.tmp
-	mv $(TOPDIR)/bin/vdx.tmp $(TOPDIR)/bin/vdx
-	chmod u+x $(TOPDIR)/bin/vdx
 	rm -f $(TOPDIR)/bin/vdx.bin
 	ln -s ../src/lic/$(ARCH)/vdx.bin $(TOPDIR)/bin/vdx.bin
 
