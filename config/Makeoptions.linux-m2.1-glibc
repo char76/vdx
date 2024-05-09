@@ -7,7 +7,7 @@
          AR = ar crl
      RANLIB = ranlib
          RM = rm -f
-     DEPEND = gcc -M
+     DEPEND = gcc -M -MM -MG
        YACC = bison
         LEX = flex
    COMPRESS = gzip -f
