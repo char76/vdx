@@ -1,1 +1,15 @@
 .depend*
+make.log*
+linuxelf-*
+linux-*
+solaris*
+hpux-*
+fallback.h
+liblac.a
+liblwid.a
+libvdx.so
+vdx-*
+vdx.bin
+Makeoptions
+l.c
+y.c
